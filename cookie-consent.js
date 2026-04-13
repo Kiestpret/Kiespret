@@ -3,7 +3,7 @@
  *
  * Categorieën:
  * - noodzakelijk: altijd aan (cookie-voorkeur onthouden)
- * - analytisch: Plausible Analytics (cookieloos, maar netjes om toestemming te vragen)
+ * - analytisch: Plausible Analytics (cookieloos, laadt altijd — geen toestemming vereist)
  * - marketing: Meta Pixel, TikTok Pixel, etc. (standaard uit, pas laden na toestemming)
  *
  * Vereisten AVG:
@@ -33,16 +33,19 @@
     document.cookie = COOKIE_NAME + '=' + val + '; expires=' + expires + '; path=/; SameSite=Lax';
   }
 
-  function applyConsent(prefs) {
-    // Analytisch: Plausible (als script nog niet geladen)
-    if (prefs.analytisch && !document.querySelector('script[data-domain="kiespret.nl"]')) {
+  // Plausible Analytics laadt altijd — geen cookies, geen persoonsgegevens,
+  // vrijgesteld onder Telecommunicatiewet art. 11.7a
+  function loadPlausible() {
+    if (!document.querySelector('script[data-domain="kiespret.nl"]')) {
       const s = document.createElement('script');
       s.defer = true;
       s.setAttribute('data-domain', 'kiespret.nl');
       s.src = 'https://plausible.io/js/script.js';
       document.head.appendChild(s);
     }
+  }
 
+  function applyConsent(prefs) {
     // Marketing: hier komen straks Meta Pixel, TikTok Pixel, etc.
     if (prefs.marketing) {
       // TODO: Meta Pixel laden
@@ -62,7 +65,7 @@
       <div class="cc-dialog" role="dialog" aria-label="Cookie-instellingen" aria-modal="true">
         <div class="cc-main">
           <h2 class="cc-title">Cookie-instellingen</h2>
-          <p class="cc-text">Kiespret gebruikt cookies en vergelijkbare technieken. Noodzakelijke cookies zorgen ervoor dat de website goed werkt. Met jouw toestemming plaatsen wij ook analytische en marketing cookies.</p>
+          <p class="cc-text">Kiespret gebruikt anonieme statistieken (Plausible, zonder cookies) om de website te verbeteren. Met jouw toestemming plaatsen wij daarnaast marketing cookies voor relevante advertenties.</p>
           <p class="cc-text cc-small">Lees meer in ons <a href="privacybeleid.html" class="cc-link">privacybeleid</a>.</p>
 
           <div class="cc-categories">
@@ -73,15 +76,6 @@
               </span>
               <input type="checkbox" checked disabled>
               <span class="cc-toggle cc-toggle-locked"></span>
-            </label>
-
-            <label class="cc-cat">
-              <span class="cc-cat-info">
-                <span class="cc-cat-name">Analytisch</span>
-                <span class="cc-cat-desc">Anonieme statistieken via Plausible om de website te verbeteren. Geen persoonsgegevens.</span>
-              </span>
-              <input type="checkbox" id="ccAnalytisch">
-              <span class="cc-toggle"></span>
             </label>
 
             <label class="cc-cat">
@@ -106,14 +100,14 @@
 
     // Event listeners
     document.getElementById('ccAcceptAll').addEventListener('click', function() {
-      var prefs = { noodzakelijk: true, analytisch: true, marketing: true };
+      var prefs = { noodzakelijk: true, marketing: true };
       setConsent(prefs);
       applyConsent(prefs);
       closeBanner();
     });
 
     document.getElementById('ccRejectAll').addEventListener('click', function() {
-      var prefs = { noodzakelijk: true, analytisch: false, marketing: false };
+      var prefs = { noodzakelijk: true, marketing: false };
       setConsent(prefs);
       applyConsent(prefs);
       closeBanner();
@@ -122,7 +116,6 @@
     document.getElementById('ccSavePrefs').addEventListener('click', function() {
       var prefs = {
         noodzakelijk: true,
-        analytisch: document.getElementById('ccAnalytisch').checked,
         marketing: document.getElementById('ccMarketing').checked
       };
       setConsent(prefs);
@@ -144,7 +137,6 @@
     // Vul huidige voorkeuren in
     var prefs = getConsent();
     if (prefs) {
-      document.getElementById('ccAnalytisch').checked = prefs.analytisch || false;
       document.getElementById('ccMarketing').checked = prefs.marketing || false;
     }
   };
@@ -299,9 +291,12 @@
   document.head.appendChild(style);
 
   // ── Init ──
+  // Plausible laadt altijd (cookieloos, geen toestemming vereist)
+  loadPlausible();
+
   var consent = getConsent();
   if (consent) {
-    // Eerder toestemming gegeven → direct toepassen
+    // Eerder toestemming gegeven → marketing consent toepassen
     applyConsent(consent);
   } else {
     // Geen toestemming → banner tonen
