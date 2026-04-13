@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiespret — Samen kiezen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sunset: #E07830;
+      --sunset-light: #FFF0E6;
+      --ocean: #2A7F9E;
+      --ocean-light: #E8F4F8;
+      --sand: #FAFAF8;
+      --shell: #F5F5F2;
+      --night: #1A1A1A;
+      --stone: #666666;
+      --border: #E8E8E4;
+      --green: #2D6A4F;
+      --red: #C0392B;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--sand);
+      color: var(--night);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── NAV ──────────────────────────────────────────────────────── */
+    nav {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--sunset);
+      text-decoration: none;
+    }
+
+    .nav-step {
+      font-size: 13px;
+      color: var(--stone);
+      font-weight: 500;
+    }
+
+    /* ── PROGRESS BAR ─────────────────────────────────────────────── */
+    .progress-bar {
+      height: 3px;
+      background: var(--border);
+      position: sticky;
+      top: 56px;
+      z-index: 99;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--sunset);
+      transition: width 0.4s ease;
+    }
+
+    /* ── SCREENS ──────────────────────────────────────────────────── */
+    .screen {
+      display: none;
+      flex: 1;
+    }
+
+    .screen.active {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── ONBOARDING ───────────────────────────────────────────────── */
+    .onboarding-wrap {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      width: 100%;
+    }
+
+    .question-label {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--sunset);
+      margin-bottom: 12px;
+    }
+
+    .question-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(22px, 5vw, 30px);
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--night);
+      margin-bottom: 8px;
+    }
+
+    .question-sub {
+      font-size: 15px;
+      color: var(--stone);
+      margin-bottom: 32px;
+    }
+
+    /* Sfeer options (visual cards) */
+    .sfeer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 480px) {
+      .sfeer-grid { grid-template-columns: 1fr; }
+    }
+
+    .sfeer-card {
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: white;
+    }
+
+    .sfeer-card:hover { border-color: var(--sunset); transform: translateY(-2px); }
+    .sfeer-card.selected { border-color: var(--sunset); background: var(--sunset-light); }
+
+    .sfeer-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+
+    .sfeer-body {
+      padding: 12px;
+    }
+
+    .sfeer-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .sfeer-desc {
+      font-size: 12px;
+      color: var(--stone);
+      line-height: 1.4;
+    }
+
+    /* Budget options */
+    .option-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .option-btn {
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 20px;
+      cursor: pointer;
+      background: white;
+      text-align: left;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .option-btn:hover { border-color: var(--sunset); }
+    .option-btn.selected { border-color: var(--sunset); background: var(--sunset-light); }
+
+    .option-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .option-main {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+
+    .option-sub {
+      font-size: 13px;
+      color: var(--stone);
+    }
+
+    /* Period checkbox grid */
+    .period-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 400px) {
+      .period-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .period-btn {
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 8px;
+      cursor: pointer;
+      background: white;
+      font-size: 13px;
+      font-weight: 500;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .period-btn:hover { border-color: var(--sunset); }
+    .period-btn.selected { border-color: var(--sunset); background: var(--sunset-light); color: var(--sunset); font-weight: 600; }
+
+    /* Duur slider */
+    .duur-options {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .duur-btn {
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 20px;
+      cursor: pointer;
+      background: white;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .duur-btn:hover { border-color: var(--sunset); }
+    .duur-btn.selected { border-color: var(--sunset); background: var(--sunset-light); color: var(--sunset); font-weight: 700; }
+
+    /* CTA button */
+    .cta-btn {
+      background: var(--sunset);
+      color: white;
+      border: none;
+      border-radius: 14px;
+      padding: 16px 32px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .cta-btn:hover { background: #c96a28; transform: translateY(-1px); }
+    .cta-btn:disabled { background: var(--border); color: var(--stone); cursor: not-allowed; transform: none; }
+
+    /* ── SWIPE SCREEN ─────────────────────────────────────────────── */
+    .swipe-wrap {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 24px 20px 100px;
+      width: 100%;
+      position: relative;
+    }
+
+    .swipe-counter {
+      text-align: center;
+      font-size: 13px;
+      color: var(--stone);
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .card-stack {
+      position: relative;
+      height: 580px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 400px) {
+      .card-stack { height: 520px; }
+    }
+
+    .trip-card {
+      position: absolute;
+      width: 100%;
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      cursor: grab;
+      user-select: none;
+      touch-action: none;
+      transition: box-shadow 0.2s;
+    }
+
+    .trip-card:active { cursor: grabbing; }
+
+    .trip-card.back-card {
+      transform: scale(0.96) translateY(8px);
+      z-index: 1;
+    }
+
+    .trip-card.front-card {
+      z-index: 10;
+      transition: transform 0.05s, box-shadow 0.2s;
+    }
+
+    .trip-card.front-card.dragging {
+      transition: none;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+    }
+
+    .trip-card.fly-right {
+      transition: transform 0.4s ease, opacity 0.4s ease !important;
+      transform: translateX(150%) rotate(20deg) !important;
+      opacity: 0;
+    }
+
+    .trip-card.fly-left {
+      transition: transform 0.4s ease, opacity 0.4s ease !important;
+      transform: translateX(-150%) rotate(-20deg) !important;
+      opacity: 0;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+      pointer-events: none;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-aanbieder {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ocean);
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .card-dest {
+      font-size: 14px;
+      color: var(--stone);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .card-why {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--night);
+      margin-bottom: 16px;
+    }
+
+    .card-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      background: var(--ocean-light);
+      color: var(--ocean);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .card-price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .card-price-label {
+      font-size: 12px;
+      color: var(--stone);
+    }
+
+    .card-price {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--night);
+    }
+
+    .card-price span {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--stone);
+    }
+
+    .card-adults-badge {
+      background: var(--sunset-light);
+      color: var(--sunset);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    /* Like / Nope overlays */
+    .card-overlay {
+      position: absolute;
+      top: 20px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: 0.05em;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.1s;
+      border: 3px solid;
+    }
+
+    .overlay-yes {
+      left: 20px;
+      color: var(--green);
+      border-color: var(--green);
+      transform: rotate(-10deg);
+    }
+
+    .overlay-no {
+      right: 20px;
+      color: var(--red);
+      border-color: var(--red);
+      transform: rotate(10deg);
+    }
+
+    /* Swipe buttons */
+    .swipe-actions {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .action-btn {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      background: white;
+      font-size: 26px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .action-btn.nope:hover { border-color: var(--red); background: #fff5f5; transform: scale(1.1); }
+    .action-btn.like:hover { border-color: var(--green); background: #f0faf4; transform: scale(1.1); }
+
+    /* No more cards */
+    .no-cards {
+      text-align: center;
+      padding: 60px 24px;
+    }
+
+    .no-cards-icon { font-size: 48px; margin-bottom: 16px; }
+
+    /* ── RESULTS SCREEN ───────────────────────────────────────────── */
+    .results-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+      width: 100%;
+    }
+
+    .results-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .results-emoji { font-size: 40px; margin-bottom: 12px; }
+
+    .results-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: clamp(24px, 5vw, 32px);
+      margin-bottom: 8px;
+    }
+
+    .results-sub {
+      font-size: 15px;
+      color: var(--stone);
+    }
+
+    .result-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      margin-bottom: 16px;
+    }
+
+    .result-rank-banner {
+      padding: 10px 20px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .rank-1 { background: #FFF3CD; color: #856404; }
+    .rank-2 { background: var(--shell); color: var(--stone); }
+    .rank-3 { background: var(--shell); color: var(--stone); }
+
+    .result-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .result-body {
+      padding: 20px;
+    }
+
+    .result-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .result-dest {
+      font-size: 14px;
+      color: var(--stone);
+      margin-bottom: 12px;
+    }
+
+    .result-why {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .result-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .result-price {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .result-price small {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--stone);
+    }
+
+    .book-btn {
+      background: var(--sunset);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 20px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .book-btn:hover { background: #c96a28; transform: translateY(-1px); }
+
+    .results-footer {
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    .restart-btn {
+      background: none;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--stone);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .restart-btn:hover { border-color: var(--night); color: var(--night); }
+
+    .results-note {
+      font-size: 12px;
+      color: var(--stone);
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+
+    /* No results */
+    .no-results {
+      text-align: center;
+      padding: 48px 24px;
+    }
+
+    /* ── EMPTY STATE ──────────────────────────────────────────────── */
+    .empty-state {
+      text-align: center;
+      padding: 80px 24px;
+    }
+
+    .empty-icon { font-size: 48px; margin-bottom: 16px; }
+    .empty-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+    .empty-sub { font-size: 15px; color: var(--stone); margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">kiespret</a>
+    <span class="nav-step" id="navStep">Stap 1 van 4</span>
+  </nav>
+
+  <!-- PROGRESS -->
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+  </div>
+
+  <!-- ══ SCREEN: STAP 1 — SFEER ══════════════════════════════════════ -->
+  <div class="screen active" id="screen-sfeer">
+    <div class="onboarding-wrap">
+      <div class="question-label">Stap 1 van 4</div>
+      <h1 class="question-title">Wat voor vakantie zoeken jullie?</h1>
+      <p class="question-sub">Kies wat het beste past — je kunt straks altijd bijstellen.</p>
+
+      <div class="sfeer-grid">
+        <div class="sfeer-card" data-sfeer="strand,rustig,zon" onclick="selectSfeer(this)">
+          <img class="sfeer-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=70" alt="Strand">
+          <div class="sfeer-body">
+            <div class="sfeer-title">Lui & ontspannen</div>
+            <div class="sfeer-desc">Strand, zon, liggen, niets moeten</div>
+          </div>
+        </div>
+        <div class="sfeer-card" data-sfeer="actief,natuur,avontuur" onclick="selectSfeer(this)">
+          <img class="sfeer-img" src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&q=70" alt="Actief">
+          <div class="sfeer-body">
+            <div class="sfeer-title">Actief & verkennen</div>
+            <div class="sfeer-desc">Wandelen, snorkelen, iets meemaken</div>
+          </div>
+        </div>
+        <div class="sfeer-card" data-sfeer="resort,comfort,allinclusive" onclick="selectSfeer(this)">
+          <img class="sfeer-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=70" alt="Resort">
+          <div class="sfeer-body">
+            <div class="sfeer-title">Resort & genieten</div>
+            <div class="sfeer-desc">All-inclusive, pool, alles geregeld</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="cta-btn" id="btnSfeer" onclick="goToStap2()" disabled>
+        Volgende →
+      </button>
+    </div>
+  </div>
+
+  <!-- ══ SCREEN: STAP 2 — BUDGET ═════════════════════════════════════ -->
+  <div class="screen" id="screen-budget">
+    <div class="onboarding-wrap">
+      <div class="question-label">Stap 2 van 4</div>
+      <h1 class="question-title">Wat mag het kosten?</h1>
+      <p class="question-sub">Prijs per persoon, voor 7 nachten.</p>
+
+      <div class="option-list">
+        <button class="option-btn" data-budget="800" onclick="selectBudget(this)">
+          <span class="option-icon">💛</span>
+          <div>
+            <div class="option-main">Tot €800</div>
+            <div class="option-sub">Goede deal, zonvakantie voor de prijs</div>
+          </div>
+        </button>
+        <button class="option-btn" data-budget="1100" onclick="selectBudget(this)">
+          <span class="option-icon">🧡</span>
+          <div>
+            <div class="option-main">€800 – €1.100</div>
+            <div class="option-sub">Kwaliteit staat centraal</div>
+          </div>
+        </button>
+        <button class="option-btn" data-budget="9999" onclick="selectBudget(this)">
+          <span class="option-icon">✨</span>
+          <div>
+            <div class="option-main">Meer dan €1.100</div>
+            <div class="option-sub">Comfort en luxe mogen wat kosten</div>
+          </div>
+        </button>
+      </div>
+
+      <button class="cta-btn" id="btnBudget" onclick="goToStap3()" disabled>
+        Volgende →
+      </button>
+    </div>
+  </div>
+
+  <!-- ══ SCREEN: STAP 3 — PERIODE ════════════════════════════════════ -->
+  <div class="screen" id="screen-periode">
+    <div class="onboarding-wrap">
+      <div class="question-label">Stap 3 van 4</div>
+      <h1 class="question-title">Wanneer willen jullie weg?</h1>
+      <p class="question-sub">Kies een of meerdere maanden die uitkomen.</p>
+
+      <div class="period-grid">
+        <button class="period-btn" data-maand="januari"   onclick="toggleMaand(this)">jan</button>
+        <button class="period-btn" data-maand="februari"  onclick="toggleMaand(this)">feb</button>
+        <button class="period-btn" data-maand="maart"     onclick="toggleMaand(this)">mrt</button>
+        <button class="period-btn" data-maand="april"     onclick="toggleMaand(this)">apr</button>
+        <button class="period-btn" data-maand="mei"       onclick="toggleMaand(this)">mei</button>
+        <button class="period-btn" data-maand="juni"      onclick="toggleMaand(this)">jun</button>
+        <button class="period-btn" data-maand="juli"      onclick="toggleMaand(this)">jul</button>
+        <button class="period-btn" data-maand="augustus"  onclick="toggleMaand(this)">aug</button>
+        <button class="period-btn" data-maand="september" onclick="toggleMaand(this)">sep</button>
+        <button class="period-btn" data-maand="oktober"   onclick="toggleMaand(this)">okt</button>
+        <button class="period-btn" data-maand="november"  onclick="toggleMaand(this)">nov</button>
+        <button class="period-btn" data-maand="december"  onclick="toggleMaand(this)">dec</button>
+      </div>
+
+      <button class="cta-btn" id="btnPeriode" onclick="goToStap4()" disabled>
+        Volgende →
+      </button>
+    </div>
+  </div>
+
+  <!-- ══ SCREEN: STAP 4 — DUUR ═══════════════════════════════════════ -->
+  <div class="screen" id="screen-duur">
+    <div class="onboarding-wrap">
+      <div class="question-label">Stap 4 van 4</div>
+      <h1 class="question-title">Hoe lang willen jullie weg?</h1>
+      <p class="question-sub">We zoeken vakanties die precies passen.</p>
+
+      <div class="duur-options">
+        <button class="duur-btn" data-duur="7"  onclick="selectDuur(this)">1 week</button>
+        <button class="duur-btn" data-duur="14" onclick="selectDuur(this)">2 weken</button>
+      </div>
+
+      <button class="cta-btn" id="btnDuur" onclick="startSwipen()" disabled>
+        Toon mijn vakanties →
+      </button>
+    </div>
+  </div>
+
+  <!-- ══ SCREEN: SWIPEN ═══════════════════════════════════════════════ -->
+  <div class="screen" id="screen-swipe">
+    <div class="swipe-wrap">
+      <div class="swipe-counter" id="swipeCounter"></div>
+      <div class="card-stack" id="cardStack"></div>
+      <div class="swipe-actions">
+        <button class="action-btn nope" onclick="swipeCard('left')" title="Nee">👎</button>
+        <button class="action-btn like" onclick="swipeCard('right')" title="Ja!">👍</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SCREEN: RESULTATEN ═══════════════════════════════════════════ -->
+  <div class="screen" id="screen-results">
+    <div class="results-wrap">
+      <div class="results-header">
+        <div class="results-emoji">🎉</div>
+        <h2 class="results-title">Jullie top 3 vakanties</h2>
+        <p class="results-sub">Op basis van jullie voorkeuren — gesorteerd op match</p>
+      </div>
+
+      <div id="resultsList"></div>
+
+      <div class="results-footer">
+        <button class="restart-btn" onclick="restart()">↩ Opnieuw beginnen</button>
+        <p class="results-note">Prijzen zijn indicatief p.p. o.b.v. april 2026. Actuele prijs zie je bij de aanbieder.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="trips.js"></script>
+  <script>
+    // ── STATE ──────────────────────────────────────────────────────────────
+    const prefs = {
+      sfeer: [],
+      budgetMax: null,
+      maanden: [],
+      duur: null,
+      airport: 'AMS',
+    };
+
+    let currentTrips = [];
+    let currentIndex = 0;
+    let liked = [];
+
+    // ── PROGRESS ───────────────────────────────────────────────────────────
+    function setProgress(pct, step, total) {
+      document.getElementById('progressFill').style.width = pct + '%';
+      document.getElementById('navStep').textContent = total
+        ? `Stap ${step} van ${total}`
+        : step;
+    }
+
+    // ── SCREEN ROUTING ─────────────────────────────────────────────────────
+    function showScreen(id) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      window.scrollTo(0, 0);
+    }
+
+    // ── STAP 1: SFEER ──────────────────────────────────────────────────────
+    function selectSfeer(el) {
+      document.querySelectorAll('.sfeer-card').forEach(c => c.classList.remove('selected'));
+      el.classList.add('selected');
+      prefs.sfeer = el.dataset.sfeer.split(',');
+      document.getElementById('btnSfeer').disabled = false;
+    }
+
+    function goToStap2() {
+      setProgress(25, 2, 4);
+      showScreen('screen-budget');
+    }
+
+    // ── STAP 2: BUDGET ─────────────────────────────────────────────────────
+    function selectBudget(el) {
+      document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+      el.classList.add('selected');
+      prefs.budgetMax = parseInt(el.dataset.budget);
+      document.getElementById('btnBudget').disabled = false;
+    }
+
+    function goToStap3() {
+      setProgress(50, 3, 4);
+      showScreen('screen-periode');
+    }
+
+    // ── STAP 3: PERIODE ────────────────────────────────────────────────────
+    function toggleMaand(el) {
+      el.classList.toggle('selected');
+      prefs.maanden = Array.from(document.querySelectorAll('.period-btn.selected'))
+        .map(b => b.dataset.maand);
+      document.getElementById('btnPeriode').disabled = prefs.maanden.length === 0;
+    }
+
+    function goToStap4() {
+      setProgress(75, 4, 4);
+      showScreen('screen-duur');
+    }
+
+    // ── STAP 4: DUUR ───────────────────────────────────────────────────────
+    function selectDuur(el) {
+      document.querySelectorAll('.duur-btn').forEach(b => b.classList.remove('selected'));
+      el.classList.add('selected');
+      prefs.duur = parseInt(el.dataset.duur);
+      document.getElementById('btnDuur').disabled = false;
+    }
+
+    // ── START SWIPEN ───────────────────────────────────────────────────────
+    function startSwipen() {
+      currentTrips = filterTrips(prefs);
+      currentIndex = 0;
+      liked = [];
+
+      if (currentTrips.length === 0) {
+        // Geen matches — verruim budget automatisch
+        prefs.budgetMax = 9999;
+        currentTrips = filterTrips(prefs);
+      }
+
+      setProgress(100, 'Swipen', null);
+      document.getElementById('navStep').textContent = '';
+      showScreen('screen-swipe');
+      renderCards();
+    }
+
+    // ── KAARTEN RENDEREN ───────────────────────────────────────────────────
+    function renderCards() {
+      const stack = document.getElementById('cardStack');
+      stack.innerHTML = '';
+
+      if (currentIndex >= currentTrips.length) {
+        showResults();
+        return;
+      }
+
+      updateCounter();
+
+      // Render top 2 kaarten (front + back)
+      for (let i = Math.min(currentIndex + 1, currentTrips.length - 1); i >= currentIndex; i--) {
+        const trip = currentTrips[i];
+        const card = buildCard(trip);
+        card.classList.add(i === currentIndex ? 'front-card' : 'back-card');
+        stack.appendChild(card);
+      }
+
+      // Touch/drag only on front card
+      initDrag(stack.querySelector('.front-card'));
+    }
+
+    function buildCard(trip) {
+      const v = trip.matchedVariant;
+      const card = document.createElement('div');
+      card.className = 'trip-card';
+      card.dataset.id = trip.id;
+
+      const highlightTags = trip.highlights.slice(0, 3)
+        .map(h => `<span class="tag">✓ ${h}</span>`).join('');
+
+      const adultsBadge = trip.adultsOnly
+        ? `<span class="card-adults-badge">Adults only</span>` : '';
+
+      card.innerHTML = `
+        <div class="card-overlay overlay-yes">❤️ JA!</div>
+        <div class="card-overlay overlay-no">✕ NEE</div>
+        <img class="card-img" src="${trip.imageUrl}" alt="${trip.destination}" draggable="false">
+        <div class="card-body">
+          <div class="card-aanbieder">${trip.aanbieder} · ${trip.boardType}</div>
+          <div class="card-title">${trip.title}</div>
+          <div class="card-dest">📍 ${trip.destination} · ✈️ ${trip.vluchtduur}</div>
+          <div class="card-why">${trip.whyThisTrip}</div>
+          <div class="card-highlights">${highlightTags}</div>
+          <div class="card-price-row">
+            <div>
+              <div class="card-price-label">v.a. per persoon</div>
+              <div class="card-price">€${v.prijs}<span> / 7 nachten</span></div>
+            </div>
+            ${adultsBadge}
+          </div>
+        </div>
+      `;
+      return card;
+    }
+
+    function updateCounter() {
+      const remaining = currentTrips.length - currentIndex;
+      document.getElementById('swipeCounter').textContent =
+        `${remaining} vakantie${remaining !== 1 ? 's' : ''} te gaan`;
+    }
+
+    // ── DRAG / SWIPE ───────────────────────────────────────────────────────
+    function initDrag(card) {
+      if (!card) return;
+
+      let startX = 0, startY = 0, dx = 0;
+      let dragging = false;
+
+      const overlayYes = card.querySelector('.overlay-yes');
+      const overlayNo  = card.querySelector('.overlay-no');
+
+      function onStart(e) {
+        dragging = true;
+        const pt = e.touches ? e.touches[0] : e;
+        startX = pt.clientX;
+        startY = pt.clientY;
+        card.classList.add('dragging');
+      }
+
+      function onMove(e) {
+        if (!dragging) return;
+        e.preventDefault();
+        const pt = e.touches ? e.touches[0] : e;
+        dx = pt.clientX - startX;
+        const dy = pt.clientY - startY;
+        const rot = dx * 0.06;
+        card.style.transform = `translate(${dx}px, ${dy * 0.3}px) rotate(${rot}deg)`;
+
+        const threshold = 60;
+        const ratio = Math.min(Math.abs(dx) / threshold, 1);
+        if (dx > 0) {
+          overlayYes.style.opacity = ratio;
+          overlayNo.style.opacity = 0;
+        } else {
+          overlayNo.style.opacity = ratio;
+          overlayYes.style.opacity = 0;
+        }
+      }
+
+      function onEnd() {
+        if (!dragging) return;
+        dragging = false;
+        card.classList.remove('dragging');
+
+        const threshold = 80;
+        if (dx > threshold) {
+          resolveSwipe('right');
+        } else if (dx < -threshold) {
+          resolveSwipe('left');
+        } else {
+          card.style.transform = '';
+          overlayYes.style.opacity = 0;
+          overlayNo.style.opacity = 0;
+        }
+      }
+
+      card.addEventListener('mousedown', onStart);
+      card.addEventListener('touchstart', onStart, { passive: true });
+      window.addEventListener('mousemove', onMove);
+      window.addEventListener('touchmove', onMove, { passive: false });
+      window.addEventListener('mouseup', onEnd);
+      window.addEventListener('touchend', onEnd);
+    }
+
+    function swipeCard(dir) {
+      const front = document.querySelector('.front-card');
+      if (!front) return;
+      resolveSwipe(dir, front);
+    }
+
+    function resolveSwipe(dir, card) {
+      const front = card || document.querySelector('.front-card');
+      if (!front) return;
+
+      if (dir === 'right') {
+        front.classList.add('fly-right');
+        liked.push(currentTrips[currentIndex]);
+      } else {
+        front.classList.add('fly-left');
+      }
+
+      currentIndex++;
+
+      setTimeout(() => {
+        renderCards();
+      }, 420);
+    }
+
+    // ── RESULTATEN ─────────────────────────────────────────────────────────
+    function showResults() {
+      setProgress(100, 'Jullie top 3', null);
+      showScreen('screen-results');
+
+      const list = document.getElementById('resultsList');
+      list.innerHTML = '';
+
+      const top3 = liked.slice(0, 3);
+
+      if (top3.length === 0) {
+        list.innerHTML = `
+          <div class="no-results">
+            <div style="font-size:40px;margin-bottom:12px">🤔</div>
+            <h3 style="margin-bottom:8px;font-family:'Plus Jakarta Sans',sans-serif">Geen favorieten</h3>
+            <p style="color:var(--stone);margin-bottom:24px">Je hebt alle kaarten overgeslagen. Probeer het opnieuw met ruimere voorkeuren.</p>
+            <button class="cta-btn" onclick="restart()" style="max-width:300px;margin:0 auto">Opnieuw beginnen</button>
+          </div>
+        `;
+        return;
+      }
+
+      const medals = ['🥇', '🥈', '🥉'];
+      const rankLabels = ['Beste match', 'Goede optie', 'Ook een aanrader'];
+      const rankClasses = ['rank-1', 'rank-2', 'rank-3'];
+
+      top3.forEach((trip, i) => {
+        const v = trip.matchedVariant;
+        const card = document.createElement('div');
+        card.className = 'result-card';
+        card.innerHTML = `
+          <div class="result-rank-banner ${rankClasses[i]}">
+            ${medals[i]} ${rankLabels[i]}
+          </div>
+          <img class="result-img" src="${trip.imageUrl}" alt="${trip.destination}">
+          <div class="result-body">
+            <div class="result-title">${trip.title}</div>
+            <div class="result-dest">📍 ${trip.destination} · ${trip.aanbieder} · ${trip.boardType}</div>
+            <div class="result-why">${trip.whyThisTrip}</div>
+            <div class="result-row">
+              <div class="result-price">€${v.prijs}<small> p.p.</small></div>
+              <a class="book-btn" href="${v.affiliateUrl}" target="_blank" rel="noopener">
+                Bekijk bij ${trip.aanbieder} →
+              </a>
+            </div>
+          </div>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    // ── RESTART ────────────────────────────────────────────────────────────
+    function restart() {
+      prefs.sfeer = [];
+      prefs.budgetMax = null;
+      prefs.maanden = [];
+      prefs.duur = null;
+
+      document.querySelectorAll('.sfeer-card, .option-btn, .period-btn, .duur-btn')
+        .forEach(el => el.classList.remove('selected'));
+      document.querySelectorAll('#btnSfeer, #btnBudget, #btnPeriode, #btnDuur')
+        .forEach(btn => btn.disabled = true);
+
+      setProgress(0, 'Stap 1 van 4', null);
+      document.getElementById('navStep').textContent = 'Stap 1 van 4';
+      showScreen('screen-sfeer');
+    }
+  </script>
+</body>
+</html>
