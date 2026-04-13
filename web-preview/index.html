@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiespret — Samen een vakantie kiezen, zonder eindeloos vergelijken</title>
+  <meta name="description" content="Kiespret helpt koppels sneller tot een vakantiekeuze komen. Beantwoord 4 vragen, bekijk vakanties die passen, vergelijk jullie top 3. Boek direct bij TUI, Sunweb of D-reizen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sunset: #E07830;
+      --sunset-light: #FFF0E6;
+      --sunset-shadow: rgba(224,120,48,0.25);
+      --ocean: #2A7F9E;
+      --ocean-light: #E8F4F8;
+      --sand: #FAFAF8;
+      --shell: #F5F5F2;
+      --night: #1A1A1A;
+      --stone: #666666;
+      --border: #E8E8E4;
+      --palm: #2D6A4F;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--sand);
+      color: var(--night);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250,250,248,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--night);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-logo span { color: var(--sunset); }
+
+    .nav-cta {
+      background: var(--sunset);
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: 'DM Sans', sans-serif;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    .nav-cta:hover { opacity: 0.88; }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 64px 24px 48px;
+      text-align: center;
+      background: linear-gradient(180deg, var(--sand) 0%, var(--sunset-light) 100%);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--sunset);
+      background: rgba(224,120,48,0.1);
+      border: 1px solid rgba(224,120,48,0.2);
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      color: var(--night);
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-sub {
+      font-size: clamp(15px, 2vw, 18px);
+      color: var(--stone);
+      line-height: 1.6;
+      max-width: 520px;
+      margin: 0 auto 28px;
+    }
+
+    .hero-path {
+      font-size: 14px;
+      color: var(--stone);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .hero-path .step { font-weight: 500; color: var(--night); }
+    .hero-path .arrow { color: var(--sunset); }
+
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--sunset);
+      color: #fff;
+      padding: 16px 32px;
+      border-radius: 14px;
+      font-size: 17px;
+      font-weight: 700;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 16px var(--sunset-shadow);
+      transition: transform 0.15s, opacity 0.15s;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover { transform: translateY(-1px); opacity: 0.92; }
+
+    .btn-microcopy {
+      font-size: 13px;
+      color: #999;
+      margin-top: 4px;
+    }
+
+    .btn-solo {
+      background: none;
+      border: none;
+      color: #999;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      margin-top: 8px;
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: #fff;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--stone);
+      font-weight: 500;
+    }
+
+    .trust-check {
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      background: var(--ocean-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .trust-check svg { width: 12px; height: 12px; }
+
+    /* ── SECTIONS ── */
+    section { padding: 64px 24px; }
+    .section-inner { max-width: 720px; margin: 0 auto; }
+    .section-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--sunset); margin-bottom: 8px; }
+    .section-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(22px, 3vw, 28px); font-weight: 700; margin-bottom: 12px; }
+    .section-sub { font-size: 16px; color: var(--stone); margin-bottom: 40px; line-height: 1.6; }
+
+    /* ── HOW IT WORKS ── */
+    .how { background: var(--shell); }
+
+    .steps { display: flex; flex-direction: column; gap: 24px; }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: #fff;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--sunset-light);
+      color: var(--sunset);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .step-desc { font-size: 14px; color: var(--stone); line-height: 1.5; }
+
+    /* ── PREVIEW ── */
+    .preview { background: #fff; }
+
+    .preview-card {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      margin-bottom: 24px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card-img {
+      height: 180px;
+      background: linear-gradient(135deg, #56B4D3 0%, #2A7F9E 100%);
+      position: relative;
+    }
+
+    .card-best {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(255,255,255,0.93);
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--sunset);
+    }
+
+    .card-provider-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255,255,255,0.93);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--ocean);
+    }
+
+    .card-dest {
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .card-body { padding: 16px; background: #fff; }
+    .card-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+    .card-match { font-size: 13px; color: var(--sunset); font-weight: 500; margin-bottom: 6px; }
+    .card-meta { font-size: 13px; color: #888; margin-bottom: 10px; }
+
+    .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+    .tag { font-size: 11px; padding: 3px 10px; border-radius: 10px; font-weight: 500; }
+    .tag-warm { background: var(--sunset-light); color: var(--sunset); }
+    .tag-trust { background: var(--ocean-light); color: var(--ocean); }
+
+    .card-footer { display: flex; justify-content: space-between; align-items: flex-end; }
+    .card-price { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; font-weight: 700; }
+    .card-price span { font-size: 14px; font-weight: 400; color: #888; }
+    .card-price-check { font-size: 11px; color: #bbb; margin-top: 2px; }
+    .card-cta-btn { background: var(--sunset); color: #fff; border: none; padding: 10px 18px; border-radius: 10px; font-size: 13px; font-weight: 600; font-family: 'DM Sans', sans-serif; cursor: pointer; }
+
+    /* top 3 table */
+    .top3 { border-radius: 14px; border: 1px solid var(--border); overflow: hidden; max-width: 400px; margin: 0 auto; }
+    .top3-header { background: var(--shell); padding: 12px 16px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 600; }
+    .top3-row { display: grid; grid-template-columns: 28px 1fr auto; gap: 12px; padding: 12px 16px; align-items: center; border-top: 1px solid var(--border); }
+    .top3-num { width: 24px; height: 24px; border-radius: 6px; background: var(--sunset-light); color: var(--sunset); font-weight: 600; font-size: 12px; display: flex; align-items: center; justify-content: center; }
+    .top3-name { font-size: 14px; font-weight: 500; }
+    .top3-name small { display: block; font-size: 12px; color: #999; font-weight: 400; }
+    .top3-price { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15px; }
+
+    /* ── DUO ── */
+    .duo { background: var(--shell); }
+
+    .duo-steps { display: flex; flex-direction: column; gap: 16px; }
+
+    .duo-step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .duo-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .duo-icon-a { background: var(--sunset-light); }
+    .duo-icon-b { background: var(--ocean-light); }
+    .duo-icon-m { background: #E8F5E9; }
+
+    .duo-step-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+    .duo-step-desc { font-size: 14px; color: var(--stone); line-height: 1.5; }
+
+    .duo-privacy {
+      margin-top: 20px;
+      padding: 12px 16px;
+      background: #fff;
+      border-radius: 10px;
+      font-size: 13px;
+      color: var(--stone);
+      border: 1px solid var(--border);
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    /* ── PARTNERS ── */
+    .partners { background: #fff; padding: 40px 24px; text-align: center; }
+    .partners-label { font-size: 13px; color: #999; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 20px; }
+    .partner-logos { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .partner-logo { padding: 10px 20px; background: var(--shell); border-radius: 10px; font-size: 15px; font-weight: 700; color: var(--stone); }
+
+    /* ── FAQ ── */
+    .faq-section { background: var(--sand); }
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { background: #fff; border-radius: 12px; padding: 18px 20px; }
+    .faq-q { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+    .faq-a { font-size: 14px; color: var(--stone); line-height: 1.6; }
+
+    /* ── BOTTOM CTA ── */
+    .bottom-cta {
+      background: linear-gradient(180deg, var(--sunset-light) 0%, var(--sand) 100%);
+      padding: 64px 24px;
+      text-align: center;
+    }
+
+    .bottom-cta h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(22px, 3vw, 28px);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .bottom-cta p { font-size: 16px; color: var(--stone); margin-bottom: 28px; max-width: 400px; margin-left: auto; margin-right: auto; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--night);
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    footer .footer-logo {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    footer .footer-logo span { color: var(--sunset); }
+
+    footer p { font-size: 12px; color: #555; margin-bottom: 4px; line-height: 1.6; }
+    footer a { color: #777; text-decoration: none; }
+    footer a:hover { color: #aaa; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="/"><span>k</span>iespret</a>
+  <button class="nav-cta" onclick="document.getElementById('start').scrollIntoView({behavior:'smooth'})">Samen kiezen</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="start">
+  <div class="hero-badge">Keuzehulp voor koppels</div>
+  <h1>Samen een vakantie kiezen, zonder eindeloos vergelijken</h1>
+  <p class="hero-sub">Geen honderden opties. Beantwoord 4 vragen, bekijk ±10 vakanties die passen, en vergelijk jullie top 3. Daarna boek je direct bij de aanbieder.</p>
+
+  <div class="hero-path">
+    <span class="step">4 vragen</span>
+    <span class="arrow">→</span>
+    <span class="step">±10 opties</span>
+    <span class="arrow">→</span>
+    <span class="step">jullie top 3</span>
+    <span class="arrow">→</span>
+    <span class="step">boek bij de aanbieder</span>
+  </div>
+
+  <div class="cta-group">
+    <button class="btn-primary">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3.5C9 3.5 7 1.5 4.5 3C2 4.5 2 7.5 4.5 9.5L9 14L13.5 9.5C16 7.5 16 4.5 13.5 3C11 1.5 9 3.5 9 3.5Z" fill="white" opacity="0.9"/></svg>
+      Samen kiezen
+    </button>
+    <div class="btn-microcopy">Jij start, je partner krijgt daarna een link</div>
+    <button class="btn-solo">Of probeer het alleen</button>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke="#2A7F9E" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    Boek direct bij bekende aanbieders
+  </div>
+  <div class="trust-item">
+    <div class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke="#2A7F9E" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    Geen extra kosten via Kiespret
+  </div>
+  <div class="trust-item">
+    <div class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke="#2A7F9E" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    Prijsindicatie met datum laatste check
+  </div>
+  <div class="trust-item">
+    <div class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke="#2A7F9E" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    Geen account nodig
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="section-inner">
+    <div class="section-label">Hoe het werkt</div>
+    <div class="section-title">Van twijfelen naar jullie top 3</div>
+    <div class="section-sub">Drie stappen, geen gedoe.</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">Vertel wat jullie zoeken</div>
+          <div class="step-desc">Vier korte vragen: sfeer, wanneer, hoe lang, budget. Geen eindeloze filters.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">Bekijk ±10 vakanties die passen</div>
+          <div class="step-desc">Zonvakanties bij TUI, Sunweb en andere bekende aanbieders. Bewaar wat je leuk vindt, sla de rest over.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">Vergelijk jullie top 3</div>
+          <div class="step-desc">Zie welke vakanties jullie allebei leuk vinden. Vergelijk prijs, duur en sfeer naast elkaar. Boek daarna direct bij de aanbieder.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREVIEW -->
+<section class="preview">
+  <div class="section-inner" style="text-align:center">
+    <div class="section-label">Zo ziet het eruit</div>
+    <div class="section-title">Een kaart, niet een catalogus</div>
+    <div class="section-sub">Elke vakantie laat zien waarom hij bij jullie past — niet alleen de specs.</div>
+
+    <div class="preview-card">
+      <div class="card-img">
+        <span class="card-best">✦ Beste match</span>
+        <span class="card-provider-badge">TUI</span>
+        <span class="card-dest">Kreta, Griekenland</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Boutique beach resort</div>
+        <div class="card-match">Past bij jullie: rustig, strand, adults-only</div>
+        <div class="card-meta">All-inclusive · 7 nachten · mei · 3u vliegen</div>
+        <div class="card-tags">
+          <span class="tag tag-warm">strand</span>
+          <span class="tag tag-warm">adults-only</span>
+          <span class="tag tag-trust">Boek bij TUI</span>
+        </div>
+        <div class="card-footer">
+          <div>
+            <div class="card-price">€749 <span>p.p.</span></div>
+            <div class="card-price-check">Gecheckt: april 2026</div>
+          </div>
+          <button class="card-cta-btn">Bewaar ♥</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="top3">
+      <div class="top3-header">Jullie top 3 naast elkaar</div>
+      <div class="top3-row">
+        <div class="top3-num">1</div>
+        <div class="top3-name">Boutique beach, Kreta<small>TUI · All-inclusive · 7 nch</small></div>
+        <div class="top3-price">€749</div>
+      </div>
+      <div class="top3-row">
+        <div class="top3-num">2</div>
+        <div class="top3-name">Adults only resort, Mallorca<small>Sunweb · All-inclusive · 7 nch</small></div>
+        <div class="top3-price">€699</div>
+      </div>
+      <div class="top3-row">
+        <div class="top3-num">3</div>
+        <div class="top3-name">Seaside villa, Rhodos<small>D-reizen · Halfpension · 7 nch</small></div>
+        <div class="top3-price">€819</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DUO -->
+<section class="duo">
+  <div class="section-inner">
+    <div class="section-label">Samen kiezen</div>
+    <div class="section-title">Zo werkt de duo-link</div>
+    <div class="section-sub">Eén van jullie start, de ander krijgt een link. Geen app, geen account.</div>
+    <div class="duo-steps">
+      <div class="duo-step">
+        <div class="duo-icon duo-icon-a">👤</div>
+        <div>
+          <div class="duo-step-title">Jij doorloopt de selectie</div>
+          <div class="duo-step-desc">Beantwoord 4 vragen en bewaar je favorieten.</div>
+        </div>
+      </div>
+      <div class="duo-step">
+        <div class="duo-icon duo-icon-b">🔗</div>
+        <div>
+          <div class="duo-step-title">Deel de link met je partner</div>
+          <div class="duo-step-desc">Via WhatsApp, sms of e-mail. Je partner ziet dezelfde vakanties en bewaart ook favorieten.</div>
+        </div>
+      </div>
+      <div class="duo-step">
+        <div class="duo-icon duo-icon-m">✓</div>
+        <div>
+          <div class="duo-step-title">Zie jullie overlap</div>
+          <div class="duo-step-desc">Alleen de vakanties die jullie allebei leuk vinden. Vergelijk en boek direct bij de aanbieder.</div>
+        </div>
+      </div>
+    </div>
+    <div class="duo-privacy">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex-shrink:0;margin-top:1px"><path d="M8 1.5L2 4v4c0 3.31 2.55 6.4 6 7 3.45-.6 6-3.69 6-7V4L8 1.5z" stroke="#666" stroke-width="1.2" fill="none"/></svg>
+      Alleen wie jij de link stuurt kan jullie selectie zien. Geen account nodig.
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<div class="partners">
+  <div class="partners-label">Je boekt bij bekende aanbieders</div>
+  <div class="partner-logos">
+    <div class="partner-logo">TUI</div>
+    <div class="partner-logo">Sunweb</div>
+    <div class="partner-logo">D-reizen</div>
+    <div class="partner-logo">Corendon</div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-inner">
+    <div class="section-label">Vragen</div>
+    <div class="section-title">Veelgestelde vragen</div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Boek ik via Kiespret?</div>
+        <div class="faq-a">Nee — Kiespret helpt je kiezen, niet boeken. Je klikt door naar de aanbieder (TUI, Sunweb, D-reizen of Corendon) en boekt daar direct, tegen dezelfde prijs. Wij beheren geen betalingen.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Betaal ik extra?</div>
+        <div class="faq-a">Nee. Wij verdienen een kleine commissie van de aanbieder als je boekt via onze link. Jij betaalt exact dezelfde prijs als wanneer je direct naar de aanbieder gaat.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Hoe actueel zijn de prijzen?</div>
+        <div class="faq-a">Bij elke vakantie staat wanneer de prijs voor het laatst gecheckt is. De actuele prijs en beschikbaarheid zie je altijd op de website van de aanbieder zelf.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Moet ik een account aanmaken?</div>
+        <div class="faq-a">Nee. Je start direct, zonder registratie. Je top 3 bewaar en deel je via een unieke link.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<div class="bottom-cta">
+  <h2>Minder gedoe, sneller eruit komen</h2>
+  <p>Kies samen een zonvakantie bij bekende aanbieders — zonder urenlang te vergelijken.</p>
+  <div class="cta-group">
+    <button class="btn-primary">Samen kiezen</button>
+    <div class="btn-microcopy">Jij start, je partner krijgt daarna een link</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><span>k</span>iespret</div>
+  <p>Keuzehulp voor koppels — geen boekingssite</p>
+  <p>Wij verdienen een kleine commissie als je boekt via onze link. Jij betaalt niet meer.</p>
+  <p style="margin-top:12px"><a href="#">Over Kiespret</a> · <a href="#">Hoe het werkt</a> · <a href="#">Contact</a></p>
+</footer>
+
+</body>
+</html>
