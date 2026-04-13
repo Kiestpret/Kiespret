@@ -190,32 +190,20 @@
     .option-btn:hover { border-color: var(--sunset); }
     .option-btn.selected { border-color: var(--sunset); background: var(--sunset-light); }
 
-    .option-icon {
-      font-size: 22px;
-      flex-shrink: 0;
-    }
-
-    .option-main {
-      font-weight: 600;
-      font-size: 15px;
-      margin-bottom: 2px;
-    }
-
-    .option-sub {
-      font-size: 13px;
-      color: var(--stone);
-    }
+    .option-icon { font-size: 22px; flex-shrink: 0; }
+    .option-main { font-weight: 600; font-size: 15px; margin-bottom: 2px; }
+    .option-sub { font-size: 13px; color: var(--stone); }
 
     /* Period checkbox grid */
     .period-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 8px;
       margin-bottom: 32px;
     }
 
     @media (max-width: 400px) {
-      .period-grid { grid-template-columns: repeat(2, 1fr); }
+      .period-grid { grid-template-columns: repeat(3, 1fr); }
     }
 
     .period-btn {
@@ -233,7 +221,7 @@
     .period-btn:hover { border-color: var(--sunset); }
     .period-btn.selected { border-color: var(--sunset); background: var(--sunset-light); color: var(--sunset); font-weight: 600; }
 
-    /* Duur slider */
+    /* Duur buttons */
     .duur-options {
       display: flex;
       gap: 10px;
@@ -296,12 +284,12 @@
 
     .card-stack {
       position: relative;
-      height: 580px;
+      height: 620px;
       margin-bottom: 24px;
     }
 
     @media (max-width: 400px) {
-      .card-stack { height: 520px; }
+      .card-stack { height: 560px; }
     }
 
     .trip-card {
@@ -318,21 +306,9 @@
     }
 
     .trip-card:active { cursor: grabbing; }
-
-    .trip-card.back-card {
-      transform: scale(0.96) translateY(8px);
-      z-index: 1;
-    }
-
-    .trip-card.front-card {
-      z-index: 10;
-      transition: transform 0.05s, box-shadow 0.2s;
-    }
-
-    .trip-card.front-card.dragging {
-      transition: none;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.2);
-    }
+    .trip-card.back-card { transform: scale(0.96) translateY(8px); z-index: 1; }
+    .trip-card.front-card { z-index: 10; transition: transform 0.05s, box-shadow 0.2s; }
+    .trip-card.front-card.dragging { transition: none; box-shadow: 0 16px 48px rgba(0,0,0,0.2); }
 
     .trip-card.fly-right {
       transition: transform 0.4s ease, opacity 0.4s ease !important;
@@ -348,14 +324,35 @@
 
     .card-img {
       width: 100%;
-      height: 240px;
+      height: 220px;
       object-fit: cover;
       display: block;
       pointer-events: none;
     }
 
-    .card-body {
-      padding: 20px;
+    /* Beste match label on first card */
+    .best-match-label {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--green);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 20px;
+      z-index: 5;
+      letter-spacing: 0.02em;
+    }
+
+    .card-body { padding: 16px 20px 20px; }
+
+    .card-match-reason {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--green);
+      margin-bottom: 10px;
+      line-height: 1.4;
     }
 
     .card-aanbieder {
@@ -364,37 +361,27 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--ocean);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .card-title {
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-weight: 700;
-      font-size: 20px;
+      font-size: 19px;
       margin-bottom: 4px;
     }
 
     .card-dest {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--stone);
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .card-why {
-      font-size: 14px;
-      line-height: 1.5;
-      color: var(--night);
-      margin-bottom: 16px;
+      margin-bottom: 10px;
     }
 
     .card-highlights {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .tag {
@@ -402,7 +389,7 @@
       color: var(--ocean);
       padding: 4px 10px;
       border-radius: 20px;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 500;
     }
 
@@ -410,35 +397,29 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: 16px;
+      padding-top: 12px;
       border-top: 1px solid var(--border);
     }
 
-    .card-price-label {
-      font-size: 12px;
-      color: var(--stone);
-    }
+    .card-price-label { font-size: 11px; color: var(--stone); }
 
     .card-price {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 800;
       color: var(--night);
     }
 
-    .card-price span {
-      font-size: 13px;
-      font-weight: 400;
-      color: var(--stone);
-    }
+    .card-price span { font-size: 12px; font-weight: 400; color: var(--stone); }
+    .card-adults-badge { background: var(--sunset-light); color: var(--sunset); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; }
 
-    .card-adults-badge {
-      background: var(--sunset-light);
-      color: var(--sunset);
+    .card-trust {
       font-size: 11px;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 20px;
+      color: var(--stone);
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
 
     /* Like / Nope overlays */
@@ -455,21 +436,11 @@
       pointer-events: none;
       transition: opacity 0.1s;
       border: 3px solid;
+      z-index: 20;
     }
 
-    .overlay-yes {
-      left: 20px;
-      color: var(--green);
-      border-color: var(--green);
-      transform: rotate(-10deg);
-    }
-
-    .overlay-no {
-      right: 20px;
-      color: var(--red);
-      border-color: var(--red);
-      transform: rotate(10deg);
-    }
+    .overlay-yes { left: 20px; color: var(--green); border-color: var(--green); transform: rotate(-10deg); }
+    .overlay-no { right: 20px; color: var(--red); border-color: var(--red); transform: rotate(10deg); }
 
     /* Swipe buttons */
     .swipe-actions {
@@ -496,14 +467,6 @@
     .action-btn.nope:hover { border-color: var(--red); background: #fff5f5; transform: scale(1.1); }
     .action-btn.like:hover { border-color: var(--green); background: #f0faf4; transform: scale(1.1); }
 
-    /* No more cards */
-    .no-cards {
-      text-align: center;
-      padding: 60px 24px;
-    }
-
-    .no-cards-icon { font-size: 48px; margin-bottom: 16px; }
-
     /* ── RESULTS SCREEN ───────────────────────────────────────────── */
     .results-wrap {
       max-width: 640px;
@@ -512,11 +475,7 @@
       width: 100%;
     }
 
-    .results-header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
+    .results-header { text-align: center; margin-bottom: 12px; }
     .results-emoji { font-size: 40px; margin-bottom: 12px; }
 
     .results-title {
@@ -526,9 +485,27 @@
       margin-bottom: 8px;
     }
 
-    .results-sub {
-      font-size: 15px;
-      color: var(--stone);
+    .results-sub { font-size: 15px; color: var(--stone); }
+
+    /* Redactioneel advies */
+    .advice-box {
+      background: var(--ocean-light);
+      border-left: 4px solid var(--ocean);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--night);
+    }
+
+    .advice-label {
+      font-weight: 700;
+      color: var(--ocean);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
     }
 
     .result-card {
@@ -553,15 +530,8 @@
     .rank-2 { background: var(--shell); color: var(--stone); }
     .rank-3 { background: var(--shell); color: var(--stone); }
 
-    .result-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .result-body {
-      padding: 20px;
-    }
+    .result-img { width: 100%; height: 180px; object-fit: cover; }
+    .result-body { padding: 20px; }
 
     .result-title {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -570,23 +540,27 @@
       margin-bottom: 4px;
     }
 
-    .result-dest {
-      font-size: 14px;
-      color: var(--stone);
-      margin-bottom: 12px;
-    }
+    .result-dest { font-size: 14px; color: var(--stone); margin-bottom: 6px; }
 
-    .result-why {
-      font-size: 14px;
-      line-height: 1.5;
+    /* Vergelijkingsdimensies */
+    .result-dims {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px 16px;
+      font-size: 13px;
       margin-bottom: 16px;
     }
+
+    .dim-label { color: var(--stone); }
+    .dim-value { font-weight: 600; }
 
     .result-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
     }
 
     .result-price {
@@ -595,11 +569,7 @@
       font-weight: 800;
     }
 
-    .result-price small {
-      font-size: 13px;
-      font-weight: 400;
-      color: var(--stone);
-    }
+    .result-price small { font-size: 13px; font-weight: 400; color: var(--stone); }
 
     .book-btn {
       background: var(--sunset);
@@ -621,10 +591,7 @@
 
     .book-btn:hover { background: #c96a28; transform: translateY(-1px); }
 
-    .results-footer {
-      text-align: center;
-      margin-top: 32px;
-    }
+    .results-footer { text-align: center; margin-top: 32px; }
 
     .restart-btn {
       background: none;
@@ -647,26 +614,73 @@
       line-height: 1.5;
     }
 
-    /* No results */
-    .no-results {
-      text-align: center;
-      padding: 48px 24px;
+    /* ── OUTBOUND MODAL ───────────────────────────────────────────── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
     }
 
-    /* ── EMPTY STATE ──────────────────────────────────────────────── */
-    .empty-state {
+    .modal-overlay.active { display: flex; }
+
+    .modal-box {
+      background: white;
+      border-radius: 20px;
+      max-width: 420px;
+      width: 100%;
+      padding: 32px 28px;
       text-align: center;
-      padding: 80px 24px;
+      box-shadow: 0 16px 64px rgba(0,0,0,0.2);
     }
 
-    .empty-icon { font-size: 48px; margin-bottom: 16px; }
-    .empty-title {
+    .modal-emoji { font-size: 36px; margin-bottom: 12px; }
+
+    .modal-title {
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-weight: 700;
-      font-size: 22px;
-      margin-bottom: 8px;
+      font-size: 20px;
+      margin-bottom: 12px;
     }
-    .empty-sub { font-size: 15px; color: var(--stone); margin-bottom: 24px; }
+
+    .modal-body {
+      font-size: 14px;
+      color: var(--stone);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .modal-go {
+      background: var(--sunset);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 28px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.2s;
+      margin-bottom: 10px;
+    }
+
+    .modal-go:hover { background: #c96a28; }
+
+    .modal-back {
+      background: none;
+      border: none;
+      font-size: 13px;
+      color: var(--stone);
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .modal-back:hover { color: var(--night); }
   </style>
 </head>
 <body>
@@ -719,33 +733,40 @@
     </div>
   </div>
 
-  <!-- ══ SCREEN: STAP 2 — BUDGET ═════════════════════════════════════ -->
+  <!-- ══ SCREEN: STAP 2 — BUDGET (4 opties conform bouwplan) ══════════ -->
   <div class="screen" id="screen-budget">
     <div class="onboarding-wrap">
       <div class="question-label">Stap 2 van 4</div>
       <h1 class="question-title">Wat mag het kosten?</h1>
-      <p class="question-sub">Prijs per persoon, voor 7 nachten.</p>
+      <p class="question-sub">Per persoon, inclusief vlucht.</p>
 
       <div class="option-list">
-        <button class="option-btn" data-budget="800" onclick="selectBudget(this)">
+        <button class="option-btn" data-budget="600" onclick="selectBudget(this)">
           <span class="option-icon">💛</span>
           <div>
-            <div class="option-main">Tot €800</div>
-            <div class="option-sub">Goede deal, zonvakantie voor de prijs</div>
+            <div class="option-main">Tot €600</div>
+            <div class="option-sub">Budgetvriendelijk — zonvakantie voor de prijs</div>
           </div>
         </button>
-        <button class="option-btn" data-budget="1100" onclick="selectBudget(this)">
+        <button class="option-btn" data-budget="900" onclick="selectBudget(this)">
           <span class="option-icon">🧡</span>
           <div>
-            <div class="option-main">€800 – €1.100</div>
-            <div class="option-sub">Kwaliteit staat centraal</div>
+            <div class="option-main">€600 – €900</div>
+            <div class="option-sub">Midden — goede balans prijs en kwaliteit</div>
+          </div>
+        </button>
+        <button class="option-btn" data-budget="1200" onclick="selectBudget(this)">
+          <span class="option-icon">🔶</span>
+          <div>
+            <div class="option-main">€900 – €1.200</div>
+            <div class="option-sub">Comfortabel — kwaliteit staat centraal</div>
           </div>
         </button>
         <button class="option-btn" data-budget="9999" onclick="selectBudget(this)">
           <span class="option-icon">✨</span>
           <div>
-            <div class="option-main">Meer dan €1.100</div>
-            <div class="option-sub">Comfort en luxe mogen wat kosten</div>
+            <div class="option-main">Meer dan €1.200</div>
+            <div class="option-sub">Geen bezwaar — luxe mag wat kosten</div>
           </div>
         </button>
       </div>
@@ -756,7 +777,7 @@
     </div>
   </div>
 
-  <!-- ══ SCREEN: STAP 3 — PERIODE ════════════════════════════════════ -->
+  <!-- ══ SCREEN: STAP 3 — PERIODE (apr–okt conform bouwplan) ══════════ -->
   <div class="screen" id="screen-periode">
     <div class="onboarding-wrap">
       <div class="question-label">Stap 3 van 4</div>
@@ -764,9 +785,6 @@
       <p class="question-sub">Kies een of meerdere maanden die uitkomen.</p>
 
       <div class="period-grid">
-        <button class="period-btn" data-maand="januari"   onclick="toggleMaand(this)">jan</button>
-        <button class="period-btn" data-maand="februari"  onclick="toggleMaand(this)">feb</button>
-        <button class="period-btn" data-maand="maart"     onclick="toggleMaand(this)">mrt</button>
         <button class="period-btn" data-maand="april"     onclick="toggleMaand(this)">apr</button>
         <button class="period-btn" data-maand="mei"       onclick="toggleMaand(this)">mei</button>
         <button class="period-btn" data-maand="juni"      onclick="toggleMaand(this)">jun</button>
@@ -774,8 +792,6 @@
         <button class="period-btn" data-maand="augustus"  onclick="toggleMaand(this)">aug</button>
         <button class="period-btn" data-maand="september" onclick="toggleMaand(this)">sep</button>
         <button class="period-btn" data-maand="oktober"   onclick="toggleMaand(this)">okt</button>
-        <button class="period-btn" data-maand="november"  onclick="toggleMaand(this)">nov</button>
-        <button class="period-btn" data-maand="december"  onclick="toggleMaand(this)">dec</button>
       </div>
 
       <button class="cta-btn" id="btnPeriode" onclick="goToStap4()" disabled>
@@ -784,7 +800,7 @@
     </div>
   </div>
 
-  <!-- ══ SCREEN: STAP 4 — DUUR ═══════════════════════════════════════ -->
+  <!-- ══ SCREEN: STAP 4 — DUUR (4 opties conform bouwplan) ════════════ -->
   <div class="screen" id="screen-duur">
     <div class="onboarding-wrap">
       <div class="question-label">Stap 4 van 4</div>
@@ -792,8 +808,10 @@
       <p class="question-sub">We zoeken vakanties die precies passen.</p>
 
       <div class="duur-options">
-        <button class="duur-btn" data-duur="7"  onclick="selectDuur(this)">1 week</button>
-        <button class="duur-btn" data-duur="14" onclick="selectDuur(this)">2 weken</button>
+        <button class="duur-btn" data-duur="7"    onclick="selectDuur(this)">1 week</button>
+        <button class="duur-btn" data-duur="10"   onclick="selectDuur(this)">10 dagen</button>
+        <button class="duur-btn" data-duur="14"   onclick="selectDuur(this)">2 weken</button>
+        <button class="duur-btn" data-duur="0"    onclick="selectDuur(this)">Maakt niet uit</button>
       </div>
 
       <button class="cta-btn" id="btnDuur" onclick="startSwipen()" disabled>
@@ -809,7 +827,7 @@
       <div class="card-stack" id="cardStack"></div>
       <div class="swipe-actions">
         <button class="action-btn nope" onclick="swipeCard('left')" title="Nee">👎</button>
-        <button class="action-btn like" onclick="swipeCard('right')" title="Ja!">👍</button>
+        <button class="action-btn like" onclick="swipeCard('right')" title="Ja, bewaar!">👍</button>
       </div>
     </div>
   </div>
@@ -819,16 +837,28 @@
     <div class="results-wrap">
       <div class="results-header">
         <div class="results-emoji">🎉</div>
-        <h2 class="results-title">Jullie top 3 vakanties</h2>
+        <h2 class="results-title">Jullie top 3</h2>
         <p class="results-sub">Op basis van jullie voorkeuren — gesorteerd op match</p>
       </div>
 
+      <div id="adviceBox"></div>
       <div id="resultsList"></div>
 
       <div class="results-footer">
         <button class="restart-btn" onclick="restart()">↩ Opnieuw beginnen</button>
-        <p class="results-note">Prijzen zijn indicatief p.p. o.b.v. april 2026. Actuele prijs zie je bij de aanbieder.</p>
+        <p class="results-note">Prijzen zijn indicatief p.p. — actuele prijs en beschikbaarheid zie je bij de aanbieder.</p>
       </div>
+    </div>
+  </div>
+
+  <!-- ══ OUTBOUND MODAL ═══════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="outboundModal">
+    <div class="modal-box">
+      <div class="modal-emoji">🎯</div>
+      <div class="modal-title" id="modalTitle">Jullie topkeuze staat klaar</div>
+      <div class="modal-body" id="modalBody"></div>
+      <button class="modal-go" id="modalGo">Ga naar TUI →</button>
+      <button class="modal-back" onclick="closeModal()">← Terug naar top 3</button>
     </div>
   </div>
 
@@ -839,23 +869,24 @@
       sfeer: [],
       budgetMax: null,
       maanden: [],
-      duur: null,
+      duur: null,      // 0 = maakt niet uit
       airport: 'AMS',
     };
 
     let currentTrips = [];
     let currentIndex = 0;
     let liked = [];
+    let likedTags = {};   // tag-scoring state
+
+    const MAX_DECK = 10;  // bouwplan: 8–10 kaarten
 
     // ── PROGRESS ───────────────────────────────────────────────────────────
     function setProgress(pct, step, total) {
       document.getElementById('progressFill').style.width = pct + '%';
       document.getElementById('navStep').textContent = total
-        ? `Stap ${step} van ${total}`
-        : step;
+        ? `Stap ${step} van ${total}` : step;
     }
 
-    // ── SCREEN ROUTING ─────────────────────────────────────────────────────
     function showScreen(id) {
       document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
       document.getElementById(id).classList.add('active');
@@ -870,25 +901,19 @@
       document.getElementById('btnSfeer').disabled = false;
     }
 
-    function goToStap2() {
-      setProgress(25, 2, 4);
-      showScreen('screen-budget');
-    }
+    function goToStap2() { setProgress(25, 2, 4); showScreen('screen-budget'); }
 
-    // ── STAP 2: BUDGET ─────────────────────────────────────────────────────
+    // ── STAP 2: BUDGET (4 ranges conform bouwplan) ─────────────────────────
     function selectBudget(el) {
-      document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+      document.querySelectorAll('#screen-budget .option-btn').forEach(b => b.classList.remove('selected'));
       el.classList.add('selected');
       prefs.budgetMax = parseInt(el.dataset.budget);
       document.getElementById('btnBudget').disabled = false;
     }
 
-    function goToStap3() {
-      setProgress(50, 3, 4);
-      showScreen('screen-periode');
-    }
+    function goToStap3() { setProgress(50, 3, 4); showScreen('screen-periode'); }
 
-    // ── STAP 3: PERIODE ────────────────────────────────────────────────────
+    // ── STAP 3: PERIODE (apr–okt) ──────────────────────────────────────────
     function toggleMaand(el) {
       el.classList.toggle('selected');
       prefs.maanden = Array.from(document.querySelectorAll('.period-btn.selected'))
@@ -896,12 +921,9 @@
       document.getElementById('btnPeriode').disabled = prefs.maanden.length === 0;
     }
 
-    function goToStap4() {
-      setProgress(75, 4, 4);
-      showScreen('screen-duur');
-    }
+    function goToStap4() { setProgress(75, 4, 4); showScreen('screen-duur'); }
 
-    // ── STAP 4: DUUR ───────────────────────────────────────────────────────
+    // ── STAP 4: DUUR (4 opties incl. 10d en "maakt niet uit") ──────────────
     function selectDuur(el) {
       document.querySelectorAll('.duur-btn').forEach(b => b.classList.remove('selected'));
       el.classList.add('selected');
@@ -909,16 +931,46 @@
       document.getElementById('btnDuur').disabled = false;
     }
 
+    // ── MATCHING (met duur=0 = alle duren) ─────────────────────────────────
+    function matchVariantCustom(trip, prefs) {
+      return trip.variants.find(v =>
+        prefs.maanden.includes(v.maand) &&
+        (prefs.duur === 0 || v.duur === prefs.duur) &&
+        v.airport === prefs.airport &&
+        v.prijs <= prefs.budgetMax
+      ) || null;
+    }
+
+    function filterTripsCustom(prefs) {
+      return trips
+        .map(trip => {
+          const variant = matchVariantCustom(trip, prefs);
+          if (!variant) return null;
+          const sfeermatch = trip.sfeer.some(s => prefs.sfeer.includes(s));
+          if (!sfeermatch) return null;
+          // Tag-overlap score
+          const tagScore = trip.sfeer.filter(s => prefs.sfeer.includes(s)).length;
+          return { ...trip, matchedVariant: variant, tagScore };
+        })
+        .filter(Boolean)
+        .sort((a, b) => b.tagScore - a.tagScore);
+    }
+
     // ── START SWIPEN ───────────────────────────────────────────────────────
     function startSwipen() {
-      currentTrips = filterTrips(prefs);
+      currentTrips = filterTripsCustom(prefs);
       currentIndex = 0;
       liked = [];
+      likedTags = {};
 
       if (currentTrips.length === 0) {
-        // Geen matches — verruim budget automatisch
         prefs.budgetMax = 9999;
-        currentTrips = filterTrips(prefs);
+        currentTrips = filterTripsCustom(prefs);
+      }
+
+      // Bouwplan: max 8–10 kaarten
+      if (currentTrips.length > MAX_DECK) {
+        currentTrips = currentTrips.slice(0, MAX_DECK);
       }
 
       setProgress(100, 'Swipen', null);
@@ -939,19 +991,17 @@
 
       updateCounter();
 
-      // Render top 2 kaarten (front + back)
       for (let i = Math.min(currentIndex + 1, currentTrips.length - 1); i >= currentIndex; i--) {
         const trip = currentTrips[i];
-        const card = buildCard(trip);
+        const card = buildCard(trip, i === currentIndex);
         card.classList.add(i === currentIndex ? 'front-card' : 'back-card');
         stack.appendChild(card);
       }
 
-      // Touch/drag only on front card
       initDrag(stack.querySelector('.front-card'));
     }
 
-    function buildCard(trip) {
+    function buildCard(trip, isFront) {
       const v = trip.matchedVariant;
       const card = document.createElement('div');
       card.className = 'trip-card';
@@ -963,23 +1013,29 @@
       const adultsBadge = trip.adultsOnly
         ? `<span class="card-adults-badge">Adults only</span>` : '';
 
+      // Bouwplan: "Beste match voor jullie" op eerste kaart
+      const bestMatchLabel = (isFront && currentIndex === 0)
+        ? `<div class="best-match-label">Beste match voor jullie</div>` : '';
+
       card.innerHTML = `
-        <div class="card-overlay overlay-yes">❤️ JA!</div>
-        <div class="card-overlay overlay-no">✕ NEE</div>
+        <div class="card-overlay overlay-yes">JA!</div>
+        <div class="card-overlay overlay-no">NEE</div>
+        ${bestMatchLabel}
         <img class="card-img" src="${trip.imageUrl}" alt="${trip.destination}" draggable="false">
         <div class="card-body">
+          <div class="card-match-reason">${trip.matchReason}</div>
           <div class="card-aanbieder">${trip.aanbieder} · ${trip.boardType}</div>
           <div class="card-title">${trip.title}</div>
-          <div class="card-dest">📍 ${trip.destination} · ✈️ ${trip.vluchtduur}</div>
-          <div class="card-why">${trip.whyThisTrip}</div>
+          <div class="card-dest">📍 ${trip.destination} · ✈️ ${trip.vluchtduur} · ${v.duur} nachten · ${v.maand}</div>
           <div class="card-highlights">${highlightTags}</div>
           <div class="card-price-row">
             <div>
-              <div class="card-price-label">v.a. per persoon</div>
-              <div class="card-price">€${v.prijs}<span> / 7 nachten</span></div>
+              <div class="card-price-label">Vanaf p.p. (${trip.prijsPeilDatum})</div>
+              <div class="card-price">€${v.prijs}<span> / ${v.duur} nachten</span></div>
             </div>
             ${adultsBadge}
           </div>
+          <div class="card-trust">✓ Boek direct bij ${trip.aanbieder}, geen extra kosten via Kiespret</div>
         </div>
       `;
       return card;
@@ -988,16 +1044,14 @@
     function updateCounter() {
       const remaining = currentTrips.length - currentIndex;
       document.getElementById('swipeCounter').textContent =
-        `${remaining} vakantie${remaining !== 1 ? 's' : ''} te gaan`;
+        `${currentIndex + 1} van ${currentTrips.length}`;
     }
 
     // ── DRAG / SWIPE ───────────────────────────────────────────────────────
     function initDrag(card) {
       if (!card) return;
-
       let startX = 0, startY = 0, dx = 0;
       let dragging = false;
-
       const overlayYes = card.querySelector('.overlay-yes');
       const overlayNo  = card.querySelector('.overlay-no');
 
@@ -1017,33 +1071,20 @@
         const dy = pt.clientY - startY;
         const rot = dx * 0.06;
         card.style.transform = `translate(${dx}px, ${dy * 0.3}px) rotate(${rot}deg)`;
-
         const threshold = 60;
         const ratio = Math.min(Math.abs(dx) / threshold, 1);
-        if (dx > 0) {
-          overlayYes.style.opacity = ratio;
-          overlayNo.style.opacity = 0;
-        } else {
-          overlayNo.style.opacity = ratio;
-          overlayYes.style.opacity = 0;
-        }
+        if (dx > 0) { overlayYes.style.opacity = ratio; overlayNo.style.opacity = 0; }
+        else { overlayNo.style.opacity = ratio; overlayYes.style.opacity = 0; }
       }
 
       function onEnd() {
         if (!dragging) return;
         dragging = false;
         card.classList.remove('dragging');
-
         const threshold = 80;
-        if (dx > threshold) {
-          resolveSwipe('right');
-        } else if (dx < -threshold) {
-          resolveSwipe('left');
-        } else {
-          card.style.transform = '';
-          overlayYes.style.opacity = 0;
-          overlayNo.style.opacity = 0;
-        }
+        if (dx > threshold) resolveSwipe('right');
+        else if (dx < -threshold) resolveSwipe('left');
+        else { card.style.transform = ''; overlayYes.style.opacity = 0; overlayNo.style.opacity = 0; }
       }
 
       card.addEventListener('mousedown', onStart);
@@ -1066,46 +1107,85 @@
 
       if (dir === 'right') {
         front.classList.add('fly-right');
-        liked.push(currentTrips[currentIndex]);
+        const trip = currentTrips[currentIndex];
+        liked.push(trip);
+
+        // Bouwplan: tag-scoring — track tags van gelikte trips
+        trip.tags.forEach(tag => { likedTags[tag] = (likedTags[tag] || 0) + 1; });
+
+        // Bouwplan: herorden na 3 swipes rechts
+        if (liked.length === 3) {
+          reorderRemainingDeck();
+        }
       } else {
         front.classList.add('fly-left');
       }
 
       currentIndex++;
-
-      setTimeout(() => {
-        renderCards();
-      }, 420);
+      setTimeout(() => renderCards(), 420);
     }
 
-    // ── RESULTATEN ─────────────────────────────────────────────────────────
+    // ── TAG-SCORING: herorden deck na 3 swipes rechts ──────────────────────
+    function reorderRemainingDeck() {
+      const remaining = currentTrips.slice(currentIndex + 1);
+      remaining.sort((a, b) => {
+        const scoreA = a.tags.reduce((sum, tag) => sum + (likedTags[tag] || 0), 0);
+        const scoreB = b.tags.reduce((sum, tag) => sum + (likedTags[tag] || 0), 0);
+        return scoreB - scoreA;
+      });
+      currentTrips = [
+        ...currentTrips.slice(0, currentIndex + 1),
+        ...remaining
+      ];
+    }
+
+    // ── RESULTATEN + VERGELIJKINGSLAAG + REDACTIONEEL ADVIES ───────────────
     function showResults() {
       setProgress(100, 'Jullie top 3', null);
       showScreen('screen-results');
 
       const list = document.getElementById('resultsList');
+      const adviceBox = document.getElementById('adviceBox');
       list.innerHTML = '';
+      adviceBox.innerHTML = '';
 
       const top3 = liked.slice(0, 3);
 
       if (top3.length === 0) {
         list.innerHTML = `
-          <div class="no-results">
+          <div style="text-align:center;padding:48px 24px">
             <div style="font-size:40px;margin-bottom:12px">🤔</div>
             <h3 style="margin-bottom:8px;font-family:'Plus Jakarta Sans',sans-serif">Geen favorieten</h3>
             <p style="color:var(--stone);margin-bottom:24px">Je hebt alle kaarten overgeslagen. Probeer het opnieuw met ruimere voorkeuren.</p>
             <button class="cta-btn" onclick="restart()" style="max-width:300px;margin:0 auto">Opnieuw beginnen</button>
-          </div>
-        `;
+          </div>`;
         return;
+      }
+
+      // Bouwplan: redactioneel advies boven vergelijking
+      if (top3.length >= 2) {
+        const advice = generateAdvice(top3);
+        adviceBox.innerHTML = `
+          <div class="advice-box">
+            <div class="advice-label">Ons advies</div>
+            ${advice}
+          </div>`;
       }
 
       const medals = ['🥇', '🥈', '🥉'];
       const rankLabels = ['Beste match', 'Goede optie', 'Ook een aanrader'];
       const rankClasses = ['rank-1', 'rank-2', 'rank-3'];
 
+      // Bouwplan: voeg sfeer-label toe per trip
+      const sfeerLabels = {
+        'strand': 'Strand & zon', 'rustig': 'Strand & zon', 'zon': 'Strand & zon',
+        'actief': 'Actief & verkennen', 'natuur': 'Actief & verkennen', 'avontuur': 'Actief & verkennen',
+        'resort': 'Resort & comfort', 'comfort': 'Resort & comfort', 'allinclusive': 'Resort & comfort'
+      };
+
       top3.forEach((trip, i) => {
         const v = trip.matchedVariant;
+        const sfeerLabel = sfeerLabels[trip.sfeer[0]] || trip.sfeer[0];
         const card = document.createElement('div');
         card.className = 'result-card';
         card.innerHTML = `
@@ -1115,18 +1195,52 @@
           <img class="result-img" src="${trip.imageUrl}" alt="${trip.destination}">
           <div class="result-body">
             <div class="result-title">${trip.title}</div>
-            <div class="result-dest">📍 ${trip.destination} · ${trip.aanbieder} · ${trip.boardType}</div>
-            <div class="result-why">${trip.whyThisTrip}</div>
+            <div class="result-dest">📍 ${trip.destination}</div>
+            <div class="result-dims">
+              <span class="dim-label">Sfeer</span><span class="dim-value">${sfeerLabel}</span>
+              <span class="dim-label">Prijs</span><span class="dim-value">Vanaf €${v.prijs} p.p. (${trip.prijsPeilDatum})</span>
+              <span class="dim-label">Vluchtduur</span><span class="dim-value">${trip.vluchtduur} vanaf Schiphol</span>
+              <span class="dim-label">Boardtype</span><span class="dim-value">${trip.boardType}</span>
+              <span class="dim-label">Aanbieder</span><span class="dim-value">${trip.aanbieder}</span>
+            </div>
             <div class="result-row">
               <div class="result-price">€${v.prijs}<small> p.p.</small></div>
-              <a class="book-btn" href="${v.affiliateUrl}" target="_blank" rel="noopener">
+              <button class="book-btn" onclick="openOutbound('${trip.aanbieder}', '${v.affiliateUrl}')">
                 Bekijk bij ${trip.aanbieder} →
-              </a>
+              </button>
             </div>
-          </div>
-        `;
+          </div>`;
         list.appendChild(card);
       });
+    }
+
+    // Bouwplan: redactioneel advies genereren
+    function generateAdvice(top3) {
+      const cheapest = top3.reduce((a, b) =>
+        a.matchedVariant.prijs < b.matchedVariant.prijs ? a : b);
+      const bestMatch = top3.reduce((a, b) =>
+        (a.tagScore || 0) > (b.tagScore || 0) ? a : b);
+
+      if (cheapest.id !== bestMatch.id) {
+        return `Als prijs belangrijker is: <strong>${cheapest.title}</strong> (€${cheapest.matchedVariant.prijs} p.p.). Als het vooral moet passen bij jullie sfeer: <strong>${bestMatch.title}</strong>.`;
+      }
+      return `<strong>${bestMatch.title}</strong> scoort het beste op zowel prijs als match — een sterke keuze.`;
+    }
+
+    // ── OUTBOUND MODAL (bouwplan: tussenstap voor affiliate klik) ──────────
+    function openOutbound(aanbieder, url) {
+      const modal = document.getElementById('outboundModal');
+      document.getElementById('modalTitle').textContent = 'Jullie topkeuze staat klaar';
+      document.getElementById('modalBody').innerHTML =
+        `Je boekt zo direct bij <strong>${aanbieder}</strong> — op hun website zie je de actuele prijs en beschikbaarheid. Geen extra kosten via Kiespret.`;
+      const goBtn = document.getElementById('modalGo');
+      goBtn.textContent = `Ga naar ${aanbieder} →`;
+      goBtn.onclick = () => { window.open(url, '_blank', 'noopener'); closeModal(); };
+      modal.classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('outboundModal').classList.remove('active');
     }
 
     // ── RESTART ────────────────────────────────────────────────────────────
@@ -1135,6 +1249,7 @@
       prefs.budgetMax = null;
       prefs.maanden = [];
       prefs.duur = null;
+      likedTags = {};
 
       document.querySelectorAll('.sfeer-card, .option-btn, .period-btn, .duur-btn')
         .forEach(el => el.classList.remove('selected'));
