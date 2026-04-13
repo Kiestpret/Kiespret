@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Over Kiespret — Wie we zijn</title>
+  <meta name="description" content="Leer meer over Kiespret: een vakantie-keuzehulp voor koppels die samen willen kiezen zonder eindeloos vergelijken.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --sunset: #E07830;
+      --sunset-light: #FFF0E6;
+      --ocean: #2A7F9E;
+      --ocean-light: #E8F4F8;
+      --sand: #FAFAF8;
+      --shell: #F5F5F2;
+      --night: #1A1A1A;
+      --stone: #666666;
+      --border: #E8E8E4;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--sand);
+      color: var(--night);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,250,248,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px; height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 20px; font-weight: 800;
+      color: var(--night); text-decoration: none; letter-spacing: -0.3px;
+    }
+    .nav-logo span { color: var(--sunset); }
+    .nav-cta {
+      background: var(--sunset); color: #fff; border: none;
+      padding: 8px 18px; border-radius: 10px;
+      font-size: 14px; font-weight: 600;
+      font-family: 'DM Sans', sans-serif; cursor: pointer;
+      transition: opacity 0.15s; text-decoration: none;
+    }
+    .nav-cta:hover { opacity: 0.88; }
+
+    .page-content {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .page-content h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+    .page-content h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 32px;
+      margin-bottom: 8px;
+    }
+    .page-content p {
+      font-size: 15px;
+      color: var(--night);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .highlight-box {
+      background: var(--sunset-light);
+      border-radius: 14px;
+      padding: 24px;
+      margin: 28px 0;
+    }
+    .highlight-box p {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--night);
+      margin-bottom: 0;
+    }
+    .values {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .value-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: #fff;
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .value-icon {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      background: var(--ocean-light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; flex-shrink: 0;
+    }
+    .value-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px; font-weight: 600; margin-bottom: 2px;
+    }
+    .value-desc { font-size: 14px; color: var(--stone); line-height: 1.5; }
+
+    .contact-box {
+      background: var(--shell);
+      border-radius: 14px;
+      padding: 24px;
+      margin-top: 32px;
+    }
+    .contact-box h2 { margin-top: 0; }
+    .contact-box a {
+      color: var(--ocean);
+      font-weight: 600;
+    }
+
+    footer {
+      background: var(--night);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    footer .footer-logo {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 8px;
+    }
+    footer .footer-logo span { color: var(--sunset); }
+    footer p { font-size: 12px; color: #555; margin-bottom: 4px; line-height: 1.6; }
+    footer a { color: #777; text-decoration: none; }
+    footer a:hover { color: #aaa; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/"><span>k</span>iespret</a>
+  <a class="nav-cta" href="app.html">Samen kiezen</a>
+</nav>
+
+<div class="page-content">
+  <h1>Over Kiespret</h1>
+
+  <p>Kiespret is gebouwd vanuit een simpele frustratie: samen een vakantie kiezen duurt veel te lang. Eindeloos scrollen door honderden opties, tientallen tabbladen open, en uiteindelijk toch niet tot een keuze komen.</p>
+
+  <p>Wij geloven dat het anders kan. Kiespret helpt koppels om in een paar minuten tot een top 3 te komen — zonder gedoe, zonder account, zonder informatie-overload.</p>
+
+  <div class="highlight-box">
+    <p>Kiespret is geen boekingssite en geen reisbureau. Wij helpen je kiezen. Boeken doe je direct bij de aanbieder, tegen dezelfde prijs.</p>
+  </div>
+
+  <h2>Hoe verdient Kiespret geld?</h2>
+  <p>Wij zijn volledig transparant over ons verdienmodel. Wanneer je via Kiespret doorklikt naar een aanbieder (zoals TUI, Sunweb, Corendon of D-reizen) en daar een vakantie boekt, ontvangen wij een kleine commissie van die aanbieder. Dit is een standaard affiliate-model.</p>
+  <p>Belangrijk: jij betaalt hierdoor niet meer. De prijs is exact hetzelfde als wanneer je rechtstreeks naar de aanbieder gaat.</p>
+
+  <h2>Waar wij voor staan</h2>
+  <div class="values">
+    <div class="value-item">
+      <div class="value-icon">🎯</div>
+      <div>
+        <div class="value-title">Minder opties, betere keuzes</div>
+        <div class="value-desc">Wij tonen maximaal 10 vakanties die passen bij wat jullie zoeken. Geen eindeloze lijsten.</div>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-icon">🔒</div>
+      <div>
+        <div class="value-title">Privacy-eerst</div>
+        <div class="value-desc">Geen tracking cookies, geen account nodig, geen persoonlijke data op onze servers. Wij gebruiken Plausible voor anonieme statistieken.</div>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-icon">💰</div>
+      <div>
+        <div class="value-title">Transparant verdienmodel</div>
+        <div class="value-desc">Wij verdienen aan affiliate-commissies. Jij betaalt niet meer. Bij elke vakantie staat bij welke aanbieder je boekt.</div>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-icon">🤝</div>
+      <div>
+        <div class="value-title">Bekende aanbieders</div>
+        <div class="value-desc">Wij werken alleen met gevestigde reisaanbieders die aangesloten zijn bij het Calamiteitenfonds en/of SGR.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-box">
+    <h2>Contact</h2>
+    <p>Heb je een vraag, suggestie of opmerking? Stuur een mailtje naar <a href="mailto:hallo@kiespret.nl">hallo@kiespret.nl</a> — we reageren meestal binnen een werkdag.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo"><span>k</span>iespret</div>
+  <p>Keuzehulp voor koppels — geen boekingssite</p>
+  <p>Wij verdienen een kleine commissie als je boekt via onze link. Jij betaalt niet meer.</p>
+  <p style="margin-top:12px"><a href="over.html">Over Kiespret</a> · <a href="privacybeleid.html">Privacybeleid</a> · <a href="voorwaarden.html">Voorwaarden</a> · <a href="mailto:hallo@kiespret.nl">Contact</a></p>
+</footer>
+
+</body>
+</html>
