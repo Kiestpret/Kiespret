@@ -654,21 +654,5 @@
   <p style="margin-top:12px"><a href="over.html">Over Kiespret</a> · <a href="privacybeleid.html">Privacybeleid</a> · <a href="voorwaarden.html">Voorwaarden</a> · <a href="mailto:hallo@kiespret.nl">Contact</a></p>
 </footer>
 
-<!-- COOKIE BANNER -->
-<div id="cookieBanner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:#fff; border-top:1px solid #E8E8E4; padding:14px 24px; box-shadow:0 -2px 12px rgba(0,0,0,0.06);">
-  <div style="max-width:720px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
-    <p style="font-family:'DM Sans',sans-serif; font-size:13px; color:#666; margin:0; line-height:1.5;">
-      Kiespret gebruikt geen tracking cookies. Wij gebruiken alleen een functionele cookie om deze melding te onthouden en Plausible voor anonieme statistieken.
-      <a href="privacybeleid.html" style="color:#2A7F9E; text-decoration:underline; text-underline-offset:2px;">Lees meer</a>
-    </p>
-    <button onclick="document.getElementById('cookieBanner').style.display='none'; try{document.cookie='kiespret_cookie_ok=1;max-age=31536000;path=/;SameSite=Lax';}catch(e){}" style="background:#E07830; color:#fff; border:none; padding:8px 20px; border-radius:8px; font-size:13px; font-weight:600; font-family:'DM Sans',sans-serif; cursor:pointer; white-space:nowrap; flex-shrink:0;">Begrepen</button>
-  </div>
-</div>
-<script>
-  if (!document.cookie.includes('kiespret_cookie_ok')) {
-    document.getElementById('cookieBanner').style.display = 'block';
-  }
-</script>
-
 </body>
 </html>
