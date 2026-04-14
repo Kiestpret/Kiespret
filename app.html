@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kiespret — Samen kiezen</title>
+  <meta name="description" content="Swipe samen door vakanties die bij jullie passen. Zie jullie overlap en boek direct bij de aanbieder.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kiespret — Samen een vakantie kiezen">
+  <meta property="og:description" content="Swipe samen door vakanties die bij jullie passen. Zie jullie overlap en boek direct bij de aanbieder.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kiespret.nl/app.html">
+  <meta property="og:image" content="https://kiespret.nl/og-image.png">
+  <meta property="og:locale" content="nl_NL">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -662,6 +672,40 @@
     }
     .share-wa-btn:hover { opacity: 0.88; }
 
+    /* ── CONFIDENCE BLOCK ── */
+    .confidence-block {
+      text-align: center;
+      margin-top: 24px;
+      padding: 20px;
+      background: var(--shell);
+      border-radius: 14px;
+    }
+    .confidence-q {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .confidence-btns { display: flex; gap: 10px; justify-content: center; }
+    .confidence-btn {
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: 'DM Sans', sans-serif;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: #fff;
+      transition: all 0.15s;
+    }
+    .confidence-yes:hover { background: #E8F5E9; border-color: #2D6A4F; }
+    .confidence-no:hover { background: var(--sunset-light); border-color: var(--sunset); }
+    .confidence-thanks {
+      font-size: 13px;
+      color: var(--stone);
+      margin-top: 12px;
+    }
+
     .results-footer { text-align: center; margin-top: 32px; }
 
     .restart-btn {
@@ -931,6 +975,16 @@
         </div>
       </div>
 
+      <!-- BESLUITZEKERHEID-MICROVRAAG (bouwplan) -->
+      <div class="confidence-block" id="confidenceBlock" style="display:none">
+        <p class="confidence-q">Voelt dit als een duidelijke keuze?</p>
+        <div class="confidence-btns">
+          <button class="confidence-btn confidence-yes" onclick="answerConfidence('ja')">👍 Ja</button>
+          <button class="confidence-btn confidence-no" onclick="answerConfidence('nee')">🤔 Nee, nog twijfel</button>
+        </div>
+        <p class="confidence-thanks" id="confidenceThanks" style="display:none">Bedankt! Dat helpt ons Kiespret te verbeteren.</p>
+      </div>
+
       <div class="results-footer">
         <button class="restart-btn" onclick="restart()">↩ Opnieuw beginnen</button>
         <p class="results-note">Prijzen zijn indicatief p.p. — actuele prijs en beschikbaarheid zie je bij de aanbieder.</p>
@@ -1010,6 +1064,19 @@
       <div class="modal-body" id="modalBody"></div>
       <button class="modal-go" id="modalGo">Ga naar TUI →</button>
       <button class="modal-back" onclick="closeModal()">← Terug naar top 3</button>
+    </div>
+  </div>
+
+  <!-- ══ REPLACE MODAL (shortlist vol) ════════════════════════════════ -->
+  <div class="modal-overlay" id="replaceModal">
+    <div class="modal-box" style="max-width:400px">
+      <div class="modal-emoji">🔄</div>
+      <div class="modal-title">Je top 3 zit vol</div>
+      <div class="modal-body" style="margin-bottom:16px">
+        Je wilt <strong id="replaceNewTrip"></strong> bewaren. Welke wil je vervangen?
+      </div>
+      <div id="replaceOptions"></div>
+      <button class="modal-back" onclick="cancelReplace()" style="margin-top:12px">Niet vervangen, ga verder</button>
     </div>
   </div>
 
@@ -1270,10 +1337,21 @@
       if (dir === 'right') {
         front.classList.add('fly-right');
         const trip = currentTrips[currentIndex];
-        liked.push(trip);
 
         // Event: swipe_right
         kiespretTrack('swipe_right', { trip: trip.id, destination: trip.title });
+
+        // Bouwplan: shortlist hard cap op 3
+        if (liked.length >= 3) {
+          // Toon vervangkeuze — pauzeer deck
+          pendingTrip = trip;
+          currentIndex++;
+          setTimeout(() => showReplaceModal(trip), 420);
+          return;
+        }
+
+        liked.push(trip);
+        saveShortlist();
 
         // Bouwplan: tag-scoring — track tags van gelikte trips
         trip.tags.forEach(tag => { likedTags[tag] = (likedTags[tag] || 0) + 1; });
@@ -1356,6 +1434,11 @@
         'resort': 'Resort & comfort', 'comfort': 'Resort & comfort', 'allinclusive': 'Resort & comfort'
       };
 
+      // Toon microvraag als er favorieten zijn
+      document.getElementById('confidenceBlock').style.display = top3.length > 0 ? '' : 'none';
+      document.querySelector('.confidence-btns').style.display = top3.length > 0 ? 'flex' : 'none';
+      document.getElementById('confidenceThanks').style.display = 'none';
+
       // Genereer deellink (alleen als er favorieten zijn)
       if (top3.length > 0) {
         const shareUrl = generateShareUrl();
@@ -1429,6 +1512,84 @@
       document.getElementById('outboundModal').classList.remove('active');
     }
 
+    // ── LOCALSTORAGE: shortlist opslaan/laden ──────────────────────────
+    function saveShortlist() {
+      try {
+        const ids = liked.map(t => t.id);
+        localStorage.setItem('kiespret_shortlist', JSON.stringify(ids));
+        localStorage.setItem('kiespret_prefs', JSON.stringify(prefs));
+      } catch(e) { /* localStorage niet beschikbaar */ }
+    }
+
+    function loadShortlist() {
+      try {
+        const ids = JSON.parse(localStorage.getItem('kiespret_shortlist'));
+        const savedPrefs = JSON.parse(localStorage.getItem('kiespret_prefs'));
+        if (!ids || !Array.isArray(ids) || ids.length === 0) return false;
+
+        // Herstel prefs
+        if (savedPrefs) {
+          prefs.sfeer = savedPrefs.sfeer || [];
+          prefs.budgetMax = savedPrefs.budgetMax || 9999;
+          prefs.maanden = savedPrefs.maanden || [];
+          prefs.duur = savedPrefs.duur !== undefined ? savedPrefs.duur : 0;
+          prefs.airport = savedPrefs.airport || 'AMS';
+        }
+
+        // Herstel gelikte trips
+        liked = ids.map(id => {
+          const trip = trips.find(t => t.id === id);
+          if (trip && !trip.matchedVariant) {
+            // Probeer variant te matchen met opgeslagen prefs
+            trip.matchedVariant = matchVariantCustom(trip, prefs) || trip.variants[0];
+            trip.tagScore = trip.sfeer.length;
+          }
+          return trip;
+        }).filter(Boolean);
+
+        return liked.length > 0;
+      } catch(e) { return false; }
+    }
+
+    // ── BESLUITZEKERHEID-MICROVRAAG ────────────────────────────────────
+    function answerConfidence(answer) {
+      kiespretTrack('decision_confidence', { answer: answer });
+      document.querySelector('.confidence-btns').style.display = 'none';
+      document.getElementById('confidenceThanks').style.display = '';
+    }
+
+    // ── SHORTLIST VERVANGEN (bouwplan: hard cap op 3) ──────────────────
+    function showReplaceModal(newTrip) {
+      document.getElementById('replaceNewTrip').textContent = newTrip.title;
+      const opts = document.getElementById('replaceOptions');
+      opts.innerHTML = '';
+      liked.slice(0, 3).forEach((trip, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'cta-btn';
+        btn.style.cssText = 'margin-bottom:8px;background:var(--shell);color:var(--night);font-size:13px;border:1px solid var(--border)';
+        btn.textContent = `Vervang: ${trip.title} (€${trip.matchedVariant.prijs})`;
+        btn.onclick = () => replaceTrip(i);
+        opts.appendChild(btn);
+      });
+      document.getElementById('replaceModal').classList.add('active');
+    }
+
+    function replaceTrip(index) {
+      const newTrip = pendingTrip;
+      liked[index] = newTrip;
+      newTrip.tags.forEach(tag => { likedTags[tag] = (likedTags[tag] || 0) + 1; });
+      pendingTrip = null;
+      saveShortlist();
+      document.getElementById('replaceModal').classList.remove('active');
+      renderCards();
+    }
+
+    function cancelReplace() {
+      pendingTrip = null;
+      document.getElementById('replaceModal').classList.remove('active');
+      renderCards();
+    }
+
     // ── POST-SWIPE KEUZE: duo of solo ──────────────────────────────────
     function showPostSwipeChoice() {
       const stack = document.getElementById('cardStack');
@@ -1451,6 +1612,7 @@
     }
 
     // ── DUO-SESSIE ─────────────────────────────────────────────────────
+    var pendingTrip = null;
     var duoSessionId = null;
     var isDuoPartnerB = false;
 
@@ -1755,6 +1917,8 @@
     function restart() {
       // Event: restart
       kiespretTrack('restart');
+
+      try { localStorage.removeItem('kiespret_shortlist'); localStorage.removeItem('kiespret_prefs'); } catch(e) {}
 
       prefs.sfeer = [];
       prefs.budgetMax = null;
