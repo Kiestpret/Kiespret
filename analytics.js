@@ -6,7 +6,7 @@
  * 2.  onboarding_complete   — Na stap 4 van de onboarding
  * 3.  swipe_right           — Trip naar rechts geswypt (bewaard)
  * 4.  swipe_left            — Trip naar links geswypt (overgeslagen)
- * 5.  shortlist_view        — Resultatenpagina geopend
+ * 5.  shortlist_view        — Resultatenpagina (top 3) geopend
  * 6.  comparison_open       — Vergelijking van top 3 bekeken
  * 7.  outbound_click        — Klik op affiliate-link naar aanbieder
  * 8.  share_link_created    — Duo-link aangemaakt

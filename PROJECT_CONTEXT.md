@@ -509,3 +509,20 @@ Volledige controle van app tegen technisch bouwplan v3.
 
 **1 afwijking bewust geparkeerd:**
 6. Partner A automatisch match tonen (vereist WebSockets/polling)
+
+### 14 april 2026 — Copy-aanscherping na externe positioneringsfeedback
+
+Externe feedback ontvangen op positionering. Oordeel: "sterk gepositioneerd, met ruimte om scherper te worden."
+
+**Overgenomen (4 aanpassingen):**
+1. Badge: "Keuzehulp voor koppels" → "Voor koppels die nog moeten kiezen"
+2. Subheadline: menselijker herschreven, "kleine selectie" i.p.v. opsomming
+3. CTA: "Samen kiezen" → "Vind jullie top 3" (resultaatgericht i.p.v. activiteit)
+4. Stap 2: "±10 vakanties die passen" → "een kleine selectie die bij jullie past"
+
+**Aanvullend:** "shortlist" overal vervangen door "top 3" — te zakelijk/Engels voor de doelgroep.
+
+**Bewust niet overgenomen:**
+- Merknaam wijzigen (Kiespret is werkbaar, domein en branding staan)
+- "Spannender" maken (rust en vertrouwen past beter bij een keuzehulp)
+- Meer urgentie pushen (risico op te agressieve toon)
