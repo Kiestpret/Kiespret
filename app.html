@@ -958,6 +958,9 @@
 
     // ── START SWIPEN ───────────────────────────────────────────────────────
     function startSwipen() {
+      // Event: onboarding_complete
+      kiespretTrack('onboarding_complete');
+
       currentTrips = filterTripsCustom(prefs);
       currentIndex = 0;
       liked = [];
@@ -1110,6 +1113,9 @@
         const trip = currentTrips[currentIndex];
         liked.push(trip);
 
+        // Event: swipe_right
+        kiespretTrack('swipe_right', { trip: trip.id, destination: trip.title });
+
         // Bouwplan: tag-scoring — track tags van gelikte trips
         trip.tags.forEach(tag => { likedTags[tag] = (likedTags[tag] || 0) + 1; });
 
@@ -1119,6 +1125,9 @@
         }
       } else {
         front.classList.add('fly-left');
+        // Event: swipe_left
+        var skipTrip = currentTrips[currentIndex];
+        kiespretTrack('swipe_left', { trip: skipTrip.id, destination: skipTrip.title });
       }
 
       currentIndex++;
@@ -1143,6 +1152,11 @@
     function showResults() {
       setProgress(100, 'Jullie top 3', null);
       showScreen('screen-results');
+
+      // Event: shortlist_view
+      kiespretTrack('shortlist_view', { count: String(Math.min(liked.length, 3)) });
+      // Event: comparison_open (top 3 vergelijking wordt direct getoond)
+      kiespretTrack('comparison_open');
 
       const list = document.getElementById('resultsList');
       const adviceBox = document.getElementById('adviceBox');
@@ -1235,7 +1249,11 @@
         `Je boekt zo direct bij <strong>${aanbieder}</strong> — op hun website zie je de actuele prijs en beschikbaarheid. Geen extra kosten via Kiespret.`;
       const goBtn = document.getElementById('modalGo');
       goBtn.textContent = `Ga naar ${aanbieder} →`;
-      goBtn.onclick = () => { window.open(url, '_blank', 'noopener'); closeModal(); };
+      goBtn.onclick = () => {
+        // Event: outbound_click
+        kiespretTrack('outbound_click', { provider: aanbieder, url: url });
+        window.open(url, '_blank', 'noopener'); closeModal();
+      };
       modal.classList.add('active');
     }
 
@@ -1245,6 +1263,9 @@
 
     // ── RESTART ────────────────────────────────────────────────────────────
     function restart() {
+      // Event: restart
+      kiespretTrack('restart');
+
       prefs.sfeer = [];
       prefs.budgetMax = null;
       prefs.maanden = [];
@@ -1262,6 +1283,7 @@
     }
   </script>
 
+<script src="analytics.js"></script>
 <script src="cookie-consent.js"></script>
 </body>
 </html>
