@@ -542,6 +542,12 @@
 
     .result-img { width: 100%; height: 180px; object-fit: cover; }
     .result-body { padding: 20px; }
+    .result-match-reason {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
 
     .result-title {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -997,7 +1003,7 @@
     <div class="onboarding-wrap" style="text-align:center">
       <div style="font-size:48px;margin-bottom:16px">🎉</div>
       <h1 class="question-title">Jij bent klaar!</h1>
-      <p class="question-sub">Stuur de link naar je partner zodat hij/zij dezelfde vakanties kan swipen. Daarna zien jullie de match.</p>
+      <p class="question-sub">Stuur de link naar je partner zodat hij/zij dezelfde vakanties kan swipen. Zodra je partner klaar is, open je deze pagina opnieuw om jullie match te zien.</p>
 
       <div class="share-block" style="margin-top:24px">
         <div class="share-row">
@@ -1459,6 +1465,7 @@
           </div>
           <img class="result-img" src="${trip.imageUrl}" alt="${trip.destination}">
           <div class="result-body">
+            <div class="result-match-reason">${trip.matchReason}</div>
             <div class="result-title">${trip.title}</div>
             <div class="result-dest">📍 ${trip.destination}</div>
             <div class="result-dims">
@@ -1827,6 +1834,7 @@
           </div>
           <img class="result-img" src="${trip.imageUrl}" alt="${trip.destination}">
           <div class="result-body">
+            <div class="result-match-reason">${trip.matchReason}</div>
             <div class="result-title">${trip.title}</div>
             <div class="result-dest">📍 ${trip.destination}</div>
             <div class="result-dims">

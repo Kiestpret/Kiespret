@@ -470,3 +470,42 @@ Optimize first for:
 - outbound click intent
 - niche fit
 - commercial viability
+
+---
+
+## Audit Log
+
+### 14 april 2026 — Persona-walkthrough audit
+
+Volledige doorloop vanuit Emma & Daan (gouden persona, 9/10) en Nikki & Kevin (secondaire, 7/10).
+
+**Wat sterk is:**
+- Snelheid van de flow (2 min van landing → top 3)
+- Trust line op elke kaart ("Boek direct bij TUI, geen extra kosten")
+- Redactioneel advies boven vergelijking
+- Duo-sessie via WhatsApp (lage drempel)
+- Transparant verdienmodel op Over-pagina
+
+**Gevonden issues en status:**
+
+| # | Issue | Persona | Status |
+|---|-------|---------|--------|
+| 1 | matchReason ontbrak op resultaatkaarten | Nikki | Gefixed |
+| 2 | Wacht-scherm duo: onduidelijk wat er daarna gebeurt | Emma | Gefixed |
+| 3 | Dummy affiliate URLs | Beide | Wacht op TradeTracker |
+| 4 | Stockfoto's i.p.v. hotelfoto's | Emma | Wacht op echte data |
+| 5 | Partner A ziet match niet automatisch na Partner B | Emma | Geparkeerd (vereist polling) |
+
+### 14 april 2026 — Bouwplan v3 audit
+
+Volledige controle van app tegen technisch bouwplan v3.
+
+**5 afwijkingen gefixed:**
+1. Shortlist hard begrensd op 3 met vervangmodal
+2. Besluitzekerheid-microvraag ("Voelt dit als een duidelijke keuze?")
+3. Shortlist opslaan in localStorage
+4. Open Graph + Twitter Card meta tags
+5. affiliate.js als apart bestand
+
+**1 afwijking bewust geparkeerd:**
+6. Partner A automatisch match tonen (vereist WebSockets/polling)
