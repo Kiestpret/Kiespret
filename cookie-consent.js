@@ -36,12 +36,14 @@
   // Plausible Analytics laadt altijd — geen cookies, geen persoonsgegevens,
   // vrijgesteld onder Telecommunicatiewet art. 11.7a
   function loadPlausible() {
-    if (!document.querySelector('script[data-domain="kiespret.nl"]')) {
-      const s = document.createElement('script');
-      s.defer = true;
-      s.setAttribute('data-domain', 'kiespret.nl');
-      s.src = 'https://plausible.io/js/script.js';
+    if (!document.querySelector('script[src*="plausible.io"]')) {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://plausible.io/js/pa-TBtTJFQwSHRK7ezq8J6-I.js';
       document.head.appendChild(s);
+      window.plausible = window.plausible || function() { (plausible.q = plausible.q || []).push(arguments); };
+      plausible.init = plausible.init || function(i) { plausible.o = i || {}; };
+      plausible.init();
     }
   }
 
