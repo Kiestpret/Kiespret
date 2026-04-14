@@ -938,6 +938,70 @@
     </div>
   </div>
 
+  <!-- ══ SCREEN: DUO WACHT (Partner A na swipen) ═══════════════════════ -->
+  <div class="screen" id="screen-duo-wait">
+    <div class="onboarding-wrap" style="text-align:center">
+      <div style="font-size:48px;margin-bottom:16px">🎉</div>
+      <h1 class="question-title">Jij bent klaar!</h1>
+      <p class="question-sub">Stuur de link naar je partner zodat hij/zij dezelfde vakanties kan swipen. Daarna zien jullie de match.</p>
+
+      <div class="share-block" style="margin-top:24px">
+        <div class="share-row">
+          <input type="text" class="share-url" id="duoShareUrl" readonly>
+          <button class="share-copy-btn" onclick="copyDuoLink()">Kopieer</button>
+        </div>
+        <div class="share-buttons">
+          <button class="share-wa-btn" onclick="shareDuoViaWhatsApp()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Deel via WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div style="margin-top:32px;padding:16px;background:var(--shell);border-radius:12px;">
+        <p style="font-size:13px;color:var(--stone)">Je kunt ook alvast je eigen top 3 bekijken:</p>
+        <button class="cta-btn" onclick="showResults()" style="margin-top:12px;max-width:300px">Bekijk mijn top 3 →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SCREEN: DUO WELKOMST (Partner B opent link) ══════════════════ -->
+  <div class="screen" id="screen-duo-welcome">
+    <div class="onboarding-wrap" style="text-align:center">
+      <div style="font-size:48px;margin-bottom:16px">👋</div>
+      <h1 class="question-title">Jouw partner heeft al geswypt</h1>
+      <p class="question-sub" id="duoLensText">Nu is het jouw beurt — swipe dezelfde vakanties en zie straks jullie match.</p>
+
+      <div id="duoLensBox" style="margin:24px 0;padding:16px;background:var(--sunset-light);border-radius:12px;text-align:left">
+        <div style="font-size:13px;font-weight:600;color:var(--sunset);margin-bottom:8px">Jullie zoeken:</div>
+        <div id="duoLensDetails" style="font-size:14px;color:var(--night);line-height:1.6"></div>
+      </div>
+
+      <button class="cta-btn" id="btnStartDuoSwipe" onclick="startDuoSwipen()">
+        Nu jij — start met swipen →
+      </button>
+    </div>
+  </div>
+
+  <!-- ══ SCREEN: DUO MATCH ════════════════════════════════════════════ -->
+  <div class="screen" id="screen-duo-match">
+    <div class="results-wrap">
+      <div class="results-header" id="duoMatchHeader">
+        <div class="results-emoji">💕</div>
+        <h2>Jullie match</h2>
+        <p class="results-sub" id="duoMatchSub"></p>
+      </div>
+
+      <div id="duoMatchAdvice"></div>
+      <div id="duoMatchList"></div>
+
+      <div class="results-footer">
+        <button class="restart-btn" onclick="restart()">↩ Opnieuw beginnen</button>
+        <p class="results-note">Prijzen zijn indicatief p.p. — actuele prijs en beschikbaarheid zie je bij de aanbieder.</p>
+      </div>
+    </div>
+  </div>
+
   <!-- ══ OUTBOUND MODAL ═══════════════════════════════════════════════ -->
   <div class="modal-overlay" id="outboundModal">
     <div class="modal-box">
@@ -1075,7 +1139,15 @@
       stack.innerHTML = '';
 
       if (currentIndex >= currentTrips.length) {
-        showResults();
+        if (isDuoPartnerB) {
+          // Partner B klaar → stuur likes naar server, bereken overlap
+          completeDuoSession();
+        } else if (liked.length > 0) {
+          // Solo of Partner A klaar → toon keuze
+          showPostSwipeChoice();
+        } else {
+          showResults();
+        }
         return;
       }
 
@@ -1352,6 +1424,264 @@
       document.getElementById('outboundModal').classList.remove('active');
     }
 
+    // ── POST-SWIPE KEUZE: duo of solo ──────────────────────────────────
+    function showPostSwipeChoice() {
+      const stack = document.getElementById('cardStack');
+      stack.innerHTML = `
+        <div style="text-align:center;padding:32px 16px">
+          <div style="font-size:40px;margin-bottom:12px">🎯</div>
+          <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:700;margin-bottom:8px">Je hebt ${liked.length} vakantie${liked.length > 1 ? 's' : ''} bewaard!</h2>
+          <p style="font-size:14px;color:var(--stone);margin-bottom:28px">Wat wil je nu doen?</p>
+
+          <button class="cta-btn" onclick="createDuoSession()" style="margin-bottom:12px;background:var(--ocean)">
+            🔗 Deel met mijn partner
+          </button>
+          <p style="font-size:12px;color:var(--stone);margin-bottom:24px">Je partner swipt dezelfde vakanties en jullie zien de match</p>
+
+          <button class="cta-btn" onclick="showResults()" style="background:var(--sunset)">
+            Bekijk mijn top 3 →
+          </button>
+          <p style="font-size:12px;color:var(--stone);margin-top:4px">Ga direct naar je resultaten (solo)</p>
+        </div>`;
+    }
+
+    // ── DUO-SESSIE ─────────────────────────────────────────────────────
+    var duoSessionId = null;
+    var isDuoPartnerB = false;
+
+    // Partner A: maak duo-sessie aan na swipen
+    async function createDuoSession() {
+      const top3Ids = liked.slice(0, 3).map(t => t.id);
+      const allLikedIds = liked.map(t => t.id);
+
+      try {
+        const res = await fetch('/api/session/create', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            likedIds: allLikedIds,
+            deckParams: {
+              sfeer: prefs.sfeer,
+              budgetMax: prefs.budgetMax,
+              maanden: prefs.maanden,
+              duur: prefs.duur,
+              airport: prefs.airport
+            }
+          })
+        });
+
+        const data = await res.json();
+        if (data.sessionId) {
+          duoSessionId = data.sessionId;
+          const duoUrl = window.location.origin + '/app.html?duo=' + duoSessionId;
+          document.getElementById('duoShareUrl').value = duoUrl;
+          showScreen('screen-duo-wait');
+          kiespretTrack('share_link_created', { method: 'duo', sessionId: duoSessionId });
+        } else {
+          alert('Er ging iets mis bij het aanmaken van de sessie. Probeer het opnieuw.');
+        }
+      } catch (e) {
+        alert('Verbindingsfout. Controleer je internet en probeer het opnieuw.');
+      }
+    }
+
+    function copyDuoLink() {
+      const url = document.getElementById('duoShareUrl').value;
+      navigator.clipboard.writeText(url).then(() => {
+        const btns = document.querySelectorAll('.share-copy-btn');
+        btns.forEach(b => { if (b.closest('#screen-duo-wait')) { b.textContent = 'Gekopieerd!'; setTimeout(() => { b.textContent = 'Kopieer'; }, 2000); }});
+      });
+    }
+
+    function shareDuoViaWhatsApp() {
+      const url = document.getElementById('duoShareUrl').value;
+      const text = 'Hey! Ik heb vakanties voor ons uitgekozen op Kiespret. Swipe jij ook even? Dan zien we welke we allebei leuk vinden: ' + url;
+      window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
+    }
+
+    // Partner B: laad duo-sessie
+    async function loadDuoSession(sessionId) {
+      try {
+        const res = await fetch('/api/session/get?id=' + sessionId);
+        const data = await res.json();
+
+        if (data.error) {
+          alert('Deze link is verlopen of ongeldig.');
+          showScreen('screen-sfeer');
+          return false;
+        }
+
+        if (data.status === 'completed' && data.matches) {
+          // Sessie al afgerond — toon match resultaat
+          showDuoMatches(data.matches);
+          return true;
+        }
+
+        // Toon lens-weergave
+        duoSessionId = sessionId;
+        isDuoPartnerB = true;
+        const dp = data.deckParams;
+
+        const sfeerMap = {
+          'strand': 'Strand & zon', 'rustig': 'Strand & zon', 'zon': 'Strand & zon',
+          'actief': 'Actief & avontuur', 'natuur': 'Actief & avontuur', 'avontuur': 'Actief & avontuur',
+          'resort': 'Resort & comfort', 'comfort': 'Resort & comfort', 'allinclusive': 'Resort & comfort'
+        };
+        const sfeerLabel = dp.sfeer ? dp.sfeer.map(s => sfeerMap[s] || s).filter((v,i,a) => a.indexOf(v) === i).join(', ') : '';
+        const maandMap = { apr: 'april', mei: 'mei', jun: 'juni', jul: 'juli', aug: 'augustus', sep: 'september', okt: 'oktober' };
+        const maanden = dp.maanden ? dp.maanden.map(m => maandMap[m] || m).join(', ') : '';
+        const budgetLabel = dp.budgetMax === 9999 ? 'geen limiet' : 'tot €' + dp.budgetMax + ' p.p.';
+        const duurLabel = dp.duur === 0 ? 'flexibel' : dp.duur + ' nachten';
+
+        document.getElementById('duoLensDetails').innerHTML =
+          `<strong>Sfeer:</strong> ${sfeerLabel}<br>` +
+          `<strong>Periode:</strong> ${maanden}<br>` +
+          `<strong>Budget:</strong> ${budgetLabel}<br>` +
+          `<strong>Duur:</strong> ${duurLabel}`;
+
+        // Sla deck params op zodat Partner B dezelfde trips ziet
+        prefs.sfeer = dp.sfeer || [];
+        prefs.budgetMax = dp.budgetMax || 9999;
+        prefs.maanden = dp.maanden || [];
+        prefs.duur = dp.duur !== undefined ? dp.duur : 0;
+        prefs.airport = dp.airport || 'AMS';
+
+        kiespretTrack('partner_session_start', { sessionId: sessionId });
+        showScreen('screen-duo-welcome');
+        return true;
+
+      } catch (e) {
+        alert('Verbindingsfout. Controleer je internet en probeer het opnieuw.');
+        return false;
+      }
+    }
+
+    // Partner B: start swipen met dezelfde deck
+    function startDuoSwipen() {
+      currentTrips = filterTripsCustom(prefs);
+      currentIndex = 0;
+      liked = [];
+      likedTags = {};
+
+      if (currentTrips.length > MAX_DECK) {
+        currentTrips = currentTrips.slice(0, MAX_DECK);
+      }
+
+      setProgress(100, 'Swipen', null);
+      document.getElementById('navStep').textContent = '';
+      showScreen('screen-swipe');
+      renderCards();
+    }
+
+    // Partner B: stuur likes naar server en toon matches
+    async function completeDuoSession() {
+      const likedIds = liked.map(t => t.id);
+
+      try {
+        const res = await fetch('/api/session/complete', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ sessionId: duoSessionId, likedIds })
+        });
+
+        const data = await res.json();
+        if (data.matches !== undefined) {
+          showDuoMatches(data.matches, data.overlapType);
+        } else {
+          alert('Er ging iets mis. Probeer het opnieuw.');
+        }
+      } catch (e) {
+        alert('Verbindingsfout. Controleer je internet en probeer het opnieuw.');
+      }
+    }
+
+    // Toon duo match-resultaat
+    function showDuoMatches(matchIds, overlapType) {
+      showScreen('screen-duo-match');
+
+      const header = document.getElementById('duoMatchHeader');
+      const sub = document.getElementById('duoMatchSub');
+      const list = document.getElementById('duoMatchList');
+      const adviceBox = document.getElementById('duoMatchAdvice');
+      list.innerHTML = '';
+      adviceBox.innerHTML = '';
+
+      // Zoek trips op
+      const matchedTrips = matchIds.map(id => {
+        const trip = trips.find(t => t.id === id);
+        if (trip && !trip.matchedVariant) {
+          trip.matchedVariant = trip.variants[0];
+          trip.tagScore = trip.sfeer.length;
+        }
+        return trip;
+      }).filter(Boolean);
+
+      // Bouwplan: overlapscore weergave
+      if (!overlapType) {
+        overlapType = matchedTrips.length >= 2 ? 'perfect' : matchedTrips.length === 1 ? 'bijna' : 'geen';
+      }
+
+      if (overlapType === 'perfect') {
+        header.querySelector('.results-emoji').textContent = '💕';
+        header.querySelector('h2').textContent = 'Jullie zijn het eens!';
+        sub.textContent = matchedTrips.length === 1
+          ? 'Jullie hebben allebei dezelfde vakantie gekozen — perfecte match!'
+          : 'Jullie hebben ' + matchedTrips.length + ' vakanties allebei leuk gevonden!';
+      } else if (overlapType === 'bijna') {
+        header.querySelector('.results-emoji').textContent = '🤝';
+        header.querySelector('h2').textContent = 'Bijna een match!';
+        sub.textContent = 'Jullie hebben 1 vakantie allebei leuk gevonden. Bekijk de details hieronder.';
+      } else {
+        header.querySelector('.results-emoji').textContent = '🤔';
+        header.querySelector('h2').textContent = 'Jullie smaak verschilt';
+        sub.textContent = 'Geen overlap dit keer. Probeer het opnieuw met andere instellingen!';
+        list.innerHTML = `
+          <div style="text-align:center;padding:24px">
+            <button class="cta-btn" onclick="restart()" style="max-width:300px;margin:0 auto">Opnieuw beginnen met andere voorkeuren</button>
+          </div>`;
+        return;
+      }
+
+      // Toon gematchte trips
+      const sfeerLabels = {
+        'strand': 'Strand & zon', 'rustig': 'Strand & zon', 'zon': 'Strand & zon',
+        'actief': 'Actief & verkennen', 'natuur': 'Actief & verkennen', 'avontuur': 'Actief & verkennen',
+        'resort': 'Resort & comfort', 'comfort': 'Resort & comfort', 'allinclusive': 'Resort & comfort'
+      };
+
+      matchedTrips.forEach((trip, i) => {
+        const v = trip.matchedVariant;
+        const sfeerLabel = sfeerLabels[trip.sfeer[0]] || trip.sfeer[0];
+        const card = document.createElement('div');
+        card.className = 'result-card';
+        card.innerHTML = `
+          <div class="result-rank-banner rank-1">
+            💕 Jullie match ${matchedTrips.length > 1 ? (i + 1) : ''}
+          </div>
+          <img class="result-img" src="${trip.imageUrl}" alt="${trip.destination}">
+          <div class="result-body">
+            <div class="result-title">${trip.title}</div>
+            <div class="result-dest">📍 ${trip.destination}</div>
+            <div class="result-dims">
+              <span class="dim-label">Sfeer</span><span class="dim-value">${sfeerLabel}</span>
+              <span class="dim-label">Prijs</span><span class="dim-value">Vanaf €${v.prijs} p.p. (${trip.prijsPeilDatum})</span>
+              <span class="dim-label">Vluchtduur</span><span class="dim-value">${trip.vluchtduur} vanaf Schiphol</span>
+              <span class="dim-label">Boardtype</span><span class="dim-value">${trip.boardType}</span>
+              <span class="dim-label">Aanbieder</span><span class="dim-value">${trip.aanbieder}</span>
+            </div>
+            <div class="result-row">
+              <div class="result-price">€${v.prijs}<small> p.p.</small></div>
+              <button class="book-btn" onclick="openOutbound('${trip.aanbieder}', '${v.affiliateUrl}')">
+                Bekijk bij ${trip.aanbieder} →
+              </button>
+            </div>
+          </div>`;
+        list.appendChild(card);
+      });
+
+      kiespretTrack('duo_match_found', { overlapType, matchCount: String(matchedTrips.length) });
+    }
+
     // ── SHORTLIST DELEN VIA URL ──────────────────────────────────────────
     function generateShareUrl() {
       const top3 = liked.slice(0, 3);
@@ -1437,11 +1767,19 @@
       showScreen('screen-sfeer');
     }
 
-    // ── INIT: check voor gedeelde shortlist ──────────────────────────────
-    if (!checkSharedShortlist()) {
-      // Geen gedeelde link → toon onboarding
-      showScreen('screen-sfeer');
-    }
+    // ── INIT: check voor duo-sessie of gedeelde shortlist ──────────────
+    (function init() {
+      const params = new URLSearchParams(window.location.search);
+      const duoParam = params.get('duo');
+
+      if (duoParam) {
+        // Partner B opent duo-link
+        loadDuoSession(duoParam);
+      } else if (!checkSharedShortlist()) {
+        // Geen gedeelde link → toon onboarding
+        showScreen('screen-sfeer');
+      }
+    })();
   </script>
 
 <script src="analytics.js"></script>
