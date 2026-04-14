@@ -1356,9 +1356,14 @@
         'resort': 'Resort & comfort', 'comfort': 'Resort & comfort', 'allinclusive': 'Resort & comfort'
       };
 
-      // Genereer deellink
-      const shareUrl = generateShareUrl();
-      document.getElementById('shareUrl').value = shareUrl;
+      // Genereer deellink (alleen als er favorieten zijn)
+      if (top3.length > 0) {
+        const shareUrl = generateShareUrl();
+        document.getElementById('shareUrl').value = shareUrl;
+        document.getElementById('shareBlock').style.display = '';
+      } else {
+        document.getElementById('shareBlock').style.display = 'none';
+      }
 
       top3.forEach((trip, i) => {
         const v = trip.matchedVariant;
