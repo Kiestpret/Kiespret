@@ -1100,7 +1100,8 @@
     let currentTrips = [];
     let currentIndex = 0;
     let liked = [];
-    let likedTags = {};   // tag-scoring state
+    let likedTags = {};    // positieve tag-scoring (ja's)
+    let dislikedTags = {}; // negatieve tag-scoring (nee's)
 
     const MAX_DECK = 10;  // bouwplan: 8–10 kaarten
 
@@ -1347,29 +1348,29 @@
         // Event: swipe_right
         kiespretTrack('swipe_right', { trip: trip.id, destination: trip.title });
 
-        // Bouwplan: shortlist hard cap op 3
-        if (liked.length >= 3) {
-          // Toon vervangkeuze — pauzeer deck
-          pendingTrip = trip;
-          currentIndex++;
-          setTimeout(() => showReplaceModal(trip), 420);
-          return;
-        }
-
         liked.push(trip);
         saveShortlist();
 
         // Bouwplan: tag-scoring — track tags van gelikte trips
         trip.tags.forEach(tag => { likedTags[tag] = (likedTags[tag] || 0) + 1; });
 
-        // Bouwplan: herorden na 3 swipes rechts
-        if (liked.length === 3) {
+        // Herorden na 3 likes (bouwplan) en daarna na elke like
+        if (liked.length >= 3) {
           reorderRemainingDeck();
         }
       } else {
         front.classList.add('fly-left');
-        // Event: swipe_left
         var skipTrip = currentTrips[currentIndex];
+
+        // Nee-learning: track tags van afgewezen trips
+        skipTrip.tags.forEach(tag => { dislikedTags[tag] = (dislikedTags[tag] || 0) + 1; });
+
+        // Herorden deck als er al likes zijn (nee's beïnvloeden volgorde)
+        if (liked.length >= 2) {
+          reorderRemainingDeck();
+        }
+
+        // Event: swipe_left
         kiespretTrack('swipe_left', { trip: skipTrip.id, destination: skipTrip.title });
       }
 
@@ -1377,18 +1378,34 @@
       setTimeout(() => renderCards(), 420);
     }
 
-    // ── TAG-SCORING: herorden deck na 3 swipes rechts ──────────────────────
+    // ── SMART SCORING: herorden deck op basis van ja's EN nee's ─────────
     function reorderRemainingDeck() {
       const remaining = currentTrips.slice(currentIndex + 1);
-      remaining.sort((a, b) => {
-        const scoreA = a.tags.reduce((sum, tag) => sum + (likedTags[tag] || 0), 0);
-        const scoreB = b.tags.reduce((sum, tag) => sum + (likedTags[tag] || 0), 0);
-        return scoreB - scoreA;
-      });
+      remaining.sort((a, b) => scoreTripSmart(b) - scoreTripSmart(a));
       currentTrips = [
         ...currentTrips.slice(0, currentIndex + 1),
         ...remaining
       ];
+    }
+
+    function scoreTripSmart(trip) {
+      var score = 0;
+      // Positief: tags die matchen met gelikete trips (zwaar gewicht)
+      trip.tags.forEach(function(tag) { score += (likedTags[tag] || 0) * 2; });
+      // Negatief: tags die matchen met afgewezen trips
+      trip.tags.forEach(function(tag) { score -= (dislikedTags[tag] || 0); });
+      // Bonus: zelfde land/regio als gelikete trips
+      if (liked.length > 0) {
+        var likedRegions = liked.map(function(t) { return (t.destination.split(',')[1] || '').trim(); }).filter(Boolean);
+        var tripRegion = (trip.destination.split(',')[1] || '').trim();
+        if (tripRegion && likedRegions.indexOf(tripRegion) !== -1) score += 1;
+      }
+      // Penalty: zelfde land als meerdere afgewezen trips
+      var dislikedCount = currentTrips.slice(0, currentIndex).filter(function(t) {
+        return !liked.includes(t) && (t.destination.split(',')[1] || '').trim() === ((trip.destination.split(',')[1] || '').trim());
+      }).length;
+      if (dislikedCount >= 2) score -= 2;
+      return score;
     }
 
     // ── RESULTATEN + VERGELIJKINGSLAAG + REDACTIONEEL ADVIES ───────────────
@@ -1406,7 +1423,9 @@
       list.innerHTML = '';
       adviceBox.innerHTML = '';
 
-      const top3 = liked.slice(0, 3);
+      // Sorteer likes op tag-score (hoogste eerst) en pak top 3
+      const sortedLikes = [...liked].sort((a, b) => (b.tagScore || 0) - (a.tagScore || 0));
+      const top3 = sortedLikes.slice(0, 3);
 
       if (top3.length === 0) {
         list.innerHTML = `
@@ -1933,6 +1952,7 @@
       prefs.maanden = [];
       prefs.duur = null;
       likedTags = {};
+      dislikedTags = {};
 
       document.querySelectorAll('.sfeer-card, .option-btn, .period-btn, .duur-btn')
         .forEach(el => el.classList.remove('selected'));
