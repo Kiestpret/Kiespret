@@ -30,7 +30,29 @@
     .pick-b { background: var(--ocean-light); }
     .pick-a strong { color: var(--sunset); }
     .pick-b strong { color: var(--ocean); }
+    .hero-img {
+      width: 100%; height: auto; border-radius: 16px;
+      margin-bottom: 16px; object-fit: cover; max-height: 400px;
+    }
+    .section-img {
+      width: 100%; height: auto; border-radius: 12px;
+      margin-bottom: 12px; object-fit: cover; max-height: 350px;
+    }
     .section-summary { font-size: 14px; color: var(--stone); font-style: italic; margin-bottom: 12px; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .compare-table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .compare-table th, .compare-table td { padding: 8px 10px; min-width: 110px; }
+      .compare-table .dim { font-size: 12px; min-width: 80px; }
+      .hero-img { max-height: 250px; border-radius: 12px; }
+      .section-img { max-height: 220px; border-radius: 10px; }
+      .article h1 { font-size: 24px; }
+      .article h2 { font-size: 18px; margin-top: 32px; }
+      .article { padding: 24px 16px 60px; }
+      .cta-block { padding: 20px 16px; }
+      .for-whom-item { padding: 12px 14px; font-size: 14px; }
+    }
     .maybe-block { padding: 14px 18px; background: var(--shell); border-radius: 10px; margin-top: 16px; font-size: 14px; color: var(--stone); }
     .maybe-block a { color: var(--ocean); font-weight: 500; }
     @media (max-width: 500px) { .quick-pick { grid-template-columns: 1fr; } }
@@ -94,6 +116,7 @@
 
 <article class="article">
   <h1>Sicilië of Sardinië: welk Italiaans eiland past bij jullie?</h1>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=900&q=80" alt="Kustlijn Sicilië met blauwe zee en historische gebouwen — vergelijking Sicilië en Sardinië voor koppels" width="900" height="500" loading="eager">
   <p class="subtitle">Twee van de mooiste eilanden in de Middellandse Zee, maar totaal verschillend in karakter. Wij vergelijken ze op sfeer, strand, cultuur, prijs, bereikbaarheid en koppelvriendelijkheid zodat jullie niet hoeven te twijfelen.</p>
 
   <div class="tldr">
@@ -131,14 +154,17 @@
   </div>
 
   <h2>Sfeer: levendig Sicilië versus rustig Sardinië</h2>
+  <img class="section-img" src="https://images.unsplash.com/photo-1523365280197-f1783db9fe62?w=800&q=80" alt="Straatmarkt in Palermo, Sicilië — levendige sfeer met lokale producten" width="800" height="450" loading="lazy">
   <p>Sicilië voelt als een klein land, niet als een eiland. Palermo heeft straatmarkten waar je verdwaalt, Catania bruist tot laat in de avond. Voor koppels die van stadsleven en authenticiteit houden is dit de betere keuze.</p>
   <p>Sardinië is het tegenovergestelde: lege landschappen, wilde bloemen, rotskusten. Geen verkeerschaos — hier is het stil en groen. Voor koppels die echt willen loskoppelen past Sardinië beter.</p>
 
   <h2>Stranden: Sardinië heeft het mooiste water</h2>
+  <img class="section-img" src="https://images.unsplash.com/photo-1586015555751-63bb77f4322a?w=800&q=80" alt="Turquoise baai op Sardinië met wit zandstrand — strandvergelijking Sicilië en Sardinië" width="800" height="450" loading="lazy">
   <p>De zuidkust rond Villasimius en de oostkust bij Cala Gonone hebben baaien met helder turquoise water. De Costa Smeralda is duurder maar spectaculair. De meeste reizigers beoordelen de Sardijnse stranden als sterker dan die van Sicilië.</p>
   <p>Sicilië heeft ook mooie stranden — San Vito Lo Capo valt op — maar stranden zijn hier niet de hoofdact. Je gaat naar Sicilië voor het totaalplaatje.</p>
 
   <h2>Cultuur: Sicilië is rijker aan geschiedenis en bezienswaardigheden</h2>
+  <img class="section-img" src="https://images.unsplash.com/photo-1555992828-ca4dbe41d294?w=800&q=80" alt="Griekse tempel in Agrigento, Sicilië — historische bezienswaardigheden voor koppels" width="800" height="450" loading="lazy">
   <p>Griekse tempels in Agrigento, barokke steden Noto en Ragusa, de Etna, de straatmarkten van Palermo — Sicilië heeft meer cultuurgeschiedenis per vierkante kilometer dan bijna elk ander Europees eiland. Koppels die op vakantie ook iets willen zien zijn hier beter af.</p>
   <p>Sardinië heeft de nuraghen (prehistorische steentorens) en mooie kustdorpjes, maar de culturele laag is dunner. Dat is prima als je niet op zoek bent naar musea.</p>
 
