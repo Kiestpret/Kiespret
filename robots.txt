@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://kiespret.nl/sitemap.xml
+Sitemap: https://www.kiespret.nl/sitemap.xml
