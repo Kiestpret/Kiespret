@@ -191,9 +191,18 @@
 
     /* ── DESTINATION STRIP ── */
     .dest-strip {
-      padding: 24px 24px 8px;
+      padding: 16px 24px 8px;
       background: linear-gradient(180deg, var(--sunset-light) 0%, #fff 100%);
       overflow: hidden;
+    }
+    .dest-strip-label {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--stone);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
     }
     .dest-strip-inner {
       display: flex;
@@ -224,6 +233,20 @@
       font-size: 11px;
       font-weight: 500;
       color: var(--stone);
+    }
+    .dest-more-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--shell);
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--sunset);
     }
 
     /* ── TRUST BAR ── */
@@ -321,7 +344,7 @@
 
     .card-img {
       height: 180px;
-      background: url('https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=800&q=80') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=800&q=80') center/cover no-repeat;
       position: relative;
     }
 
@@ -512,13 +535,14 @@
 
 <!-- DESTINATION STRIP -->
 <div class="dest-strip">
+  <div class="dest-strip-label">Bestemmingen o.a.</div>
   <div class="dest-strip-inner">
     <div class="dest-thumb">
       <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&q=80" alt="Mallorca">
       <span>Mallorca</span>
     </div>
     <div class="dest-thumb">
-      <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=200&q=80" alt="Kreta">
+      <img src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=200&q=80" alt="Kreta">
       <span>Kreta</span>
     </div>
     <div class="dest-thumb">
@@ -526,16 +550,20 @@
       <span>Antalya</span>
     </div>
     <div class="dest-thumb">
-      <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=200&q=80" alt="Tenerife">
+      <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=200&q=80" alt="Tenerife">
       <span>Tenerife</span>
     </div>
     <div class="dest-thumb">
-      <img src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=200&q=80" alt="Rhodos">
+      <img src="https://images.unsplash.com/photo-1586861203927-800a5acdce4d?w=200&q=80" alt="Rhodos">
       <span>Rhodos</span>
     </div>
     <div class="dest-thumb">
-      <img src="https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=200&q=80" alt="Kos">
+      <img src="https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?w=200&q=80" alt="Kos">
       <span>Kos</span>
+    </div>
+    <div class="dest-thumb dest-more">
+      <div class="dest-more-circle">+20</div>
+      <span>meer</span>
     </div>
   </div>
 </div>
