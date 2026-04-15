@@ -189,6 +189,43 @@
       margin-top: 8px;
     }
 
+    /* ── DESTINATION STRIP ── */
+    .dest-strip {
+      padding: 24px 24px 8px;
+      background: linear-gradient(180deg, var(--sunset-light) 0%, #fff 100%);
+      overflow: hidden;
+    }
+    .dest-strip-inner {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 8px;
+    }
+    .dest-strip-inner::-webkit-scrollbar { display: none; }
+    .dest-thumb {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .dest-thumb img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .dest-thumb span {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--stone);
+    }
+
     /* ── TRUST BAR ── */
     .trust-bar {
       background: #fff;
@@ -284,7 +321,7 @@
 
     .card-img {
       height: 180px;
-      background: linear-gradient(135deg, #56B4D3 0%, #2A7F9E 100%);
+      background: url('https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=800&q=80') center/cover no-repeat;
       position: relative;
     }
 
@@ -472,6 +509,36 @@
     <button class="btn-solo" onclick="kiespretTrack('flow_start', {source: 'solo_link'}); location.href='app.html'">Of probeer het alleen</button>
   </div>
 </section>
+
+<!-- DESTINATION STRIP -->
+<div class="dest-strip">
+  <div class="dest-strip-inner">
+    <div class="dest-thumb">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&q=80" alt="Mallorca">
+      <span>Mallorca</span>
+    </div>
+    <div class="dest-thumb">
+      <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=200&q=80" alt="Kreta">
+      <span>Kreta</span>
+    </div>
+    <div class="dest-thumb">
+      <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=200&q=80" alt="Antalya">
+      <span>Antalya</span>
+    </div>
+    <div class="dest-thumb">
+      <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=200&q=80" alt="Tenerife">
+      <span>Tenerife</span>
+    </div>
+    <div class="dest-thumb">
+      <img src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=200&q=80" alt="Rhodos">
+      <span>Rhodos</span>
+    </div>
+    <div class="dest-thumb">
+      <img src="https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=200&q=80" alt="Kos">
+      <span>Kos</span>
+    </div>
+  </div>
+</div>
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
