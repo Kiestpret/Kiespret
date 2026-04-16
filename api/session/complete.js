@@ -15,9 +15,33 @@ function sanitizeLikedIds(raw) {
   return clean;
 }
 
+// CSRF-bescherming: accepteer alleen POST's van bekende origins
+function isAllowedOrigin(origin) {
+  if (!origin) return false;
+  try {
+    const host = new URL(origin).host;
+    return (
+      host === 'www.kiespret.nl' ||
+      host === 'kiespret.nl' ||
+      host.endsWith('.vercel.app') ||
+      host === 'localhost' ||
+      host.startsWith('localhost:') ||
+      host.startsWith('127.0.0.1')
+    );
+  } catch (e) {
+    return false;
+  }
+}
+
 export default async function handler(req) {
   if (req.method !== 'POST') {
     return new Response(JSON.stringify({ error: 'Method not allowed' }), { status: 405 });
+  }
+
+  // CSRF-check: Origin moet van een vertrouwde host komen
+  const origin = req.headers.get('origin');
+  if (!isAllowedOrigin(origin)) {
+    return new Response(JSON.stringify({ error: 'Forbidden origin' }), { status: 403 });
   }
 
   const url = process.env.KV_REST_API_URL || process.env.STORAGE_REST_API_URL;
