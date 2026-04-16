@@ -43,6 +43,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.kiespret.nl/gids/griekenland/kos-of-kreta/</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kiespret.nl/gids/adults-only-griekenland/</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kiespret.nl/gids/griekenland/rustige-eilanden/</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.kiespret.nl/over.html</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
