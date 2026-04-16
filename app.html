@@ -1107,6 +1107,8 @@
   </div>
 
   <script src="/trips.js"></script>
+  <script src="/analytics.js"></script>
+  <script src="/cookie-consent.js"></script>
   <script>
     // ── HTML ESCAPE (XSS-defense voor innerHTML templates) ─────────────────
     const _escapeMap = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
@@ -2100,6 +2102,7 @@
 
         return true;
       } catch(e) {
+        console.error('checkSharedShortlist failed:', e);
         return false;
       }
     }
@@ -2164,8 +2167,5 @@
       }
     })();
   </script>
-
-<script src="/analytics.js"></script>
-<script src="/cookie-consent.js"></script>
 </body>
 </html>
