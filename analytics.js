@@ -15,20 +15,59 @@
  * 11. restart               — Gebruiker start opnieuw
  *
  * Plausible wordt geladen via cookie-consent.js (altijd, want cookieloos).
- * window.plausible() is beschikbaar als global.
+ * Events tijdens eerste paint worden in een lokale queue gezet en geflushed
+ * zodra window.plausible beschikbaar is — zo verliezen we geen KPI-data.
  */
 
 (function() {
   'use strict';
 
-  // Veilige wrapper: als Plausible nog niet geladen is, queue het event
-  function track(event, props) {
-    if (typeof window.plausible === 'function') {
+  var localQueue = [];
+  var flushTimer = null;
+
+  function sendEvent(event, props) {
+    try {
       if (props) {
         window.plausible(event, { props: props });
       } else {
         window.plausible(event);
       }
+    } catch (e) {
+      console.warn('kiespretTrack verzend-fout:', e);
+    }
+  }
+
+  function flushLocalQueue() {
+    if (typeof window.plausible !== 'function') return;
+    while (localQueue.length > 0) {
+      var item = localQueue.shift();
+      sendEvent(item.event, item.props);
+    }
+    if (flushTimer) {
+      clearInterval(flushTimer);
+      flushTimer = null;
+    }
+  }
+
+  function track(event, props) {
+    if (typeof window.plausible === 'function') {
+      sendEvent(event, props);
+      return;
+    }
+    // Plausible nog niet geladen — queue het event en start flush-timer
+    localQueue.push({ event: event, props: props });
+    if (!flushTimer) {
+      var attempts = 0;
+      flushTimer = setInterval(function() {
+        attempts++;
+        if (typeof window.plausible === 'function') {
+          flushLocalQueue();
+        } else if (attempts >= 25) {
+          // Na 5 seconden geven we het op — events blijven in queue
+          clearInterval(flushTimer);
+          flushTimer = null;
+        }
+      }, 200);
     }
   }
 
