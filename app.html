@@ -1206,25 +1206,79 @@
       // Event: onboarding_complete
       kiespretTrack('onboarding_complete');
 
+      const origBudget = prefs.budgetMax;
+      const origDuur = prefs.duur;
+
       currentTrips = filterTripsCustom(prefs);
       currentIndex = 0;
       liked = [];
       likedTags = {};
+      dislikedTags = {};
 
+      // Progressieve fallbacks: eerst budget loslaten, dan duur, dan beide
       if (currentTrips.length === 0) {
         prefs.budgetMax = 9999;
         currentTrips = filterTripsCustom(prefs);
       }
+      if (currentTrips.length === 0) {
+        prefs.budgetMax = origBudget;
+        prefs.duur = 0; // alle duren
+        currentTrips = filterTripsCustom(prefs);
+      }
+      if (currentTrips.length === 0) {
+        prefs.budgetMax = 9999;
+        prefs.duur = 0;
+        currentTrips = filterTripsCustom(prefs);
+      }
+      // Laatste redmiddel: ook sfeer loslaten
+      if (currentTrips.length === 0) {
+        currentTrips = trips
+          .map(trip => {
+            const variant = trip.variants.find(v =>
+              prefs.maanden.includes(v.maand) && v.airport === prefs.airport
+            );
+            if (!variant) return null;
+            return { ...trip, matchedVariant: variant, tagScore: 0 };
+          })
+          .filter(Boolean)
+          .sort(() => Math.random() - 0.5);
+      }
+
+      // Herstel originele prefs voor eventuele restart
+      prefs.budgetMax = origBudget;
+      prefs.duur = origDuur;
 
       // Bouwplan: max 8–10 kaarten
       if (currentTrips.length > MAX_DECK) {
         currentTrips = currentTrips.slice(0, MAX_DECK);
       }
 
+      if (currentTrips.length === 0) {
+        // Echt geen resultaten — toon nette melding
+        showNoResults();
+        return;
+      }
+
       setProgress(100, 'Swipen', null);
       document.getElementById('navStep').textContent = '';
       showScreen('screen-swipe');
       renderCards();
+    }
+
+    function showNoResults() {
+      setProgress(100, 'Helaas', null);
+      showScreen('screen-results');
+      const list = document.getElementById('resultsList');
+      const adviceBox = document.getElementById('adviceBox');
+      list.innerHTML = '';
+      adviceBox.innerHTML = '';
+      list.innerHTML = `
+        <div style="text-align:center;padding:48px 24px">
+          <div style="font-size:40px;margin-bottom:12px">🤷</div>
+          <h3 style="margin-bottom:8px;font-family:'Plus Jakarta Sans',sans-serif">Geen vakanties gevonden</h3>
+          <p style="color:var(--stone);margin-bottom:24px">We konden geen vakanties vinden die bij jullie voorkeuren passen. Probeer een andere maand of reisduur.</p>
+          <button class="cta-btn" onclick="restart()" style="max-width:300px;margin:0 auto">Opnieuw beginnen</button>
+        </div>`;
     }
 
     // ── KAARTEN RENDEREN ───────────────────────────────────────────────────
