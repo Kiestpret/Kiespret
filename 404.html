@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina niet gevonden | Kiespret</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --sunset: #E07830;
+      --sunset-light: #FFF0E6;
+      --ocean: #2A7F9E;
+      --ocean-light: #E8F4F8;
+      --sand: #FAFAF8;
+      --shell: #F5F5F2;
+      --night: #1A1A1A;
+      --stone: #666666;
+      --border: #E8E8E4;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--sand);
+      color: var(--night);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,250,248,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px; height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; font-weight: 800; color: var(--night); text-decoration: none; letter-spacing: -0.3px; }
+    .nav-logo span { color: var(--sunset); }
+    .nav-cta { background: var(--sunset); color: #fff; border: none; padding: 8px 18px; border-radius: 10px; font-size: 14px; font-weight: 600; font-family: 'DM Sans', sans-serif; cursor: pointer; text-decoration: none; transition: opacity 0.15s; }
+    .nav-cta:hover { opacity: 0.88; }
+
+    /* Content */
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px;
+      text-align: center;
+    }
+    .error-code {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 96px;
+      font-weight: 800;
+      color: var(--sunset);
+      line-height: 1;
+      margin-bottom: 12px;
+      opacity: 0.25;
+    }
+    .content h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .content p {
+      font-size: 17px;
+      color: var(--stone);
+      max-width: 440px;
+      margin-bottom: 28px;
+    }
+    .links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn-primary {
+      background: var(--sunset);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .btn-primary:hover { opacity: 0.88; }
+    .btn-secondary {
+      background: var(--shell);
+      color: var(--night);
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: 'DM Sans', sans-serif;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .btn-secondary:hover { background: var(--border); }
+
+    /* Footer */
+    footer {
+      background: var(--night);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    footer .footer-logo { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    footer .footer-logo span { color: var(--sunset); }
+    footer p { font-size: 12px; color: #555; margin-bottom: 4px; line-height: 1.6; }
+    footer a { color: #777; text-decoration: none; }
+    footer a:hover { color: #aaa; }
+
+    @media (max-width: 600px) {
+      .error-code { font-size: 64px; }
+      .content h1 { font-size: 22px; }
+      .content p { font-size: 15px; }
+      .links { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/"><span>k</span>iespret</a>
+  <a class="nav-cta" href="/app.html">Vind jullie top 3</a>
+</nav>
+
+<div class="content">
+  <div class="error-code">404</div>
+  <h1>Deze pagina bestaat niet (meer)</h1>
+  <p>Misschien is de URL veranderd, of was het een typfout. Geen stress — hieronder vind je de juiste weg.</p>
+  <div class="links">
+    <a class="btn-primary" href="/app.html">Start de keuzehulp</a>
+    <a class="btn-secondary" href="/gids/">Bekijk de vakantiegids</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo"><span>k</span>iespret</div>
+  <p>Keuzehulp voor koppels — geen boekingssite</p>
+  <p style="margin-top:12px"><a href="/over.html">Over Kiespret</a> · <a href="/privacybeleid.html">Privacybeleid</a> · <a href="/voorwaarden.html">Voorwaarden</a> · <a href="mailto:hallo@kiespret.nl">Contact</a></p>
+</footer>
+
+</body>
+</html>
