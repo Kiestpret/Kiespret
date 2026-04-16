@@ -828,7 +828,7 @@
 
   <!-- NAV -->
   <nav>
-    <a href="index.html" class="nav-logo">kiespret</a>
+    <a href="/" class="nav-logo">kiespret</a>
     <span class="nav-step" id="navStep">Stap 1 van 4</span>
   </nav>
 
@@ -1106,8 +1106,22 @@
     </div>
   </div>
 
-  <script src="trips.js"></script>
+  <script src="/trips.js"></script>
   <script>
+    // ── HTML ESCAPE (XSS-defense voor innerHTML templates) ─────────────────
+    const _escapeMap = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+    function escapeHtml(val) {
+      if (val === null || val === undefined) return '';
+      return String(val).replace(/[&<>"']/g, ch => _escapeMap[ch]);
+    }
+    // Alleen http(s) URL's toelaten in img src / window.open
+    function safeUrl(val) {
+      if (typeof val !== 'string') return '';
+      const trimmed = val.trim();
+      if (/^https?:\/\//i.test(trimmed) || trimmed.startsWith('/')) return trimmed;
+      return '';
+    }
+
     // ── STATE ──────────────────────────────────────────────────────────────
     const prefs = {
       sfeer: [],
@@ -1264,7 +1278,7 @@
       card.dataset.id = trip.id;
 
       const highlightTags = trip.highlights.slice(0, 3)
-        .map(h => `<span class="tag">✓ ${h}</span>`).join('');
+        .map(h => `<span class="tag">✓ ${escapeHtml(h)}</span>`).join('');
 
       const adultsBadge = trip.adultsOnly
         ? `<span class="card-adults-badge">Adults only</span>` : '';
@@ -1273,25 +1287,28 @@
       const bestMatchLabel = (isFront && currentIndex === 0)
         ? `<div class="best-match-label">Beste match voor jullie</div>` : '';
 
+      const aanbiederSafe = escapeHtml(trip.aanbieder);
+      const destSafe = escapeHtml(trip.destination);
+
       card.innerHTML = `
         <div class="card-overlay overlay-yes">JA!</div>
         <div class="card-overlay overlay-no">NEE</div>
         ${bestMatchLabel}
-        <img class="card-img" src="${trip.imageUrl}" alt="${trip.destination}" draggable="false">
+        <img class="card-img" src="${escapeHtml(safeUrl(trip.imageUrl))}" alt="${destSafe}" draggable="false">
         <div class="card-body">
-          <div class="card-match-reason">${trip.matchReason}</div>
-          <div class="card-aanbieder">${trip.aanbieder} · ${trip.boardType}</div>
-          <div class="card-title">${trip.title}</div>
-          <div class="card-dest">📍 ${trip.destination} · ✈️ ${trip.vluchtduur} · ${v.duur} nachten · ${v.maand}</div>
+          <div class="card-match-reason">${escapeHtml(trip.matchReason)}</div>
+          <div class="card-aanbieder">${aanbiederSafe} · ${escapeHtml(trip.boardType)}</div>
+          <div class="card-title">${escapeHtml(trip.title)}</div>
+          <div class="card-dest">📍 ${destSafe} · ✈️ ${escapeHtml(trip.vluchtduur)} · ${Number(v.duur) || 0} nachten · ${escapeHtml(v.maand)}</div>
           <div class="card-highlights">${highlightTags}</div>
           <div class="card-price-row">
             <div>
-              <div class="card-price-label">Vanaf p.p. (${trip.prijsPeilDatum})</div>
-              <div class="card-price">€${v.prijs}<span> / ${v.duur} nachten</span></div>
+              <div class="card-price-label">Vanaf p.p. (${escapeHtml(trip.prijsPeilDatum)})</div>
+              <div class="card-price">€${Number(v.prijs) || 0}<span> / ${Number(v.duur) || 0} nachten</span></div>
             </div>
             ${adultsBadge}
           </div>
-          <div class="card-trust">✓ Boek direct bij ${trip.aanbieder}, geen extra kosten via Kiespret</div>
+          <div class="card-trust">✓ Boek direct bij ${aanbiederSafe}, geen extra kosten via Kiespret</div>
         </div>
       `;
       return card;
@@ -1458,10 +1475,10 @@
         return;
       }
 
-      // Uitleg selectie-logica
+      // Uitleg selectie-logica (selectionNote bevat alleen een cijfer, maar we escapen defensief)
       const totalLiked = liked.length;
       const selectionNote = totalLiked > 3
-        ? `Je hebt ${totalLiked} vakanties bewaard. Dit zijn de 3 die het beste passen bij je swipegedrag — op basis van sfeer, bestemming en wat je wel en niet leuk vond.`
+        ? `Je hebt ${Number(totalLiked)} vakanties bewaard. Dit zijn de 3 die het beste passen bij je swipegedrag — op basis van sfeer, bestemming en wat je wel en niet leuk vond.`
         : `Op basis van jullie voorkeuren en swipegedrag — gesorteerd op beste match.`;
       adviceBox.innerHTML = `
         <div class="selection-note">${selectionNote}</div>`;
@@ -1504,31 +1521,38 @@
       top3.forEach((trip, i) => {
         const v = trip.matchedVariant;
         const sfeerLabel = sfeerLabels[trip.sfeer[0]] || trip.sfeer[0];
+        const aanbiederSafe = escapeHtml(trip.aanbieder);
+        const destSafe = escapeHtml(trip.destination);
         const card = document.createElement('div');
         card.className = 'result-card';
         card.innerHTML = `
           <div class="result-rank-banner ${rankClasses[i]}">
             ${medals[i]} ${rankLabels[i]}
           </div>
-          <img class="result-img" src="${trip.imageUrl}" alt="${trip.destination}">
+          <img class="result-img" src="${escapeHtml(safeUrl(trip.imageUrl))}" alt="${destSafe}">
           <div class="result-body">
-            <div class="result-match-reason">${trip.matchReason}</div>
-            <div class="result-title">${trip.title}</div>
-            <div class="result-dest">📍 ${trip.destination}</div>
+            <div class="result-match-reason">${escapeHtml(trip.matchReason)}</div>
+            <div class="result-title">${escapeHtml(trip.title)}</div>
+            <div class="result-dest">📍 ${destSafe}</div>
             <div class="result-dims">
-              <span class="dim-label">Sfeer</span><span class="dim-value">${sfeerLabel}</span>
-              <span class="dim-label">Prijs</span><span class="dim-value">Vanaf €${v.prijs} p.p. (${trip.prijsPeilDatum})</span>
-              <span class="dim-label">Vluchtduur</span><span class="dim-value">${trip.vluchtduur} vanaf Schiphol</span>
-              <span class="dim-label">Boardtype</span><span class="dim-value">${trip.boardType}</span>
-              <span class="dim-label">Aanbieder</span><span class="dim-value">${trip.aanbieder}</span>
+              <span class="dim-label">Sfeer</span><span class="dim-value">${escapeHtml(sfeerLabel)}</span>
+              <span class="dim-label">Prijs</span><span class="dim-value">Vanaf €${Number(v.prijs) || 0} p.p. (${escapeHtml(trip.prijsPeilDatum)})</span>
+              <span class="dim-label">Vluchtduur</span><span class="dim-value">${escapeHtml(trip.vluchtduur)} vanaf Schiphol</span>
+              <span class="dim-label">Boardtype</span><span class="dim-value">${escapeHtml(trip.boardType)}</span>
+              <span class="dim-label">Aanbieder</span><span class="dim-value">${aanbiederSafe}</span>
             </div>
             <div class="result-row">
-              <div class="result-price">€${v.prijs}<small> p.p.</small></div>
-              <button class="book-btn" onclick="openOutbound('${trip.aanbieder}', '${v.affiliateUrl}')">
-                Bekijk bij ${trip.aanbieder} →
+              <div class="result-price">€${Number(v.prijs) || 0}<small> p.p.</small></div>
+              <button class="book-btn" data-book-btn>
+                Bekijk bij ${aanbiederSafe} →
               </button>
             </div>
           </div>`;
+        // Wire click handler via JS (geen inline onclick → geen string-injection risk)
+        const bookBtn = card.querySelector('[data-book-btn]');
+        if (bookBtn) {
+          bookBtn.addEventListener('click', () => openOutbound(trip.aanbieder, v.affiliateUrl));
+        }
         list.appendChild(card);
       });
     }
@@ -1541,23 +1565,26 @@
         (a.tagScore || 0) > (b.tagScore || 0) ? a : b);
 
       if (cheapest.id !== bestMatch.id) {
-        return `Als prijs belangrijker is: <strong>${cheapest.title}</strong> (€${cheapest.matchedVariant.prijs} p.p.). Als het vooral moet passen bij jullie sfeer: <strong>${bestMatch.title}</strong>.`;
+        return `Als prijs belangrijker is: <strong>${escapeHtml(cheapest.title)}</strong> (€${Number(cheapest.matchedVariant.prijs) || 0} p.p.). Als het vooral moet passen bij jullie sfeer: <strong>${escapeHtml(bestMatch.title)}</strong>.`;
       }
-      return `<strong>${bestMatch.title}</strong> scoort het beste op zowel prijs als match — een sterke keuze.`;
+      return `<strong>${escapeHtml(bestMatch.title)}</strong> scoort het beste op zowel prijs als match — een sterke keuze.`;
     }
 
     // ── OUTBOUND MODAL (bouwplan: tussenstap voor affiliate klik) ──────────
     function openOutbound(aanbieder, url) {
       const modal = document.getElementById('outboundModal');
+      const safeAanbieder = escapeHtml(aanbieder);
+      const safeOutboundUrl = safeUrl(url);
       document.getElementById('modalTitle').textContent = 'Jullie topkeuze staat klaar';
       document.getElementById('modalBody').innerHTML =
-        `Je boekt zo direct bij <strong>${aanbieder}</strong> — op hun website zie je de actuele prijs en beschikbaarheid. Geen extra kosten via Kiespret.`;
+        `Je boekt zo direct bij <strong>${safeAanbieder}</strong> — op hun website zie je de actuele prijs en beschikbaarheid. Geen extra kosten via Kiespret.`;
       const goBtn = document.getElementById('modalGo');
       goBtn.textContent = `Ga naar ${aanbieder} →`;
       goBtn.onclick = () => {
         // Event: outbound_click
-        kiespretTrack('outbound_click', { provider: aanbieder, url: url });
-        window.open(url, '_blank', 'noopener'); closeModal();
+        kiespretTrack('outbound_click', { provider: aanbieder, url: safeOutboundUrl });
+        if (safeOutboundUrl) window.open(safeOutboundUrl, '_blank', 'noopener');
+        closeModal();
       };
       modal.classList.add('active');
     }
@@ -1792,11 +1819,22 @@
         const budgetLabel = dp.budgetMax === 9999 ? 'geen limiet' : 'tot €' + dp.budgetMax + ' p.p.';
         const duurLabel = dp.duur === 0 ? 'flexibel' : dp.duur + ' nachten';
 
-        document.getElementById('duoLensDetails').innerHTML =
-          `<strong>Sfeer:</strong> ${sfeerLabel}<br>` +
-          `<strong>Periode:</strong> ${maanden}<br>` +
-          `<strong>Budget:</strong> ${budgetLabel}<br>` +
-          `<strong>Duur:</strong> ${duurLabel}`;
+        // Veilige DOM-constructie: Partner A's data komt via de API en mag NIET als HTML gerenderd worden
+        const lens = document.getElementById('duoLensDetails');
+        lens.textContent = '';
+        const lensRows = [
+          ['Sfeer', sfeerLabel],
+          ['Periode', maanden],
+          ['Budget', budgetLabel],
+          ['Duur', duurLabel]
+        ];
+        lensRows.forEach(([label, value], idx) => {
+          const strong = document.createElement('strong');
+          strong.textContent = label + ':';
+          lens.appendChild(strong);
+          lens.appendChild(document.createTextNode(' ' + value));
+          if (idx < lensRows.length - 1) lens.appendChild(document.createElement('br'));
+        });
 
         // Sla deck params op zodat Partner B dezelfde trips ziet
         prefs.sfeer = dp.sfeer || [];
@@ -1911,31 +1949,37 @@
       matchedTrips.forEach((trip, i) => {
         const v = trip.matchedVariant;
         const sfeerLabel = sfeerLabels[trip.sfeer[0]] || trip.sfeer[0];
+        const aanbiederSafe = escapeHtml(trip.aanbieder);
+        const destSafe = escapeHtml(trip.destination);
         const card = document.createElement('div');
         card.className = 'result-card';
         card.innerHTML = `
           <div class="result-rank-banner rank-1">
             💕 Jullie match ${matchedTrips.length > 1 ? (i + 1) : ''}
           </div>
-          <img class="result-img" src="${trip.imageUrl}" alt="${trip.destination}">
+          <img class="result-img" src="${escapeHtml(safeUrl(trip.imageUrl))}" alt="${destSafe}">
           <div class="result-body">
-            <div class="result-match-reason">${trip.matchReason}</div>
-            <div class="result-title">${trip.title}</div>
-            <div class="result-dest">📍 ${trip.destination}</div>
+            <div class="result-match-reason">${escapeHtml(trip.matchReason)}</div>
+            <div class="result-title">${escapeHtml(trip.title)}</div>
+            <div class="result-dest">📍 ${destSafe}</div>
             <div class="result-dims">
-              <span class="dim-label">Sfeer</span><span class="dim-value">${sfeerLabel}</span>
-              <span class="dim-label">Prijs</span><span class="dim-value">Vanaf €${v.prijs} p.p. (${trip.prijsPeilDatum})</span>
-              <span class="dim-label">Vluchtduur</span><span class="dim-value">${trip.vluchtduur} vanaf Schiphol</span>
-              <span class="dim-label">Boardtype</span><span class="dim-value">${trip.boardType}</span>
-              <span class="dim-label">Aanbieder</span><span class="dim-value">${trip.aanbieder}</span>
+              <span class="dim-label">Sfeer</span><span class="dim-value">${escapeHtml(sfeerLabel)}</span>
+              <span class="dim-label">Prijs</span><span class="dim-value">Vanaf €${Number(v.prijs) || 0} p.p. (${escapeHtml(trip.prijsPeilDatum)})</span>
+              <span class="dim-label">Vluchtduur</span><span class="dim-value">${escapeHtml(trip.vluchtduur)} vanaf Schiphol</span>
+              <span class="dim-label">Boardtype</span><span class="dim-value">${escapeHtml(trip.boardType)}</span>
+              <span class="dim-label">Aanbieder</span><span class="dim-value">${aanbiederSafe}</span>
             </div>
             <div class="result-row">
-              <div class="result-price">€${v.prijs}<small> p.p.</small></div>
-              <button class="book-btn" onclick="openOutbound('${trip.aanbieder}', '${v.affiliateUrl}')">
-                Bekijk bij ${trip.aanbieder} →
+              <div class="result-price">€${Number(v.prijs) || 0}<small> p.p.</small></div>
+              <button class="book-btn" data-book-btn>
+                Bekijk bij ${aanbiederSafe} →
               </button>
             </div>
           </div>`;
+        const bookBtn = card.querySelector('[data-book-btn]');
+        if (bookBtn) {
+          bookBtn.addEventListener('click', () => openOutbound(trip.aanbieder, v.affiliateUrl));
+        }
         list.appendChild(card);
       });
 
@@ -2067,7 +2111,7 @@
     })();
   </script>
 
-<script src="analytics.js"></script>
-<script src="cookie-consent.js"></script>
+<script src="/analytics.js"></script>
+<script src="/cookie-consent.js"></script>
 </body>
 </html>

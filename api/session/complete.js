@@ -2,6 +2,19 @@
 // Partner B stuurt gelikte IDs — overlap wordt berekend
 export const config = { runtime: 'edge' };
 
+const SESSION_ID_PATTERN = /^[a-f0-9]{8,32}$/;
+const MAX_LIKED_IDS = 50;
+const MAX_ID_LENGTH = 40;
+const ID_PATTERN = /^[A-Za-z0-9_-]+$/;
+
+function sanitizeLikedIds(raw) {
+  if (!Array.isArray(raw)) return null;
+  const clean = raw
+    .filter(id => typeof id === 'string' && id.length > 0 && id.length <= MAX_ID_LENGTH && ID_PATTERN.test(id))
+    .slice(0, MAX_LIKED_IDS);
+  return clean;
+}
+
 export default async function handler(req) {
   if (req.method !== 'POST') {
     return new Response(JSON.stringify({ error: 'Method not allowed' }), { status: 405 });
@@ -17,8 +30,13 @@ export default async function handler(req) {
   try {
     const { sessionId, likedIds } = await req.json();
 
-    if (!sessionId || !likedIds || !Array.isArray(likedIds)) {
-      return new Response(JSON.stringify({ error: 'sessionId and likedIds are required' }), { status: 400 });
+    if (!sessionId || typeof sessionId !== 'string' || !SESSION_ID_PATTERN.test(sessionId)) {
+      return new Response(JSON.stringify({ error: 'Invalid session ID' }), { status: 400 });
+    }
+
+    const cleanLikedIds = sanitizeLikedIds(likedIds);
+    if (!cleanLikedIds) {
+      return new Response(JSON.stringify({ error: 'likedIds must be an array' }), { status: 400 });
     }
 
     // Haal sessie op
@@ -39,7 +57,7 @@ export default async function handler(req) {
     const session = JSON.parse(getData.result);
 
     // Bereken overlap
-    const matches = session.partnerA.filter(id => likedIds.includes(id));
+    const matches = session.partnerA.filter(id => cleanLikedIds.includes(id));
 
     // Bepaal overlap-type conform bouwplan
     let overlapType;
@@ -54,7 +72,7 @@ export default async function handler(req) {
     // Update sessie
     const updatedSession = {
       ...session,
-      partnerB: likedIds,
+      partnerB: cleanLikedIds,
       matches,
       overlapType,
       status: 'completed',
@@ -81,7 +99,7 @@ export default async function handler(req) {
       matches,
       overlapType,
       partnerALiked: session.partnerA.length,
-      partnerBLiked: likedIds.length
+      partnerBLiked: cleanLikedIds.length
     }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }
