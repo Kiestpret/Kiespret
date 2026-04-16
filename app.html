@@ -2030,7 +2030,7 @@
       showScreen('screen-sfeer');
     }
 
-    // ── INIT: check voor duo-sessie of gedeelde shortlist ──────────────
+    // ── INIT: check voor duo-sessie, gedeelde shortlist, of SEO deeplink ─
     (function init() {
       const params = new URLSearchParams(window.location.search);
       const duoParam = params.get('duo');
@@ -2039,7 +2039,29 @@
         // Partner B opent duo-link
         loadDuoSession(duoParam);
       } else if (!checkSharedShortlist()) {
-        // Geen gedeelde link → toon onboarding
+        // Check of er sfeer-params vanuit SEO-pagina's meekomen
+        const sfeerParam = params.get('sfeer');
+        if (sfeerParam) {
+          // Pre-fill stap 1 met sfeer uit URL, bijv. ?sfeer=strand,rustig
+          const sfeerTags = sfeerParam.split(',');
+          // Zoek de sfeer-card die de beste overlap heeft
+          let bestCard = null;
+          let bestOverlap = 0;
+          document.querySelectorAll('.sfeer-card').forEach(card => {
+            const cardTags = card.dataset.sfeer.split(',');
+            const overlap = cardTags.filter(t => sfeerTags.includes(t)).length;
+            if (overlap > bestOverlap) {
+              bestOverlap = overlap;
+              bestCard = card;
+            }
+          });
+          if (bestCard) {
+            selectSfeer(bestCard);
+            // Visueel markeren
+            bestCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+        // Toon onboarding (stap 1, evt met pre-selectie)
         showScreen('screen-sfeer');
       }
     })();
