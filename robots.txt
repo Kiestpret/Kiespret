@@ -2,9 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /api/
 # Voorkom indexering van gedeelde top 3 en duo-sessies (persoonlijke URL's)
-Disallow: /app/?shortlist=
-Disallow: /app/?duo=
-Disallow: /app.html?shortlist=
-Disallow: /app.html?duo=
+Disallow: /start/?shortlist=
+Disallow: /start/?duo=
 
 Sitemap: https://www.kiespret.nl/sitemap.xml

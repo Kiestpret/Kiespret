@@ -20,9 +20,9 @@ function isAllowedOrigin(origin) {
   }
 }
 
-// Whitelists — moeten matchen met waardes in app.html onboarding
+// Whitelists — moeten matchen met waardes in start.html onboarding
 const ALLOWED_SFEER = ['strand', 'rustig', 'zon', 'actief', 'natuur', 'avontuur', 'resort', 'comfort', 'allinclusive'];
-// Let op: stap 3 in app.html slaat volledige maandnamen op (`data-maand="april"` etc.)
+// Let op: stap 3 in start.html slaat volledige maandnamen op (`data-maand="april"` etc.)
 const ALLOWED_MAANDEN = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
 const ALLOWED_AIRPORTS = ['AMS', 'RTM', 'EIN', 'MST', 'GRQ'];
 const ALLOWED_DUUR = [0, 7, 10, 14]; // 0 = maakt niet uit; stap 4 heeft alleen 7/10/14/0

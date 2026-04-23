@@ -2,7 +2,7 @@
  * Kiespret Analytics — 11 custom events conform bouwplan v3
  *
  * Events:
- * 1.  flow_start            — Eerste klik op start-CTA (index.html + app.html)
+ * 1.  flow_start            — Eerste klik op start-CTA (index.html + start.html)
  * 2.  onboarding_complete   — Na stap 4 van de onboarding
  * 3.  swipe_right           — Trip naar rechts geswypt (bewaard)
  * 4.  swipe_left            — Trip naar links geswypt (overgeslagen)

@@ -4,8 +4,8 @@ Kiespret smoke-test — vangt de soort regressies die Tessa anders pas op
 productie ontdekt:
 
 1. Relatieve script/link-paden (breken onder Vercel trailingSlash=true)
-2. app.html laad-volgorde: analytics.js moet vóór het main script
-3. Share-URLs moeten /app/?...  genereren, niet /app.html?...
+2. start.html laad-volgorde: analytics.js moet vóór het main script
+3. Share-URLs moeten /start/?...  genereren, niet /start.html?...
 4. vercel.json is geldig JSON
 5. robots.txt disallow-regels voor persoonlijke URLs aanwezig
 6. CSP-header verwijst niet naar ontbrekende hosts
@@ -25,7 +25,7 @@ def err(msg):
     errors.append(msg)
 
 
-HTML_PAGES = ["index.html", "app.html", "over.html", "privacybeleid.html", "voorwaarden.html", "404.html"]
+HTML_PAGES = ["index.html", "start.html", "over.html", "privacybeleid.html", "voorwaarden.html", "404.html"]
 
 
 # ── CHECK 1: relatieve <script src="..."> en <a href="...html"> ────────────
@@ -45,25 +45,25 @@ for name in HTML_PAGES:
         err(f"{name}:{line}: relatieve href=\"{m.group(1)}\" — gebruik absolute cleanURL (/over, /app, etc.)")
 
 
-# ── CHECK 2: app.html laad-volgorde ────────────────────────────────────────
-app_html = (ROOT / "app.html").read_text()
-scripts_in_order = re.findall(r'<script(?:\s+src="([^"]+)")?', app_html)
+# ── CHECK 2: start.html laad-volgorde ──────────────────────────────────────
+start_html = (ROOT / "start.html").read_text()
+scripts_in_order = re.findall(r'<script(?:\s+src="([^"]+)")?', start_html)
 # Vind index van analytics.js en de eerste inline script
 analytics_idx = next((i for i, s in enumerate(scripts_in_order) if s and "analytics.js" in s), -1)
 inline_idx = next((i for i, s in enumerate(scripts_in_order) if not s), -1)
 if analytics_idx == -1:
-    err("app.html: <script src=\"/analytics.js\"> ontbreekt")
+    err("start.html: <script src=\"/analytics.js\"> ontbreekt")
 elif inline_idx != -1 and analytics_idx > inline_idx:
     err(
-        "app.html: /analytics.js laadt na inline script — "
+        "start.html: /analytics.js laadt na inline script — "
         "init() roept kiespretTrack aan die dan nog niet bestaat"
     )
 
 
-# ── CHECK 3: share-URL's gebruiken /app/?... niet /app.html?... ────────────
-for bad in re.finditer(r"/app\.html\?(?:shortlist|duo)=", app_html):
-    line = app_html[: bad.start()].count("\n") + 1
-    err(f"app.html:{line}: share-URL gebruikt /app.html — redirect naar /app/ kan query kwijt maken")
+# ── CHECK 3: share-URL's gebruiken /start/?... niet /start.html?... ────────
+for bad in re.finditer(r"/start\.html\?(?:shortlist|duo)=", start_html):
+    line = start_html[: bad.start()].count("\n") + 1
+    err(f"start.html:{line}: share-URL gebruikt /start.html — redirect naar /start/ kan query kwijt maken")
 
 
 # ── CHECK 4: vercel.json is geldig JSON ────────────────────────────────────
@@ -76,7 +76,7 @@ except json.JSONDecodeError as e:
 
 # ── CHECK 5: robots.txt blokkeert persoonlijke URLs ────────────────────────
 robots = (ROOT / "robots.txt").read_text()
-for needle in ["/app/?shortlist=", "/app/?duo="]:
+for needle in ["/start/?shortlist=", "/start/?duo="]:
     if needle not in robots:
         err(f"robots.txt: mist 'Disallow: {needle}' — gedeelde URLs kunnen in Google komen")
 

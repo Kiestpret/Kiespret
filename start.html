@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kiespret — Vind jullie top 3 zonvakanties</title>
   <meta name="description" content="Beantwoord 4 vragen, swipe door vakanties die passen en vergelijk jullie top 3. Boek direct bij de aanbieder.">
-  <link rel="canonical" href="https://www.kiespret.nl/app/">
-  <link rel="alternate" hreflang="nl-NL" href="https://www.kiespret.nl/app/">
-  <link rel="alternate" hreflang="nl-BE" href="https://www.kiespret.nl/app/">
-  <link rel="alternate" hreflang="x-default" href="https://www.kiespret.nl/app/">
+  <link rel="canonical" href="https://www.kiespret.nl/start/">
+  <link rel="alternate" hreflang="nl-NL" href="https://www.kiespret.nl/start/">
+  <link rel="alternate" hreflang="nl-BE" href="https://www.kiespret.nl/start/">
+  <link rel="alternate" hreflang="x-default" href="https://www.kiespret.nl/start/">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -16,7 +16,7 @@
   <meta property="og:title" content="Kiespret — Vind jullie top 3 zonvakanties">
   <meta property="og:description" content="Beantwoord 4 vragen, swipe door vakanties die passen en vergelijk jullie top 3.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.kiespret.nl/app/">
+  <meta property="og:url" content="https://www.kiespret.nl/start/">
   <meta property="og:image" content="https://www.kiespret.nl/og-image.png">
   <meta property="og:locale" content="nl_NL">
 
@@ -1816,7 +1816,7 @@
         const data = await res.json();
         if (data.sessionId) {
           duoSessionId = data.sessionId;
-          const duoUrl = window.location.origin + '/app/?duo=' + duoSessionId;
+          const duoUrl = window.location.origin + '/start/?duo=' + duoSessionId;
           document.getElementById('duoShareUrl').value = duoUrl;
           showScreen('screen-duo-wait');
           kiespretTrack('share_link_created', { method: 'duo', sessionId: duoSessionId });
@@ -2049,7 +2049,7 @@
       if (top3.length === 0) return '';
       const ids = top3.map(t => t.id);
       const encoded = btoa(JSON.stringify(ids));
-      return window.location.origin + '/app/?shortlist=' + encodeURIComponent(encoded);
+      return window.location.origin + '/start/?shortlist=' + encodeURIComponent(encoded);
     }
 
     function copyShareLink() {
