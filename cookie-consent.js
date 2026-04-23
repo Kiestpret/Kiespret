@@ -68,7 +68,7 @@
         <div class="cc-main">
           <h2 class="cc-title">Cookie-instellingen</h2>
           <p class="cc-text">Kiespret gebruikt anonieme statistieken (Plausible, zonder cookies) om de website te verbeteren. Met jouw toestemming plaatsen wij daarnaast marketing cookies voor relevante advertenties.</p>
-          <p class="cc-text cc-small">Lees meer in ons <a href="privacybeleid.html" class="cc-link">privacybeleid</a>.</p>
+          <p class="cc-text cc-small">Lees meer in ons <a href="/privacybeleid/" class="cc-link">privacybeleid</a>.</p>
 
           <div class="cc-categories">
             <label class="cc-cat">
