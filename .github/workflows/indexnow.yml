@@ -1,0 +1,60 @@
+name: IndexNow — notify search engines of updated pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'gids/**'
+      - 'sitemap.xml'
+      - 'llms.txt'
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Find changed URLs
+        id: urls
+        run: |
+          # Get changed HTML files + sitemap + llms.txt
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- '*.html' 'gids/' 'sitemap.xml' 'llms.txt' 2>/dev/null || echo "")
+          if [ -z "$CHANGED" ]; then
+            echo "No relevant files changed"
+            echo "skip=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Convert file paths to URLs
+          URLS=""
+          while IFS= read -r file; do
+            # Remove index.html suffix, add trailing slash
+            url="https://www.kiespret.nl/${file}"
+            url=$(echo "$url" | sed 's|/index\.html|/|g')
+            url=$(echo "$url" | sed 's|index\.html|/|g')
+            # sitemap.xml and llms.txt stay as-is
+            URLS="${URLS}\"${url}\","
+          done <<< "$CHANGED"
+
+          # Remove trailing comma
+          URLS="${URLS%,}"
+          echo "urls=[$URLS]" >> $GITHUB_OUTPUT
+          echo "skip=false" >> $GITHUB_OUTPUT
+          echo "Submitting URLs: [$URLS]"
+
+      - name: Submit to IndexNow
+        if: steps.urls.outputs.skip != 'true'
+        run: |
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "host": "www.kiespret.nl",
+              "key": "68141b8881c2f26817fed62a660eebebadf094f9dd516c8ff2b86ddae131c04d",
+              "keyLocation": "https://www.kiespret.nl/68141b8881c2f26817fed62a660eebebadf094f9dd516c8ff2b86ddae131c04d.txt",
+              "urlList": ${{ steps.urls.outputs.urls }}
+            }'
+          echo ""
+          echo "IndexNow submission complete"
