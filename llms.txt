@@ -1,0 +1,90 @@
+# Kiespret — Keuzehulp voor zonvakanties
+
+Kiespret helpt koppels sneller een zonvakantie kiezen.
+Beantwoord 4 vragen, vergelijk jullie top 3, en boek bij TUI, Sunweb of Corendon.
+
+## Hoe het werkt
+- Methodologie: https://www.kiespret.nl/gids/methodologie/
+- Welke vakantie past bij mij: https://www.kiespret.nl/gids/welke-vakantie-past-bij-mij/
+
+## Gidsen — Overzicht
+- Master gids: https://www.kiespret.nl/gids/
+
+## Griekenland
+- Cluster: https://www.kiespret.nl/gids/griekenland/
+- Kos of Rhodos: https://www.kiespret.nl/gids/griekenland/kos-of-rhodos/
+- Kreta of Rhodos: https://www.kiespret.nl/gids/griekenland/kreta-of-rhodos/
+- Kos of Kreta: https://www.kiespret.nl/gids/griekenland/kos-of-kreta/
+- Corfu of Zakynthos: https://www.kiespret.nl/gids/griekenland/corfu-of-zakynthos/
+- Rhodos of Zakynthos: https://www.kiespret.nl/gids/griekenland/rhodos-of-zakynthos/
+- Rustige eilanden: https://www.kiespret.nl/gids/griekenland/rustige-eilanden/
+- Romantisch Grieks eiland: https://www.kiespret.nl/gids/griekenland/romantisch-grieks-eiland/
+
+## Eilanden vergelijken
+- Cluster: https://www.kiespret.nl/gids/eilanden/
+- Sicilië of Sardinië: https://www.kiespret.nl/gids/eilanden/sicilie-of-sardinie/
+- Tenerife of Gran Canaria: https://www.kiespret.nl/gids/eilanden/tenerife-of-gran-canaria/
+- Lanzarote of Fuerteventura: https://www.kiespret.nl/gids/eilanden/lanzarote-of-fuerteventura/
+- Mallorca of Menorca: https://www.kiespret.nl/gids/eilanden/mallorca-of-menorca/
+- Ibiza of Mallorca: https://www.kiespret.nl/gids/eilanden/ibiza-of-mallorca/
+- Malta of Cyprus: https://www.kiespret.nl/gids/eilanden/malta-of-cyprus/
+- Cyprus of Kreta: https://www.kiespret.nl/gids/eilanden/cyprus-of-kreta/
+- Canarische eilanden vergelijken: https://www.kiespret.nl/gids/eilanden/canarische-eilanden-vergelijken/
+
+## Adults only
+- Cluster: https://www.kiespret.nl/gids/adults-only/
+- Adults only Griekenland: https://www.kiespret.nl/gids/adults-only-griekenland/
+- Adults only hotel Griekenland: https://www.kiespret.nl/gids/adults-only-hotel-griekenland/
+- Adults only Turkije: https://www.kiespret.nl/gids/adults-only-turkije/
+- Adults only Spanje: https://www.kiespret.nl/gids/adults-only-spanje/
+- Vakantie zonder kinderen: https://www.kiespret.nl/gids/vakantie-zonder-kinderen/
+
+## Turkije
+- Cluster: https://www.kiespret.nl/gids/turkije/
+- Side of Alanya: https://www.kiespret.nl/gids/turkije/side-of-alanya/
+- Antalya of Side: https://www.kiespret.nl/gids/turkije/antalya-of-side/
+- Bodrum of Antalya: https://www.kiespret.nl/gids/turkije/bodrum-of-antalya/
+- All inclusive Turkije: https://www.kiespret.nl/gids/turkije/all-inclusive/
+- Beste reistijd Turkije: https://www.kiespret.nl/gids/turkije/beste-reistijd/
+- Strandvakantie Turkije: https://www.kiespret.nl/gids/turkije/strandvakantie/
+- Turkse Rivièra: https://www.kiespret.nl/gids/turkije/turkse-riviera/
+
+## Albanië
+- Cluster: https://www.kiespret.nl/gids/albanie/
+- Saranda of Ksamil: https://www.kiespret.nl/gids/albanie/saranda-of-ksamil/
+- Albanese Rivièra: https://www.kiespret.nl/gids/albanie/albanese-riviera/
+- Veiligheid: https://www.kiespret.nl/gids/albanie/veiligheid/
+- Kosten: https://www.kiespret.nl/gids/albanie/kosten/
+- Beste reistijd: https://www.kiespret.nl/gids/albanie/beste-reistijd/
+- Strandvakantie: https://www.kiespret.nl/gids/albanie/strandvakantie/
+
+## Kroatië
+- Cluster: https://www.kiespret.nl/gids/kroatie/
+- Istrië of Dalmatië: https://www.kiespret.nl/gids/kroatie/istrie-of-dalmatie/
+- Split of Zadar: https://www.kiespret.nl/gids/kroatie/split-of-zadar/
+- Eilanden Kroatië: https://www.kiespret.nl/gids/kroatie/eilanden/
+- Strandvakantie: https://www.kiespret.nl/gids/kroatie/strandvakantie/
+- Kosten: https://www.kiespret.nl/gids/kroatie/kosten/
+- Beste reistijd: https://www.kiespret.nl/gids/kroatie/beste-reistijd/
+
+## Cross-cluster vergelijkingen
+- Turkije of Griekenland: https://www.kiespret.nl/gids/turkije-of-griekenland/
+- Turkije of Egypte: https://www.kiespret.nl/gids/turkije-of-egypte/
+- Albanië of Griekenland: https://www.kiespret.nl/gids/albanie-of-griekenland/
+- Albanië of Kroatië: https://www.kiespret.nl/gids/albanie-of-kroatie/
+- Albanië of Montenegro: https://www.kiespret.nl/gids/albanie-of-montenegro/
+- Kroatië of Griekenland: https://www.kiespret.nl/gids/kroatie-of-griekenland/
+- Kroatië of Italië: https://www.kiespret.nl/gids/kroatie-of-italie/
+- Kroatië of Spanje: https://www.kiespret.nl/gids/kroatie-of-spanje/
+- Dubrovnik of Split: https://www.kiespret.nl/gids/dubrovnik-of-split/
+- Vakantie twee personen: https://www.kiespret.nl/gids/vakantie-twee-personen/
+
+## Seizoenstips
+- Zonvakantie mei: https://www.kiespret.nl/gids/zonvakantie-mei/
+- Zonvakantie juni: https://www.kiespret.nl/gids/zonvakantie-juni/
+- Zonvakantie september: https://www.kiespret.nl/gids/zonvakantie-september/
+- Winterzon Canarische eilanden: https://www.kiespret.nl/gids/winterzon-canarische-eilanden/
+- Romantische vakantie Europa: https://www.kiespret.nl/gids/romantische-vakantie-europa/
+
+## Optionele bron
+sitemap: https://www.kiespret.nl/sitemap.xml

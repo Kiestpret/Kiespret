@@ -5,4 +5,14 @@ Disallow: /api/
 Disallow: /start/?shortlist=
 Disallow: /start/?duo=
 
+# AI-crawlers expliciet toestaan (GEO/AI-search readiness)
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://www.kiespret.nl/sitemap.xml
