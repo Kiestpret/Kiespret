@@ -48,10 +48,30 @@
   }
 
   function applyConsent(prefs) {
-    // Marketing: hier komen straks Meta Pixel, TikTok Pixel, etc.
     if (prefs.marketing) {
-      // TODO: Meta Pixel laden
-      // TODO: TikTok Pixel laden
+      // Microsoft Clarity — heatmaps & sessie-opnames
+      if (!document.querySelector('script[src*="clarity.ms"]')) {
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wqm57cj2ma");
+      }
+
+      // TradeTracker SuperTag — affiliate tracking
+      if (!document.querySelector('script[src*="tradetracker.net"]')) {
+        var _TradeTrackerTagOptions = {
+          t: 'a',
+          s: '509815',
+          chk: 'd32333308beb69d4e116fafe32cb0e00',
+          overrideOptions: {}
+        };
+        window._TradeTrackerTagOptions = _TradeTrackerTagOptions;
+        var tt = document.createElement('script'), s = document.getElementsByTagName('script')[0];
+        tt.setAttribute('type', 'text/javascript');
+        tt.setAttribute('src', 'https://tm.tradetracker.net/tag?t=' + _TradeTrackerTagOptions.t + '&s=' + _TradeTrackerTagOptions.s + '&chk=' + _TradeTrackerTagOptions.chk);
+        s.parentNode.insertBefore(tt, s);
+      }
     }
 
     // Event dispatchen zodat andere scripts kunnen reageren
