@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /dashboard
 # Voorkom indexering van gedeelde top 3 en duo-sessies (persoonlijke URL's)
 Disallow: /start/?shortlist=
 Disallow: /start/?duo=
