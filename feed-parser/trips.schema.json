@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Kiespret Trips",
+  "description": "Schema voor trips.json — gegenereerd uit TradeTracker productfeed",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id", "title", "destination", "hotelName", "sfeer",
+      "aanbieder", "boardType", "adultsOnly", "audience",
+      "matchReason", "tags", "highlights", "description",
+      "imageUrl", "affiliatePartner", "variants"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$",
+        "description": "Unieke slug-ID voor de trip"
+      },
+      "title": {
+        "type": "string",
+        "minLength": 5,
+        "maxLength": 80
+      },
+      "destination": {
+        "type": "string",
+        "description": "Regio/stad, Land"
+      },
+      "hotelName": {
+        "type": "string",
+        "minLength": 2
+      },
+      "sfeer": {
+        "type": "array",
+        "items": { "type": "string" },
+        "minItems": 1
+      },
+      "aanbieder": {
+        "type": "string",
+        "enum": ["Corendon", "TUI", "Sunweb", "D-reizen"]
+      },
+      "boardType": {
+        "type": "string"
+      },
+      "vluchtduur": {
+        "type": "string",
+        "pattern": "^\\d+u(\\d+)?$"
+      },
+      "adultsOnly": {
+        "type": "boolean"
+      },
+      "audience": {
+        "type": "string",
+        "enum": ["couples", "families", "budget"]
+      },
+      "matchReason": {
+        "type": "string",
+        "minLength": 10,
+        "maxLength": 120
+      },
+      "whyThisTrip": {
+        "type": "string"
+      },
+      "tags": {
+        "type": "array",
+        "items": { "type": "string" },
+        "minItems": 1
+      },
+      "highlights": {
+        "type": "array",
+        "items": { "type": "string" },
+        "minItems": 1,
+        "maxItems": 5
+      },
+      "description": {
+        "type": "string",
+        "minLength": 20,
+        "maxLength": 300
+      },
+      "imageUrl": {
+        "type": "string",
+        "format": "uri"
+      },
+      "affiliatePartner": {
+        "type": "string"
+      },
+      "variants": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "required": ["maand", "duur", "airport", "prijs", "affiliateUrl"],
+          "properties": {
+            "maand": {
+              "type": "string",
+              "enum": [
+                "januari", "februari", "maart", "april", "mei", "juni",
+                "juli", "augustus", "september", "oktober", "november", "december"
+              ]
+            },
+            "duur": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 28
+            },
+            "airport": {
+              "type": "string",
+              "enum": ["AMS", "EIN", "RTM", "GRQ", "MST"]
+            },
+            "prijs": {
+              "type": "number",
+              "minimum": 50
+            },
+            "affiliateUrl": {
+              "type": "string",
+              "pattern": "^https://"
+            }
+          }
+        }
+      },
+      "prijsPeilDatum": {
+        "type": "string"
+      }
+    }
+  }
+}
