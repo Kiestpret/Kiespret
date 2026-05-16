@@ -1499,6 +1499,13 @@
         return !liked.includes(t) && (t.destination.split(',')[1] || '').trim() === ((trip.destination.split(',')[1] || '').trim());
       }).length;
       if (dislikedCount >= 2) score -= 2;
+      // Prijs-voorkeur: lichte bonus voor trips duidelijk onder budget (max +2).
+      // Doel: outbound-conversie omhoog zonder dat goedkope altijd wint.
+      if (prefs.budgetMax && prefs.budgetMax < 9999 && trip.matchedVariant) {
+        var prijsRatio = trip.matchedVariant.prijs / prefs.budgetMax;
+        if (prijsRatio <= 0.75) score += 1;
+        if (prijsRatio <= 0.60) score += 1;
+      }
       return score;
     }
 
@@ -1518,7 +1525,10 @@
       adviceBox.innerHTML = '';
 
       // Sorteer likes op tag-score (hoogste eerst) en pak top 3
-      const sortedLikes = [...liked].sort((a, b) => (b.tagScore || 0) - (a.tagScore || 0));
+      // Top 3 op basis van scoreTripSmart (gebruikt likedTags/dislikedTags/regio/prijs),
+      // niet alleen de onboarding-tagScore. Persoonlijker resultaat dat ook spontane
+      // swipe-keuzes meeneemt.
+      const sortedLikes = [...liked].sort((a, b) => scoreTripSmart(b) - scoreTripSmart(a));
       const top3 = sortedLikes.slice(0, 3);
 
       if (top3.length === 0) {
