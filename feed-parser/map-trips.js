@@ -77,29 +77,48 @@ function parseDuration(product) {
 }
 
 function deriveSfeer(product) {
+  // Alleen tags die de UI als sfeer-keuze biedt (start.html stap 1):
+  //   strand, rustig, zon, actief, natuur, avontuur, resort, comfort, allinclusive
+  // Andere descriptieve tags (pool, wellness, luxe, adults-only) horen in tags,
+  // niet in sfeer — ze tellen daar wel mee voor scoreTripSmart-learning.
   const sfeer = [];
   const service = prop(product, 'serviceType').toLowerCase();
-  const adultsOnly = prop(product, 'onlyadult') === 'true';
   const stars = parseInt(prop(product, 'stars', '0'), 10);
-  const desc = (prop(product, 'descriptionShort') + ' ' + product.name).toLowerCase();
+  const desc = (
+    prop(product, 'descriptionShort') + ' ' +
+    prop(product, 'descriptionLong', '') + ' ' +
+    product.name
+  ).toLowerCase();
 
+  // ── UI-matchbare sfeer-tags ──
   if (service.includes('all inclusive') || service.includes('ultra all')) sfeer.push('allinclusive');
-  if (adultsOnly) sfeer.push('adults-only');
-  if (stars >= 5) sfeer.push('luxe');
   if (stars >= 4) sfeer.push('comfort');
   if (desc.includes('strand') || desc.includes('beach') || desc.includes('zee')) sfeer.push('strand');
-  if (desc.includes('zwembad') || desc.includes('pool')) sfeer.push('pool');
-  if (desc.includes('spa') || desc.includes('wellness')) sfeer.push('wellness');
-  if (desc.includes('rustig') || desc.includes('adults') || desc.includes('boutique')) sfeer.push('rustig');
+  if (desc.includes('rustig') || desc.includes('boutique')) sfeer.push('rustig');
   if (desc.includes('resort')) sfeer.push('resort');
 
-  // Zorg voor minimum
+  // ── Actief/natuur/avontuur: strenger dan eerder, vereist concrete activiteits-woorden ──
+  // Voorkomt dat een resort met "uitzicht op bergen" ten onrechte 'natuur' krijgt.
+  if (desc.match(/\b(wandel(en|tocht|paden|route)?|hike|fietst?(en|tour|route)?|duik(en|spot|plek)?|snorkel(en|spot)?|excursie|kajak|surf)\b/)) {
+    sfeer.push('actief');
+  }
+  if (desc.match(/\b(natuurpark|nationaal park|wandelroute|bergen|bos(sen)?|vulkaanlandschap|kustpad|grotten)\b/)) {
+    sfeer.push('natuur');
+  }
+  if (desc.match(/\b(avontuur(lijk)?|verkennen|ontdekken|expeditie|safari|jeep-?tour|quad)\b/)) {
+    sfeer.push('avontuur');
+  }
+
+  // Fallback: zonvakanties zonder duidelijke sfeer krijgen 'zon'
   if (sfeer.length === 0) sfeer.push('zon');
 
   return [...new Set(sfeer)];
 }
 
 function deriveTags(product) {
+  // Tags voeden scoreTripSmart-learning tijdens swipen — rijker dan sfeer,
+  // niet beperkt tot UI-buttons. Pool/wellness/luxe/adults-only zitten hier
+  // (en NIET in sfeer) zodat ze swipe-signaal geven zonder de filter te verstoren.
   const tags = [];
   const service = prop(product, 'serviceType').toLowerCase();
   const adultsOnly = prop(product, 'onlyadult') === 'true';
@@ -122,6 +141,8 @@ function deriveTags(product) {
   if (desc.includes('centrum') || desc.includes('center')) tags.push('centraal');
   if (desc.includes('duik') || desc.includes('snorkel')) tags.push('snorkelen');
   if (desc.includes('wifi')) tags.push('wifi');
+  if (desc.match(/\b(wandel|hike|fiets)\b/)) tags.push('wandelen');
+  if (desc.match(/\bromantisch|honeymoon\b/)) tags.push('romantisch');
 
   return [...new Set(tags)];
 }
@@ -180,21 +201,52 @@ function deriveTitle(product) {
 }
 
 function deriveMatchReason(product) {
+  // v3: hotel-specifiek door {concept} in {city/country} — {feature} te combineren.
+  // Doel: top 3 toont niet 3x dezelfde generieke tekst.
+  const country = prop(product, 'country');
+  const city = prop(product, 'city');
+  const stars = parseInt(prop(product, 'stars', '0'), 10);
   const adultsOnly = prop(product, 'onlyadult') === 'true';
   const service = prop(product, 'serviceType').toLowerCase();
-  const stars = parseInt(prop(product, 'stars', '0'), 10);
-  const rating = prop(product, 'rating', '');
+  const ratingRaw = prop(product, 'rating', '');
+  const rating = parseFloat(ratingRaw.replace(',', '.')) || 0;
   const price = product.price?.amount || 0;
+  const desc = (
+    prop(product, 'descriptionShort', '') + ' ' +
+    prop(product, 'descriptionLong', '')
+  ).toLowerCase();
 
-  if (adultsOnly && service.includes('all inclusive')) return 'Adults only en volledig ontzorgd';
-  if (adultsOnly) return 'Alleen voor volwassenen — rust gegarandeerd';
-  if (service.includes('ultra all')) return 'Ultra all-inclusive: alles inbegrepen';
-  if (service.includes('all inclusive') && price < 600) return 'All-inclusive én scherp geprijsd';
-  if (service.includes('all inclusive')) return 'Zorgeloos genieten met all-inclusive';
-  if (stars >= 5) return 'Luxe verblijf met topservice';
-  if (rating && parseFloat(rating.replace(',', '.')) >= 8.5) return `Hoog gewaardeerd door gasten (${rating})`;
-  if (price < 500) return 'Scherpe prijs voor een zonvakantie';
-  return 'Fijne vakantie op een toplocatie';
+  // 1. Concept (één label)
+  let concept;
+  if (adultsOnly && (service.includes('all inclusive') || service.includes('ultra all'))) concept = 'Adults only all-inclusive';
+  else if (adultsOnly) concept = 'Adults only';
+  else if (service.includes('ultra all')) concept = 'Ultra all-inclusive';
+  else if (service.includes('all inclusive')) concept = 'All-inclusive';
+  else if (stars >= 5) concept = 'Luxe verblijf';
+  else if (service.includes('halfpension')) concept = 'Halfpension';
+  else concept = 'Zonvakantie';
+
+  // 2. Locatie: stad als zinvol, anders alleen land
+  const locatie = city && city.toLowerCase() !== country.toLowerCase()
+    ? `${city}, ${country}`
+    : country;
+
+  // 3. Hotel-specifiek feature (eerste match wint, gekozen op herkenbaarheid)
+  let feature = '';
+  if (desc.match(/\bprivéstrand|eigen strand|eigen baai\b/)) feature = 'met privéstrand';
+  else if (desc.includes('infinity')) feature = 'met infinity pool';
+  else if (desc.match(/\baan zee|strandlocatie|aan het strand\b/)) feature = 'direct aan zee';
+  else if (desc.match(/\boude stad|historisch centrum|vlakbij het centrum\b/)) feature = 'vlakbij het centrum';
+  else if (desc.includes('rooftop') || desc.includes('dakterras')) feature = 'met rooftop';
+  else if (desc.match(/\bspa|wellness\b/) && stars >= 4) feature = 'met spa & wellness';
+  else if (desc.match(/\b(swim[- ]?up|swimup|kamer met zwembad)\b/)) feature = 'met swim-up kamer';
+  else if (rating >= 8.8) feature = `${ratingRaw}/10 reviews`;
+  else if (stars === 5) feature = '5 sterren';
+  else if (price > 0 && price < 500) feature = 'scherp geprijsd';
+
+  return feature
+    ? `${concept} in ${locatie} — ${feature}`
+    : `${concept} in ${locatie}`;
 }
 
 function deriveWhyThisTrip(product) {

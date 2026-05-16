@@ -28,13 +28,13 @@ const outputPath = join(__dirname, '..', 'trips.js');
 
 // ── Config ──────────────────────────────────────────────────────────────
 
-const MAX_TOTAL = 300;          // Maximaal aantal Corendon-trips
+const MAX_TOTAL = 200;          // Maximaal aantal Corendon-trips (was 300)
 const MIN_STARS = 4;            // Minimaal 4 sterren
-const MIN_RATING = 7.0;        // Minimaal 7.0 rating (of onbekend)
+const MIN_RATING = 7.5;         // Minimaal 7.5 rating (was 7.0) — strenger cureren
 const ALLOWED_AIRPORTS = new Set(['AMS', 'EIN']);
-const MAX_PER_REGION = 12;     // Max trips per regio voor spreiding
-const MAX_PER_COUNTRY = 60;    // Max trips per land voor diversiteit
-const ADULTS_ONLY_BOOST = 50;  // Scoresbonus voor adults-only
+const MAX_PER_REGION = 8;       // Max trips per regio (was 12) — meer regio-diversiteit
+const MAX_PER_COUNTRY = 25;     // Max trips per land (was 60) — voorkomt Turkije/Spanje-dominantie
+const ADULTS_ONLY_BOOST = 50;   // Scoresbonus voor adults-only
 
 // Prioriteitslanden (matchen met Kiespret SEO-content)
 const PRIORITY_COUNTRIES = new Set([
@@ -192,7 +192,7 @@ const header = `// trips.js — Kiespret dataset
 // Totaal: ${allTrips.length}
 //
 // Scope: uitsluitend zonvakanties voor Nederlandse koppels 28–45
-// Curatie: 4+ sterren, rating ≥ 7.0, AMS/EIN, max ${MAX_PER_REGION}/regio
+// Curatie: 4+ sterren, rating ≥ ${MIN_RATING}, AMS/EIN, max ${MAX_PER_REGION}/regio, max ${MAX_PER_COUNTRY}/land
 // Prijs: per persoon inclusief vlucht
 
 const trips = `;
