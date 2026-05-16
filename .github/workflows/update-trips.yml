@@ -8,6 +8,8 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # nodig om de bijgewerkte trips.js terug naar main te kunnen pushen
     steps:
       - uses: actions/checkout@v4
 
