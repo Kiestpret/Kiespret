@@ -36,6 +36,11 @@ const MAX_PER_REGION = 8;       // Max trips per regio (was 12) — meer regio-d
 const MAX_PER_COUNTRY = 25;     // Max trips per land (was 60) — voorkomt Turkije/Spanje-dominantie
 const ADULTS_ONLY_BOOST = 50;   // Scoresbonus voor adults-only
 
+// Behoud handmatige TUI/Sunweb/D-reizen trips? Tijdelijk uit: ze gebruiken
+// dummy affiliateUrls (geen TradeTracker-deal). Zet op true zodra TUI/Sunweb
+// affiliate-relaties geregeld zijn en hun trips echte commissie genereren.
+const KEEP_MANUAL_TRIPS = false;
+
 // Prioriteitslanden (matchen met Kiespret SEO-content)
 const PRIORITY_COUNTRIES = new Set([
   'Griekenland', 'Turkije', 'Spanje', 'Portugal', 'Italië',
@@ -45,6 +50,7 @@ const PRIORITY_COUNTRIES = new Set([
 // ── Helpers ──────────────────────────────────────────────────────────────
 
 function parseExistingTrips(filePath) {
+  if (!KEEP_MANUAL_TRIPS) return [];
   try {
     const content = readFileSync(filePath, 'utf-8');
     const match = content.match(/const trips\s*=\s*\[/);
