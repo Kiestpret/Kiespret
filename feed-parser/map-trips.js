@@ -25,6 +25,11 @@ const RELEVANT_COUNTRIES = new Set([
 
 const MIN_STARS = 3;
 
+// Last-minute aanbiedingen (< 14 dagen vooruit) zijn vaak niet meer beschikbaar
+// tegen feed-prijs. Corendon toont dan een latere maand, wat onze vanaf-prijs
+// op de kaart inconsistent maakt met wat de gebruiker bij doorklik ziet.
+const MIN_DAYS_AHEAD = 14;
+
 const MAAND_MAP = {
   '01': 'januari', '02': 'februari', '03': 'maart', '04': 'april',
   '05': 'mei', '06': 'juni', '07': 'juli', '08': 'augustus',
@@ -67,6 +72,14 @@ function parseDateToMaand(dateStr) {
   const parts = dateStr.split('/');
   if (parts.length !== 3) return null;
   return MAAND_MAP[parts[1]] || null;
+}
+
+function parseDateToDate(dateStr) {
+  // Format: dd/mm/yyyy → Date
+  const parts = dateStr.split('/');
+  if (parts.length !== 3) return null;
+  const d = new Date(`${parts[2]}-${parts[1]}-${parts[0]}T00:00:00Z`);
+  return isNaN(d.getTime()) ? null : d;
 }
 
 function parseDuration(product) {
@@ -304,6 +317,14 @@ function mapProduct(product) {
   const dateStr = prop(product, 'departureDate');
   const maand = parseDateToMaand(dateStr);
   if (!maand) return null;
+
+  // Skip last-minute aanbiedingen — vaak niet meer boekbaar tegen feed-prijs,
+  // wat leidt tot mismatch tussen onze vanaf-prijs en wat user op Corendon ziet.
+  const departureDate = parseDateToDate(dateStr);
+  if (departureDate) {
+    const cutoff = new Date(Date.now() + MIN_DAYS_AHEAD * 24 * 60 * 60 * 1000);
+    if (departureDate < cutoff) return null;
+  }
 
   const duur = parseDuration(product);
   if (duur < 2) return null;
