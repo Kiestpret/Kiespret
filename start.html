@@ -1360,7 +1360,7 @@
           <div class="card-highlights">${highlightTags}</div>
           <div class="card-price-row">
             <div>
-              <div class="card-price-label">Vanaf p.p. (${escapeHtml(trip.prijsPeilDatum)})</div>
+              <div class="card-price-label">Vanaf p.p. — vertrek ${escapeHtml(v.maand)}</div>
               <div class="card-price">€${Number(v.prijs) || 0}<span> / ${Number(v.duur) || 0} nachten</span></div>
             </div>
             ${adultsBadge}
@@ -1603,7 +1603,7 @@
             <div class="result-dest">📍 ${destSafe}</div>
             <div class="result-dims">
               <span class="dim-label">Sfeer</span><span class="dim-value">${escapeHtml(sfeerLabel)}</span>
-              <span class="dim-label">Prijs</span><span class="dim-value">Vanaf €${Number(v.prijs) || 0} p.p. (${escapeHtml(trip.prijsPeilDatum)})</span>
+              <span class="dim-label">Prijs</span><span class="dim-value">Vanaf €${Number(v.prijs) || 0} p.p. — vertrek ${escapeHtml(v.maand)}</span>
               <span class="dim-label">Vluchtduur</span><span class="dim-value">${escapeHtml(trip.vluchtduur)} vanaf Schiphol</span>
               <span class="dim-label">Boardtype</span><span class="dim-value">${escapeHtml(trip.boardType)}</span>
               <span class="dim-label">Aanbieder</span><span class="dim-value">${aanbiederSafe}</span>
@@ -2031,7 +2031,7 @@
             <div class="result-dest">📍 ${destSafe}</div>
             <div class="result-dims">
               <span class="dim-label">Sfeer</span><span class="dim-value">${escapeHtml(sfeerLabel)}</span>
-              <span class="dim-label">Prijs</span><span class="dim-value">Vanaf €${Number(v.prijs) || 0} p.p. (${escapeHtml(trip.prijsPeilDatum)})</span>
+              <span class="dim-label">Prijs</span><span class="dim-value">Vanaf €${Number(v.prijs) || 0} p.p. — vertrek ${escapeHtml(v.maand)}</span>
               <span class="dim-label">Vluchtduur</span><span class="dim-value">${escapeHtml(trip.vluchtduur)} vanaf Schiphol</span>
               <span class="dim-label">Boardtype</span><span class="dim-value">${escapeHtml(trip.boardType)}</span>
               <span class="dim-label">Aanbieder</span><span class="dim-value">${aanbiederSafe}</span>
