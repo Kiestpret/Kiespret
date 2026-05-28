@@ -362,7 +362,7 @@ function buildTrip(product, variant) {
   const adultsOnly = prop(product, 'onlyadult') === 'true';
   const code = prop(product, 'accommodationcode', product.ID);
   const stars = parseInt(prop(product, 'stars', '0'), 10);
-  const imageUrl = product.images?.[0] || prop(product, 'productimage_1', '');
+  const imageUrl = product.images?.[1] || product.images?.[0] || prop(product, 'productimage_1', '');
 
   return {
     id: `corendon-${slugify(decodeHtmlEntities(product.name))}-${code.toLowerCase()}`,
