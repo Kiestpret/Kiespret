@@ -1204,18 +1204,27 @@
     }
 
     function filterTripsCustom(prefs) {
-      return trips
+      const sorted = trips
         .map(trip => {
           const variant = matchVariantCustom(trip, prefs);
           if (!variant) return null;
           const sfeermatch = trip.sfeer.some(s => prefs.sfeer.includes(s));
           if (!sfeermatch) return null;
-          // Tag-overlap score
           const tagScore = trip.sfeer.filter(s => prefs.sfeer.includes(s)).length;
           return { ...trip, matchedVariant: variant, tagScore };
         })
         .filter(Boolean)
         .sort((a, b) => b.tagScore - a.tagScore);
+
+      // Bestemmingsdiversiteit: max 2 trips per land
+      const MAX_PER_COUNTRY = 2;
+      const countPerCountry = {};
+      return sorted.filter(t => {
+        const parts = (t.destination || '').split(',');
+        const c = (parts[parts.length - 1] || 'unknown').trim();
+        countPerCountry[c] = (countPerCountry[c] || 0) + 1;
+        return countPerCountry[c] <= MAX_PER_COUNTRY;
+      });
     }
 
     // ── START SWIPEN ───────────────────────────────────────────────────────
@@ -1247,9 +1256,9 @@
         prefs.duur = 0;
         currentTrips = filterTripsCustom(prefs);
       }
-      // Laatste redmiddel: ook sfeer loslaten
+      // Laatste redmiddel: ook sfeer loslaten (met diversiteit)
       if (currentTrips.length === 0) {
-        currentTrips = trips
+        const all = trips
           .map(trip => {
             const variant = trip.variants.find(v =>
               prefs.maanden.includes(v.maand) && v.airport === prefs.airport
@@ -1259,6 +1268,13 @@
           })
           .filter(Boolean)
           .sort(() => Math.random() - 0.5);
+        const cpc = {};
+        currentTrips = all.filter(t => {
+          const parts = (t.destination || '').split(',');
+          const c = (parts[parts.length - 1] || 'unknown').trim();
+          cpc[c] = (cpc[c] || 0) + 1;
+          return cpc[c] <= 2;
+        });
       }
 
       // Herstel originele prefs voor eventuele restart

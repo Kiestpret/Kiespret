@@ -2,20 +2,28 @@
 /**
  * map-trips.js — Zet Corendon TradeTracker feed om naar trips.json
  *
- * Groepeert per hotel, filtert op koppelgeschiktheid,
- * en genereert het variants-schema uit bouwplan v3.
+ * Variant-accumulatie: laadt bestaande trips.json en merget nieuwe
+ * feed-producten als varianten bij bestaande hotels. Zo bouw je over
+ * meerdere dagen een complete set maand/prijs-combinaties per hotel op.
  *
- * Input:  feed-parser/raw-feed.json
+ * - Bestaand hotel + nieuwe variant → variant wordt toegevoegd
+ * - Bestaand hotel + zelfde variant → prijs/URL wordt bijgewerkt
+ * - Nieuw hotel → nieuwe trip aangemaakt
+ * - Varianten ouder dan MAX_VARIANT_AGE_DAYS → opgeruimd
+ *
+ * Input:  feed-parser/raw-feed.json + (optioneel) feed-parser/trips.json
  * Output: feed-parser/trips.json
  */
 
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // ── Config ──────────────────────────────────────────────────────────────
+
+const MAX_VARIANT_AGE_DAYS = 14; // Varianten ouder dan 14 dagen opruimen
 
 const RELEVANT_COUNTRIES = new Set([
   'Griekenland', 'Turkije', 'Spanje', 'Portugal', 'Italië',
@@ -56,6 +64,17 @@ function prop(product, key, fallback = '') {
   return arr?.[0] ?? fallback;
 }
 
+function decodeHtmlEntities(str) {
+  return str
+    .replace(/&apos;/g, "'")
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(n))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCharCode(parseInt(n, 16)));
+}
+
 function slugify(str) {
   return str
     .toLowerCase()
@@ -68,7 +87,6 @@ function slugify(str) {
 }
 
 function parseDateToMaand(dateStr) {
-  // Format: dd/mm/yyyy
   const parts = dateStr.split('/');
   if (parts.length !== 3) return null;
   return MAAND_MAP[parts[1]] || null;
@@ -85,7 +103,6 @@ function parseDateToDate(dateStr) {
 function parseDuration(product) {
   const d = parseInt(prop(product, 'duration', '0'), 10);
   const type = prop(product, 'durationType', 'dagen');
-  // Feed geeft "8 dagen" = 7 nachten
   return type === 'dagen' ? d - 1 : d;
 }
 
@@ -124,7 +141,6 @@ function deriveSfeer(product) {
 
   // Fallback: zonvakanties zonder duidelijke sfeer krijgen 'zon'
   if (sfeer.length === 0) sfeer.push('zon');
-
   return [...new Set(sfeer)];
 }
 
@@ -174,7 +190,6 @@ function deriveHighlights(product) {
   if (adultsOnly) highlights.push('Adults only');
   if (prop(product, 'flightIncluded') === 'true') highlights.push('Vlucht inbegrepen');
 
-  // Parse description for specifics
   const strandMatch = desc.match(/strand[^\n]*?op circa (\d+) meter/);
   if (strandMatch) highlights.push(`Strand op ${strandMatch[1]}m`);
 
@@ -192,7 +207,6 @@ function deriveTitle(product) {
   const region = prop(product, 'region', city);
 
   const parts = [];
-
   if (adultsOnly) parts.push('Adults only');
   else if (service.includes('ultra all')) parts.push('Ultra all-inclusive');
   else if (service.includes('all inclusive')) parts.push('All-inclusive');
@@ -284,7 +298,7 @@ function deriveDescription(product) {
 
   const city = prop(product, 'city');
   const country = prop(product, 'country');
-  return `Ontdek ${product.name} in ${city}, ${country}. Boek direct bij Corendon.`;
+  return `Ontdek ${decodeHtmlEntities(product.name)} in ${city}, ${country}. Boek direct bij Corendon.`;
 }
 
 function getBoardType(product) {
@@ -301,19 +315,15 @@ function getBoardType(product) {
   return map[s] || s || 'Logies';
 }
 
-// ── Main mapping ────────────────────────────────────────────────────────
+// ── Variant key (uniek per maand+duur+airport) ─────────────────────────
 
-function mapProduct(product) {
-  const country = prop(product, 'country');
-  if (!RELEVANT_COUNTRIES.has(country)) return null;
+function variantKey(v) {
+  return `${v.maand}|${v.duur}|${v.airport}`;
+}
 
-  const stars = parseInt(prop(product, 'stars', '0'), 10);
-  if (stars < MIN_STARS) return null;
+// ── Extract variant from feed product ──────────────────────────────────
 
-  // Skip cruises en andere niet-hotel types
-  const accType = prop(product, 'accommodationType', '').toLowerCase();
-  if (accType.includes('cruise') || accType.includes('cabin')) return null;
-
+function extractVariant(product) {
   const dateStr = prop(product, 'departureDate');
   const maand = parseDateToMaand(dateStr);
   if (!maand) return null;
@@ -333,46 +343,47 @@ function mapProduct(product) {
   const price = product.price?.amount;
   if (!price || price < 50) return null;
 
+  return {
+    maand,
+    duur,
+    airport,
+    prijs: price,
+    affiliateUrl: product.URL,
+    _addedAt: new Date().toISOString().split('T')[0], // voor veroudering
+  };
+}
+
+// ── Build trip object from feed product (nieuw hotel) ──────────────────
+
+function buildTrip(product, variant) {
+  const country = prop(product, 'country');
   const city = prop(product, 'city');
   const region = prop(product, 'region', city);
   const adultsOnly = prop(product, 'onlyadult') === 'true';
   const code = prop(product, 'accommodationcode', product.ID);
-
-  // ID: slugified hotel name + code
-  const id = `corendon-${slugify(product.name)}-${code.toLowerCase()}`;
-
-  // Eerste afbeelding (hoge kwaliteit)
+  const stars = parseInt(prop(product, 'stars', '0'), 10);
   const imageUrl = product.images?.[0] || prop(product, 'productimage_1', '');
 
   return {
-    id,
+    id: `corendon-${slugify(decodeHtmlEntities(product.name))}-${code.toLowerCase()}`,
     title: deriveTitle(product),
     destination: `${region}, ${country}`,
-    hotelName: product.name,
+    hotelName: decodeHtmlEntities(product.name),
     sfeer: deriveSfeer(product),
     aanbieder: 'Corendon',
     boardType: getBoardType(product),
     vluchtduur: VLUCHTDUUR_MAP[country] || '3u',
     adultsOnly,
-    audience: adultsOnly ? 'couples' : 'couples',
+    audience: 'couples',
     matchReason: deriveMatchReason(product),
-    whyThisTrip: deriveWhyThisTrip(product),
+    whyThisTrip: decodeHtmlEntities(deriveWhyThisTrip(product)),
     tags: deriveTags(product),
     highlights: deriveHighlights(product),
-    description: deriveDescription(product),
+    description: decodeHtmlEntities(deriveDescription(product)),
     imageUrl,
     affiliatePartner: 'Corendon',
-    variants: [
-      {
-        maand,
-        duur,
-        airport,
-        prijs: price,
-        affiliateUrl: product.URL,
-      },
-    ],
+    variants: [variant],
     prijsPeilDatum: new Date().toLocaleDateString('nl-NL', { month: 'long', year: 'numeric' }),
-    // Extra metadata voor filtering/sorting
     _meta: {
       stars,
       rating: prop(product, 'rating', '0').replace(',', '.'),
@@ -386,33 +397,163 @@ function mapProduct(product) {
   };
 }
 
+// ── Verouderde varianten opruimen ──────────────────────────────────────
+
+function pruneOldVariants(trip) {
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - MAX_VARIANT_AGE_DAYS);
+  const cutoffStr = cutoff.toISOString().split('T')[0];
+
+  trip.variants = trip.variants.filter(v => {
+    // Varianten zonder _addedAt behouden (handmatige trips, legacy)
+    if (!v._addedAt) return true;
+    return v._addedAt >= cutoffStr;
+  });
+
+  // Update prijsPeilDatum op basis van meest recente variant
+  if (trip.variants.length > 0) {
+    const newest = trip.variants.reduce((a, b) =>
+      (a._addedAt || '') > (b._addedAt || '') ? a : b
+    );
+    if (newest._addedAt) {
+      const d = new Date(newest._addedAt);
+      trip.prijsPeilDatum = d.toLocaleDateString('nl-NL', { month: 'long', year: 'numeric' });
+    }
+  }
+
+  return trip.variants.length > 0;
+}
+
+// ── Filter: mag dit product meedoen? ───────────────────────────────────
+
+function isEligible(product) {
+  const country = prop(product, 'country');
+  if (!RELEVANT_COUNTRIES.has(country)) return false;
+
+  const stars = parseInt(prop(product, 'stars', '0'), 10);
+  if (stars < MIN_STARS) return false;
+
+  const accType = prop(product, 'accommodationType', '').toLowerCase();
+  if (accType.includes('cruise') || accType.includes('cabin')) return false;
+
+  return true;
+}
+
 // ── Run ─────────────────────────────────────────────────────────────────
 
 const rawPath = join(__dirname, 'raw-feed.json');
 const outPath = join(__dirname, 'trips.json');
 
+// Stap 1: Laad bestaande trips (als die er zijn)
+let existingTrips = [];
+if (existsSync(outPath)) {
+  try {
+    existingTrips = JSON.parse(readFileSync(outPath, 'utf-8'));
+    console.log(`📂 Bestaande trips.json geladen: ${existingTrips.length} hotels`);
+  } catch {
+    console.log('⚠️  trips.json kon niet gelezen worden, start met leeg bestand');
+  }
+}
+
+// Bouw index op accommodationCode
+const hotelIndex = new Map();
+for (const trip of existingTrips) {
+  const code = trip._meta?.accommodationCode;
+  if (code) hotelIndex.set(code, trip);
+}
+
+// Stap 2: Laad nieuwe feed
 console.log('📦 Feed laden…');
 const raw = JSON.parse(readFileSync(rawPath, 'utf-8'));
 const products = raw.products || raw;
 console.log(`   ${products.length} producten in de feed`);
 
-console.log('🔄 Mapping…');
-const mapped = products.map(mapProduct).filter(Boolean);
-console.log(`   ${mapped.length} trips na filtering`);
+// Stap 3: Merge feed-producten met bestaande hotels
+let newHotels = 0;
+let updatedVariants = 0;
+let newVariants = 0;
+let skipped = 0;
+
+for (const product of products) {
+  if (!isEligible(product)) { skipped++; continue; }
+
+  const variant = extractVariant(product);
+  if (!variant) { skipped++; continue; }
+
+  const code = prop(product, 'accommodationcode', product.ID);
+  const existing = hotelIndex.get(code);
+
+  if (existing) {
+    // Hotel bestaat al → merge variant
+    const key = variantKey(variant);
+    const idx = existing.variants.findIndex(v => variantKey(v) === key);
+
+    if (idx >= 0) {
+      // Zelfde maand+duur+airport → update prijs en URL
+      existing.variants[idx].prijs = variant.prijs;
+      existing.variants[idx].affiliateUrl = variant.affiliateUrl;
+      existing.variants[idx]._addedAt = variant._addedAt;
+      updatedVariants++;
+    } else {
+      // Nieuwe combinatie → voeg variant toe
+      existing.variants.push(variant);
+      newVariants++;
+    }
+  } else {
+    // Nieuw hotel → maak trip aan
+    const trip = buildTrip(product, variant);
+    hotelIndex.set(code, trip);
+    newHotels++;
+  }
+}
+
+console.log(`\n🔄 Merge resultaat:`);
+console.log(`   ${newHotels} nieuwe hotels`);
+console.log(`   ${newVariants} nieuwe varianten bij bestaande hotels`);
+console.log(`   ${updatedVariants} bijgewerkte varianten (prijs/URL)`);
+console.log(`   ${skipped} producten overgeslagen (filters)`);
+
+// Stap 4: Decode HTML entities in bestaande hotels (legacy fix)
+for (const trip of hotelIndex.values()) {
+  if (trip.hotelName) trip.hotelName = decodeHtmlEntities(trip.hotelName);
+  if (trip.title) trip.title = decodeHtmlEntities(trip.title);
+  if (trip.whyThisTrip) trip.whyThisTrip = decodeHtmlEntities(trip.whyThisTrip);
+  if (trip.description) trip.description = decodeHtmlEntities(trip.description);
+}
+
+// Stap 5: Ruim verouderde varianten op
+let pruned = 0;
+const allTrips = [];
+for (const trip of hotelIndex.values()) {
+  const beforeCount = trip.variants.length;
+  if (pruneOldVariants(trip)) {
+    allTrips.push(trip);
+    pruned += beforeCount - trip.variants.length;
+  } else {
+    pruned += beforeCount;
+  }
+}
+
+if (pruned > 0) console.log(`   ${pruned} verouderde varianten opgeruimd`);
 
 // Stats
 const countries = {};
-const adultsCount = mapped.filter(t => t.adultsOnly).length;
-mapped.forEach(t => {
+let adultsCount = 0;
+let totalVariants = 0;
+allTrips.forEach(t => {
   const c = t._meta.country;
   countries[c] = (countries[c] || 0) + 1;
+  if (t.adultsOnly) adultsCount++;
+  totalVariants += t.variants.length;
 });
 
-console.log('\n📊 Verdeling:');
+console.log(`\n📊 Resultaat:`);
+console.log(`   ${allTrips.length} hotels, ${totalVariants} varianten totaal`);
+console.log(`   Gemiddeld ${(totalVariants / allTrips.length).toFixed(1)} varianten per hotel`);
 Object.entries(countries)
   .sort((a, b) => b[1] - a[1])
   .forEach(([c, n]) => console.log(`   ${c}: ${n}`));
 console.log(`   Adults only: ${adultsCount}`);
 
-writeFileSync(outPath, JSON.stringify(mapped, null, 2), 'utf-8');
+writeFileSync(outPath, JSON.stringify(allTrips, null, 2), 'utf-8');
 console.log(`\n💾 Opgeslagen: ${outPath}`);
