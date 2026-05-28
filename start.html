@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kiespret — Vind jullie top 3 zonvakanties</title>
-  <meta name="description" content="Beantwoord 4 vragen, swipe door vakanties die passen en vergelijk jullie top 3. Boek direct bij de aanbieder.">
+  <meta name="description" content="Beantwoord 3 vragen, swipe door vakanties die passen en vergelijk jullie top 3. Boek direct bij de aanbieder.">
   <link rel="canonical" href="https://www.kiespret.nl/start/">
   <link rel="alternate" hreflang="nl-NL" href="https://www.kiespret.nl/start/">
   <link rel="alternate" hreflang="nl-BE" href="https://www.kiespret.nl/start/">
@@ -14,7 +14,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Kiespret — Vind jullie top 3 zonvakanties">
-  <meta property="og:description" content="Beantwoord 4 vragen, swipe door vakanties die passen en vergelijk jullie top 3.">
+  <meta property="og:description" content="Beantwoord 3 vragen, swipe door vakanties die passen en vergelijk jullie top 3.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.kiespret.nl/start/">
   <meta property="og:image" content="https://www.kiespret.nl/og-image.png">
@@ -23,7 +23,7 @@
   <!-- Twitter/X Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Kiespret — Vind jullie top 3 zonvakanties">
-  <meta name="twitter:description" content="Beantwoord 4 vragen, swipe door vakanties die passen en vergelijk jullie top 3.">
+  <meta name="twitter:description" content="Beantwoord 3 vragen, swipe door vakanties die passen en vergelijk jullie top 3.">
   <meta name="twitter:image" content="https://www.kiespret.nl/og-image.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -830,7 +830,7 @@
   <!-- NAV -->
   <nav>
     <a href="/" class="nav-logo">kiespret</a>
-    <span class="nav-step" id="navStep">Stap 1 van 4</span>
+    <span class="nav-step" id="navStep">Stap 1 van 3</span>
   </nav>
 
   <!-- PROGRESS -->
@@ -841,7 +841,7 @@
   <!-- ══ SCREEN: STAP 1 — SFEER ══════════════════════════════════════ -->
   <div class="screen active" id="screen-sfeer">
     <div class="onboarding-wrap">
-      <div class="question-label">Stap 1 van 4</div>
+      <div class="question-label">Stap 1 van 3</div>
       <h1 class="question-title">Wat voor vakantie zoeken jullie?</h1>
       <p class="question-sub">Kies wat het beste past — je kunt straks altijd bijstellen.</p>
 
@@ -878,7 +878,7 @@
   <!-- ══ SCREEN: STAP 2 — BUDGET (4 opties conform bouwplan) ══════════ -->
   <div class="screen" id="screen-budget">
     <div class="onboarding-wrap">
-      <div class="question-label">Stap 2 van 4</div>
+      <div class="question-label">Stap 2 van 3</div>
       <h2 class="question-title">Wat mag het kosten?</h2>
       <p class="question-sub">Per persoon, inclusief vlucht.</p>
 
@@ -919,16 +919,14 @@
     </div>
   </div>
 
-  <!-- ══ SCREEN: STAP 3 — PERIODE (apr–okt conform bouwplan) ══════════ -->
+  <!-- ══ SCREEN: STAP 3 — PERIODE (jun–okt) ══════════════════════════ -->
   <div class="screen" id="screen-periode">
     <div class="onboarding-wrap">
-      <div class="question-label">Stap 3 van 4</div>
+      <div class="question-label">Stap 3 van 3</div>
       <h2 class="question-title">Wanneer willen jullie weg?</h2>
       <p class="question-sub">Kies een of meerdere maanden die uitkomen.</p>
 
       <div class="period-grid">
-        <button class="period-btn" data-maand="april"     onclick="toggleMaand(this)">apr</button>
-        <button class="period-btn" data-maand="mei"       onclick="toggleMaand(this)">mei</button>
         <button class="period-btn" data-maand="juni"      onclick="toggleMaand(this)">jun</button>
         <button class="period-btn" data-maand="juli"      onclick="toggleMaand(this)">jul</button>
         <button class="period-btn" data-maand="augustus"  onclick="toggleMaand(this)">aug</button>
@@ -936,31 +934,13 @@
         <button class="period-btn" data-maand="oktober"   onclick="toggleMaand(this)">okt</button>
       </div>
 
-      <button class="cta-btn" id="btnPeriode" onclick="goToStap4()" disabled>
-        Volgende →
-      </button>
-    </div>
-  </div>
-
-  <!-- ══ SCREEN: STAP 4 — DUUR (4 opties conform bouwplan) ════════════ -->
-  <div class="screen" id="screen-duur">
-    <div class="onboarding-wrap">
-      <div class="question-label">Stap 4 van 4</div>
-      <h2 class="question-title">Hoe lang willen jullie weg?</h2>
-      <p class="question-sub">We zoeken vakanties die precies passen.</p>
-
-      <div class="duur-options">
-        <button class="duur-btn" data-duur="7"    onclick="selectDuur(this)">1 week</button>
-        <button class="duur-btn" data-duur="10"   onclick="selectDuur(this)">10 dagen</button>
-        <button class="duur-btn" data-duur="14"   onclick="selectDuur(this)">2 weken</button>
-        <button class="duur-btn" data-duur="0"    onclick="selectDuur(this)">Maakt niet uit</button>
-      </div>
-
-      <button class="cta-btn" id="btnDuur" onclick="startSwipen()" disabled>
+      <button class="cta-btn" id="btnPeriode" onclick="startSwipen()" disabled>
         Toon mijn vakanties →
       </button>
     </div>
   </div>
+
+  <!-- Stap 4 (duur) verwijderd — intern gefilterd op 6-8 nachten -->
 
   <!-- ══ SCREEN: SWIPEN ═══════════════════════════════════════════════ -->
   <div class="screen" id="screen-swipe">
@@ -1163,7 +1143,7 @@
       document.getElementById('btnSfeer').disabled = false;
     }
 
-    function goToStap2() { setProgress(25, 2, 4); showScreen('screen-budget'); }
+    function goToStap2() { setProgress(33, 2, 3); showScreen('screen-budget'); }
 
     // ── STAP 2: BUDGET (4 ranges conform bouwplan) ─────────────────────────
     function selectBudget(el) {
@@ -1173,9 +1153,9 @@
       document.getElementById('btnBudget').disabled = false;
     }
 
-    function goToStap3() { setProgress(50, 3, 4); showScreen('screen-periode'); }
+    function goToStap3() { setProgress(66, 3, 3); showScreen('screen-periode'); }
 
-    // ── STAP 3: PERIODE (apr–okt) ──────────────────────────────────────────
+    // ── STAP 3: PERIODE (jun–okt) ──────────────────────────────────────────
     function toggleMaand(el) {
       el.classList.toggle('selected');
       prefs.maanden = Array.from(document.querySelectorAll('.period-btn.selected'))
@@ -1183,21 +1163,11 @@
       document.getElementById('btnPeriode').disabled = prefs.maanden.length === 0;
     }
 
-    function goToStap4() { setProgress(75, 4, 4); showScreen('screen-duur'); }
-
-    // ── STAP 4: DUUR (4 opties incl. 10d en "maakt niet uit") ──────────────
-    function selectDuur(el) {
-      document.querySelectorAll('.duur-btn').forEach(b => b.classList.remove('selected'));
-      el.classList.add('selected');
-      prefs.duur = parseInt(el.dataset.duur);
-      document.getElementById('btnDuur').disabled = false;
-    }
-
-    // ── MATCHING (met duur=0 = alle duren) ─────────────────────────────────
+    // ── MATCHING (intern 6-8 nachten, sfeer als ranking) ──────────────────
     function matchVariantCustom(trip, prefs) {
       return trip.variants.find(v =>
         prefs.maanden.includes(v.maand) &&
-        (prefs.duur === 0 || v.duur === prefs.duur) &&
+        v.duur >= 6 && v.duur <= 8 &&
         v.airport === prefs.airport &&
         v.prijs <= prefs.budgetMax
       ) || null;
@@ -1208,8 +1178,7 @@
         .map(trip => {
           const variant = matchVariantCustom(trip, prefs);
           if (!variant) return null;
-          const sfeermatch = trip.sfeer.some(s => prefs.sfeer.includes(s));
-          if (!sfeermatch) return null;
+          // Sfeer als ranking: match geeft hogere score, maar geen uitsluiting
           const tagScore = trip.sfeer.filter(s => prefs.sfeer.includes(s)).length;
           return { ...trip, matchedVariant: variant, tagScore };
         })
@@ -1233,7 +1202,6 @@
       kiespretTrack('onboarding_complete');
 
       const origBudget = prefs.budgetMax;
-      const origDuur = prefs.duur;
 
       currentTrips = filterTripsCustom(prefs);
       currentIndex = 0;
@@ -1241,23 +1209,13 @@
       likedTags = {};
       dislikedTags = {};
 
-      // Progressieve fallbacks: eerst budget loslaten, dan duur, dan beide
-      if (currentTrips.length === 0) {
+      // Fallback: budget loslaten als te weinig resultaten
+      if (currentTrips.length < 3) {
         prefs.budgetMax = 9999;
         currentTrips = filterTripsCustom(prefs);
       }
-      if (currentTrips.length === 0) {
-        prefs.budgetMax = origBudget;
-        prefs.duur = 0; // alle duren
-        currentTrips = filterTripsCustom(prefs);
-      }
-      if (currentTrips.length === 0) {
-        prefs.budgetMax = 9999;
-        prefs.duur = 0;
-        currentTrips = filterTripsCustom(prefs);
-      }
-      // Laatste redmiddel: ook sfeer loslaten (met diversiteit)
-      if (currentTrips.length === 0) {
+      // Laatste redmiddel: ook duur-filter loslaten (met diversiteit)
+      if (currentTrips.length < 3) {
         const all = trips
           .map(trip => {
             const variant = trip.variants.find(v =>
@@ -1279,7 +1237,6 @@
 
       // Herstel originele prefs voor eventuele restart
       prefs.budgetMax = origBudget;
-      prefs.duur = origDuur;
 
       // Bouwplan: max 8–10 kaarten
       if (currentTrips.length > MAX_DECK) {
@@ -1897,7 +1854,7 @@
           'resort': 'Resort & comfort', 'comfort': 'Resort & comfort', 'allinclusive': 'Resort & comfort'
         };
         const sfeerLabel = dp.sfeer ? dp.sfeer.map(s => sfeerMap[s] || s).filter((v,i,a) => a.indexOf(v) === i).join(', ') : '';
-        const maandMap = { apr: 'april', mei: 'mei', jun: 'juni', jul: 'juli', aug: 'augustus', sep: 'september', okt: 'oktober' };
+        const maandMap = { mei: 'mei', jun: 'juni', jul: 'juli', aug: 'augustus', sep: 'september', okt: 'oktober' };
         const maanden = dp.maanden ? dp.maanden.map(m => maandMap[m] || m).join(', ') : '';
         const budgetLabel = dp.budgetMax === 9999 ? 'geen limiet' : 'tot €' + dp.budgetMax + ' p.p.';
         const duurLabel = dp.duur === 0 ? 'flexibel' : dp.duur + ' nachten';
@@ -2153,8 +2110,8 @@
       document.querySelectorAll('#btnSfeer, #btnBudget, #btnPeriode, #btnDuur')
         .forEach(btn => btn.disabled = true);
 
-      setProgress(0, 'Stap 1 van 4', null);
-      document.getElementById('navStep').textContent = 'Stap 1 van 4';
+      setProgress(0, 'Stap 1 van 3', null);
+      document.getElementById('navStep').textContent = 'Stap 1 van 3';
       showScreen('screen-sfeer');
     }
 
