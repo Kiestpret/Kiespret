@@ -127,17 +127,16 @@ function deriveSfeer(product) {
   if (desc.includes('rustig') || desc.includes('boutique')) sfeer.push('rustig');
   if (desc.includes('resort')) sfeer.push('resort');
 
-  // ── Actief/natuur/avontuur: strenger dan eerder, vereist concrete activiteits-woorden ──
-  // Voorkomt dat een resort met "uitzicht op bergen" ten onrechte 'natuur' krijgt.
-  if (desc.match(/\b(wandel(en|tocht|paden|route)?|hike|fietst?(en|tour|route)?|duik(en|spot|plek)?|snorkel(en|spot)?|excursie|kajak|surf)\b/)) {
-    sfeer.push('actief');
-  }
+  // ── Actief/natuur/avontuur: min 2 matches vereist ──
+  // Voorkomt dat elk strandresort met één keer "excursie" in de tekst 'actief' krijgt.
+  const actiefHits = (desc.match(/\b(wandel(en|tocht|paden|route)?|hik(e|ing)|fietst?(en|tour|route)?|duik(en|spot|plek)?|snorkel(en|spot)?|excursie|kajak|surf(en)?|sportief|actief)\b/g) || []).length;
+  if (actiefHits >= 2) sfeer.push('actief');
+
   if (desc.match(/\b(natuurpark|nationaal park|wandelroute|bergen|bos(sen)?|vulkaanlandschap|kustpad|grotten)\b/)) {
     sfeer.push('natuur');
   }
-  if (desc.match(/\b(avontuur(lijk)?|verkennen|ontdekken|expeditie|safari|jeep-?tour|quad)\b/)) {
-    sfeer.push('avontuur');
-  }
+  const avontuurHits = (desc.match(/\b(avontuur(lijk)?|verkennen|ontdekken|expeditie|safari|jeep-?tour|quad|off-?road)\b/g) || []).length;
+  if (avontuurHits >= 2) sfeer.push('avontuur');
 
   // Fallback: zonvakanties zonder duidelijke sfeer krijgen 'zon'
   if (sfeer.length === 0) sfeer.push('zon');
@@ -499,6 +498,12 @@ for (const product of products) {
       existing.variants.push(variant);
       newVariants++;
     }
+
+    // Herbereken metadata bij elke merge (sfeer-logica kan verbeterd zijn)
+    existing.sfeer = deriveSfeer(product);
+    existing.tags = deriveTags(product);
+    existing.matchReason = deriveMatchReason(product);
+    existing.highlights = deriveHighlights(product);
   } else {
     // Nieuw hotel → maak trip aan
     const trip = buildTrip(product, variant);
