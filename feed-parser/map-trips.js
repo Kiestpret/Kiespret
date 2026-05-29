@@ -327,6 +327,23 @@ const destinationDescriptions = {
   'Marrakech': 'Djemaa el-Fna, riads met binnentuinen, souks vol specerijen en de Jardin Majorelle. Zintuigelijke stadservaring.',
   'Sal': 'Santa Maria strand, zoutpannen van Pedra de Lume en walvissen spotten. Kaapverdische zon het hele jaar door.',
   'Abu Dhabi': 'Sheikh Zayed-moskee, Louvre Abu Dhabi en mangrove-kajakken. Rustiger dan Dubai met dezelfde woestijnwarmte.',
+  'Sveti Vlas': 'Modern badplaatsje naast Nessebar, met jachthavens en een rustig strand aan de Zwarte Zee. Luxer dan Sunny Beach.',
+  'Nessebar': 'UNESCO-oude stad op een schiereiland, omringd door stranden. Bulgaarse geschiedenis aan de Zwarte Zee.',
+  'Obzor': 'Rustig kustplaatsje met lang zandstrand en Thracische ruïnes. Onontdekt Bulgarije zonder massatoerisme.',
+  'Pomorie': 'Modderbaden, zoutlagunes en een authentiek vissersdorp aan de Zwarte Zee. Wellness en rust.',
+  'Didim': 'Apollotempel, Altinkum-strand met drie baaien en een ontspannen Turkse sfeer. Rustiger dan Bodrum.',
+  'Ozdere': 'Breed zandstrand, warmwaterbronnen en fruitboomgaarden. Onbekend Turks kustplaatsje voor rust.',
+  'Sarigerme': 'Drie kilometer beschermd schildpaddenstrand met duinen. Eén van de rustigste plekken aan de Turkse kust.',
+  'Gumuldur': 'Klein Turks kustdorp met wijnranken, olijfboomgaarden en een kalm kiezelstrand. Authentiek en betaalbaar.',
+  'Kas': 'Lycische rotsgraven, duiken bij onderwaterruïnes en een charmant centrum aan de Turkse kust. Het mooiste dorp van de zuidkust.',
+  'Ras al Khaimah': 'Woestijn, bergen en mangroven in één emiraat. Avontuurlijk alternatief voor Dubai zonder de drukte.',
+  'Costa de la Luz': 'Witte dorpen, eindeloze zandstranden en de wind van de Atlantische Oceaan. Surfen en Spaanse authenticiteit.',
+  'Costa del Azahar': 'Sinaasappelboomgaarden, rustige stranden en het keramiekstadje Onda. Onontdekt stuk Spaanse kust.',
+  'Jan Thiel Baai': 'Koraalstrand, flamingo\'s bij het zoutmeer en strandtenten op Curaçao. Caribisch ontspannen.',
+  'Mambo Beach': 'Kleurrijke strandtenten, snorkelen en cocktails bij zonsondergang. Het levendigste strand van Curaçao.',
+  'Piscadera Baai': 'Beschutte baai bij Willemstad met koraalrif voor de deur. Rustig en toch dichtbij het centrum.',
+  'Luxor': 'Vallei der Koningen, Karnak-tempel en felucca-vaarten op de Nijl. Het openluchtmuseum van Egypte.',
+  'Caïro': 'Piramides van Gizeh, Khan el-Khalili bazaar en de Nijl-corniche. Chaotisch, fascinerend en onvergetelijk.',
 };
 
 // Laag 1: bestemmingsbeschrijving (zelfde voor heel Zakynthos — foto-overlay)

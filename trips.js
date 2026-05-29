@@ -2345,7 +2345,7 @@ const trips = [
     "adultsOnly": true,
     "audience": "couples",
     "matchReason": "Adults only en volledig ontzorgd",
-    "whyThisTrip": "Nessebar is een perfecte keuze voor koppels — adults only en op loopafstand van het strand.",
+    "whyThisTrip": "UNESCO-oude stad op een schiereiland, omringd door stranden. Bulgaarse geschiedenis aan de Zwarte Zee.",
     "tags": [
       "adults-only",
       "allinclusive",
@@ -5082,7 +5082,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "Ultra all-inclusive: alles inbegrepen",
-    "whyThisTrip": "Ultra All Inclusive in Sveti Vlas: ontspannen zonder na te denken over de rekening.",
+    "whyThisTrip": "Modern badplaatsje naast Nessebar, met jachthavens en een rustig strand aan de Zwarte Zee. Luxer dan Sunny Beach.",
     "tags": [
       "allinclusive",
       "ultra-allinclusive",
@@ -5777,7 +5777,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "All-inclusive én scherp geprijsd",
-    "whyThisTrip": "All Inclusive in Nessebar: ontspannen zonder na te denken over de rekening.",
+    "whyThisTrip": "UNESCO-oude stad op een schiereiland, omringd door stranden. Bulgaarse geschiedenis aan de Zwarte Zee.",
     "tags": [
       "allinclusive",
       "5-sterren",
@@ -6060,7 +6060,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "All-inclusive én scherp geprijsd",
-    "whyThisTrip": "All Inclusive in Nessebar: ontspannen zonder na te denken over de rekening.",
+    "whyThisTrip": "UNESCO-oude stad op een schiereiland, omringd door stranden. Bulgaarse geschiedenis aan de Zwarte Zee.",
     "tags": [
       "allinclusive",
       "4-sterren",
@@ -6115,7 +6115,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "Zorgeloos genieten met all-inclusive",
-    "whyThisTrip": "All Inclusive in Pomorie: ontspannen zonder na te denken over de rekening.",
+    "whyThisTrip": "Modderbaden, zoutlagunes en een authentiek vissersdorp aan de Zwarte Zee. Wellness en rust.",
     "tags": [
       "allinclusive",
       "4-sterren",
@@ -6394,7 +6394,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "Zorgeloos genieten met all-inclusive",
-    "whyThisTrip": "All Inclusive in Nessebar: ontspannen zonder na te denken over de rekening.",
+    "whyThisTrip": "UNESCO-oude stad op een schiereiland, omringd door stranden. Bulgaarse geschiedenis aan de Zwarte Zee.",
     "tags": [
       "allinclusive",
       "4-sterren",
@@ -6605,7 +6605,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "All-inclusive én scherp geprijsd",
-    "whyThisTrip": "All Inclusive in Obzor: ontspannen zonder na te denken over de rekening.",
+    "whyThisTrip": "Rustig kustplaatsje met lang zandstrand en Thracische ruïnes. Onontdekt Bulgarije zonder massatoerisme.",
     "tags": [
       "allinclusive",
       "4-sterren",
@@ -6667,7 +6667,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "All-inclusive én scherp geprijsd",
-    "whyThisTrip": "All Inclusive in Nessebar: ontspannen zonder na te denken over de rekening.",
+    "whyThisTrip": "UNESCO-oude stad op een schiereiland, omringd door stranden. Bulgaarse geschiedenis aan de Zwarte Zee.",
     "tags": [
       "allinclusive",
       "4-sterren",
@@ -6722,7 +6722,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "Ultra all-inclusive: alles inbegrepen",
-    "whyThisTrip": "Ultra All Inclusive in Pomorie: ontspannen zonder na te denken over de rekening.",
+    "whyThisTrip": "Modderbaden, zoutlagunes en een authentiek vissersdorp aan de Zwarte Zee. Wellness en rust.",
     "tags": [
       "allinclusive",
       "ultra-allinclusive",
@@ -7223,7 +7223,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "Luxe verblijf met topservice",
-    "whyThisTrip": "Nijlcruise in Egypte — een mooie bestemming voor jullie zonvakantie.",
+    "whyThisTrip": "Vallei der Koningen, Karnak-tempel en felucca-vaarten op de Nijl. Het openluchtmuseum van Egypte.",
     "tags": [
       "5-sterren",
       "luxe",
@@ -7268,7 +7268,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "All-inclusive én scherp geprijsd",
-    "whyThisTrip": "All Inclusive in Nessebar: ontspannen zonder na te denken over de rekening.",
+    "whyThisTrip": "UNESCO-oude stad op een schiereiland, omringd door stranden. Bulgaarse geschiedenis aan de Zwarte Zee.",
     "tags": [
       "allinclusive",
       "4-sterren",
@@ -7382,7 +7382,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "Zorgeloos genieten met all-inclusive",
-    "whyThisTrip": "All Inclusive in Nessebar: ontspannen zonder na te denken over de rekening.",
+    "whyThisTrip": "UNESCO-oude stad op een schiereiland, omringd door stranden. Bulgaarse geschiedenis aan de Zwarte Zee.",
     "tags": [
       "allinclusive",
       "4-sterren",
@@ -7731,7 +7731,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "Ultra all-inclusive: alles inbegrepen",
-    "whyThisTrip": "Ultra All Inclusive in Pomorie: ontspannen zonder na te denken over de rekening.",
+    "whyThisTrip": "Modderbaden, zoutlagunes en een authentiek vissersdorp aan de Zwarte Zee. Wellness en rust.",
     "tags": [
       "allinclusive",
       "ultra-allinclusive",
@@ -8645,7 +8645,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "Ultra all-inclusive: alles inbegrepen",
-    "whyThisTrip": "Ultra All Inclusive in Obzor: ontspannen zonder na te denken over de rekening.",
+    "whyThisTrip": "Rustig kustplaatsje met lang zandstrand en Thracische ruïnes. Onontdekt Bulgarije zonder massatoerisme.",
     "tags": [
       "allinclusive",
       "ultra-allinclusive",
@@ -9080,7 +9080,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "Ultra all-inclusive: alles inbegrepen",
-    "whyThisTrip": "Ultra All Inclusive in Obzor: ontspannen zonder na te denken over de rekening.",
+    "whyThisTrip": "Rustig kustplaatsje met lang zandstrand en Thracische ruïnes. Onontdekt Bulgarije zonder massatoerisme.",
     "tags": [
       "allinclusive",
       "ultra-allinclusive",
@@ -9586,7 +9586,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "Hoog gewaardeerd door gasten (8,6)",
-    "whyThisTrip": "Jan Thiel Baai in Curaçao — een mooie bestemming voor jullie zonvakantie.",
+    "whyThisTrip": "Koraalstrand, flamingo's bij het zoutmeer en strandtenten op Curaçao. Caribisch ontspannen.",
     "tags": [
       "4-sterren",
       "strand",
@@ -9901,7 +9901,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "Hoog gewaardeerd door gasten (9,0)",
-    "whyThisTrip": "Mambo Beach in Curaçao — een mooie bestemming voor jullie zonvakantie.",
+    "whyThisTrip": "Kleurrijke strandtenten, snorkelen en cocktails bij zonsondergang. Het levendigste strand van Curaçao.",
     "tags": [
       "4-sterren",
       "strand",
@@ -9948,7 +9948,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "Hoog gewaardeerd door gasten (8,9)",
-    "whyThisTrip": "Mambo Beach in Curaçao — een mooie bestemming voor jullie zonvakantie.",
+    "whyThisTrip": "Kleurrijke strandtenten, snorkelen en cocktails bij zonsondergang. Het levendigste strand van Curaçao.",
     "tags": [
       "4-sterren",
       "strand",
@@ -10051,7 +10051,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "Hoog gewaardeerd door gasten (8,6)",
-    "whyThisTrip": "Jan Thiel Baai in Curaçao — een mooie bestemming voor jullie zonvakantie.",
+    "whyThisTrip": "Koraalstrand, flamingo's bij het zoutmeer en strandtenten op Curaçao. Caribisch ontspannen.",
     "tags": [
       "4-sterren",
       "strand",
@@ -10113,7 +10113,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "Hoog gewaardeerd door gasten (8,6)",
-    "whyThisTrip": "Jan Thiel Baai in Curaçao — een mooie bestemming voor jullie zonvakantie.",
+    "whyThisTrip": "Koraalstrand, flamingo's bij het zoutmeer en strandtenten op Curaçao. Caribisch ontspannen.",
     "tags": [
       "4-sterren",
       "strand",
@@ -10167,7 +10167,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "Hoog gewaardeerd door gasten (8,6)",
-    "whyThisTrip": "Jan Thiel Baai in Curaçao — een mooie bestemming voor jullie zonvakantie.",
+    "whyThisTrip": "Koraalstrand, flamingo's bij het zoutmeer en strandtenten op Curaçao. Caribisch ontspannen.",
     "tags": [
       "4-sterren",
       "strand",
@@ -10229,7 +10229,7 @@ const trips = [
     "adultsOnly": false,
     "audience": "couples",
     "matchReason": "Hoog gewaardeerd door gasten (8,5)",
-    "whyThisTrip": "Jan Thiel Baai in Curaçao — een mooie bestemming voor jullie zonvakantie.",
+    "whyThisTrip": "Koraalstrand, flamingo's bij het zoutmeer en strandtenten op Curaçao. Caribisch ontspannen.",
     "tags": [
       "4-sterren",
       "strand",
