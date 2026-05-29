@@ -344,12 +344,63 @@
       opacity: 0;
     }
 
+    /* ── Card image wrapper ── */
+    .card-img-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+
     .card-img {
       width: 100%;
-      height: 180px;
+      height: 210px;
       object-fit: cover;
       display: block;
       pointer-events: none;
+    }
+
+    /* Destination overlay on photo */
+    .card-dest-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 32px 16px 12px;
+      background: linear-gradient(to top, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0) 100%);
+      pointer-events: none;
+    }
+
+    .card-dest-overlay h3 {
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 19px;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.2;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .card-dest-overlay p {
+      color: rgba(255,255,255,0.82);
+      font-size: 12px;
+      margin: 3px 0 0;
+      line-height: 1.35;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+    }
+
+    /* Adults only badge on photo */
+    .card-ao-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0,0,0,0.55);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      z-index: 5;
+      letter-spacing: 0.02em;
+      backdrop-filter: blur(4px);
     }
 
     /* Beste match label on first card */
@@ -367,43 +418,13 @@
       letter-spacing: 0.02em;
     }
 
-    .card-body { padding: 12px 16px 14px; }
-
-    .card-match-reason {
-      font-weight: 700;
-      font-size: 13px;
-      color: var(--green);
-      margin-bottom: 6px;
-      line-height: 1.3;
-    }
-
-    .card-aanbieder {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--ocean);
-      margin-bottom: 4px;
-    }
-
-    .card-title {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-weight: 700;
-      font-size: 17px;
-      margin-bottom: 2px;
-    }
-
-    .card-dest {
-      font-size: 13px;
-      color: var(--stone);
-      margin-bottom: 10px;
-    }
+    .card-body { padding: 10px 16px 12px; }
 
     .card-highlights {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
     .tag {
@@ -419,29 +440,63 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: 12px;
-      border-top: 1px solid var(--border);
+      margin-bottom: 8px;
     }
-
-    .card-price-label { font-size: 11px; color: var(--stone); }
 
     .card-price {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 800;
       color: var(--night);
     }
 
     .card-price span { font-size: 12px; font-weight: 400; color: var(--stone); }
-    .card-adults-badge { background: var(--sunset-light); color: var(--sunset); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; }
 
-    .card-trust {
-      font-size: 11px;
+    .card-compact-info {
+      font-size: 12px;
       color: var(--stone);
-      margin-top: 10px;
+      font-weight: 500;
+      text-align: right;
+      line-height: 1.4;
+    }
+
+    .card-trip-desc {
+      font-size: 12px;
+      color: var(--stone);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    .card-match-tags {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--green);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .card-footer {
       display: flex;
       align-items: center;
-      gap: 4px;
+      justify-content: space-between;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      font-size: 11px;
+      color: var(--stone);
+      line-height: 1.3;
+    }
+
+    .card-footer-hotel {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 65%;
+    }
+
+    .card-footer-trust {
+      white-space: nowrap;
+      font-weight: 500;
+      color: var(--green);
     }
 
     /* Like / Nope overlays */
@@ -563,13 +618,6 @@
     }
 
     .result-body { padding: 20px; }
-    .result-match-reason {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--green);
-      margin-bottom: 6px;
-    }
-
     .result-title {
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-weight: 700;
@@ -1301,44 +1349,116 @@
       initDrag(stack.querySelector('.front-card'));
     }
 
+    // Sfeer label map for match tags
+    const sfeerLabelMap = { strand: 'strand', rustig: 'rust', zon: 'zon', actief: 'actief', natuur: 'natuur', avontuur: 'avontuur', resort: 'resort', comfort: 'comfort', allinclusive: 'all-inclusive', romantisch: 'romantisch', luxe: 'luxe', wellness: 'wellness', pool: 'pool', 'adults-only': 'adults only' };
+
+    // Helper: extract rating from highlights or trip.rating
+    function extractRating(trip) {
+      if (trip.rating) return String(trip.rating).replace('.', ',');
+      for (const h of (trip.highlights || [])) {
+        const m = h.match(/Gastwaardering[:\s]*(\d[\d,\.]*)/i);
+        if (m) return m[1].replace('.', ',');
+      }
+      return '';
+    }
+
+    // Helper: extract star level from highlights
+    function extractStars(trip) {
+      for (const h of (trip.highlights || [])) {
+        const m = h.match(/(\d)-sterren/i);
+        if (m) return m[1];
+      }
+      return '';
+    }
+
+    // Helper: short month label
+    function shortMaand(m) {
+      const map = { januari:'jan', februari:'feb', maart:'mrt', april:'apr', mei:'mei', juni:'jun', juli:'jul', augustus:'aug', september:'sep', oktober:'okt', november:'nov', december:'dec' };
+      return map[(m || '').toLowerCase()] || m;
+    }
+
     function buildCard(trip, isFront) {
       const v = trip.matchedVariant;
       const card = document.createElement('div');
       card.className = 'trip-card';
       card.dataset.id = trip.id;
 
-      const highlightTags = trip.highlights.slice(0, 3)
-        .map(h => `<span class="tag">✓ ${escapeHtml(h)}</span>`).join('');
+      // Destination city name (first part before comma)
+      const destCity = (trip.destination || '').split(',')[0].trim();
 
-      const adultsBadge = trip.adultsOnly
-        ? `<span class="card-adults-badge">Adults only</span>` : '';
+      // Laag 1: bestemmingsbeschrijving (foto-overlay) — truncated
+      const destDesc = (trip.whyThisTrip || '').length > 65
+        ? trip.whyThisTrip.substring(0, 62) + '...'
+        : (trip.whyThisTrip || '');
+      // Laag 2: trip-specifieke beschrijving (body)
+      const tripSpecific = trip.tripDesc || '';
 
-      // Bouwplan: "Beste match voor jullie" op eerste kaart
+      // Adults only badge on photo
+      const aoBadge = trip.adultsOnly
+        ? `<span class="card-ao-badge">Adults only</span>` : '';
+
+      // Beste match label on first card
       const bestMatchLabel = (isFront && currentIndex === 0)
         ? `<div class="best-match-label">Beste match voor jullie</div>` : '';
 
+      // Compact info: duration, month, flight time
+      const duur = Number(v.duur) || 0;
+      const maand = shortMaand(v.maand);
+      const vlucht = escapeHtml(trip.vluchtduur);
+      const compactInfo = `${duur} nch · ${escapeHtml(maand)} · ✈ ${vlucht}`;
+
+      // Badges (max 3): rating, boardType, stars
+      const badges = [];
+      const rating = extractRating(trip);
+      if (rating) badges.push(`<span class="tag">⭐ ${escapeHtml(rating)}</span>`);
+      if (trip.boardType) badges.push(`<span class="tag">${escapeHtml(trip.boardType)}</span>`);
+      const stars = extractStars(trip);
+      if (stars) badges.push(`<span class="tag">${escapeHtml(stars)}-sterren</span>`);
+      const badgesHtml = badges.slice(0, 3).join('');
+
+      // Match tags: intersection of user sfeer and trip sfeer
+      const matchingTags = (trip.sfeer || [])
+        .filter(s => prefs.sfeer.includes(s))
+        .map(s => sfeerLabelMap[s] || s)
+        .filter((v, i, a) => a.indexOf(v) === i);
+      const matchTagsHtml = matchingTags.length > 0
+        ? `<div class="card-match-tags">Past bij jullie: ${escapeHtml(matchingTags.join(', '))}</div>`
+        : '';
+
+      // Footer: hotel name + aanbieder
+      const hotelName = trip.hotelName || trip.title || '';
       const aanbiederSafe = escapeHtml(trip.aanbieder);
       const destSafe = escapeHtml(trip.destination);
+
+      // Trip-specifieke beschrijving als die er is
+      const tripDescHtml = tripSpecific
+        ? `<div class="card-trip-desc">${escapeHtml(tripSpecific)}</div>`
+        : '';
 
       card.innerHTML = `
         <div class="card-overlay overlay-yes">JA!</div>
         <div class="card-overlay overlay-no">NEE</div>
-        ${bestMatchLabel}
-        <img class="card-img" src="${escapeHtml(safeUrl(trip.imageUrl))}" alt="${destSafe}" draggable="false">
-        <div class="card-body">
-          <div class="card-match-reason">${escapeHtml(trip.matchReason)}</div>
-          <div class="card-aanbieder">${aanbiederSafe} · ${escapeHtml(trip.boardType)}</div>
-          <div class="card-title">${escapeHtml(trip.title)}</div>
-          <div class="card-dest">📍 ${destSafe} · ✈️ ${escapeHtml(trip.vluchtduur)} · ${Number(v.duur) || 0} nachten · ${escapeHtml(v.maand)}</div>
-          <div class="card-highlights">${highlightTags}</div>
-          <div class="card-price-row">
-            <div>
-              <div class="card-price-label">Vanaf p.p. — vertrek ${escapeHtml(v.maand)}</div>
-              <div class="card-price">€${Number(v.prijs) || 0}<span> / ${Number(v.duur) || 0} nachten</span></div>
-            </div>
-            ${adultsBadge}
+        <div class="card-img-wrap">
+          ${bestMatchLabel}
+          <img class="card-img" src="${escapeHtml(safeUrl(trip.imageUrl))}" alt="${destSafe}" draggable="false">
+          <div class="card-dest-overlay">
+            <h3>${escapeHtml(destCity)}</h3>
+            <p>${escapeHtml(destDesc)}</p>
           </div>
-          <div class="card-trust">✓ Boek direct bij ${aanbiederSafe}, geen extra kosten via Kiespret</div>
+          ${aoBadge}
+        </div>
+        <div class="card-body">
+          <div class="card-price-row">
+            <div class="card-price">€${Number(v.prijs) || 0} <span>p.p.</span></div>
+            <div class="card-compact-info">${compactInfo}</div>
+          </div>
+          <div class="card-highlights">${badgesHtml}</div>
+          ${tripDescHtml}
+          ${matchTagsHtml}
+          <div class="card-footer">
+            <span class="card-footer-hotel">${escapeHtml(hotelName)} · via ${aanbiederSafe}</span>
+            <span class="card-footer-trust">Geen extra kosten</span>
+          </div>
         </div>
       `;
       return card;
@@ -1563,6 +1683,10 @@
         const sfeerLabel = sfeerLabels[trip.sfeer[0]] || trip.sfeer[0];
         const aanbiederSafe = escapeHtml(trip.aanbieder);
         const destSafe = escapeHtml(trip.destination);
+        const hotelName = escapeHtml(trip.hotelName || trip.title || '');
+        const whyText = escapeHtml(trip.whyThisTrip || '');
+        const ratingVal = extractRating(trip);
+        const starsVal = extractStars(trip);
         const card = document.createElement('div');
         card.className = 'result-card';
         card.innerHTML = `
@@ -1571,14 +1695,14 @@
           </div>
           <img class="result-img" src="${escapeHtml(safeUrl(trip.imageUrl))}" alt="${destSafe}">
           <div class="result-body">
-            <div class="result-match-reason">${escapeHtml(trip.matchReason)}</div>
-            <div class="result-title">${escapeHtml(trip.title)}</div>
+            <div class="result-title">${hotelName}</div>
             <div class="result-dest">📍 ${destSafe}</div>
+            ${whyText ? `<p style="font-size:13px;color:var(--stone);margin-bottom:10px;line-height:1.5">${whyText}</p>` : ''}
             <div class="result-dims">
               <span class="dim-label">Sfeer</span><span class="dim-value">${escapeHtml(sfeerLabel)}</span>
-              <span class="dim-label">Prijs</span><span class="dim-value">Vanaf €${Number(v.prijs) || 0} p.p. — vertrek ${escapeHtml(v.maand)}</span>
+              <span class="dim-label">Prijs</span><span class="dim-value">€${Number(v.prijs) || 0} p.p. · ${escapeHtml(v.maand)} · ${Number(v.duur) || 0} nachten</span>
               <span class="dim-label">Vluchtduur</span><span class="dim-value">${escapeHtml(trip.vluchtduur)} vanaf Schiphol</span>
-              <span class="dim-label">Boardtype</span><span class="dim-value">${escapeHtml(trip.boardType)}</span>
+              <span class="dim-label">Boardtype</span><span class="dim-value">${escapeHtml(trip.boardType)}${starsVal ? ' · ' + escapeHtml(starsVal) + '-sterren' : ''}${ratingVal ? ' · ⭐ ' + escapeHtml(ratingVal) : ''}</span>
               <span class="dim-label">Aanbieder</span><span class="dim-value">${aanbiederSafe}</span>
             </div>
             <div class="result-row">
@@ -1604,10 +1728,20 @@
       const bestMatch = top3.reduce((a, b) =>
         (a.tagScore || 0) > (b.tagScore || 0) ? a : b);
 
-      if (cheapest.id !== bestMatch.id) {
-        return `Als prijs belangrijker is: <strong>${escapeHtml(cheapest.title)}</strong> (€${Number(cheapest.matchedVariant.prijs) || 0} p.p.). Als het vooral moet passen bij jullie sfeer: <strong>${escapeHtml(bestMatch.title)}</strong>.`;
+      // Use hotelName and destination for specificity
+      function tripLabel(trip) {
+        const hotel = trip.hotelName || trip.title || '';
+        const dest = (trip.destination || '').split(',')[0].trim();
+        return hotel + (dest ? ' in ' + dest : '');
       }
-      return `<strong>${escapeHtml(bestMatch.title)}</strong> scoort het beste op zowel prijs als match — een sterke keuze.`;
+
+      const bestRating = extractRating(bestMatch);
+      const ratingNote = bestRating ? ' en gastwaardering ' + bestRating : '';
+
+      if (cheapest.id !== bestMatch.id) {
+        return `Als prijs belangrijker is: <strong>${escapeHtml(tripLabel(cheapest))}</strong> (€${Number(cheapest.matchedVariant.prijs) || 0} p.p.). Voor de beste sfeer-match: <strong>${escapeHtml(tripLabel(bestMatch))}</strong>${escapeHtml(ratingNote)}.`;
+      }
+      return `<strong>${escapeHtml(tripLabel(bestMatch))}</strong> heeft de beste combinatie van prijs (€${Number(bestMatch.matchedVariant.prijs) || 0})${escapeHtml(ratingNote)} — de sterkste keuze.`;
     }
 
     // ── OUTBOUND MODAL (bouwplan: tussenstap voor affiliate klik) ──────────
@@ -1991,6 +2125,10 @@
         const sfeerLabel = sfeerLabels[trip.sfeer[0]] || trip.sfeer[0];
         const aanbiederSafe = escapeHtml(trip.aanbieder);
         const destSafe = escapeHtml(trip.destination);
+        const hotelName = escapeHtml(trip.hotelName || trip.title || '');
+        const whyText = escapeHtml(trip.whyThisTrip || '');
+        const ratingVal = extractRating(trip);
+        const starsVal = extractStars(trip);
         const card = document.createElement('div');
         card.className = 'result-card';
         card.innerHTML = `
@@ -1999,14 +2137,14 @@
           </div>
           <img class="result-img" src="${escapeHtml(safeUrl(trip.imageUrl))}" alt="${destSafe}">
           <div class="result-body">
-            <div class="result-match-reason">${escapeHtml(trip.matchReason)}</div>
-            <div class="result-title">${escapeHtml(trip.title)}</div>
+            <div class="result-title">${hotelName}</div>
             <div class="result-dest">📍 ${destSafe}</div>
+            ${whyText ? `<p style="font-size:13px;color:var(--stone);margin-bottom:10px;line-height:1.5">${whyText}</p>` : ''}
             <div class="result-dims">
               <span class="dim-label">Sfeer</span><span class="dim-value">${escapeHtml(sfeerLabel)}</span>
-              <span class="dim-label">Prijs</span><span class="dim-value">Vanaf €${Number(v.prijs) || 0} p.p. — vertrek ${escapeHtml(v.maand)}</span>
+              <span class="dim-label">Prijs</span><span class="dim-value">€${Number(v.prijs) || 0} p.p. · ${escapeHtml(v.maand)} · ${Number(v.duur) || 0} nachten</span>
               <span class="dim-label">Vluchtduur</span><span class="dim-value">${escapeHtml(trip.vluchtduur)} vanaf Schiphol</span>
-              <span class="dim-label">Boardtype</span><span class="dim-value">${escapeHtml(trip.boardType)}</span>
+              <span class="dim-label">Boardtype</span><span class="dim-value">${escapeHtml(trip.boardType)}${starsVal ? ' · ' + escapeHtml(starsVal) + '-sterren' : ''}${ratingVal ? ' · ⭐ ' + escapeHtml(ratingVal) : ''}</span>
               <span class="dim-label">Aanbieder</span><span class="dim-value">${aanbiederSafe}</span>
             </div>
             <div class="result-row">

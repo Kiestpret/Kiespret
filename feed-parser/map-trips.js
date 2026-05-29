@@ -275,20 +275,128 @@ function deriveMatchReason(product) {
     : `${concept} in ${locatie}`;
 }
 
-function deriveWhyThisTrip(product) {
-  const city = prop(product, 'city');
-  const country = prop(product, 'country');
-  const adultsOnly = prop(product, 'onlyadult') === 'true';
-  const service = prop(product, 'serviceType');
-  const shortDesc = prop(product, 'descriptionShort', '');
+const destinationDescriptions = {
+  'Kreta': 'Elafonissi, Balos Beach en bergdorpjes in de White Mountains. Het grootste Griekse eiland combineert strand met Venetiaanse haventjes en Kretenzische keuken.',
+  'Zakynthos': 'Navagio Beach, schildpadden spotten bij Laganas Bay en boottochtjes naar de Blue Caves. Rustig Ionisch eiland met turquoise baaien.',
+  'Rhodos': 'Middeleeuwse oude stad, Lindos met zijn acropolis en lange zandstranden aan de oostkust. Cultuur en strand op loopafstand.',
+  'Kos': 'Compact eiland waar je alles op de fiets bereikt. Rustige stranden, Griekse taverna\'s in Kos-stad en de Asclepion-ruïnes.',
+  'Corfu': 'Venetiaanse architectuur in Kerkyra, olijfboomgaarden en de beroemde Canal d\'Amour bij Sidari. Groener dan de meeste Griekse eilanden.',
+  'Samos': 'Pythagorio, bergwandelingen en rustige kiezelstranden. Klein en authentiek eiland voor koppels die drukte willen vermijden.',
+  'Lesbos': 'Versteend bos, warmwaterbronnen en pittoreske Molyvos. Authentiek Grieks eiland zonder massatoerisme.',
+  'Lefkas': 'Porto Katsiki en Egremni — stranden met turquoise water omringd door witte kliffen. Rustig en bereikbaar via een brug.',
+  'Parga': 'Kleurrijke Venetiaanse huizen aan een beschutte baai. Kasteel met panoramisch uitzicht en bootjes naar Paxos.',
+  'Athene': 'Acropolis, Plaka-wijk en rooftopbars met uitzicht over de stad. Combineer een citytrip met een stranddag bij Vouliagmeni.',
+  'Thessaloniki': 'Witte Toren, levendige Ladadika-wijk en de beste streetfood van Griekenland. Culturele havenstad aan de Egeïsche Zee.',
+  'Alanya': 'Kleopatra Beach, de rode toren en boottochtjes langs grotten. Levendige badplaats met een historisch centrum op de rots.',
+  'Side': 'Romeinse ruïnes naast het strand, de Manavgat-waterval en een gezellige oude binnenstad. Cultuur en zon in één.',
+  'Antalya': 'Kaleiçi oude stad, Düden-watervallen en het Taurusgebergte als decor. Grote stad met strand, cultuur en nachtleven.',
+  'Bodrum': 'Witte huisjes, het kasteel van Sint-Pieter en strandclubs aan de Egeïsche kust. De chiqueste badplaats van Turkije.',
+  'Marmaris': 'Langgerekte boulevard, watertaxi naar Dalyan en schildpadden, en dagtrips naar het Griekse eiland Rhodos.',
+  'Belek': 'Brede zandstranden, golfbanen en luxe resorts tussen de dennenbossen. Rustig en groen, vlakbij het oude Aspendos.',
+  'Fethiye': 'Ölüdeniz Blue Lagoon, paragliden vanaf Babadağ en de Lycische rotsgraven. Natuur en avontuur aan de Turkse kust.',
+  'Dalyan': 'Bootvaren door rietvelden naar Iztuzu-schildpaddenstrand en de Lycische koningsgraven. Rustig en natuurlijk.',
+  'Kusadasi': 'Op een steenworp van Efeze, met een levendig centrum en stranden. Ideaal als je cultuur en strand wilt combineren.',
+  'Kemer': 'Bossen, bergen en kiezelstranden aan de voet van het Taurusgebergte. Rustige tegenhanger van druk Antalya.',
+  'Mallorca': 'Serra de Tramuntana, verborgen baaien (calas), Palma\'s kathedraal en wijngaarden in Binissalem. Veel meer dan massatoerisme.',
+  'Ibiza': 'Zonsondergangen bij Café del Mar, verborgen baaien in het noorden en de oude stad Dalt Vila. Feest én rust op één eiland.',
+  'Menorca': 'Ongerepte baaien, de oude hoofdstad Ciutadella en het langzaamste levenstempo van de Balearen. Perfecte digital detox.',
+  'Tenerife': 'Teide-vulkaan, walvissen spotten en zwarte lavastranden in het zuiden. Van woestijnlandschap tot tropisch groen.',
+  'Gran Canaria': 'Duinen van Maspalomas, het koloniale Vegueta in Las Palmas en bergdorpjes in het binnenland. Mini-continent.',
+  'Fuerteventura': 'Eindeloze witte stranden, surfen bij El Cotillo en woestijnlandschap. Het rustigste Canarische eiland.',
+  'Lanzarote': 'Vulkaanlandschap van Timanfaya, César Manrique-kunst en wijnbouw op lava. Anders dan elk ander eiland.',
+  'La Palma': 'Sterrenwacht op de Roque, laurierbossen en wandelroutes door vulkaankraters. Het groenste Canarische eiland.',
+  'Costa del Sol': 'Málaga\'s Picasso-museum, witte dorpen in de bergen en lange zandstranden. Strand met culturele diepgang.',
+  'Costa Brava': 'Rotsachtige kustlijn, Dalí-museum in Figueres en middeleeuwse dorpjes. Ruiger dan de zuidkust.',
+  'Costa Blanca': 'Benidorm\'s skyline, rustige baaien bij Jávea en Altea en palmenbos in Elche. Zon met Spaans dorpsleven eromheen.',
+  'Costa de Almería': 'Woestijnlandschap van Tabernas, ongerepte stranden in Cabo de Gata en Moorse architectuur. Het droogste hoekje van Europa.',
+  'Sicilië': 'Etna, Griekse tempels in Agrigento, straateten in Palermo en barokke steden als Noto. Cultuur, keuken en kust.',
+  'Sardinië': 'Costa Smeralda, turquoise baaien bij Cala Gonone en nuraghen-ruïnes. Spectaculaire natuur en helder water.',
+  'Hurghada': 'Rode Zee-snorkelen bij Giftun Island, woestijnsafari\'s en all-inclusive aan een eindeloos zandstrand.',
+  'Marsa Alam': 'Dugongs spotten, huisriffen om vanaf het strand te snorkelen en rustige baaien. Rode Zee zonder de drukte van Hurghada.',
+  'Sharm el Sheikh': 'Ras Mohammed-koraalriffen, duiken en snorkelen in de Rode Zee. Woestijn ontmoet onderwaterwereld.',
+  'Algarve': 'Gouden kliffen, grotten bij Benagil, visrestaurants in Lagos en golfbanen. De zuidkust van Portugal op z\'n best.',
+  'Madeira': 'Levada-wandelingen door laurierbos, Funchal\'s bloemenmarkt en eeuwig lenteweer. Groen eiland voor actieve koppels.',
+  'Lissabon': 'Tram 28 door Alfama, pastéis de nata bij Belém en rooftopbars met uitzicht over de Taag. Charmante heuvels en azulejos.',
+  'Porto': 'Portwijnkelders in Vila Nova de Gaia, Ribeira aan de Douro en art nouveau-cafés. Stoerder en rauwer dan Lissabon.',
+  'Sunny Beach': 'Lang zandstrand aan de Zwarte Zee, betaalbare restaurants en een levendig uitgaansleven. Meeste waar voor je geld.',
+  'Dubai': 'Burj Khalifa, woestijnsafari, souks en strandclubs. Skyline van de toekomst gecombineerd met woestijnavontuur.',
+  'Willemstad': 'Handelskade in pastelkleuren, snorkelen bij Tugboat Beach en Blue Curaçao proeven. Caribisch met een Nederlandse twist.',
+  'Kralendijk': 'Bonaire\'s huisriffen, flamingo\'s bij Gotomeer en windsurfen op Lac Bay. Het rustigste ABC-eiland.',
+  'Istanbul': 'Hagia Sophia, Grote Bazaar, Bosporus-cruise en streetfood in Karaköy. Twee continenten in één stad.',
+  'Agadir': 'Lange zandstranden, de souk en dagtrips naar het Atlasgebergte en Paradise Valley. Zon met Marokkaanse sfeer.',
+  'Marrakech': 'Djemaa el-Fna, riads met binnentuinen, souks vol specerijen en de Jardin Majorelle. Zintuigelijke stadservaring.',
+  'Sal': 'Santa Maria strand, zoutpannen van Pedra de Lume en walvissen spotten. Kaapverdische zon het hele jaar door.',
+  'Abu Dhabi': 'Sheikh Zayed-moskee, Louvre Abu Dhabi en mangrove-kajakken. Rustiger dan Dubai met dezelfde woestijnwarmte.',
+};
 
-  if (shortDesc.length > 20 && shortDesc.length < 200) {
-    return shortDesc.replace(/\s+/g, ' ').trim();
+// Laag 1: bestemmingsbeschrijving (zelfde voor heel Zakynthos — foto-overlay)
+function deriveDestinationDesc(product) {
+  const region = prop(product, 'region', prop(product, 'city'));
+  const country = prop(product, 'country');
+
+  if (destinationDescriptions[region]) return destinationDescriptions[region];
+  if (destinationDescriptions[country]) return destinationDescriptions[country];
+
+  // Slimme fallback voor onbekende bestemmingen op basis van sfeer-tags
+  const ao = prop(product, 'onlyadult') === 'true';
+  const service = prop(product, 'serviceType');
+  const isAI = service.toLowerCase().includes('all inclusive');
+  const parts = [];
+  if (ao) parts.push('alleen voor volwassenen');
+  if (isAI) parts.push('volledig ontzorgd met all-inclusive');
+  parts.push(`ontdek ${region} in ${country}`);
+  return parts.join(' — ') + '.';
+}
+
+// Laag 2: trip-specifieke beschrijving (uniek per hotel — card body)
+function deriveTripDesc(product) {
+  const city = prop(product, 'city');
+  const region = prop(product, 'region', city);
+  const name = decodeHtmlEntities(product.name || '');
+  const ao = prop(product, 'onlyadult') === 'true';
+  const service = prop(product, 'serviceType');
+  const stars = prop(product, 'stars', '');
+  const rating = prop(product, 'rating', '');
+
+  const parts = [];
+
+  // Locatie-context als city verschilt van region
+  if (city && city !== region && !city.startsWith('Bingoreizen') && !city.startsWith('Excursiereis') && !city.startsWith('Rondreizen')) {
+    parts.push(`in ${city}`);
   }
 
-  if (adultsOnly) return `${city} is een perfecte keuze voor koppels — adults only en op loopafstand van het strand.`;
-  if (service.toLowerCase().includes('all inclusive')) return `${service} in ${city}: ontspannen zonder na te denken over de rekening.`;
-  return `${city} in ${country} — een mooie bestemming voor jullie zonvakantie.`;
+  // Hotel-specifieke kenmerken
+  if (ao) parts.push('adults only');
+  if (service) {
+    const svc = service.toLowerCase();
+    if (svc.includes('all inclusive')) parts.push('all-inclusive');
+    else if (svc.includes('halfpension')) parts.push('halfpension');
+    else if (svc.includes('ontbijt')) parts.push('met ontbijt');
+  }
+  const starsNum = parseInt(stars);
+  if (starsNum >= 3 && starsNum <= 5) parts.push(`${starsNum}-sterren`);
+
+  // Gastwaardering als afsluiter
+  const ratingNum = parseFloat(String(rating).replace(',', '.'));
+  if (ratingNum >= 8.5) parts.push(`gastwaardering ${rating}`);
+  else if (ratingNum >= 7.5) parts.push(`beoordeeld met een ${rating}`);
+
+  if (parts.length === 0) return `${name} in ${region}.`;
+  return parts.join(', ') + '.';
+}
+
+// Bewaar whyThisTrip als bestemmingsbeschrijving (backward compatible)
+function deriveWhyThisTrip(product) {
+  return deriveDestinationDesc(product);
+}
+
+// Log onbekende bestemmingen zodat we ze handmatig kunnen toevoegen
+const unknownDestinations = new Set();
+function flagUnknownDestination(product) {
+  const region = prop(product, 'region', prop(product, 'city'));
+  if (!destinationDescriptions[region]) {
+    unknownDestinations.add(region);
+  }
 }
 
 function deriveDescription(product) {
@@ -376,6 +484,7 @@ function buildTrip(product, variant) {
     audience: 'couples',
     matchReason: deriveMatchReason(product),
     whyThisTrip: decodeHtmlEntities(deriveWhyThisTrip(product)),
+    tripDesc: decodeHtmlEntities(deriveTripDesc(product)),
     tags: deriveTags(product),
     highlights: deriveHighlights(product),
     description: decodeHtmlEntities(deriveDescription(product)),
@@ -504,12 +613,23 @@ for (const product of products) {
     existing.tags = deriveTags(product);
     existing.matchReason = deriveMatchReason(product);
     existing.highlights = deriveHighlights(product);
+    existing.whyThisTrip = decodeHtmlEntities(deriveWhyThisTrip(product));
+    existing.tripDesc = decodeHtmlEntities(deriveTripDesc(product));
+    flagUnknownDestination(product);
   } else {
     // Nieuw hotel → maak trip aan
     const trip = buildTrip(product, variant);
     hotelIndex.set(code, trip);
     newHotels++;
+    flagUnknownDestination(product);
   }
+}
+
+// Log onbekende bestemmingen
+if (unknownDestinations.size > 0) {
+  console.log(`\n⚠️  ${unknownDestinations.size} bestemmingen zonder handgeschreven beschrijving:`);
+  for (const d of [...unknownDestinations].sort()) console.log(`   - ${d}`);
+  console.log('   Voeg ze toe aan destinationDescriptions in map-trips.js');
 }
 
 console.log(`\n🔄 Merge resultaat:`);
@@ -518,13 +638,45 @@ console.log(`   ${newVariants} nieuwe varianten bij bestaande hotels`);
 console.log(`   ${updatedVariants} bijgewerkte varianten (prijs/URL)`);
 console.log(`   ${skipped} producten overgeslagen (filters)`);
 
-// Stap 4: Decode HTML entities in bestaande hotels (legacy fix)
+// Stap 4: Decode HTML entities + genereer ontbrekende beschrijvingen
+let descGenerated = 0;
 for (const trip of hotelIndex.values()) {
   if (trip.hotelName) trip.hotelName = decodeHtmlEntities(trip.hotelName);
   if (trip.title) trip.title = decodeHtmlEntities(trip.title);
   if (trip.whyThisTrip) trip.whyThisTrip = decodeHtmlEntities(trip.whyThisTrip);
   if (trip.description) trip.description = decodeHtmlEntities(trip.description);
+
+  // Bestemmingsbeschrijving bijwerken voor trips zonder custom beschrijving
+  const region = (trip.destination || '').split(',')[0].trim();
+  if (destinationDescriptions[region] && (!trip.whyThisTrip || trip.whyThisTrip.includes('mooie bestemming') || trip.whyThisTrip.includes('perfecte keuze voor koppels') || trip.whyThisTrip.includes('ontspannen zonder'))) {
+    trip.whyThisTrip = destinationDescriptions[region];
+  }
+
+  // tripDesc genereren voor trips die het nog niet hebben
+  if (!trip.tripDesc) {
+    const parts = [];
+    const city = (trip._meta?.city || '');
+    if (city && city !== region && !city.startsWith('Bingoreizen') && !city.startsWith('Excursiereis') && !city.startsWith('Rondreizen')) {
+      parts.push(`in ${city}`);
+    }
+    if (trip.adultsOnly) parts.push('adults only');
+    const bt = (trip.boardType || '').toLowerCase();
+    if (bt.includes('all-inclusive') || bt.includes('ultra all')) parts.push('all-inclusive');
+    else if (bt.includes('halfpension')) parts.push('halfpension');
+    else if (bt.includes('ontbijt')) parts.push('met ontbijt');
+    const starsNum = parseInt(trip._meta?.stars || '0');
+    if (starsNum >= 3 && starsNum <= 5) parts.push(`${starsNum}-sterren`);
+    const ratingStr = trip._meta?.rating || '';
+    const ratingNum = parseFloat(String(ratingStr).replace(',', '.'));
+    if (ratingNum >= 8.5) parts.push(`gastwaardering ${ratingStr}`);
+    else if (ratingNum >= 7.5) parts.push(`beoordeeld met een ${ratingStr}`);
+    if (parts.length > 0) {
+      trip.tripDesc = parts.join(', ') + '.';
+      descGenerated++;
+    }
+  }
 }
+if (descGenerated > 0) console.log(`   ${descGenerated} tripDesc's gegenereerd voor bestaande trips`);
 
 // Stap 5: Ruim verouderde varianten op
 let pruned = 0;
