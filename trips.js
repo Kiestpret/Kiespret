@@ -50,7 +50,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Cook's Club Corfu is een gloednieuw Only Adult hotel. Geniet met een heerlijke cocktail van lekkere beats langs het zwembad. Dit stijlvolle hotel met een eigentijdse urban style is ontworpen voor stellen of vrienden. Vergeet het klassieke buffet",
-    "imageUrl": "https://images.corendonresources.com/L1E10204A2W0H0.jpg?v=220630112534",
+    "imageUrl": "https://images.corendonresources.com/L1E10204A1W1024H684.jpg?v=220630112511",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -289,7 +289,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Je kijkt je ogen werkelijk uit in het adembenemende 5-sterrenresort Sea Side a Lifestyle Resort. Niet alleen vanuit het zonneterras geniet je van een prachtig panoramisch uitzicht, ook tijdens je maaltijden kijk je uit over de schitterende omgeving. ",
-    "imageUrl": "https://images.corendonresources.com/L1E8272A2W0H0.jpg?v=251020141838",
+    "imageUrl": "https://images.corendonresources.com/L1E8272A1W1024H684.jpg?v=251020141837",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -347,7 +347,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Sunrise Holiday Resort Select is het ultieme “home away from home” voor wie op zoek is naar ontspanning in een rustige en luxe setting. Dit Only Adult resort (min. leeftijd 16 jaar) ligt direct aan een privéstrand, met een klein privé-eiland voor de ",
-    "imageUrl": "https://images.corendonresources.com/L1E4714A2W0H0.jpg?v=240320142615",
+    "imageUrl": "https://images.corendonresources.com/L1E4714A1W1024H684.jpg?v=240320142615",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -412,7 +412,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Agaya Bodrum Resort Adult Only (voorheen Hotel Privé Bodrum) is een stijlvol Only Adult hotel. Hier kun je genieten van een ontspannen vakantie waar je heerlijk uitgerust van thuis komt. Het hotel grenst aan zee en biedt je een prachtig uitzicht op h",
-    "imageUrl": "https://images.corendonresources.com/L1E2380A2W0H0.jpg?v=231026091954",
+    "imageUrl": "https://images.corendonresources.com/L1E2380A1W1024H684.jpg?v=231026091914",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -470,7 +470,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Het KaiSol Romance Resort (voorheen Sunrise Romance Resort -Grand Select-) is een romantisch toevluchtsoord, ideaal voor koppels die samen willen ontspannen in luxe. Het resort ligt in een rustige omgeving, direct aan een prachtig privéstrand, waar j",
-    "imageUrl": "https://images.corendonresources.com/L1E9123A2W0H0.jpg?v=251009165243",
+    "imageUrl": "https://images.corendonresources.com/L1E9123A1W1024H684.jpg?v=251009165247",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -646,7 +646,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Mayia Exclusive Resort & Spa doet z'n naam eer aan. Dit Ultra All Inclusive resort is exclusief ontworpen voor volwassenen en vervult al jouw vakantiewensen. Laat je in de luxueuze watten leggen en geniet van de hoogstaande service en het veelzijdige",
-    "imageUrl": "https://images.corendonresources.com/L1E10154A2W0H0.jpg?v=241218132352",
+    "imageUrl": "https://images.corendonresources.com/L1E10154A1W1024H684.jpg?v=241218132407",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -702,7 +702,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Het Steigenberger Pure Lifestyle Hotel is het ultieme Only Adult resort voor wie op zoek is naar luxe, ontspanning en een beetje extra flair. Gelegen aan het strand, biedt dit hotel een oase van rust en stijl voor gasten vanaf 16 jaar. Hier kun je ge",
-    "imageUrl": "https://images.corendonresources.com/L1E9393A2W0H0.jpg?v=260402110731",
+    "imageUrl": "https://images.corendonresources.com/L1E9393A1W1024H684.jpg?v=260402110815",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -769,7 +769,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Het Liberty Hotels Lykia Adult Only (voorheen Sentido Lykia Resort) ligt in een prachtige, rustige omgeving en wordt omringd door groene pijnboombossen. Ideaal om te ontspannen of nieuwe ervaringen op te doen, zo kun je genieten van Spa behandelingen",
-    "imageUrl": "https://images.corendonresources.com/L1E9089A2W0H0.jpg?v=220520150015",
+    "imageUrl": "https://images.corendonresources.com/L1E9089A1W1024H684.jpg?v=220520150015",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -825,7 +825,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Diamond Elite Hotel is een heerlijk vakantieadres! Dit prachtige 5-sterren hotel ligt op korte afstand van het strand en met de dolmus kun je makkelijk naar het centrum van Side. Je zult genieten van het heerlijke Spa Center, de ruime kamers, de à-la",
-    "imageUrl": "https://images.corendonresources.com/L1E6069A2W0H0.jpg?v=220521024135",
+    "imageUrl": "https://images.corendonresources.com/L1E6069A1W1024H684.jpg?v=220521024135",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -882,7 +882,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Het prachtige en rustig gelegen 5-sterrenhotel Selene Beach & Spa (voorheen Numa Beach) heeft alles in huis om jou een geweldige vakantie onder de Turkse zon te laten beleven. Romantisch met z'n tweetjes of heerlijk alleen: dit Only Adult hotel biedt",
-    "imageUrl": "https://images.corendonresources.com/L1E9743A2W0H0.jpg?v=220520195111",
+    "imageUrl": "https://images.corendonresources.com/L1E9743A1W1024H684.jpg?v=220520195111",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -938,7 +938,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Pickalbatros Royal Grand is wellicht de mooiste plek aan de Rode Zee waar jij je vakantie wilt vieren. En eigenlijk weet je dat nog niet, maar je komt hier helemaal tot rust. De luxe en ruime kamers hebben zicht op het zwembad of op de Rode Zee, die ",
-    "imageUrl": "https://images.corendonresources.com/L1E10315A2W0H0.jpg?v=241106153748",
+    "imageUrl": "https://images.corendonresources.com/L1E10315A1W1024H684.jpg?v=241106153813",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -1063,7 +1063,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Paradisus Salinas Lazarote is onder architectuur ontworpen: Fernando Higueras, een nationale architectuurprijswinnaar, met recht een design hotel. Het hotel is ook opgenomen in de Artistic and Cultural Heritage of Lanzarote. Klinkt al goed he? In de ",
-    "imageUrl": "https://images.corendonresources.com/L1E10418A2W0H0.jpg?v=240306112241",
+    "imageUrl": "https://images.corendonresources.com/L1E10418A1W1024H684.jpg?v=240306112241",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -1126,7 +1126,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Ella Alkyna is een Only Adult hotel met een geweldige ligging, tegen een heuvel aan en aan het strand. Het centrum van Agios Gordios vind je op loopafstand. Kom tot rust in het Spa Center, neem een duik in het zwembad of de zee, geniet van heerlijke ",
-    "imageUrl": "https://images.corendonresources.com/L1E6419A2W0H0.jpg?v=230125152937",
+    "imageUrl": "https://images.corendonresources.com/L1E6419A1W1024H684.jpg?v=230125153042",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -1178,7 +1178,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Het Tropical Beach hotel heeft een toplocatie aan het privéstrand en biedt gasten het beste van twee werelden: de levendigheid van het centrum van Marmaris en een ontspannen vakantie aan de Turkse kust. Breng de dagen door rondom het zwembad in de Tu",
-    "imageUrl": "https://images.corendonresources.com/L1E6394A2W0H0.jpg?v=260224170239",
+    "imageUrl": "https://images.corendonresources.com/L1E6394A1W1024H684.jpg?v=260224170215",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -1239,7 +1239,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Hotel Riviera Zen heeft een centrale ligging, vlak bij het centrum van Alanya en het Kleopatra strand. Het hotel biedt een buffetrestaurant, een zwembad, een spa center en comfortabele kamers. Hotel Riviera Zen is ideaal voor een strandvakantie of om",
-    "imageUrl": "https://images.corendonresources.com/L1E9166A2W0H0.jpg?v=240320130052",
+    "imageUrl": "https://images.corendonresources.com/L1E9166A1W1024H684.jpg?v=240320130028",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -1304,7 +1304,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E11732A2W0H0.jpg?v=241218144453",
+    "imageUrl": "https://images.corendonresources.com/L1E11732A5W0H0.jpg?v=241218144652",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -1359,7 +1359,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "The Ixian Grand & All Suites biedt alles voor een heerlijk ontspannen vakantie. Zodra je dit Only Adult Hotel binnenloopt weet je het; dit wordt een vakantie om helemaal bij te komen van al je druktes thuis. Het luxe hotel biedt een oase van rust en ",
-    "imageUrl": "https://images.corendonresources.com/L1E9106A2W0H0.jpg?v=260422121936",
+    "imageUrl": "https://images.corendonresources.com/L1E9106A1W1024H684.jpg?v=260422121929",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -1483,7 +1483,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Welkom bij Mythos Panorama, een gloednieuw Only Adult hotel waar luxe, comfort en natuur samenkomen voor de ultieme vakantie-ervaring. Het hotel ligt verscholen in een prachtige groene omgeving, met een panoramisch uitzicht op de baai van Boukari en ",
-    "imageUrl": "https://images.corendonresources.com/L1E12857A2W0H0.jpg?v=251009163918",
+    "imageUrl": "https://images.corendonresources.com/L1E12857A1W1024H684.jpg?v=251009163931",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -1652,7 +1652,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Ideal Pearl Hotel is een stijlvol Only Adult hotel aan de rand van Marmaris. Hier geniet je van een ontspannen vakantie in een moderne setting met fijne faciliteiten. Het vriendelijke personeel zorgt ervoor dat het je aan niets ontbreekt en het ruime",
-    "imageUrl": "https://images.corendonresources.com/L1E1299A2W0H0.jpg?v=250603073526",
+    "imageUrl": "https://images.corendonresources.com/L1E1299A1W1024H684.jpg?v=250603073537",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -1713,7 +1713,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Blue Lagoon Ocean, onderdeel van de gerenommeerde keten Blue Lagoon, heeft een nieuw vakantieparadijsje op Kos voor iedereen met een minimale leeftijd van 16 jaar! Op het oostelijke puntje van het eiland, vrijwel direct aan het Psalidi strand en op s",
-    "imageUrl": "https://images.corendonresources.com/L1E8996A2W0H0.jpg?v=220521120956",
+    "imageUrl": "https://images.corendonresources.com/L1E8996A1W1024H684.jpg?v=220521120956",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -1765,7 +1765,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "In het hart van Alanya vind je Ramira City Hotel. Dit heerlijke Only Adult hotel ligt op ca. 600 meter van het Kleopatra strand en in de directe omgeving vind je tal van winkels, restaurants en bars. Het hotel biedt onder andere een buffetrestaurant,",
-    "imageUrl": "https://images.corendonresources.com/L1E8883A2W0H0.jpg?v=220520195108",
+    "imageUrl": "https://images.corendonresources.com/L1E8883A1W1024H684.jpg?v=220520195108",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -1820,7 +1820,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Wil jij binnenkort genieten van zon, zee, zwembaden en luxe? Leg dan je boeking snel vast voor Mythos Palace (voorheen Kairaba Mythos Palace) in Boukari (nabij Messonghi) op Corfu. Dit Adult Only hotel heeft gasten van minimaal 16 jaar en biedt je de",
-    "imageUrl": "https://images.corendonresources.com/L1E9929A2W0H0.jpg?v=230119155525",
+    "imageUrl": "https://images.corendonresources.com/L1E9929A1W1024H684.jpg?v=230119155359",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -1933,7 +1933,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Luxe, Loungen & Design. Verblijf je in Iberostar Selection Llaut Palma, dan vier je vakantie in een accommodatie die helemaal van nu is. Dit prachtig gelegen luxe 5-sterrenhotel staat dan ook garant voor een fantastisch verblijf. Het zal je aan niets",
-    "imageUrl": "https://images.corendonresources.com/L1E9642A2W0H0.jpg?v=250305125110",
+    "imageUrl": "https://images.corendonresources.com/L1E9642A1W1024H684.jpg?v=250305125050",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -2045,7 +2045,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "De rustige sfeer maakt Aquamare tot een ideaal hotel voor een ontspannende en zorgeloze vakantie. Op loopafstand vind je het strand en met je huurauto sta je zo in het gezellige centrum van Molyvos. Het Aquamare Hotel wordt omringd door een prachtige",
-    "imageUrl": "https://images.corendonresources.com/L1E12578A2W0H0.jpg?v=251110112859",
+    "imageUrl": "https://images.corendonresources.com/L1E12578A5W0H0.jpg?v=251110112920",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -2098,7 +2098,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Het moderne en stijlvolle Sunprime C Lounge Hotel is een uitstekend resort voor volwassenen, gelegen op slechts enkele kilometers afstand van het bruisende centrum van Alanya. Het hotel biedt een prachtig uitzicht op het strand en de prachtige turquo",
-    "imageUrl": "https://images.corendonresources.com/L1E11550A2W0H0.jpg?v=231010105359",
+    "imageUrl": "https://images.corendonresources.com/L1E11550A1W1024H684.jpg?v=231010105402",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -2153,7 +2153,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Het Only Adult hotel Secrets Bahía Real Resort and Spa is een genot voor wie op zoek is naar een romantische en ontspannen vakantie. Intimiteit, service en exclusiviteit vormen samen een magisch en uniek toevluchtsoord. Het resort ligt direct aan het",
-    "imageUrl": "https://images.corendonresources.com/L1E11204A2W0H0.jpg?v=260408073108",
+    "imageUrl": "https://images.corendonresources.com/L1E11204A1W1024H684.jpg?v=260408073100",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -2205,7 +2205,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Wat een bijzonder hotel is dit... Only Adult (minimum leeftijd 16 jaar) en in boutiquestijl, is Castelli Hotel dé perfecte plek om te ontspannen. Het hotel is voorzien van moderne faciliteiten om je verblijf zo aangenaam mogelijk te maken. Op je ligb",
-    "imageUrl": "https://images.corendonresources.com/L1E4150A2W0H0.jpg?v=251022142400",
+    "imageUrl": "https://images.corendonresources.com/L1E4150A1W1024H684.jpg?v=251022142413",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -2256,7 +2256,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Sette Serenity Hotel, gelegen in het zonnige Turkije, biedt een aangenaam toevluchtsoord op loopafstand van het strand en op slechts 3 kilometer afstand van het centrum van Alanya. Het hotel beschikt over een restaurant waar je op basis van All Inclu",
-    "imageUrl": "https://images.corendonresources.com/L1E11869A2W0H0.jpg?v=231213111208",
+    "imageUrl": "https://images.corendonresources.com/L1E11869A1W1024H684.jpg?v=231213111152",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -2312,7 +2312,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "In het stijlvolle Commodore Elite Suites & Spa draait alles om ontspannen en genieten - helemaal Only Adult, dus alle rust om écht bij te komen. Dit luxe 5-sterrenhotel ligt direct aan het strand bij Side en is dé plek voor stellen die houden van zon",
-    "imageUrl": "https://images.corendonresources.com/L1E4594A2W0H0.jpg?v=250402112650",
+    "imageUrl": "https://images.corendonresources.com/L1E4594A1W1024H684.jpg?v=250402112632",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -2419,7 +2419,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Meandros Boutique Hotel & SPA (voorheen Meandros Hotel) is een stijlvol boetiekhotel gelegen in het hart van Kalamaki op Zakynthos. Het mooie strand vind je op wandelafstand. Hier kun je met een beetje geluk de zeldzame Caretta-Caretta schildpadden s",
-    "imageUrl": "https://images.corendonresources.com/L1E4061A2W0H0.jpg?v=230511084441",
+    "imageUrl": "https://images.corendonresources.com/L1E4061A1W1024H684.jpg?v=230511084439",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -2481,7 +2481,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E12204A2W0H0.jpg?v=260121074405",
+    "imageUrl": "https://images.corendonresources.com/L1E12204A5W0H0.jpg?v=260121074400",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -2606,7 +2606,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Ben je toe aan rust, een fantastische locatie en genieten in luxe met bijbehorend comfort? Strijk dan neer in het Faro a Lopesan Collection Hotel. Proef de kosmopolitische sfeer in dit Only Adult hotel met modern en elegant interieur. De directe ligg",
-    "imageUrl": "https://images.corendonresources.com/L1E9922A2W0H0.jpg?v=241206151600",
+    "imageUrl": "https://images.corendonresources.com/L1E9922A1W1024H684.jpg?v=241206155926",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -2660,7 +2660,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Het prachtige 5-sterren Iberostar Selection Sábila van de gerenommeerde Iberostar-hotelketen is dé accommodatie bij uitstek voor je relaxvakantie zonder kinderen. Iedereen vanaf 16 jaar is hier welkom. Dat betekent relaxen, relaxen en nog eens relaxe",
-    "imageUrl": "https://images.corendonresources.com/L1E9756A2W0H0.jpg?v=260206141719",
+    "imageUrl": "https://images.corendonresources.com/L1E9756A1W1024H684.jpg?v=260206141722",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -2775,7 +2775,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Esperos Village Blue is een heerlijk 5 sterren Only Adult hotel. De locatie is schitterend; tegen een groene heuvel vol pijnbomen en cipressen en met een panoramisch adembenemend uitzicht op de Egeïsche zee. Geniet van de uitstekende sfeer en pricacy",
-    "imageUrl": "https://images.corendonresources.com/L1E3581A2W0H0.jpg?v=251027170732",
+    "imageUrl": "https://images.corendonresources.com/L1E3581A1W1024H684.jpg?v=251027170731",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -2884,7 +2884,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Houd je van luxe en verwennerij, dan heten wij je van harte welkom in hotel Minos Ambassador. Dit sublieme 5-sterrenhotel wordt exclusief door Corendon op de Nederlandse en Belgische markt aangeboden. Het hotel ligt vlak bij het zandstrand en op ca. ",
-    "imageUrl": "https://images.corendonresources.com/L1E9525A3W0H0.jpg?v=241016160943",
+    "imageUrl": "https://images.corendonresources.com/L1E9525A1W1024H684.jpg?v=241016160947",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -2938,7 +2938,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E11942A3W0H0.jpg?v=241016161027",
+    "imageUrl": "https://images.corendonresources.com/L1E11942A17W0H0.jpg?v=241016161036",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -2990,7 +2990,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Hovima Cool Costa Adeje is een 4-sterrenhotel gelegen direct aan het strand op Tenerife, met Playa de las Americas op slechts 1 kilometer afstand. Dit adults only hotel biedt de perfecte combinatie van luxe en rust, ideaal voor wie op zoek is naar on",
-    "imageUrl": "https://images.corendonresources.com/L1E12939A2W0H0.jpg?v=241022101855",
+    "imageUrl": "https://images.corendonresources.com/L1E12939A1W1024H684.jpg?v=241022101855",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -3043,7 +3043,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Het Iberostar Selection Santa Eulalia ligt pal aan de schitterende kust in het noordoosten van Ibiza en is de ideale plek om heerlijk te ontspannen en tot rust te komen. Iberostar Selection Santa Eulalia is alleen voor volwassenen en nu boekbaar bij ",
-    "imageUrl": "https://images.corendonresources.com/L1E6409A2W0H0.jpg?v=220824161732",
+    "imageUrl": "https://images.corendonresources.com/L1E6409A1W1024H684.jpg?v=220824161901",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -3099,7 +3099,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Verscholen tussen de eeuwenoude olijfboomgaarden en cipressen ligt Atlantica Nissaki Beach, een oase van rust aan de oostkust van Corfu. Het hotel is trapsgewijs tegen de groene heuvels aangebouwd, waardoor je vanaf de diverse terrassen een weids uit",
-    "imageUrl": "https://images.corendonresources.com/L1E13880A2W0H0.jpg?v=260127123119",
+    "imageUrl": "https://images.corendonresources.com/L1E13880A1W1024H684.jpg?v=260127123117",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -3151,7 +3151,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Welkom bij Cook's Club Kolymbia, een eigentijds hotel exclusief voor volwassenen, gelegen op loopafstand van het strand en op 1,5 kilometer van het charmante Kolymbia op Rhodos. Dit moderne toevluchtsoord biedt een relaxte atmosfeer voor een hee",
-    "imageUrl": "https://images.corendonresources.com/L1E11773A2W0H0.jpg?v=251027144051",
+    "imageUrl": "https://images.corendonresources.com/L1E11773A1W1024H684.jpg?v=251027144052",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -3203,7 +3203,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Voor een onvergetelijke vakantie met vrienden heeft Fergus Style Tobago alles wat je verlangt. Fergus Style Tobago ligt aan het strand in de schitterende baai van Palmanova. Bij het complex kun je genieten van een ontspannen sfeer, wervelende avondpr",
-    "imageUrl": "https://images.corendonresources.com/L1E13681A2W0H0.jpg?v=251215151033",
+    "imageUrl": "https://images.corendonresources.com/L1E13681A5W0H0.jpg?v=251215151039",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -3320,7 +3320,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "AluaSoul Zakynthos (voorheen Plagos Beach) is een heerlijk viersterren All Inclusive hotel, omgeven door weelderige landschappen, verharde paden en oneindig uitzicht op de Middellandse Zee. Het hotel ligt vlak bij het prachtige Amboula strand en op s",
-    "imageUrl": "https://images.corendonresources.com/L1E9881A2W0H0.jpg?v=251015181124",
+    "imageUrl": "https://images.corendonresources.com/L1E9881A1W1024H684.jpg?v=251015181106",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -3375,7 +3375,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Lindos Village Resort & Spa is gebouwd in gebouwd in Griekse stijl en geeft je echt het ultieme vakantiegevoel. Dit Only Adult resort heeft een rustige ligging en het strand vind je op ongeveer 200 meter. De luxe faciliteiten bestaan onder andere uit",
-    "imageUrl": "https://images.corendonresources.com/L1E8238A2W0H0.jpg?v=260219080547",
+    "imageUrl": "https://images.corendonresources.com/L1E8238A1W1024H684.jpg?v=260219080548",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -3429,7 +3429,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E11722A2W0H0.jpg?v=260219073253",
+    "imageUrl": "https://images.corendonresources.com/L1E11722A5W0H0.jpg?v=260219073235",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -3492,7 +3492,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Het luxe Lesante Blu - The Leading Hotels of the World (voorheen Lesante Blu Resort) is een nieuw Only Adult (min. leeftijd 16 jaar) hotel met alle moderne faciliteiten die je van een luxe 5-sterrenhotel mag verwachten. Wat een paradijs is dit. Stijl",
-    "imageUrl": "https://images.corendonresources.com/L1E8132A2W0H0.jpg?v=251021110333",
+    "imageUrl": "https://images.corendonresources.com/L1E8132A1W1024H684.jpg?v=251021110346",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -3545,7 +3545,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Ongestoord met vrienden of je partner vakantie vieren op Fuerteventura. Dat kan in het Adult Only H10 Ocean Dunas hotel. De 4-sterrenaccommodatie heeft ruime kamers die van alle gemakken zijn voorzien. Een moderne inrichting, minibar, koffie-en theef",
-    "imageUrl": "https://images.corendonresources.com/L1E9653A2W0H0.jpg?v=240612145409",
+    "imageUrl": "https://images.corendonresources.com/L1E9653A1W1024H684.jpg?v=240612145411",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -3600,7 +3600,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "het Only Adult hotel Secrets Lanzarote Resort & Spa is de perfecte keuze voor wie op zoek is naar een romantisch en ontspannen vakantie. Op loopafstand vind je het plaatsje Puerto Calero waar je naast winkels en restaurants ook een jachthaven vindt. ",
-    "imageUrl": "https://images.corendonresources.com/L1E11041A2W0H0.jpg?v=260115170939",
+    "imageUrl": "https://images.corendonresources.com/L1E11041A1W1024H684.jpg?v=260115170938",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -3662,7 +3662,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Op Rhodos verwelkomt het Lindos Grand Resort & Spa je in weldaad en luxe! Kom volledig tot rust in de spa, neem een duikcursus of huur een boot. Het mag natuurlijk ook veel avontuurlijker worden op het strand, maar je komt uiteraard ook om vakantie t",
-    "imageUrl": "https://images.corendonresources.com/L1E10078A2W0H0.jpg?v=260219071731",
+    "imageUrl": "https://images.corendonresources.com/L1E10078A1W1024H684.jpg?v=260219071545",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -3713,7 +3713,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Bull Vital Suites & Spa, gelegen op 3 kilometer van het strand en op 1,5 kilometer van Playa del Inglés op Gran Canaria, biedt een ontspannen en heerlijk verblijf. Het hotel beschikt over twee restaurants waar je kunt genieten van heerlijke gerechten",
-    "imageUrl": "https://images.corendonresources.com/L1E12599A2W0H0.jpg?v=240724141506",
+    "imageUrl": "https://images.corendonresources.com/L1E12599A1W1024H684.jpg?v=240724141454",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -3763,7 +3763,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Het kleinschalige Only Adult hotel HL Suites Nardos ligt in het bruisende Playa del Inglés. Het winkelcentrum Kasbah en het strand vind je op loopafstand. Het hotel beschikt over een restaurant, een zwembad met zonneterras, een Wellness Center en rui",
-    "imageUrl": "https://images.corendonresources.com/L1E11021A2W0H0.jpg?v=260105154118",
+    "imageUrl": "https://images.corendonresources.com/L1E11021A1W1024H684.jpg?v=260105154122",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -3871,7 +3871,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Het Hipotels Natura Palace & Spa is rustig gelegen en biedt een prachtig uitzicht over zee. Via de wandelpromenade loop je naar het centrum van Playa Blanca. Het 4-sterrenhotel biedt je tal van faciliteiten, zoals een Spa & Wellness Center, ruime kam",
-    "imageUrl": "https://images.corendonresources.com/L1E4647A2W0H0.jpg?v=240306172647",
+    "imageUrl": "https://images.corendonresources.com/L1E4647A1W1024H684.jpg?v=240306172645",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -3930,7 +3930,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Heerlijk en ontspannen genieten onder de Spaanse zon? Dat kan in het prachtige Adult Only Arona Gran Hotel & Spa op Tenerife. Bij binnenkomst in de lobby kijk je je ogen al uit, overal planten en een onstspannen sfeer. Dit hotel heeft werkelijk alles",
-    "imageUrl": "https://images.corendonresources.com/L1E10174A2W0H0.jpg?v=220524095330",
+    "imageUrl": "https://images.corendonresources.com/L1E10174A1W1024H684.jpg?v=220524095330",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -3983,7 +3983,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Dalyan Resort Spa ligt op een rustige en idyllische plek, direct aan de rivier en omringd door een prachtige tuin. Hier kom je echt even helemaal tot rust. Je hoort de vogels fluiten als je 's ochtends wakker wordt en vanaf je balkon kijk je uit over",
-    "imageUrl": "https://images.corendonresources.com/L1E4131A2W0H0.jpg?v=240605142228",
+    "imageUrl": "https://images.corendonresources.com/L1E4131A1W1024H684.jpg?v=240605142341",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4034,7 +4034,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Cook's Club El Gouna is hét Only Adult hotel (16+) voor koppels en vrienden die houden van muziek, gezelligheid en een levendige sfeer. In dit hotel voor alleen volwassenen (16+) ontspan je bij het zwembad terwijl je de hele dag geniet van muzie",
-    "imageUrl": "https://images.corendonresources.com/L1E9663A2W0H0.jpg?v=220801234408",
+    "imageUrl": "https://images.corendonresources.com/L1E9663A1W1024H684.jpg?v=220801234813",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4093,7 +4093,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "The Views Baia (voormalig Four Views Baia) is een Adult Only hotel, gelegen op een heuvel en biedt een prachtig uitzicht over de baai van Funchal en de haven. Je kunt hier genieten van een heerlijk zwembad met prachtig uitzicht, culinaire gerechten i",
-    "imageUrl": "https://images.corendonresources.com/L1E7796A2W0H0.jpg?v=230921162742",
+    "imageUrl": "https://images.corendonresources.com/L1E7796A1W1024H684.jpg?v=230921162739",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4144,7 +4144,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "H10 Ocean Dreams is een elegant en stijlvol hotel ontworpen met oog voor detail, ideaal voor een ontspannen vakantie. Van de prachtige zwembaden tot de adembenemende uitzichten vanaf het dakterras, alles is ontworpen om u te laten genieten van de per",
-    "imageUrl": "https://images.corendonresources.com/L1E6458A2W0H0.jpg?v=251113125324",
+    "imageUrl": "https://images.corendonresources.com/L1E6458A1W1024H684.jpg?v=251113125322",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4197,7 +4197,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E12155A2W0H0.jpg?v=240111065426",
+    "imageUrl": "https://images.corendonresources.com/L1E12155A5W0H0.jpg?v=240111065416",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4249,7 +4249,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "H10 Costa Mogan (voorheen LABRANDA Costa Mogan) is een rustig gelegen 4-sterrenhotel nabij Puerto Rico. Dit comfortabele hotel is een fantastische plek voor een heerlijke strandvakantie door de geweldige ligging direct aan het zand en de zee. Dé acco",
-    "imageUrl": "https://images.corendonresources.com/L1E9810A2W0H0.jpg?v=250410112229",
+    "imageUrl": "https://images.corendonresources.com/L1E9810A1W1024H684.jpg?v=250410112230",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4301,7 +4301,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Het Guayarmina Princess is een prachtig 4-sterrenhotel en doet zijn naam absoluut eer aan! Ben je op zoek naar goede kwaliteit, een prima ligging aan de boulevard, volop vertier en lekker eten? Dan ben je hier aan het juiste adres. Alle ingrediënten ",
-    "imageUrl": "https://images.corendonresources.com/L1E8779A2W0H0.jpg?v=230516102155",
+    "imageUrl": "https://images.corendonresources.com/L1E8779A1W1024H684.jpg?v=230516102213",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4354,7 +4354,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Hotel Bull Costa Canaria & Spa, gelegen aan het strand en op loopafstand van San Agustin op Gran Canaria, biedt een ontspannend en comfortabel verblijf. Het hotel beschikt over één buffetrestaurant waar je kunt genieten van diverse lekkere gerechten,",
-    "imageUrl": "https://images.corendonresources.com/L1E12593A2W0H0.jpg?v=240611143722",
+    "imageUrl": "https://images.corendonresources.com/L1E12593A1W1024H684.jpg?v=240611143802",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4404,7 +4404,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Het volledig gerenoveerde en Adult Only hotel THB Bamboo Alcudia ligt op loopafstand van het strand. Het gezellige oude centrum van Alcudia ligt op slechts twee kilometer met leuke souvenirwinkeltjes, smalle straatjes met authentieke huizen en het hi",
-    "imageUrl": "https://images.corendonresources.com/L1E13682A2W0H0.jpg?v=251215150653",
+    "imageUrl": "https://images.corendonresources.com/L1E13682A5W0H0.jpg?v=251215150637",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4454,7 +4454,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Proef de authentieke charme van Kura Botanica, verscholen in het hart van Otrobanda en omringd door het kleurrijke Unesco-erfgoed van Willemstad. Acht in 17e- en 18e-eeuwse stijl gerestaureerde pandjes vormen hier samen een mini-dorpje, waar elke hoe",
-    "imageUrl": "https://images.corendonresources.com/L1E10369A2W0H0.jpg?v=251107172641",
+    "imageUrl": "https://images.corendonresources.com/L1E10369A1W1024H684.jpg?v=251107172705",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4505,7 +4505,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Ole Tenerife Tropical is een heerlijk hotel met een ideale ligging, vlakbij het strand en in het gezellige centrum van Costa Adeje. U kunt hier met het hele gezin genieten van de vele faciliteiten die het hotel te bieden heeft, zoals moderne kamers, ",
-    "imageUrl": "https://images.corendonresources.com/L1E6316A2W0H0.jpg?v=241216082016",
+    "imageUrl": "https://images.corendonresources.com/L1E6316A1W1024H684.jpg?v=241216082027",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4556,7 +4556,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Ideaal gelegen, eerste lijn aan de boulevard en het lange zandstrand van Playa de Palma, daar vind je het totaal gerenoveerde, moderne Iberostar Waves Bahia de Palma! Een adult only hotel van de befaamde Iberostar keten, waar je het aan niets zult on",
-    "imageUrl": "https://images.corendonresources.com/L1E9643A2W0H0.jpg?v=250122142133",
+    "imageUrl": "https://images.corendonresources.com/L1E9643A1W1024H684.jpg?v=250122142200",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4606,7 +4606,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Kom helemaal tot rust in het sfeervolle hotel Falesia. Het hotel heeft een prachtige ligging, aan de rand van Albufeira in de fraaie wijk Falesia, tussen de pijn- en palmbomen. De keur aan faciliteiten en comfort maken dat Falesia een plezierig hotel",
-    "imageUrl": "https://images.corendonresources.com/L1E4919A2W0H0.jpg?v=240515104014",
+    "imageUrl": "https://images.corendonresources.com/L1E4919A1W1024H684.jpg?v=240515104024",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4665,7 +4665,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Don Gregory by Dunas (voorheen Dunas Don Gregory) is een geliefd hotel op Gran Canaria. Niet alleen vanwege de goede ligging direct aan het strand, maar ook vanwege de uitstekende service, de kamers met zeezicht, het heerlijke eten en het comfort van",
-    "imageUrl": "https://images.corendonresources.com/L1E3844A2W0H0.jpg?v=260206113340",
+    "imageUrl": "https://images.corendonresources.com/L1E3844A1W1024H684.jpg?v=260206113341",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4717,7 +4717,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Hoog tijd voor een luxe vakantie zonder kinderen? Het moderne Only Adult hotel H10 Gran Tinerfe biedt je gegarandeerd een topverblijf. Met een ligging nabij het zandstrand en het centrum van Playa de las Americas op steenworp afstand kan het eigenlij",
-    "imageUrl": "https://images.corendonresources.com/L1E8972A2W0H0.jpg?v=250530131325",
+    "imageUrl": "https://images.corendonresources.com/L1E8972A1W1024H684.jpg?v=250530131301",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4770,7 +4770,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Dalyan Resort Spa ligt op een rustige en idyllische plek, direct aan de rivier en omringd door een prachtige tuin. Hier kom je echt even helemaal tot rust. Je hoort de vogels fluiten als je 's ochtends wakker wordt en vanaf je balkon kijk je uit over",
-    "imageUrl": "https://images.corendonresources.com/L1E11893A2W0H0.jpg?v=240126134044",
+    "imageUrl": "https://images.corendonresources.com/L1E11893A5W0H0.jpg?v=240126134043",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4821,7 +4821,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E10380A2W0H0.jpg?v=251107173215",
+    "imageUrl": "https://images.corendonresources.com/L1E10380A5W0H0.jpg?v=251107173155",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4935,7 +4935,7 @@ const trips = [
       "Strand op 300m"
     ],
     "description": "Club Grand Side is een heerlijk hotel vlak bij het strand. De faciliteiten bieden voor ieder wat wils, zoals een waterpark met golfslagbad en glijbanen, diverse restaurants, een Spa Center, diverse sportactiviteiten en leuke entertainment voor jong e",
-    "imageUrl": "https://images.corendonresources.com/L1E8055A2W0H0.jpg?v=220521025820",
+    "imageUrl": "https://images.corendonresources.com/L1E8055A1W1024H684.jpg?v=220521025820",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -4990,7 +4990,7 @@ const trips = [
       "Strand op 500m"
     ],
     "description": "Wil jij in alle luxe vakantie vieren met het hele gezin in een 5-sterrenhotel? Dan zit je bij Seaden Quality Resort & Spa goed. Dit resort is door de zeer centrale ligging aan het privéstrand dé ideale locatie voor een relaxvakantie vol zon, zee en g",
-    "imageUrl": "https://images.corendonresources.com/L1E9676A2W0H0.jpg?v=220521044207",
+    "imageUrl": "https://images.corendonresources.com/L1E9676A1W1024H684.jpg?v=220521044207",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -5046,7 +5046,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Voor wie toe is aan rust, ruimte en een flinke dosis luxe, is Melia Llana Resort & SPA op het zonovergoten eiland Sal een schot in de roos. Dit stijlvolle vijfsterrenresort richt zich exclusief op volwassenen en ligt direct aan het zandstrand. Geen d",
-    "imageUrl": "https://images.corendonresources.com/L1E13338A2W0H0.jpg?v=250520082544",
+    "imageUrl": "https://images.corendonresources.com/L1E13338A1W1024H684.jpg?v=250520082545",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -5166,7 +5166,7 @@ const trips = [
       "Strand op 500m"
     ],
     "description": "Aan een privé strand in de Turkse badplaats Lara ligt het indrukwekkende Delphin Imperial. Alles wat je maar kunt wensen op gebied van service, kwaliteit, luxe en comfort vind je in Delphin Imperial. De binnenkomst in dit hotel geeft direct een konin",
-    "imageUrl": "https://images.corendonresources.com/L1E442A2W0H0.jpg?v=251013122032",
+    "imageUrl": "https://images.corendonresources.com/L1E442A1W1024H684.jpg?v=251013122039",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -5217,7 +5217,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Bij Madeira Regency Cliff Hotel draait alles om ontspannen genieten met persoonlijke service en volop rust. Dit stijlvolle Adults Only hotel vanaf 16 jaar ligt spectaculair aan zee en trakteert je vanuit elke kamer op uitzicht over de Atlantische Oce",
-    "imageUrl": "https://images.corendonresources.com/L1E13852A2W0H0.jpg?v=260105132633",
+    "imageUrl": "https://images.corendonresources.com/L1E13852A1W1024H684.jpg?v=260105132620",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -5281,7 +5281,7 @@ const trips = [
       "3 buitenzwembad(en)"
     ],
     "description": "Letoonia Club & Hotel is voor velen dé favoriete plek aan de Middellandse zee door de unieke locatie op het uitgestrekte schiereiland in Fethiye. Omgeven door maar liefst drie privé baaien vind je hier altijd een plekje om te ontspannen onder de Turk",
-    "imageUrl": "https://images.corendonresources.com/L1E1845A2W0H0.jpg?v=230523113327",
+    "imageUrl": "https://images.corendonresources.com/L1E1845A1W1024H684.jpg?v=230523113325",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -5397,7 +5397,7 @@ const trips = [
       "Strand op 500m"
     ],
     "description": "Pickalbatros Sands Hotel is de perfecte vakantiebestemming waar luxe en avontuur samenkomen. Gelegen direct aan een prachtig privéstrand, biedt het resort alles wat je nodig hebt voor een onvergetelijk verblijf. Beleef veel plezier in het aquapark, m",
-    "imageUrl": "https://images.corendonresources.com/L1E12755A2W0H0.jpg?v=251202114953",
+    "imageUrl": "https://images.corendonresources.com/L1E12755A1W1024H684.jpg?v=251202114954",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -5463,7 +5463,7 @@ const trips = [
       "12 buitenzwembad(en)"
     ],
     "description": "Zon, zee en strand zijn de sleutelwoorden bij het Pickalbatros Villaggio Resort, een prachtig hotel vlak bij Marsa Alam. Dit resort is de ultieme plek voor gezinnen die willen genieten van de Egyptische zon. Neem een verfrissende duik in een van de z",
-    "imageUrl": "https://images.corendonresources.com/L1E12780A2W0H0.jpg?v=251203123531",
+    "imageUrl": "https://images.corendonresources.com/L1E12780A1W1024H684.jpg?v=251203123526",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -5584,7 +5584,7 @@ const trips = [
       "Strand op 500m"
     ],
     "description": "Zin in zon, spektakel en eindeloos plezier? Dan zit je helemaal goed bij Pickalbatros Aqua Park Resort in het levendige Sharm El Sheikh. Dit resort is één groot feest voor jong en oud, met het grootste waterpark van de regio als absolute blikvanger. ",
-    "imageUrl": "https://images.corendonresources.com/L1E3372A2W0H0.jpg?v=260122164944",
+    "imageUrl": "https://images.corendonresources.com/L1E3372A1W1024H684.jpg?v=260122164943",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -5635,7 +5635,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Op zoek naar rust, uitzicht en comfort? Bij Orca Praia Hotel zit je goed. Dit Only Adults hotel ligt tegen een klif aan de kust van Madeira en kijkt uit over de Atlantische Oceaan. Vanuit je kamer hoor je de golven en zie je de zon in zee zakken. Nee",
-    "imageUrl": "https://images.corendonresources.com/L1E8769A2W0H0.jpg?v=220522081122",
+    "imageUrl": "https://images.corendonresources.com/L1E8769A1W1024H684.jpg?v=220522081122",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -5686,7 +5686,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Porto Santa Maria is een Only Adult hotel in het charmante Funchal, op slechts zeven minuten lopen van het centrum en op 200 meter van een kiezelstrand. Het hotel biedt een rustige en ontspannen sfeer, ideaal voor volwassenen die willen genieten van ",
-    "imageUrl": "https://images.corendonresources.com/L1E13193A2W0H0.jpg?v=250211091638",
+    "imageUrl": "https://images.corendonresources.com/L1E13193A1W1024H684.jpg?v=250211091638",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -5740,7 +5740,7 @@ const trips = [
       "Strand op 200m"
     ],
     "description": "Pickalbatros Laguna Vista (voorheen Laguna Vista Beach) ligt direct aan het strand en het beschikt over tal van faciliteiten. De schitterende tuin lijkt op een lagune met meerdere zwembaden, zonneterrassen en schaduwrijke plekjes.",
-    "imageUrl": "https://images.corendonresources.com/L1E3809A2W0H0.jpg?v=230809144344",
+    "imageUrl": "https://images.corendonresources.com/L1E3809A1W1024H684.jpg?v=230809144403",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -5852,7 +5852,7 @@ const trips = [
       "2 buitenzwembad(en)"
     ],
     "description": "Het 5-sterren Concorde Moreen Beach biedt u een panoramisch uitzicht over de Rode Zee en ligt midden in de baai van Abu Dabour, een van de meest mooie duikplaatsen van Egypte. Het Concorde Moreen Beach biedt vriendelijk personeel, 4 heerlijke zwembad",
-    "imageUrl": "https://images.corendonresources.com/L1E3818A2W0H0.jpg?v=251021165813",
+    "imageUrl": "https://images.corendonresources.com/L1E3818A1W1024H684.jpg?v=251021165813",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -5971,7 +5971,7 @@ const trips = [
       "5 buitenzwembad(en)"
     ],
     "description": "Het Pickalbatros Palace Resort ligt pal aan de Rode Zee en staat garant voor een geweldige vakantie onder de Egyptische zon. Heerlijk ontstressen in één van de 9 zwembaden, terwijl de kinderen joelend de glijbanen afroetsjen (er zijn maar liefst 15 g",
-    "imageUrl": "https://images.corendonresources.com/L1E10314A2W0H0.jpg?v=250911145655",
+    "imageUrl": "https://images.corendonresources.com/L1E10314A1W1024H684.jpg?v=250911145711",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -6195,7 +6195,7 @@ const trips = [
       "2 buitenzwembad(en)"
     ],
     "description": "Iberostar Waves Club Palmeraie Marrakech ligt in een prachtige palmoase met meer dan 100.000 bomen, op slechts een kwartier van de sfeervolle medina van Marrakech. Hier wandel je langs kleurrijke souks, ontdek je indrukwekkende bezienswaardigheden zo",
-    "imageUrl": "https://images.corendonresources.com/L1E13457A2W0H0.jpg?v=250902081940",
+    "imageUrl": "https://images.corendonresources.com/L1E13457A1W1024H684.jpg?v=250902081952",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -6359,7 +6359,7 @@ const trips = [
       "Strand op 800m"
     ],
     "description": "Stop! Zoek niet verder, want Pickalbatros Aqua Blu Resort is hét resort waar je gelijk wilt blijven! Zeker voor de waterliefhebbers onder ons, met alle zwembaden, glijbanen en het Aquapark en watergames. Dit wordt gegarandeerd een spetterende vakanti",
-    "imageUrl": "https://images.corendonresources.com/L1E10313A2W0H0.jpg?v=260122165519",
+    "imageUrl": "https://images.corendonresources.com/L1E10313A1W1024H684.jpg?v=260122165500",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -6520,7 +6520,7 @@ const trips = [
       "6 buitenzwembad(en)"
     ],
     "description": "Het luxe Pickalbatros Royal Moderna is een waar waterparadijs! U beleeft veel waterpret in de spetterende glijbanen en ook snorkelliefhebbers en duikers kunnen hun hart hier ophalen. Pickalbatros Royal Moderna ligt namelijk in Nabq Bay met een pracht",
-    "imageUrl": "https://images.corendonresources.com/L1E3370A2W0H0.jpg?v=230914175802",
+    "imageUrl": "https://images.corendonresources.com/L1E3370A1W1024H684.jpg?v=230914175928",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -6571,7 +6571,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Proef de authentieke sfeer in Kura Botanica waar acht in 17e- en 18e-eeuwse stijl opgetrokken pandjes een historische dorpservaring bieden. Het hotel is gerenoveerd en getransformeerd tot een luxe Only Adult hotel waar alle faciliteiten en de kamers ",
-    "imageUrl": "https://images.corendonresources.com/L1E12561A2W0H0.jpg?v=250407120119",
+    "imageUrl": "https://images.corendonresources.com/L1E12561A1W1024H684.jpg?v=260505094715",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -6801,7 +6801,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Ontdek de rust en gastvrijheid van Meliá Madeira Mare, een 5-sterrenhotel gelegen op loopafstand van het strand en op slechts 3,5 kilometer van het bruisende Funchal. Met een adembenemend uitzicht over de Atlantische Oceaan is dit de ideale uitvalbas",
-    "imageUrl": "https://images.corendonresources.com/L1E11826A2W0H0.jpg?v=231129115829",
+    "imageUrl": "https://images.corendonresources.com/L1E11826A1W1024H684.jpg?v=231129115838",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -6856,7 +6856,7 @@ const trips = [
       "Strand op 500m"
     ],
     "description": "Zin om te genieten van een onbezorgde vakantie? Boek dan snel jouw verblijf in het 4-sterrenhotel 3HB Guarana en ontdek wat dit veelzijdige hotel te bieden heeft. Met 2 buitenzwembaden, een kinderbad en een groot zonneterras met ligbedden en parasols",
-    "imageUrl": "https://images.corendonresources.com/L1E10267A2W0H0.jpg?v=240913092722",
+    "imageUrl": "https://images.corendonresources.com/L1E10267A1W1024H684.jpg?v=240913092803",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -6974,7 +6974,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Ben je op zoek naar een uniek plekje waar het je aan niets ontbreekt? Laat je dan in de watten leggen in Pestana Royal All Inclusive Ocean & Spa Resort op Madeira. Dit fijne complex heeft fantastisch uitzicht over de oceaan en heerlijke zwembaden waa",
-    "imageUrl": "https://images.corendonresources.com/L1E9633A2W0H0.jpg?v=251001104615",
+    "imageUrl": "https://images.corendonresources.com/L1E9633A1W1024H684.jpg?v=251001104622",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -7028,7 +7028,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Zin om deze zomer naar de Portugese zon te gaan? Boek dan jouw verblijf in het 4-sterren 3HB Clube Humbria hotel en geniet van een onbezorgde vakantie! Dit hotel, gelegen in de sfeervolle badplaats Olhos de Agua, is op loopafstand van één van de mooi",
-    "imageUrl": "https://images.corendonresources.com/L1E10232A2W0H0.jpg?v=241107103349",
+    "imageUrl": "https://images.corendonresources.com/L1E10232A1W1024H684.jpg?v=241107103357",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -7080,7 +7080,7 @@ const trips = [
       "Strand op 100m"
     ],
     "description": "Het gerenoveerde Barceló Funchal Oldtown is een absoluut tophotel met een ideale ligging midden in het centrum van Funchal, de hoofdstad van Madeira, ook wel bekend als de parel van de Atlantische Oceaan. Vanuit het hotel stap je de deur uit en bevin",
-    "imageUrl": "https://images.corendonresources.com/L1E11821A2W0H0.jpg?v=231129090309",
+    "imageUrl": "https://images.corendonresources.com/L1E11821A1W1024H684.jpg?v=231129090322",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -7132,7 +7132,7 @@ const trips = [
       "Strand op 50m"
     ],
     "description": "Dompel je onder in de luxe wereld van Savoy Palace, een 5-sterrenhotel uit de collectie van The Leading Hotels of the World. Het fonkelnieuwe majestueuze gebouw biedt moderne elegantie met een gouden touch en is van alle gemakken voorzien. De smaakvo",
-    "imageUrl": "https://images.corendonresources.com/L1E9158A2W0H0.jpg?v=251001132958",
+    "imageUrl": "https://images.corendonresources.com/L1E9158A1W1024H684.jpg?v=251001133010",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -7192,7 +7192,7 @@ const trips = [
       "Strand op 300m"
     ],
     "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E12037A2W0H0.jpg?v=260108140438",
+    "imageUrl": "https://images.corendonresources.com/L1E12037A5W0H0.jpg?v=260108140424",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -7341,7 +7341,7 @@ const trips = [
       "Strand op 800m"
     ],
     "description": "Eloro Hotel ligt aan een prachtige baai met fraai privé zandstrand, centraal op het eiland op ca. 10 minuten rijden van een van de mooiste en belangrijkste baroksteden van Italië, Noto! Maar ook o.a. de oude stad Syracuse, ooit de grootste en belangr",
-    "imageUrl": "https://images.corendonresources.com/L1E12511A2W0H0.jpg?v=260116101423",
+    "imageUrl": "https://images.corendonresources.com/L1E12511A5W0H0.jpg?v=260116101435",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -7458,7 +7458,7 @@ const trips = [
       "2 buitenzwembad(en)"
     ],
     "description": "Pickalbatros Luxury Suites Resort is een stijlvol 5 sterrenresort in Sharm el Sheikh waar comfort, ruimte en ontspannen vakantiedagen mooi samenkomen. Hier verblijf je in een omgeving die net even wat exclusiever aanvoelt, met moderne kamers en suite",
-    "imageUrl": "https://images.corendonresources.com/L1E14163A2W0H0.jpg?v=260507125316",
+    "imageUrl": "https://images.corendonresources.com/L1E14163A1W1024H684.jpg?v=260507125320",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -7512,7 +7512,7 @@ const trips = [
       "Strand op 500m"
     ],
     "description": "Welkom bij Pickalbatros Oasis Hotel, de ideale plek voor een vakantie vol luxe en avontuur. Het resort ligt direct aan een prachtig privéstrand en biedt alles wat je nodig hebt voor een onvergetelijke ervaring. Ga los in het aquapark met spannende gl",
-    "imageUrl": "https://images.corendonresources.com/L1E12756A2W0H0.jpg?v=251127173257",
+    "imageUrl": "https://images.corendonresources.com/L1E12756A1W1024H684.jpg?v=251127173257",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -7574,7 +7574,7 @@ const trips = [
       "Strand op 200m"
     ],
     "description": "Bij het elegante Hotel Albatros Palace Port Ghalib kun je genieten van luxe en comfort in een geweldige omgeving. Dit hotel ligt vlak bij de haven van Port Ghalib en beschikt over een eigen strand met fijn, goudkleurig zand. Naast het strand ligt een",
-    "imageUrl": "https://images.corendonresources.com/L1E12761A2W0H0.jpg?v=251202155332",
+    "imageUrl": "https://images.corendonresources.com/L1E12761A1W1024H684.jpg?v=251202155336",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -7638,7 +7638,7 @@ const trips = [
       "Strand op 200m"
     ],
     "description": "Beleef de perfecte mix van ontspanning en avontuur aan de Rode Zee in het prachtige Pickalbatros Vita Resort. Dit ruim opgezette resort, dichtbij Marsa Alam, verwelkomt je in een oriëntaalse sfeer waar luxe en cultuur samenkomen. Dompel jezelf onder ",
-    "imageUrl": "https://images.corendonresources.com/L1E12996A2W0H0.jpg?v=251202121112",
+    "imageUrl": "https://images.corendonresources.com/L1E12996A1W1024H684.jpg?v=251202121057",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -7696,7 +7696,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Welkom bij Club Marina Seada Beach, een sfeervol hotel op het prachtige Sardinië. Perfect gelegen op loopafstand van het strand en op 5 kilometer van Budoni, biedt dit hotel een ontspannen toevluchtsoord te midden van de prachtige omgeving van het ei",
-    "imageUrl": "https://images.corendonresources.com/L1E12179A2W0H0.jpg?v=251205115339",
+    "imageUrl": "https://images.corendonresources.com/L1E12179A1W1024H684.jpg?v=251205115351",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -7915,7 +7915,7 @@ const trips = [
       "2 buitenzwembad(en)"
     ],
     "description": "Vitor's Village is een ruim opgezet complex gelegen aan een hellende weg, waardoor je een prachtig uitzicht hebt over de omgeving. Met de gratis shuttleservice sta je zo op het strand of in het centrum van Ferragudo, maar aan het zwembad kun je ook g",
-    "imageUrl": "https://images.corendonresources.com/L1E12738A2W0H0.jpg?v=250911153934",
+    "imageUrl": "https://images.corendonresources.com/L1E12738A5W0H0.jpg?v=250911153956",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -7966,7 +7966,7 @@ const trips = [
       "2 buitenzwembad(en)"
     ],
     "description": "Iberostar Selection Lagos Algarve is werkelijk een hotel waar je jaarlijks naar terugverlangt. Of het nu vanwege de moderne kamers is of de gastvrije medewerkers, of zelfs vanwege de gerechten waarbij je je vingers erbij aflikt. Kies voor de All Incl",
-    "imageUrl": "https://images.corendonresources.com/L1E11562A2W0H0.jpg?v=231010143500",
+    "imageUrl": "https://images.corendonresources.com/L1E11562A1W1024H684.jpg?v=231010143503",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -8026,7 +8026,7 @@ const trips = [
       "1 buitenzwembad(en)"
     ],
     "description": "Gelegen op een rustige plek aan de rand van Vilamoura en met een prachtige 27-holes golfbaan, is het hotel Pestana Vila Sol een uitstekende keuze voor je volgende vakantie. Het is een oase voor iedereen die op zoek is naar een ontspannende vakantie m",
-    "imageUrl": "https://images.corendonresources.com/L1E12729A2W0H0.jpg?v=260310094228",
+    "imageUrl": "https://images.corendonresources.com/L1E12729A5W0H0.jpg?v=260310094220",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -8087,7 +8087,7 @@ const trips = [
       "Strand op 250m"
     ],
     "description": "Club Hotel Li Suari op Sardinië biedt een rustig toevluchtsoord, gunstig gelegen op loopafstand van het strand en slechts 1 kilometer van het schilderachtige San Teodoro. Dit charmante hotel is de perfecte plek om te ontspannen en te genieten van de ",
-    "imageUrl": "https://images.corendonresources.com/L1E12169A2W0H0.jpg?v=260513120651",
+    "imageUrl": "https://images.corendonresources.com/L1E12169A1W1024H684.jpg?v=260513120645",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -8196,7 +8196,7 @@ const trips = [
       "5 buitenzwembad(en)"
     ],
     "description": "Relax to the max Een relaxed vakantiegevoel! Dat is wat je tijdens je verblijf in The Rif at Mangrove Beach, een Curio Collection by Hilton hotel zult ervaren. In dit exclusieve 5-sterrenresort, het luxe zusje van het Corendon Mangrove Beach Resort, ",
-    "imageUrl": "https://images.corendonresources.com/L1E11211A2W0H0.jpg?v=260226145903",
+    "imageUrl": "https://images.corendonresources.com/L1E11211A1W1024H684.jpg?v=260226145920",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -8244,7 +8244,7 @@ const trips = [
       "1 buitenzwembad(en)"
     ],
     "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E13376A2W0H0.jpg?v=250724074605",
+    "imageUrl": "https://images.corendonresources.com/L1E13376A5W0H0.jpg?v=250724074651",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -8303,7 +8303,7 @@ const trips = [
       "1 buitenzwembad(en)"
     ],
     "description": "Welkom bij Club Marina Seada Beach, een sfeervol hotel op het prachtige Sardinië. Perfect gelegen op loopafstand van het strand en op 5 kilometer van Budoni, biedt dit hotel een ontspannen toevluchtsoord te midden van de prachtige omgeving van het ei",
-    "imageUrl": "https://images.corendonresources.com/L1E13769A2W0H0.jpg?v=251204121028",
+    "imageUrl": "https://images.corendonresources.com/L1E13769A5W0H0.jpg?v=251204121055",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -8365,7 +8365,7 @@ const trips = [
       "Strand op 100m"
     ],
     "description": "Aan de rand van het schiereiland bij Santa Maria, waar de oceaan en het eiland elkaar ontmoeten, ligt het gloednieuwe Royal Horizon Ponta Sino. Dit stijlvolle vijfsterrenresort op het eiland Sal is zo'n plek waar alles klopt. Denk een uitgestrekt str",
-    "imageUrl": "https://images.corendonresources.com/L1E9746A2W0H0.jpg?v=251023165530",
+    "imageUrl": "https://images.corendonresources.com/L1E9746A1W1024H684.jpg?v=251023165518",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -8428,7 +8428,7 @@ const trips = [
       "5 buitenzwembad(en)"
     ],
     "description": "Relax to the max Een relaxed vakantiegevoel! Dat is wat je tijdens je verblijf in The Rif at Mangrove Beach, een Curio Collection by Hilton hotel zult ervaren. In dit exclusieve 5-sterrenresort, het luxe zusje van het Corendon Mangrove Beach Resort, ",
-    "imageUrl": "https://images.corendonresources.com/L1E13314A2W0H0.jpg?v=251103172012",
+    "imageUrl": "https://images.corendonresources.com/L1E13314A1W1024H684.jpg?v=260123090402",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -8483,7 +8483,7 @@ const trips = [
       "5 buitenzwembad(en)"
     ],
     "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E11212A2W0H0.jpg?v=251103165951",
+    "imageUrl": "https://images.corendonresources.com/L1E11212A5W0H0.jpg?v=251103170022",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -8539,7 +8539,7 @@ const trips = [
       "Strand op 500m"
     ],
     "description": "Kom onbezorgd vakantie vieren in Corendon Mangrove Beach Resort op tropisch Curaçao! Dit prachtige resort, onderdeel van Curio Collection by Hilton, ligt te midden van een mangrovebos dat bijna nergens anders in het Caribisch gebied te vinden is. Voo",
-    "imageUrl": "https://images.corendonresources.com/L1E9404A2W0H0.jpg?v=260318094739",
+    "imageUrl": "https://images.corendonresources.com/L1E9404A1W1024H684.jpg?v=260318094809",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -8603,7 +8603,7 @@ const trips = [
       "Strand op 500m"
     ],
     "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E9782A2W0H0.jpg?v=260318095608",
+    "imageUrl": "https://images.corendonresources.com/L1E9782A5W0H0.jpg?v=260318095719",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -8771,7 +8771,7 @@ const trips = [
       "Strand op 10m"
     ],
     "description": "Iberostar Waves Founty Beach is een fijne plek om helemaal in de vakantiesfeer te komen. Je verblijft vrijwel direct aan het brede zandstrand van Agadir, waar je 's ochtends wakker wordt met het geluid van de golven op de achtergrond. Het hotel ligt ",
-    "imageUrl": "https://images.corendonresources.com/L1E13696A2W0H0.jpg?v=251119081209",
+    "imageUrl": "https://images.corendonresources.com/L1E13696A1W1024H684.jpg?v=251119081233",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -8816,7 +8816,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Deze onvergetelijke reis naar Egypte biedt een unieke combinatie van cultuur, avontuur en ontspanning. Je reist naar Hurghada, waar je de iconen van het oude Egypte ontdekt, verblijft in luxe accommodaties en geniet van een rondreis langs de belangri",
-    "imageUrl": "https://images.corendonresources.com/L1E13256A2W0H0.jpg?v=250326105954",
+    "imageUrl": "https://images.corendonresources.com/L1E13256A1W1024H684.jpg?v=251107122708",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -8875,7 +8875,7 @@ const trips = [
       "Strand op 50m"
     ],
     "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E11757A2W0H0.jpg?v=260116102951",
+    "imageUrl": "https://images.corendonresources.com/L1E11757A5W0H0.jpg?v=260116102932",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -9276,7 +9276,7 @@ const trips = [
       "1 buitenzwembad(en)"
     ],
     "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E8898A2W0H0.jpg?v=251211152534",
+    "imageUrl": "https://images.corendonresources.com/L1E8898A5W0H0.jpg?v=251211152510",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -9393,7 +9393,7 @@ const trips = [
       "Strand op 600m"
     ],
     "description": "Het Royal M Al Aqah Beach Resort is zo'n plek waar je meteen voelt dat alles klopt. Direct aan het fijne zandstrand van Fujairah en met de Hajar-bergen als indrukwekkende achtergrond is dit vijfsterrenadres een heerlijke uitvalsbasis voor een zorgelo",
-    "imageUrl": "https://images.corendonresources.com/L1E13744A2W0H0.jpg?v=251201114409",
+    "imageUrl": "https://images.corendonresources.com/L1E13744A1W1024H684.jpg?v=251201114410",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -9445,7 +9445,7 @@ const trips = [
       "Strand op 500m"
     ],
     "description": "Welkom in het Al Habtoor Grand Resort, Autograph Collection, het paradijs van perfecte vergezichten, omgeven door het ongerepte strand en heldere blauwe luchten. Waar weelderige landschappen de warme wateren van de Arabische Golf ontmoeten. In het Al",
-    "imageUrl": "https://images.corendonresources.com/L1E4787A2W0H0.jpg?v=231211130844",
+    "imageUrl": "https://images.corendonresources.com/L1E4787A1W1024H684.jpg?v=231211130904",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -9656,7 +9656,7 @@ const trips = [
       "1 buitenzwembad(en)"
     ],
     "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E13772A2W0H0.jpg?v=251208151841",
+    "imageUrl": "https://images.corendonresources.com/L1E13772A5W0H0.jpg?v=251208151857",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -9716,7 +9716,7 @@ const trips = [
       "Strand op 150m"
     ],
     "description": "Club Esse Posada ligt op een prachtige plek aan de kust van Palau, met uitzicht op de indrukwekkende La Maddalena Archipel. Elke dag begint hier met een mix van helderblauw water, verborgen inhammen en stranden die zo van een ansichtkaart lijken te k",
-    "imageUrl": "https://images.corendonresources.com/L1E13732A2W0H0.jpg?v=251127100638",
+    "imageUrl": "https://images.corendonresources.com/L1E13732A1W1024H684.jpg?v=251127100638",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -9761,7 +9761,7 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "Tijdens deze rondreis leer je het charmante Sicilië kennen. Het grootste eiland van de Middellandse Zee is een populaire vakantiebestemming. Al menig vakantieganger viert jaar na jaar vakantie op Sicilië. Dat is niet zo gek want er is hier genoeg te ",
-    "imageUrl": "https://images.corendonresources.com/L1E8286A2W0H0.jpg?v=220522080336",
+    "imageUrl": "https://images.corendonresources.com/L1E8286A1W1024H684.jpg?v=220522080336",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -9815,7 +9815,7 @@ const trips = [
       "1 buitenzwembad(en)"
     ],
     "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E9144A2W0H0.jpg?v=251205133901",
+    "imageUrl": "https://images.corendonresources.com/L1E9144A5W0H0.jpg?v=251205133834",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -9869,7 +9869,7 @@ const trips = [
       "Strand op 300m"
     ],
     "description": "Tropisch genieten doe je natuurlijk in het 4-sterrenresort Oasis Belorizonte op het Kaapverdische Sal! Dit gezellige resort bestaat uit bungalows en deluxe kamers. In de tuin vind je naast palmbomen ook 3 zwembaden met aparte kinderbaden, een zonnete",
-    "imageUrl": "https://images.corendonresources.com/L1E9779A2W0H0.jpg?v=250516143219",
+    "imageUrl": "https://images.corendonresources.com/L1E9779A1W1024H684.jpg?v=250516143217",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -10016,7 +10016,7 @@ const trips = [
       "Strand op 250m"
     ],
     "description": "Beleef luxe en ontspanning bij Grand Windsock Dive & Beach Resort, een stijlvol resort vlakbij het centrum van Kralendijk. Kies uit moderne appartementen of ruime privévilla's, waarvan sommige zelfs een eigen zwembad op het terras hebben. Neem een du",
-    "imageUrl": "https://images.corendonresources.com/L1E13139A2W0H0.jpg?v=250327124708",
+    "imageUrl": "https://images.corendonresources.com/L1E13139A1W1024H684.jpg?v=250327124627",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -10309,7 +10309,7 @@ const trips = [
       "Strand op 750m"
     ],
     "description": "Resort Bonaire is de perfecte uitvalsbasis om het eiland te ontdekken én om heerlijk tot rust te komen. Of je nu op avontuur gaat over het eiland of liever relaxt op een ligbedje aan het zwembad: hier heb je alles binnen handbereik. Het grote zonnete",
-    "imageUrl": "https://images.corendonresources.com/L1E12415A2W0H0.jpg?v=260421104446",
+    "imageUrl": "https://images.corendonresources.com/L1E12415A1W1024H684.jpg?v=260421104411",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -10361,7 +10361,7 @@ const trips = [
       "1 buitenzwembad(en)"
     ],
     "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E13140A2W0H0.jpg?v=260115073511",
+    "imageUrl": "https://images.corendonresources.com/L1E13140A5W0H0.jpg?v=260115073501",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -10412,7 +10412,7 @@ const trips = [
       "Strand op 750m"
     ],
     "description": "Resort Bonaire biedt de ideale setting om het eiland Bonaire te verkennen en diverse activiteiten te ondernemen. Of je nu de omgeving wilt verkennen of gewoon wilt ontspannen op een ligbedje bij het zwembad, hier vind je alles wat je nodig hebt voor ",
-    "imageUrl": "https://images.corendonresources.com/L1E12557A2W0H0.jpg?v=260421105254",
+    "imageUrl": "https://images.corendonresources.com/L1E12557A5W0H0.jpg?v=260421105231",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -10462,7 +10462,7 @@ const trips = [
       "Strand op 10m"
     ],
     "description": "Te midden van een groot aantal winkels, restaurants met terrasjes en cafétjes ligt het luxe 5-sterren Sofitel Jumeirah Beach. Dit is dé plek om overdag Dubai te ontdekken of lekker te relaxen op het strand en 's avonds langs de beroemde 'The Walk' te",
-    "imageUrl": "https://images.corendonresources.com/L1E6330A2W0H0.jpg?v=251029103504",
+    "imageUrl": "https://images.corendonresources.com/L1E6330A1W1024H684.jpg?v=251029103452",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -10513,7 +10513,7 @@ const trips = [
       "Strand op 650m"
     ],
     "description": "Sobrado Hotel is een sfeervol 4-sterrenhotel op een ideale plek in Santa Maria, op het prachtige eiland Sal. Vanuit het hotel wandel je in een paar minuten naar het brede zandstrand en het levendige centrum met gezellige winkels, restaurants en terra",
-    "imageUrl": "https://images.corendonresources.com/L1E13355A2W0H0.jpg?v=250716150100",
+    "imageUrl": "https://images.corendonresources.com/L1E13355A1W1024H684.jpg?v=250716150038",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -10565,7 +10565,7 @@ const trips = [
       "Strand op 50m"
     ],
     "description": "Zon, zee, strand.. met een cocktail in de hand! Hilton Cabo Verde Sal Resort staat garant voor een relaxte zonvakantie. Het resort beschikt over een prachtig beach restaurant met af en toe een DJ, comfortabele, ruime kamers, soft entertainment en een",
-    "imageUrl": "https://images.corendonresources.com/L1E9814A2W0H0.jpg?v=250625082409",
+    "imageUrl": "https://images.corendonresources.com/L1E9814A1W1024H684.jpg?v=250625082410",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -10615,7 +10615,7 @@ const trips = [
       "Strand op 50m"
     ],
     "description": "Welkom in Hotel Morabeza! Hier verblijf je in het oudste hotel van Sal, met zo'n 60 jaar geschiedenis. Een plek vol karakter, authenticiteit en charme, waar de relaxte, laid-back sfeer van het eiland direct voelbaar is. Kleinschalig van opzet en",
-    "imageUrl": "https://images.corendonresources.com/L1E9817A2W0H0.jpg?v=250625095148",
+    "imageUrl": "https://images.corendonresources.com/L1E9817A1W1024H684.jpg?v=250625095128",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -10668,7 +10668,7 @@ const trips = [
       "Strand op 150m"
     ],
     "description": "Heerlijk kleinschalig en met persoonlijke aandacht: dat is Hotel Dunas de Sal op het Kaapverdische eiland Sal. Dit moderne hotel ligt op loopafstand van het lange, witte zandstrand van Santa Maria en heeft alles in huis voor een ontspannen vakantie o",
-    "imageUrl": "https://images.corendonresources.com/L1E13387A2W0H0.jpg?v=250728141227",
+    "imageUrl": "https://images.corendonresources.com/L1E13387A1W1024H684.jpg?v=250728141248",
     "affiliatePartner": "Corendon",
     "variants": [
       {

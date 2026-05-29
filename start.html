@@ -1425,7 +1425,7 @@
         .filter(s => prefs.sfeer.includes(s))
         .map(s => sfeerLabelMap[s] || s)
         .filter((v, i, a) => a.indexOf(v) === i);
-      const matchTagsHtml = matchingTags.length > 0
+      const matchTagsHtml = matchingTags.length >= 2
         ? `<div class="card-match-tags">Past bij jullie: ${escapeHtml(matchingTags.join(', '))}</div>`
         : '';
 

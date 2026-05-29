@@ -486,7 +486,13 @@ function buildTrip(product, variant) {
   const adultsOnly = prop(product, 'onlyadult') === 'true';
   const code = prop(product, 'accommodationcode', product.ID);
   const stars = parseInt(prop(product, 'stars', '0'), 10);
-  const imageUrl = product.images?.[1] || product.images?.[0] || prop(product, 'productimage_1', '');
+  // Foto-selectie: Fly & Go / Bingo trips hebben vaak een generieke stockfoto als
+  // eerste beeld. Pak dan een latere foto (zwembad/uitzicht) uit de productimage-reeks.
+  const name = decodeHtmlEntities(product.name || '');
+  const isGenericBrand = /fly\s*[&+]\s*go|bingo|excursiereis|rondreizen/i.test(name);
+  const imageUrl = isGenericBrand
+    ? (prop(product, 'productimage_3') || prop(product, 'productimage_4') || prop(product, 'productimage_2') || product.images?.[3] || product.images?.[2] || product.images?.[1] || product.images?.[0] || '')
+    : (product.images?.[1] || product.images?.[0] || prop(product, 'productimage_1', ''));
 
   return {
     id: `corendon-${slugify(decodeHtmlEntities(product.name))}-${code.toLowerCase()}`,
@@ -632,6 +638,13 @@ for (const product of products) {
     existing.highlights = deriveHighlights(product);
     existing.whyThisTrip = decodeHtmlEntities(deriveWhyThisTrip(product));
     existing.tripDesc = decodeHtmlEntities(deriveTripDesc(product));
+    // Foto updaten (Fly & Go trips krijgen nu betere foto uit de reeks)
+    const updName = decodeHtmlEntities(product.name || '');
+    const isGen = /fly\s*[&+]\s*go|bingo|excursiereis|rondreizen/i.test(updName);
+    const newImg = isGen
+      ? (prop(product, 'productimage_3') || prop(product, 'productimage_4') || prop(product, 'productimage_2') || product.images?.[3] || product.images?.[2] || product.images?.[1] || product.images?.[0] || '')
+      : (product.images?.[1] || product.images?.[0] || prop(product, 'productimage_1', ''));
+    if (newImg) existing.imageUrl = newImg;
     flagUnknownDestination(product);
   } else {
     // Nieuw hotel → maak trip aan
