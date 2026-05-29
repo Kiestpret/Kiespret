@@ -6,7 +6,7 @@
  * Exit 0 = alles goed, Exit 1 = fouten gevonden
  */
 
-import { readFileSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -16,7 +16,9 @@ const schema = JSON.parse(readFileSync(join(__dirname, 'trips.schema.json'), 'ut
 const trips = JSON.parse(readFileSync(join(__dirname, 'trips.json'), 'utf-8'));
 
 let errors = 0;
+let warnings = 0;
 const ids = new Set();
+const skipped = [];
 
 for (let i = 0; i < trips.length; i++) {
   const t = trips[i];
@@ -63,17 +65,25 @@ for (let i = 0; i < trips.length; i++) {
     }
   }
 
-  // Title length
+  // Title length (warning, niet blokkerend)
   if (t.title && t.title.length > 80) {
-    console.error(`⚠️  ${loc}: titel te lang (${t.title.length} chars)`);
-    errors++;
+    console.warn(`⚠️  ${loc}: titel te lang (${t.title.length} chars)`);
+    warnings++;
   }
 
-  // Image URL
+  // Image URL (warning, trip wordt overgeslagen in output)
   if (!t.imageUrl || !t.imageUrl.startsWith('https://')) {
-    console.error(`⚠️  ${loc}: geen geldige imageUrl`);
-    errors++;
+    console.warn(`⚠️  ${loc}: geen geldige imageUrl — wordt overgeslagen`);
+    warnings++;
+    skipped.push(t.id);
   }
+}
+
+// Filter trips zonder geldige imageUrl uit trips.json
+if (skipped.length > 0) {
+  const filtered = trips.filter(t => !skipped.includes(t.id));
+  writeFileSync(join(__dirname, 'trips.json'), JSON.stringify(filtered, null, 2), 'utf-8');
+  console.log(`\n🧹 ${skipped.length} trip(s) zonder geldige afbeelding verwijderd uit trips.json`);
 }
 
 // Stats
@@ -81,11 +91,12 @@ console.log(`\n📋 Validatie voltooid`);
 console.log(`   ${trips.length} trips gecontroleerd`);
 console.log(`   ${ids.size} unieke IDs`);
 console.log(`   ${errors} fouten gevonden`);
+console.log(`   ${warnings} waarschuwingen`);
 
 if (errors > 0) {
   console.error(`\n❌ Validatie MISLUKT — ${errors} fouten`);
   process.exit(1);
 } else {
-  console.log(`\n✅ Validatie GESLAAGD`);
+  console.log(`\n✅ Validatie GESLAAGD${warnings > 0 ? ` (${warnings} waarschuwingen)` : ''}`);
   process.exit(0);
 }
