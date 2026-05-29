@@ -306,12 +306,12 @@
 
     .card-stack {
       position: relative;
-      height: 520px;
+      height: 560px;
       margin-bottom: 16px;
     }
 
     @media (max-width: 400px) {
-      .card-stack { height: 480px; }
+      .card-stack { height: 520px; }
     }
 
     .trip-card {
@@ -364,27 +364,27 @@
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 40px 16px 12px;
-      background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0) 100%);
+      padding: 24px 16px 10px;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
       pointer-events: none;
     }
 
     .card-dest-overlay h3 {
       color: #fff;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 700;
       margin: 0;
       line-height: 1.2;
       text-shadow: 0 1px 6px rgba(0,0,0,0.6);
     }
 
-    .card-dest-overlay p {
-      color: rgba(255,255,255,0.92);
-      font-size: 12px;
-      margin: 3px 0 0;
-      line-height: 1.35;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    .card-dest-desc {
+      font-size: 13px;
+      color: var(--night);
+      line-height: 1.45;
+      margin-bottom: 10px;
+      font-weight: 500;
     }
 
     /* Adults only badge on photo */
@@ -1390,10 +1390,10 @@
       const wellKnown = ['Kreta','Zakynthos','Rhodos','Kos','Corfu','Mallorca','Ibiza','Menorca','Tenerife','Gran Canaria','Fuerteventura','Lanzarote','Sicilië','Sardinië','Madeira','Dubai','Hurghada','Marmaris','Bodrum','Antalya','Istanbul','Marrakech','Lissabon','Porto'];
       const destCity = wellKnown.includes(destRegion) ? destRegion : `${destRegion}, ${destCountry}`;
 
-      // Laag 1: bestemmingsbeschrijving (foto-overlay) — truncated
-      const destDesc = (trip.whyThisTrip || '').length > 65
-        ? trip.whyThisTrip.substring(0, 62) + '...'
-        : (trip.whyThisTrip || '');
+      // Laag 1: bestemmingsbeschrijving (foto-overlay) — eerste zin
+      const fullDesc = trip.whyThisTrip || '';
+      const firstDot = fullDesc.indexOf('.');
+      const destDesc = firstDot > 0 && firstDot < 120 ? fullDesc.substring(0, firstDot + 1) : fullDesc.substring(0, 80);
       // Laag 2: trip-specifieke beschrijving (body)
       const tripSpecific = trip.tripDesc || '';
 
@@ -1435,9 +1435,7 @@
       const destSafe = escapeHtml(trip.destination);
 
       // Trip-specifieke beschrijving als die er is
-      const tripDescHtml = tripSpecific
-        ? `<div class="card-trip-desc">${escapeHtml(tripSpecific)}</div>`
-        : '';
+      // tripDesc niet meer apart tonen — info zit al in badges + match-tags
 
       card.innerHTML = `
         <div class="card-overlay overlay-yes">JA!</div>
@@ -1447,17 +1445,16 @@
           <img class="card-img" src="${escapeHtml(safeUrl(trip.imageUrl))}" alt="${destSafe}" draggable="false">
           <div class="card-dest-overlay">
             <h3>${escapeHtml(destCity)}</h3>
-            <p>${escapeHtml(destDesc)}</p>
           </div>
           ${aoBadge}
         </div>
         <div class="card-body">
+          <div class="card-dest-desc">${escapeHtml(destDesc)}</div>
           <div class="card-price-row">
             <div class="card-price">€${Number(v.prijs) || 0} <span>p.p.</span></div>
             <div class="card-compact-info">${compactInfo}</div>
           </div>
           <div class="card-highlights">${badgesHtml}</div>
-          ${tripDescHtml}
           ${matchTagsHtml}
           <div class="card-footer">
             <span class="card-footer-hotel">${escapeHtml(hotelName)} · via ${aanbiederSafe}</span>
