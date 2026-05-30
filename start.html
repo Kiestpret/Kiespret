@@ -1160,6 +1160,7 @@
       maanden: [],
       duur: null,      // 0 = maakt niet uit
       airport: 'AMS',
+      focusLands: [],   // vanuit gids-pagina: prioriteer deze landen/regio's (kan meerdere zijn bij vergelijkingen)
     };
 
     let currentTrips = [];
@@ -1227,20 +1228,26 @@
           const variant = matchVariantCustom(trip, prefs);
           if (!variant) return null;
           // Sfeer als ranking: match geeft hogere score, maar geen uitsluiting
-          const tagScore = trip.sfeer.filter(s => prefs.sfeer.includes(s)).length;
+          let tagScore = trip.sfeer.filter(s => prefs.sfeer.includes(s)).length;
+          // Focus-boost: trips uit het land/regio van de gids-pagina krijgen prioriteit
+          if (prefs.focusLands.length > 0) {
+            const dest = (trip.destination || '').toLowerCase();
+            if (prefs.focusLands.some(l => dest.includes(l.toLowerCase()))) tagScore += 5;
+          }
           return { ...trip, matchedVariant: variant, tagScore };
         })
         .filter(Boolean)
         .sort((a, b) => b.tagScore - a.tagScore);
 
-      // Bestemmingsdiversiteit: max 2 trips per land
-      const MAX_PER_COUNTRY = 2;
+      // Bestemmingsdiversiteit: max 2 trips per land (of 4 als het het focus-land is)
       const countPerCountry = {};
       return sorted.filter(t => {
         const parts = (t.destination || '').split(',');
         const c = (parts[parts.length - 1] || 'unknown').trim();
+        const isFocus = prefs.focusLands.length > 0 && prefs.focusLands.some(l => c.toLowerCase().includes(l.toLowerCase()));
+        const maxForCountry = isFocus ? 4 : 2;
         countPerCountry[c] = (countPerCountry[c] || 0) + 1;
-        return countPerCountry[c] <= MAX_PER_COUNTRY;
+        return countPerCountry[c] <= maxForCountry;
       });
     }
 
@@ -2263,12 +2270,19 @@
         // Partner B opent duo-link
         loadDuoSession(duoParam);
       } else if (!checkSharedShortlist()) {
-        // Check of er sfeer-params vanuit SEO-pagina's meekomen
+        // Check of er params vanuit SEO-pagina's meekomen
         const sfeerParam = params.get('sfeer');
+        const landParam = params.get('land');
+
+        // Land/regio('s) onthouden voor focus-boost in matching
+        // Bijv. ?land=Kos,Kreta of ?land=Griekenland
+        if (landParam) {
+          prefs.focusLands = landParam.split(',').map(l => l.trim());
+        }
+
         if (sfeerParam) {
           // Pre-fill stap 1 met sfeer uit URL, bijv. ?sfeer=strand,rustig
           const sfeerTags = sfeerParam.split(',');
-          // Zoek de sfeer-card die de beste overlap heeft
           let bestCard = null;
           let bestOverlap = 0;
           document.querySelectorAll('.sfeer-card').forEach(card => {
@@ -2281,12 +2295,18 @@
           });
           if (bestCard) {
             selectSfeer(bestCard);
-            // Visueel markeren
-            bestCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
           }
+
+          // Als er ook een land-focus is, sla stap 1 over → direct naar budget
+          if (landParam) {
+            goToStap2();
+          } else {
+            showScreen('screen-sfeer');
+          }
+        } else {
+          // Geen params → toon stap 1 normaal
+          showScreen('screen-sfeer');
         }
-        // Toon onboarding (stap 1, evt met pre-selectie)
-        showScreen('screen-sfeer');
       }
     })();
   </script>
