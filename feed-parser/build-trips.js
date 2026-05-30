@@ -116,9 +116,9 @@ function curateTrips(trips) {
     const rating = parseFloat(m.rating) || 0;
     if (rating > 0 && rating < MIN_RATING) return false;
 
-    // Minimaal 4 nachten (korte stedentrips vallen buiten scope)
+    // Minimaal 6 nachten — prijs is altijd op weekbasis, kortere trips vallen buiten scope
     const duur = t.variants[0]?.duur || 0;
-    if (duur < 4) return false;
+    if (duur < 6) return false;
 
     return true;
   });
