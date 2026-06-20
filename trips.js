@@ -1,10 +1,10 @@
 // trips.js — Kiespret dataset
 // Automatisch gegenereerd door feed-parser/build-trips.js
-// Laatste update: 2026-06-19
+// Laatste update: 2026-06-20
 //
 // Handmatige trips (TUI/Sunweb): 0
-// Corendon feed-trips: 185 (gecureerd uit 2555)
-// Totaal: 185
+// Corendon feed-trips: 184 (gecureerd uit 2551)
+// Totaal: 184
 //
 // Scope: uitsluitend zonvakanties voor Nederlandse koppels 28–45
 // Curatie: 4+ sterren, rating ≥ 7.5, AMS/EIN, max 8/regio, max 25/land
@@ -58,7 +58,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 794,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fturkse-riviera%2Fside%2Fkizilot%2Fflora-garden-beach%2311841.SIFLO.AMSAYT.221026.7.DBG-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "oktober",
@@ -125,7 +125,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1187,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fegeische-kust%2Ffethiye%2Foludeniz%2Fliberty-hotels-lykia-adult-only-ex-sentido-lykia-resort%239089.FESEN.AMSDLM.241026.7.DZG-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -235,7 +235,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1092,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fkreta%2Fagia-pelagia%2Fsea-side-a-lifestyle-resort%238272.KRSSR.AMSHER.311026.7.U1-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -362,20 +362,12 @@ const trips = [
         "_addedAt": "2026-06-18"
       },
       {
-        "maand": "juni",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 1070,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fhurghada%2Fsahl-hasheesh%2Fkaisol-romance-resort-ex-sunrise-romance-resort-grand-select%239123.HUGSR.AMSHRG.200626.7.DE-A..",
-        "_addedAt": "2026-06-05"
-      },
-      {
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
         "prijs": 993,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fhurghada%2Fsahl-hasheesh%2Fkaisol-romance-resort-ex-sunrise-romance-resort-grand-select%239123.HUGSR.AMSHRG.101226.7.DE-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -437,8 +429,8 @@ const trips = [
         "duur": 7,
         "airport": "RTM",
         "prijs": 934,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fcorfu%2Fgouvia%2Fcooks-club-corfu%2310204.COPR1.RTMCFU.131026.7.D1L-A..",
-        "_addedAt": "2026-06-19"
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fcorfu%2Fgouvia%2Fcooks-club-corfu%2310204.COPR1.RTMCFU.131026.7.DZL-A..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -494,7 +486,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 998,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fsunny-beach%2Fsecrets-sunny-beach-resort-spa%2310792.VASSB.AMSBOJ.200926.7.DD1-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -550,7 +542,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1580,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Frhodos%2Fkiotari%2Fmayia-exclusive-resort-spa%2310154.RHMAY.AMSRHO.221026.7.DDM-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -601,20 +593,12 @@ const trips = [
     "affiliatePartner": "Corendon",
     "variants": [
       {
-        "maand": "juni",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 1306,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fhurghada%2Fhurghada-stad%2Fsteigenberger-pure-life-style%239393.HUSPL.AMSHRG.200626.7.DU-A..",
-        "_addedAt": "2026-06-05"
-      },
-      {
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
         "prijs": 1235,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fhurghada%2Fhurghada-stad%2Fsteigenberger-pure-life-style%239393.HUSPL.AMSHRG.101226.7.DU-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -670,7 +654,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 622,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fturkse-riviera%2Fside%2Fcolakli%2Fdiamond-elite%236069.SIDIA.AMSAYT.231126.7.DZ-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -740,6 +724,14 @@ const trips = [
         "prijs": 725,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fturkse-riviera%2Falanya%2Falanya-centrum%2Fhotel-riviera-zen%239166.ALRIZ.AMSGZP.260826.7.DE-A..",
         "_addedAt": "2026-06-19"
+      },
+      {
+        "maand": "augustus",
+        "duur": 7,
+        "airport": "GRQ",
+        "prijs": 723,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fturkse-riviera%2Falanya%2Falanya-centrum%2Fhotel-riviera-zen%239166.ALRIZ.GRQAYT.250826.7.DE-A..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -796,7 +788,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 855,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fturkse-riviera%2Falanya%2Fturkler%2Fselene-beach-spa%239743.ALSEB.AMSAYT.221026.7.DZL-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -860,7 +852,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 702,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fsharm-el-sheikh%2Fras-um-el-sid%2Fpickalbatros-royal-grand%2310315.SHARG.AMSSSH.021226.7.DE-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "november",
@@ -923,7 +915,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1290,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fcorfu%2Fagios-gordios%2Fella-alkyna%236419.COLGV.AMSCFU.121026.7.DDM-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -980,7 +972,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1125,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Frhodos%2Fixia%2Ffly-go-the-ixian-grand-all-suites%2311732.RHIXGF.AMSRHO.221026.7.D1L-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -1033,9 +1025,9 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 928,
+        "prijs": 1111,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Frhodos%2Fixia%2Fthe-ixian-grand-all-suites%239106.RHIXG.AMSRHO.221026.7.D1L-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -1090,7 +1082,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1068,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fcorfu%2Fboukari%2Fmythos-panorama%2312857.COMPA.AMSCFU.121026.7.DRG-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -1155,7 +1147,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1212,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fsharm-el-sheikh%2Fsharks-bay%2Fsunrise-meraki-resort-ssh%2311423.SHMKI.AMSSSH.021226.7.D1G-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "november",
@@ -1252,7 +1244,7 @@ const trips = [
     ],
     "highlights": [
       "4-sterren accommodatie",
-      "Gastwaardering: 8,7",
+      "Gastwaardering: 8,8",
       "All Inclusive",
       "Adults only",
       "Vlucht inbegrepen"
@@ -1267,7 +1259,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 573,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fturkse-riviera%2Falanya%2Falanya-centrum%2Framira-city-hotel%238883.ALRCI.AMSAYT.221026.7.DZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "juni",
@@ -1279,7 +1271,7 @@ const trips = [
       }
     ],
     "prijsPeilDatum": "juni 2026",
-    "tripDesc": "in Alanya-Centrum, adults only, all-inclusive, 4-sterren, gastwaardering 8,7.",
+    "tripDesc": "in Alanya-Centrum, adults only, all-inclusive, 4-sterren, gastwaardering 8,8.",
     "_score": 230
   },
   {
@@ -1330,7 +1322,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 859,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fcorfu%2Fboukari%2Fmythos-palace%239929.COKMP.AMSCFU.121026.7.DSL-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -1384,9 +1376,9 @@ const trips = [
         "maand": "augustus",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 829,
+        "prijs": 831,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fhurghada%2Fhurghada-stad%2Fcaves-beach-resort%234725.HUCAV.AMSHRG.240826.7.DE-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -1438,7 +1430,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1018,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fsamos%2Fpythagorion%2Fproteas-blu-resort%238537.SSPRO.AMSSMI.051026.7.DBM-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -1483,20 +1475,71 @@ const trips = [
       "Vlucht inbegrepen"
     ],
     "description": "De rustige sfeer maakt Aquamare tot een ideaal hotel voor een ontspannende en zorgeloze vakantie. Op loopafstand vind je het strand en met je huurauto sta je zo in het gezellige centrum van Molyvos. Het Aquamare Hotel wordt omringd door een prachtige",
-    "imageUrl": "https://images.corendonresources.com/L1E12578A5W0H0.jpg?v=251110112920",
+    "imageUrl": "https://images.corendonresources.com/L1E12578A5W0H0.jpg?v=260618162823",
     "affiliatePartner": "Corendon",
     "variants": [
       {
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 726,
+        "prijs": 664,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Flesbos%2Feftalou%2Ffly-go-aquamare%2312578.LEAQMF.AMSMJT.051026.7.DZP-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
     "tripDesc": "in Eftalou, adults only, all-inclusive, 4-sterren, beoordeeld met een 8,4.",
+    "_score": 227
+  },
+  {
+    "id": "corendon-lango-design-hotel-spa-kolan",
+    "title": "Adults only resort Kos",
+    "destination": "Kos, Griekenland",
+    "hotelName": "Lango Design Hotel & Spa",
+    "sfeer": [
+      "comfort",
+      "strand"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Ontbijt",
+    "vluchtduur": "3u",
+    "adultsOnly": true,
+    "audience": "couples",
+    "matchReason": "Adults only in Kos-Stad Lambi, Griekenland — met spa & wellness",
+    "whyThisTrip": "Compact eiland waar je alles op de fiets bereikt. Rustige stranden, Griekse taverna's in Kos-stad en de Asclepion-ruïnes.",
+    "tags": [
+      "adults-only",
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "centraal",
+      "wifi"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: 9,7",
+      "Logies en ontbijt",
+      "Adults only",
+      "Vlucht inbegrepen"
+    ],
+    "description": "Het nieuwe en luxe Only Adult hotel Lango Design Hotel & Spa combineert hedendaagse architectuur van nature met luxe materialen en ultramoderne faciliteiten, terwijl het prachtige vrij uitzicht op de Egeïsche blauwe zee de perfecte achtergrond vormt ",
+    "imageUrl": "https://images.corendonresources.com/L1E8786A1W1024H684.jpg?v=220521120955",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "oktober",
+        "duur": 7,
+        "airport": "EIN",
+        "prijs": 963,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fkos%2Fkos-stad-lambi%2Flango-design-hotel-spa%238786.KOLAN.EINKGS.061026.7.DD-F..",
+        "_addedAt": "2026-06-20"
+      }
+    ],
+    "prijsPeilDatum": "juni 2026",
+    "tripDesc": "in Kos-Stad Lambi, adults only, met ontbijt, 5-sterren, gastwaardering 9,7.",
     "_score": 227
   },
   {
@@ -1544,7 +1587,7 @@ const trips = [
         "airport": "EIN",
         "prijs": 1027,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fzakynthos%2Flaganas%2Fcastelli-hotel%234150.ZACTH.EINZTH.081026.7.DZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "oktober",
@@ -1607,7 +1650,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 778,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fnessebar%2Fmarina-palace-affiliated-by-melia%231324.VASMP.AMSBOJ.130926.7.DD-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -1632,7 +1675,6 @@ const trips = [
     "whyThisTrip": "Navagio Beach, schildpadden spotten bij Laganas Bay en boottochtjes naar de Blue Caves. Rustig Ionisch eiland met turquoise baaien.",
     "tags": [
       "adults-only",
-      "halfpension",
       "5-sterren",
       "luxe",
       "strand",
@@ -1644,8 +1686,8 @@ const trips = [
     ],
     "highlights": [
       "5-sterren accommodatie",
-      "Gastwaardering: 9,4",
-      "Halfpension",
+      "Gastwaardering: 9,5",
+      "Logies en ontbijt",
       "Adults only",
       "Vlucht inbegrepen"
     ],
@@ -1657,9 +1699,9 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "EIN",
-        "prijs": 837,
+        "prijs": 816,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fzakynthos%2Fkalamaki%2Fmeandros-boutique-hotel-spa%234061.ZAMEA.EINZTH.041026.7.UZ-F..",
-        "_addedAt": "2026-06-14"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "oktober",
@@ -1679,7 +1721,7 @@ const trips = [
       }
     ],
     "prijsPeilDatum": "juni 2026",
-    "tripDesc": "in Kalamaki, adults only, halfpension, 5-sterren, gastwaardering 9,4.",
+    "tripDesc": "in Kalamaki, adults only, met ontbijt, 5-sterren, gastwaardering 9,5.",
     "_score": 224
   },
   {
@@ -1714,7 +1756,7 @@ const trips = [
     ],
     "highlights": [
       "5-sterren accommodatie",
-      "Gastwaardering: 9,4",
+      "Gastwaardering: 9,5",
       "Halfpension",
       "Adults only",
       "Vlucht inbegrepen"
@@ -1729,11 +1771,11 @@ const trips = [
         "airport": "AMS",
         "prijs": 903,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fzakynthos%2Fkalamaki%2Ffly-go-meandros-boutique-hotel-spa%2312204.ZAMEAF.AMSZTH.031026.7.DR1-H..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
-    "tripDesc": "in Kalamaki, adults only, halfpension, 5-sterren, gastwaardering 9,4.",
+    "tripDesc": "in Kalamaki, adults only, halfpension, 5-sterren, gastwaardering 9,5.",
     "_score": 224
   },
   {
@@ -1799,8 +1841,8 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 789,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fhurghada%2Fhurghada-stad%2Fsunrise-meraki-resort%239471.HUMKI.AMSHRG.101226.7.DE-A..",
-        "_addedAt": "2026-06-19"
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fhurghada%2Fhurghada-stad%2Fsunrise-meraki-resort%239471.HUMKI.AMSHRG.101226.7.DZG-A..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -1837,7 +1879,7 @@ const trips = [
     ],
     "highlights": [
       "5-sterren accommodatie",
-      "Gastwaardering: 9,2",
+      "Gastwaardering: 9,3",
       "Halfpension",
       "Adults only",
       "Vlucht inbegrepen"
@@ -1852,11 +1894,11 @@ const trips = [
         "airport": "AMS",
         "prijs": 1001,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Frhodos%2Ffaliraki%2Fesperos-village-blue%233581.RHESV.AMSRHO.221026.7.D1M-H..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
-    "tripDesc": "in Faliraki, adults only, halfpension, 5-sterren, gastwaardering 9,2.",
+    "tripDesc": "in Faliraki, adults only, halfpension, 5-sterren, gastwaardering 9,3.",
     "_score": 223
   },
   {
@@ -1913,7 +1955,7 @@ const trips = [
         "airport": "GRQ",
         "prijs": 946,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fkreta%2Frethymnon%2Fminos-ambassador%239525.KRMNS.GRQHER.221026.7.JZ-H..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -1968,7 +2010,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1095,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fkreta%2Fmalia%2Fikaros-beach-luxury-resort%238726.KRIBS.AMSHER.231026.7.DZG-H..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -2022,7 +2064,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 952,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fkreta%2Frethymnon%2Ffly-go-minos-ambassador%2311942.KRMNSF.AMSCHQ.151026.7.JZ-H..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -2073,7 +2115,7 @@ const trips = [
         "airport": "EIN",
         "prijs": 1042,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fbalearen%2Fibiza%2Fcala-gracio%2Ffly-go-trs-ibiza-hotel%2312159.IBTRSF.EINIBZ.121026.7.DD4-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -2124,7 +2166,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1123,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fsamos%2Fpythagorion%2Fcasa-cook-samos%2310113.SSCAS.AMSSMI.081026.7.DZ-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -2188,7 +2230,7 @@ const trips = [
         "airport": "RTM",
         "prijs": 1111,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fcorfu%2Fnissaki%2Fatlantica-nissaki-beach%2313880.COANI.RTMCFU.131026.7.DDL-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -2240,7 +2282,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 721,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Frhodos%2Fkolymbia%2Fcooks-club-kolymbia%2311773.RHCOC.AMSRHO.221026.7.DZ-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -2292,7 +2334,7 @@ const trips = [
         "airport": "EIN",
         "prijs": 910,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fbalearen%2Fmallorca%2Fpalma-nova%2Ffly-go-fergus-style-tobago%2313681.MLFTOF.EINPMI.081026.7.DZ-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -2346,7 +2388,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 893,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fegeische-kust%2Fmarmaris%2Fadakoy%2Ffly-go-cooks-club-adakoy%2311923.MACOKF.AMSDLM.241026.7.DZL-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -2399,7 +2441,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 844,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fzakynthos%2Ftragaki%2Faluasoul-zakynthos%239881.ZAPLG.AMSZTH.300926.7.DZI-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "oktober",
@@ -2462,7 +2504,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 648,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Frhodos%2Flindos%2Flindos-village-resort-spa%238238.RHLIV.AMSRHO.221026.7.DDG-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -2516,7 +2558,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 967,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Frhodos%2Flindos%2Ffly-go-lindos-grand-resort-spa%2311722.RHLGAF.AMSRHO.221026.7.DDG-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -2571,7 +2613,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 828,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fegeische-kust%2Fmarmaris%2Fadakoy%2Fcooks-club-adakoy%2310243.MACOK.AMSDLM.241026.7.DZL-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -2625,74 +2667,11 @@ const trips = [
         "airport": "AMS",
         "prijs": 852,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fsunny-beach%2Faluasoul-sunny-beach%2313258.VASLS.AMSBOJ.200926.7.DS-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
     "tripDesc": "adults only, all-inclusive, 4-sterren, beoordeeld met een 7,9.",
-    "_score": 217
-  },
-  {
-    "id": "corendon-lesante-blu-the-leading-hotels-of-the-world-zaleb",
-    "title": "Adults only resort Zakynthos",
-    "destination": "Zakynthos, Griekenland",
-    "hotelName": "Lesante Blu - The Leading Hotels of the World",
-    "sfeer": [
-      "comfort",
-      "strand",
-      "resort"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "Ontbijt",
-    "vluchtduur": "3u",
-    "adultsOnly": true,
-    "audience": "couples",
-    "matchReason": "Adults only in Tragaki, Griekenland — met privéstrand",
-    "whyThisTrip": "Navagio Beach, schildpadden spotten bij Laganas Bay en boottochtjes naar de Blue Caves. Rustig Ionisch eiland met turquoise baaien.",
-    "tags": [
-      "adults-only",
-      "5-sterren",
-      "luxe",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "snorkelen",
-      "wifi",
-      "romantisch"
-    ],
-    "highlights": [
-      "5-sterren accommodatie",
-      "Gastwaardering: 9,3",
-      "Logies en ontbijt",
-      "Adults only",
-      "Vlucht inbegrepen"
-    ],
-    "description": "Het luxe Lesante Blu - The Leading Hotels of the World (voorheen Lesante Blu Resort) is een nieuw Only Adult (min. leeftijd 16 jaar) hotel met alle moderne faciliteiten die je van een luxe 5-sterrenhotel mag verwachten. Wat een paradijs is dit. Stijl",
-    "imageUrl": "https://images.corendonresources.com/L1E8132A1W1024H684.jpg?v=251021110346",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "september",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 1221,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fzakynthos%2Ftragaki%2Flesante-blu-resort%238132.ZALEB.AMSZTH.300926.7.DUM-F..",
-        "_addedAt": "2026-06-13"
-      },
-      {
-        "maand": "oktober",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 1251,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fzakynthos%2Ftragaki%2Flesante-blu-the-leading-hotels-of-the-world%238132.ZALEB.AMSZTH.031026.7.DUM-F..",
-        "_addedAt": "2026-06-19"
-      }
-    ],
-    "prijsPeilDatum": "juni 2026",
-    "tripDesc": "in Tragaki, adults only, met ontbijt, 5-sterren, gastwaardering 9,3.",
     "_score": 217
   },
   {
@@ -2755,7 +2734,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 649,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fhurghada%2Fel-gouna%2Fcooks-club-el-gouna%239663.HUCOO.AMSHRG.101226.7.DZ-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -2806,7 +2785,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 598,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Fmadeira%2Ffunchal%2Fthe-views-baia%237796.FNFVB.AMSFNC.011226.7.DZ-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -2859,7 +2838,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 630,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fsunny-beach%2Fsuneo-perla-beach%234487.VAPER.AMSBOJ.200926.7.DZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -2911,7 +2890,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 647,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fturkse-riviera%2Falanya%2Falanya-centrum%2Ffly-go-alaaddin-beach-alanya%2311721.ALABEF.AMSAYT.221026.7.DZ-H..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "juni",
@@ -2969,7 +2948,7 @@ const trips = [
         "airport": "EIN",
         "prijs": 726,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fbalearen%2Fmallorca%2Falcudia%2Ffly-go-thb-bamboo-alcudia%2313682.MLBAMF.EINPMI.061026.7.DZ-U..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -3150,115 +3129,14 @@ const trips = [
         "maand": "september",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 650,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Ffuerteventura%2Fcorralejo%2Farena-suite%234590.FUARE.AMSFUE.170926.7.DZP-F..",
-        "_addedAt": "2026-06-19"
+        "prijs": 639,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Ffuerteventura%2Fcorralejo%2Farena-suite%234590.FUARE.AMSFUE.080926.7.DZP-F..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
     "tripDesc": "in Corralejo, adults only, met ontbijt, 4-sterren, beoordeeld met een 8,3.",
     "_score": 207
-  },
-  {
-    "id": "corendon-kura-botanica-cwbot",
-    "title": "Adults only resort Willemstad",
-    "destination": "Willemstad, Curaçao",
-    "hotelName": "Kura Botanica",
-    "sfeer": [
-      "comfort",
-      "strand"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "Ontbijt",
-    "vluchtduur": "9u30",
-    "adultsOnly": true,
-    "audience": "couples",
-    "matchReason": "Adults only in Willemstad, Curaçao — met spa & wellness",
-    "whyThisTrip": "Handelskade in pastelkleuren, snorkelen bij Tugboat Beach en Blue Curaçao proeven. Caribisch met een Nederlandse twist.",
-    "tags": [
-      "adults-only",
-      "5-sterren",
-      "luxe",
-      "pool",
-      "wellness",
-      "fitness",
-      "centraal",
-      "wifi"
-    ],
-    "highlights": [
-      "5-sterren accommodatie",
-      "Gastwaardering: 9,1",
-      "Logies en ontbijt",
-      "Adults only",
-      "Vlucht inbegrepen"
-    ],
-    "description": "Proef de authentieke charme van Kura Botanica, verscholen in het hart van Otrobanda en omringd door het kleurrijke Unesco-erfgoed van Willemstad. Acht in 17e- en 18e-eeuwse stijl gerestaureerde pandjes vormen hier samen een mini-dorpje, waar elke hoe",
-    "imageUrl": "https://images.corendonresources.com/L1E10369A1W1024H684.jpg?v=251107172705",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "juni",
-        "duur": 8,
-        "airport": "AMS",
-        "prijs": 825,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fwillemstad%2Fkura-botanica%2310369.CWBOT.AMSCUR.240626.7.DD-F..",
-        "_addedAt": "2026-06-05"
-      }
-    ],
-    "prijsPeilDatum": "juni 2026",
-    "tripDesc": "adults only, met ontbijt, 5-sterren, gastwaardering 9,1.",
-    "_score": 206
-  },
-  {
-    "id": "corendon-fly-go-kura-botanica-cwbotf",
-    "title": "Adults only resort Willemstad",
-    "destination": "Willemstad, Curaçao",
-    "hotelName": "Fly & Go Kura Botanica",
-    "sfeer": [
-      "comfort",
-      "strand",
-      "avontuur"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "Ontbijt",
-    "vluchtduur": "9u30",
-    "adultsOnly": true,
-    "audience": "couples",
-    "matchReason": "Adults only in Willemstad, Curaçao — 9,0/10 reviews",
-    "whyThisTrip": "Handelskade in pastelkleuren, snorkelen bij Tugboat Beach en Blue Curaçao proeven. Caribisch met een Nederlandse twist.",
-    "tags": [
-      "adults-only",
-      "5-sterren",
-      "luxe",
-      "pool",
-      "wellness",
-      "fitness",
-      "centraal",
-      "wifi"
-    ],
-    "highlights": [
-      "5-sterren accommodatie",
-      "Gastwaardering: 9,0",
-      "Logies en ontbijt",
-      "Adults only",
-      "Vlucht inbegrepen"
-    ],
-    "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E10380A5W0H0.jpg?v=251107173155",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "juni",
-        "duur": 6,
-        "airport": "AMS",
-        "prijs": 957,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fwillemstad%2Ffly-go-kura-botanica%2310380.CWBOTF.AMSCUR.230626.5.DD-F..",
-        "_addedAt": "2026-06-05"
-      }
-    ],
-    "prijsPeilDatum": "juni 2026",
-    "tripDesc": "adults only, met ontbijt, 5-sterren, gastwaardering 9,0.",
-    "_score": 205
   },
   {
     "id": "corendon-melia-llana-resort-spa-cvmel",
@@ -3309,7 +3187,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1404,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fkaapverdie%2Fsal%2Fsanta-maria%2Fmelia-llana-resort-spa%2313338.CVMEL.AMSSID.271026.7.DD-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -3371,7 +3249,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 831,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fmarsa-alam%2Fpickalbatros-sands-hotel%2312755.MSSAN.AMSRMF.051226.7.DZG-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -3425,7 +3303,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 732,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fegeische-kust%2Ffethiye%2Fcalis%2Fjiva-beach-resort%232400.FEJIV.AMSDLM.241026.7.DZ1-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -3480,7 +3358,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1079,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fturkse-riviera%2Fkemer%2Fbeldibi%2Fnirvana-mediterranean-excellence%234182.KENIR.AMSAYT.221026.7.DZ-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -3546,7 +3424,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 844,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fmarsa-alam%2Fpickalbatros-villaggio-resort%2312780.MSPVR.AMSRMF.051226.7.DZG-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -3599,8 +3477,8 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 747,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fegeische-kust%2Fkusadasi%2Fladies-beach%2F10%2Fliberty-kusadasi%234998.KUSEL.AMSBJV.211026.7.DDI-X..",
-        "_addedAt": "2026-06-19"
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fegeische-kust%2Fkusadasi%2Fladies-beach%2Fliberty-kusadasi%234998.KUSEL.AMSBJV.211026.7.DDI-X..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -3654,7 +3532,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 698,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fturkse-riviera%2Fside%2Fcolakli%2Falba-queen%231393.SIAQU.AMSAYT.091126.7.DE-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -3710,7 +3588,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 694,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fturkse-riviera%2Fside%2Fcolakli%2Falba-resort%23175.SIALB.AMSAYT.091126.7.DE-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -3821,7 +3699,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1100,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fegeische-kust%2Ffethiye%2Foludeniz%2Fliberty-hotels-lykia%231842.FELWO.AMSDLM.241026.7.DZL-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -3940,7 +3818,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 726,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fsharm-el-sheikh%2Fras-um-el-sid%2Fpickalbatros-aqua-park%233372.SHPAQ.AMSSSH.021226.7.DE-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "november",
@@ -4002,7 +3880,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 638,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fturkse-riviera%2Fside%2Fkumkoy%2Fdream-world-hill%237527.SIDRH.AMSAYT.201126.7.DZL-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -4085,73 +3963,6 @@ const trips = [
     "_score": 193
   },
   {
-    "id": "corendon-innside-costa-blanca-clinn",
-    "title": "Adults only hotel Costa Blanca",
-    "destination": "Costa Blanca, Spanje",
-    "hotelName": "Innside Costa Blanca",
-    "sfeer": [
-      "comfort",
-      "strand",
-      "rustig"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "Ontbijt",
-    "vluchtduur": "2u30",
-    "adultsOnly": true,
-    "audience": "couples",
-    "matchReason": "Adults only in Benidorm, Spanje — met spa & wellness",
-    "whyThisTrip": "Benidorm's skyline, rustige baaien bij Jávea en Altea en palmenbos in Elche. Zon met Spaans dorpsleven eromheen.",
-    "tags": [
-      "adults-only",
-      "4-sterren",
-      "strand",
-      "pool",
-      "wellness",
-      "entertainment",
-      "centraal",
-      "wifi"
-    ],
-    "highlights": [
-      "4-sterren accommodatie",
-      "Gastwaardering: N.A.",
-      "Logies en ontbijt",
-      "Adults only",
-      "Vlucht inbegrepen"
-    ],
-    "description": "INNSiDE Costa Blanca is een modern Only Adult hotel in Benidorm waar je vakantie direct goed begint. Vanaf het moment dat je aankomt, merk je dat dit een fijne plek is voor volwassenen die houden van comfort, een frisse uitstraling en een ontspannen ",
-    "imageUrl": "https://images.corendonresources.com/L1E14019A1W1024H684.jpg?v=260311073945",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "oktober",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 798,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcosta-blanca%2Fbenidorm%2Finnside-costa-blanca%2314019.CLINN.AMSALC.201026.7.DZ-F..",
-        "_addedAt": "2026-06-05"
-      },
-      {
-        "maand": "december",
-        "duur": 3,
-        "airport": "EIN",
-        "prijs": 319,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcosta-blanca%2Fbenidorm%2Finnside-costa-blanca%2314019.CLINN.EINALC.071226.3.DZ-F..",
-        "_addedAt": "2026-06-14"
-      },
-      {
-        "maand": "november",
-        "duur": 3,
-        "airport": "EIN",
-        "prijs": 313,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcosta-blanca%2Fbenidorm%2Finnside-costa-blanca%2314019.CLINN.EINALC.301126.3.DZ-F..",
-        "_addedAt": "2026-06-19"
-      }
-    ],
-    "prijsPeilDatum": "juni 2026",
-    "tripDesc": "in Benidorm, adults only, met ontbijt, 4-sterren.",
-    "_score": 193
-  },
-  {
     "id": "corendon-pickalbatros-sea-world-resort-huasw",
     "title": "All-inclusive resort Marsa Alam",
     "destination": "Marsa Alam, Egypte",
@@ -4202,6 +4013,14 @@ const trips = [
         "prijs": 750,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fmarsa-alam%2Fpickalbatros-sea-world-resort%239367.HUASW.AMSHRG.210127.7.DE-A..",
         "_addedAt": "2026-06-16"
+      },
+      {
+        "maand": "december",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 764,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fmarsa-alam%2Fpickalbatros-sea-world-resort%239367.HUASW.AMSHRG.101226.7.DE-A..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -4256,7 +4075,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1186,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fegeische-kust%2Ffethiye%2Ffethiye-centrum%2Ffly-go-letoonia-club-hotel%2312495.FELETF.AMSDLM.241026.7.DE-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -4318,7 +4137,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 716,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fsharm-el-sheikh%2Fnabq-bay%2Fpickalbatros-laguna-vista%233809.SHLAB.AMSSSH.021226.7.DE-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "november",
@@ -4380,8 +4199,8 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1416,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fegeische-kust%2Fdidim%2Fdidim-centrum%2Fanda-barut-collection%2311626.DIAND.AMSBJV.211026.7.DDM-X..",
-        "_addedAt": "2026-06-19"
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fegeische-kust%2Fdidim%2Fdidim-centrum%2Fanda-barut-collection%2311626.DIAND.AMSBJV.211026.7.DD2-X..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -4434,7 +4253,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 839,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fegeische-kust%2Ffethiye%2Foludeniz%2Fbelcekiz-beach%231626.FEBEB.AMSDLM.241026.7.DZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -4488,7 +4307,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 726,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fturkse-riviera%2Fkemer%2Fkemer-centrum%2Fcrystal-de-luxe-comfort-collection%232394.KECRY.AMSAYT.221026.7.DE-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "september",
@@ -4551,7 +4370,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 913,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fegeische-kust%2Fkusadasi%2Fpamucak%2Fkorumar-ephesus-beach-spa%238143.KUKOE.AMSBJV.211026.7.DE-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -4606,7 +4425,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1096,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fturkse-riviera%2Fside%2Fside-centrum%2Fmelas-resort-hotel%236399.SIMEL.AMSAYT.221026.7.DZG-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -4660,7 +4479,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1053,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fturkse-riviera%2Fantalya%2Flara%2Fmelas-lara%232668.ANMEL.AMSAYT.221026.7.DZI-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "juni",
@@ -4723,7 +4542,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 756,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fnessebar%2Fsol-nessebar-palace%23549.VANES.AMSBOJ.200926.7.DZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -4785,7 +4604,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 694,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fmarsa-alam%2Fconcorde-moreen-beach%233818.MSCON.AMSRMF.051226.7.DZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -4808,7 +4627,7 @@ const trips = [
     "vluchtduur": "5u",
     "adultsOnly": false,
     "audience": "couples",
-    "matchReason": "All-inclusive in Sharks Bay, Egypte — met spa & wellness",
+    "matchReason": "All-inclusive in Sharks Bay, Egypte — met privéstrand",
     "whyThisTrip": "Ras Mohammed-koraalriffen, duiken en snorkelen in de Rode Zee. Woestijn ontmoet onderwaterwereld.",
     "tripDesc": "in Sharks Bay, all-inclusive, 5-sterren, gastwaardering 9,1.",
     "tags": [
@@ -4818,13 +4637,18 @@ const trips = [
       "strand",
       "pool",
       "wellness",
-      "centraal"
+      "fitness",
+      "entertainment",
+      "centraal",
+      "snorkelen",
+      "wifi"
     ],
     "highlights": [
       "5-sterren accommodatie",
       "Gastwaardering: 9,1",
       "All Inclusive",
-      "Vlucht inbegrepen"
+      "Vlucht inbegrepen",
+      "4 buitenzwembad(en)"
     ],
     "description": "Ontdek de geest van de Arabische sfeer in het Sunrise Arabian Beach Resort -Grand Select- en ervaar een plek waar sprankelend blauw water naadloos overgaat in fantastisch zandstrand. Gelegen in Sharks Bay met uitzicht op het populaire eiland Tiran li",
     "imageUrl": "https://images.corendonresources.com/L1E10330A1W1024H684.jpg?v=220801121728",
@@ -4836,7 +4660,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 853,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fsharm-el-sheikh%2Fsharks-bay%2Fsunrise-arabian-beach-resort-grand-select%2310330.SHSAB.AMSSSH.021226.7.DS2-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "november",
@@ -4877,14 +4701,18 @@ const trips = [
       "strand",
       "pool",
       "wellness",
+      "fitness",
       "entertainment",
-      "snorkelen"
+      "centraal",
+      "snorkelen",
+      "wifi"
     ],
     "highlights": [
       "5-sterren accommodatie",
       "Gastwaardering: 8,6",
       "All Inclusive",
-      "Vlucht inbegrepen"
+      "Vlucht inbegrepen",
+      "3 buitenzwembad(en)"
     ],
     "description": "Het Sunrise Diamond Beach Resort -Grand Select- in Hadaba is een ideale startpunt voor je volgende vakantie onder de Egyptische zon! Aan de Rode Zee is het goed toeven; het privéstrand heeft een steiger waarmee je eenvoudiger de zee op komt. Verken d",
     "imageUrl": "https://images.corendonresources.com/L1E10331A1W1024H684.jpg?v=230719190814",
@@ -4896,7 +4724,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 799,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fsharm-el-sheikh%2Fras-um-el-sid%2Fsunrise-diamond-beach-resort-grand-select%2310331.SHSDB.AMSSSH.021226.7.DS-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "november",
@@ -4966,7 +4794,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 686,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fsharm-el-sheikh%2Fsharks-bay%2Fpickalbatros-palace-resort%2310314.SHALP.AMSSSH.021226.7.DE-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "november",
@@ -5029,7 +4857,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1256,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fsveti-vlas%2Fvoya-beach-resort%2310473.VAVOY.AMSBOJ.130926.7.DE-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -5081,8 +4909,8 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 864,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Fnew-region%2Fnew-destination%2Fesencia-de-la-palma-by-princess%2314039.LPEPP.AMSSPC.041226.7.DZ-H..",
-        "_addedAt": "2026-06-19"
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Fla-palma%2Ffuencaliente%2Fb%2Fesencia-de-la-palma-by-princess%2314039.LPEPP.AMSSPC.041226.7.DZ-H..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -5105,7 +4933,7 @@ const trips = [
     "vluchtduur": "5u",
     "adultsOnly": false,
     "audience": "couples",
-    "matchReason": "All-inclusive in Ras Um El Sid, Egypte — met spa & wellness",
+    "matchReason": "All-inclusive in Ras Um El Sid, Egypte — met privéstrand",
     "whyThisTrip": "Ras Mohammed-koraalriffen, duiken en snorkelen in de Rode Zee. Woestijn ontmoet onderwaterwereld.",
     "tripDesc": "in Ras Um El Sid, all-inclusive, 5-sterren, gastwaardering 8,7.",
     "tags": [
@@ -5115,14 +4943,18 @@ const trips = [
       "strand",
       "pool",
       "wellness",
+      "fitness",
       "entertainment",
-      "snorkelen"
+      "centraal",
+      "snorkelen",
+      "wifi"
     ],
     "highlights": [
       "5-sterren accommodatie",
       "Gastwaardering: 8,7",
       "All Inclusive",
-      "Vlucht inbegrepen"
+      "Vlucht inbegrepen",
+      "Strand op 500m"
     ],
     "description": "Ervaar een oase van comfort en luxe in het Sunrise Montemare Resort-Grand Select-. Met een spectaculair strand en luxe faciliteiten biedt dit unieke resort een perfect toevluchtsoord. Geniet van het prachtige uitzicht vanuit een uitnodigend zwembad o",
     "imageUrl": "https://images.corendonresources.com/L1E3596A1W1024H684.jpg?v=221202085953",
@@ -5134,7 +4966,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 829,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fsharm-el-sheikh%2Fras-um-el-sid%2Fsunrise-montemare-resort-grand-select%233596.SHMOM.AMSSSH.021226.7.DS-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "november",
@@ -5147,67 +4979,6 @@ const trips = [
     ],
     "prijsPeilDatum": "juni 2026",
     "_score": 187
-  },
-  {
-    "id": "corendon-aqua-paradise-resort-vaaqu",
-    "title": "All-inclusive hotel Nessebar",
-    "destination": "Nessebar, Bulgarije",
-    "hotelName": "Aqua Paradise Resort",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand",
-      "resort"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "2u45",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "All-inclusive in Nessebar, Bulgarije — met spa & wellness",
-    "whyThisTrip": "UNESCO-oude stad op een schiereiland, omringd door stranden. Bulgaarse geschiedenis aan de Zwarte Zee.",
-    "tags": [
-      "allinclusive",
-      "4-sterren",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "wifi"
-    ],
-    "highlights": [
-      "4-sterren accommodatie",
-      "Gastwaardering: 8,8",
-      "All Inclusive",
-      "Vlucht inbegrepen",
-      "Strand op 500m"
-    ],
-    "description": "Aqua Paradise Resort in Bulgarije doet zijn naam eer aan - dit is hét ultieme waterparadijs voor het hele gezin! Direct naast het grootste aquapark van het land, met razendsnelle glijbanen, kronkelende lazy rivers en spetterend waterplezier voor jong",
-    "imageUrl": "https://images.corendonresources.com/L1E8564A1W1024H684.jpg?v=260106065514",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "juni",
-        "duur": 6,
-        "airport": "AMS",
-        "prijs": 466,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fnessebar%2Faqua-paradise-resort%238564.VAAQU.AMSBOJ.220626.6.DS-A..",
-        "_addedAt": "2026-06-05"
-      },
-      {
-        "maand": "september",
-        "duur": 4,
-        "airport": "AMS",
-        "prijs": 609,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fnessebar%2Faqua-paradise-resort%238564.VAAQU.AMSBOJ.160926.4.DZ-A..",
-        "_addedAt": "2026-06-19"
-      }
-    ],
-    "prijsPeilDatum": "juni 2026",
-    "tripDesc": "all-inclusive, 4-sterren, gastwaardering 8,8.",
-    "_score": 186
   },
   {
     "id": "corendon-barcel-royal-beach-vabar",
@@ -5256,7 +5027,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 762,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fsunny-beach%2Fbarcelo-royal-beach%232790.VABAR.AMSBOJ.200926.7.DZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -5311,7 +5082,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 799,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fsunny-beach%2Fsentido-neptun-beach%2310143.VANEP.AMSBOJ.200926.7.DZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -5363,7 +5134,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 719,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fsunny-beach%2Fhvd-club-hotel-bor%239904.VABOR.AMSBOJ.200926.7.DZ-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -5414,7 +5185,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1484,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fwillemstad%2Fcuracao-north-sea-jazz-arrangement-kura-botanica%2312561.CWBOJ.AMSCUR.010926.5.DD-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -5467,7 +5238,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 975,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fpomorie%2Fwave-resort%239258.VAWAV.AMSBOJ.200926.7.DZI-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -5519,7 +5290,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 700,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fsunny-beach%2Ftiara-beach%232791.VATIA.AMSBOJ.200926.7.DZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -5527,56 +5298,56 @@ const trips = [
     "_score": 179
   },
   {
-    "id": "corendon-izola-paradise-vaizo",
-    "title": "All-inclusive hotel Sunny Beach",
+    "id": "corendon-dit-majestic-beach-vamaj",
+    "title": "Ultra all-inclusive hotel Sunny Beach",
     "destination": "Sunny Beach, Bulgarije",
-    "hotelName": "Izola Paradise",
+    "hotelName": "DIT Majestic Beach",
     "sfeer": [
       "allinclusive",
       "comfort",
       "strand"
     ],
     "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
+    "boardType": "Ultra all-inclusive",
     "vluchtduur": "2u45",
     "adultsOnly": false,
     "audience": "couples",
-    "matchReason": "All-inclusive in Sunny Beach, Bulgarije — met spa & wellness",
+    "matchReason": "Ultra all-inclusive in Sunny Beach, Bulgarije — met spa & wellness",
     "whyThisTrip": "Lang zandstrand aan de Zwarte Zee, betaalbare restaurants en een levendig uitgaansleven. Meeste waar voor je geld.",
-    "tripDesc": "all-inclusive, 4-sterren, beoordeeld met een 8,0.",
     "tags": [
       "allinclusive",
+      "ultra-allinclusive",
       "4-sterren",
       "strand",
       "pool",
       "wellness",
-      "fitness",
       "entertainment",
       "centraal",
       "wifi"
     ],
     "highlights": [
       "4-sterren accommodatie",
-      "Gastwaardering: 8,0",
-      "All Inclusive",
+      "Gastwaardering: 8,6",
+      "Ultra All Inclusive",
       "Vlucht inbegrepen",
-      "Strand op 600m"
+      "Strand op 20m"
     ],
-    "description": "Izola Paradise is centraal gelegen aan de Zwarte Zee, in de populaire en kleurrijke badplaats Sunny Beach, dat bekend staat vanwege de lage prijzen voor consumpties, activiteiten en nog veel meer! Heerlijk ontspannen of juist de drukte opzoeken? Izol",
-    "imageUrl": "https://images.corendonresources.com/L1E1398A1W1024H684.jpg?v=251202114216",
+    "description": "Het DIT Majestic Beach is een ideaal 4-sterrenhotel, beschikt over 2 ruime zwembaden gelegen in een fraaie tuin, heeft tal van faciliteiten en erg mooie kamers. Een uniek hotel en dat ook nog eens op een toplocatie! Het DIT Majestic Beach biedt een i",
+    "imageUrl": "https://images.corendonresources.com/L1E1317A1W1024H684.jpg?v=251125115217",
     "affiliatePartner": "Corendon",
     "variants": [
       {
         "maand": "september",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 468,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fsunny-beach%2Fizola-paradise%231398.VAIZO.AMSBOJ.200926.7.DZ-A..",
-        "_addedAt": "2026-06-19"
+        "prijs": 711,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fsunny-beach%2Fdit-majestic-beach%231317.VAMAJ.AMSBOJ.200926.7.DZ1-X..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
-    "_score": 178
+    "tripDesc": "all-inclusive, 4-sterren, gastwaardering 8,6.",
+    "_score": 179
   },
   {
     "id": "corendon-fly-go-taimar-hotel-futaif",
@@ -5622,7 +5393,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 785,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Ffuerteventura%2Fcosta-calma%2Ffly-go-taimar-hotel%2311776.FUTAIF.AMSFUE.031226.7.JZX-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -5687,7 +5458,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 601,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Ffuerteventura%2Fcosta-calma%2Fsbh-taro-beach%238204.FUTAR.AMSFUE.220127.6.DZE-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -5757,7 +5528,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 600,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Falgarve%2Folhos-dagua%2F3hb-clube-humbria%2310232.POCHU.AMSFAO.021126.3.2AZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -5811,7 +5582,7 @@ const trips = [
         "airport": "EIN",
         "prijs": 1231,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fbalearen%2Fmallorca%2Fplaya-de-muro%2Ffly-go-iberostar-selection-albufera-playa%2312750.MLALBF.EINPMI.131026.7.DR3-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "oktober",
@@ -5871,7 +5642,7 @@ const trips = [
         "airport": "EIN",
         "prijs": 657,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fbalearen%2Fmallorca%2Fpalma-nova%2Ffly-go-fergus-club-palmanova-park%2312684.MLCPPF.EINPMI.061026.7.DZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -5922,9 +5693,9 @@ const trips = [
         "maand": "september",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 630,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fobzor%2Falua-helios-bay%2310793.VAAHB.AMSBOJ.200926.7.D1M-A..",
-        "_addedAt": "2026-06-19"
+        "prijs": 647,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fobzor%2Falua-helios-bay%2310793.VAAHB.AMSBOJ.200926.7.DZM-A..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -5986,7 +5757,7 @@ const trips = [
         "airport": "EIN",
         "prijs": 1702,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fbalearen%2Fmallorca%2Fplaya-de-muro%2Ffly-go-iberostar-selection-albufera-park%2312749.MLALPF.EINPMI.031026.7.FR1-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "oktober",
@@ -5999,66 +5770,6 @@ const trips = [
     ],
     "prijsPeilDatum": "juni 2026",
     "tripDesc": "in Playa de Muro, all-inclusive, 4-sterren, gastwaardering 9,2.",
-    "_score": 175
-  },
-  {
-    "id": "corendon-fly-go-iberostar-waves-cala-domingos-mlicdf",
-    "title": "All-inclusive hotel Mallorca",
-    "destination": "Mallorca, Spanje",
-    "hotelName": "Fly & Go Iberostar Waves Cala Domingos",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand",
-      "natuur"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "2u30",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "All-inclusive in Calas de Mallorca, Spanje — met spa & wellness",
-    "whyThisTrip": "Serra de Tramuntana, verborgen baaien (calas), Palma's kathedraal en wijngaarden in Binissalem. Veel meer dan massatoerisme.",
-    "tags": [
-      "allinclusive",
-      "4-sterren",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "wifi"
-    ],
-    "highlights": [
-      "4-sterren accommodatie",
-      "Gastwaardering: 8,8",
-      "All Inclusive",
-      "Vlucht inbegrepen"
-    ],
-    "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E11807A5W0H0.jpg?v=260116171905",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "oktober",
-        "duur": 7,
-        "airport": "EIN",
-        "prijs": 1126,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fbalearen%2Fmallorca%2Fcalas-de-mallorca%2Ffly-go-iberostar-waves-cala-domingos%2311807.MLICDF.EINPMI.061026.7.DT1-A..",
-        "_addedAt": "2026-06-05"
-      },
-      {
-        "maand": "oktober",
-        "duur": 7,
-        "airport": "RTM",
-        "prijs": 1103,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fbalearen%2Fmallorca%2Fcalas-de-mallorca%2Ffly-go-iberostar-waves-cala-domingos%2311807.MLICDF.RTMPMI.081026.7.DT1-A..",
-        "_addedAt": "2026-06-19"
-      }
-    ],
-    "prijsPeilDatum": "juni 2026",
-    "tripDesc": "in Calas de Mallorca, all-inclusive, 4-sterren, gastwaardering 8,8.",
     "_score": 175
   },
   {
@@ -6107,7 +5818,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 679,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fnessebar%2Ffesta-panorama%232796.VAFES.AMSBOJ.200926.7.DZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -6158,7 +5869,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 790,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Ffuerteventura%2Fcosta-calma%2Ffly-go-sbh-monica-beach%2312603.FUMONF.AMSFUE.270826.7.DE-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "juni",
@@ -6180,114 +5891,6 @@ const trips = [
     "prijsPeilDatum": "juni 2026",
     "tripDesc": "in Costa Calma, all-inclusive, 4-sterren, beoordeeld met een 8,1.",
     "_score": 174
-  },
-  {
-    "id": "corendon-fly-go-maspalomas-resort-by-dunas-pldunf",
-    "title": "All-inclusive verblijf Gran Canaria",
-    "destination": "Gran Canaria, Spanje",
-    "hotelName": "Fly & Go Maspalomas Resort by Dunas",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand",
-      "rustig",
-      "resort",
-      "avontuur"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "2u30",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "All-inclusive in Maspalomas, Spanje — met spa & wellness",
-    "whyThisTrip": "Duinen van Maspalomas, het koloniale Vegueta in Las Palmas en bergdorpjes in het binnenland. Mini-continent.",
-    "tags": [
-      "allinclusive",
-      "4-sterren",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "wifi"
-    ],
-    "highlights": [
-      "4-sterren accommodatie",
-      "Gastwaardering: 8,5",
-      "All Inclusive",
-      "Vlucht inbegrepen",
-      "Strand op 100m"
-    ],
-    "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E11691A5W0H0.jpg?v=260119180650",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "juni",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 981,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Fgran-canaria%2Fmaspalomas%2Ffly-go-maspalomas-resort-by-dunas%2311691.PLDUNF.AMSLPA.280626.7.2B-A..",
-        "_addedAt": "2026-06-05"
-      },
-      {
-        "maand": "december",
-        "duur": 4,
-        "airport": "AMS",
-        "prijs": 605,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Fgran-canaria%2Fmaspalomas%2Ffly-go-maspalomas-resort-by-dunas%2311691.PLDUNF.AMSLPA.141226.4.2B-A..",
-        "_addedAt": "2026-06-19"
-      }
-    ],
-    "prijsPeilDatum": "juni 2026",
-    "tripDesc": "in Maspalomas, all-inclusive, 4-sterren, gastwaardering 8,5.",
-    "_score": 173
-  },
-  {
-    "id": "corendon-egypte-classic-5-huniv",
-    "title": "Luxe resort Luxor",
-    "destination": "Luxor, Egypte",
-    "hotelName": "Egypte Classic 5*",
-    "sfeer": [
-      "comfort",
-      "strand",
-      "resort"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "Volpension",
-    "vluchtduur": "5u",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "Luxe verblijf in Nijlcruise, Egypte — 5 sterren",
-    "whyThisTrip": "Vallei der Koningen, Karnak-tempel en felucca-vaarten op de Nijl. Het openluchtmuseum van Egypte.",
-    "tags": [
-      "5-sterren",
-      "luxe",
-      "strand"
-    ],
-    "highlights": [
-      "5-sterren accommodatie",
-      "Gastwaardering: 8,2",
-      "Volpension",
-      "Vlucht inbegrepen"
-    ],
-    "description": "Een Nijlcruise is dé manier om Egypte met al haar schatten te ontdekken en een ervaring om nooit te vergeten. Bewonder de schoonheid van het landschap, ontmoet de vriendelijke bevolking en vergaap je aan de rijkdom van de kunstschatten. Belangrijke h",
-    "imageUrl": "https://images.corendonresources.com/L1E2582A1W1024H684.jpg?v=250528150135",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "juni",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 339,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Fluxor%2Fnijlcruise%2Fegypte-classic-5%232582.HUNIV.AMSHRG.250626.7.DZ-V..",
-        "_addedAt": "2026-06-05"
-      }
-    ],
-    "prijsPeilDatum": "juni 2026",
-    "tripDesc": "in Nijlcruise, 5-sterren, beoordeeld met een 8,2.",
-    "_score": 172
   },
   {
     "id": "corendon-flamenco-beach-resort-hufia",
@@ -6420,7 +6023,7 @@ const trips = [
         "airport": "EIN",
         "prijs": 1040,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Flanzarote%2Fplaya-blanca%2Ffly-go-princesa-yaiza-suite-hotel-resort%2311936.LAPRIF.EINACE.120127.7.DS-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "december",
@@ -6481,7 +6084,7 @@ const trips = [
         "airport": "EIN",
         "prijs": 764,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fbalearen%2Fmallorca%2Fmagaluf-calvia-beach%2Ffly-go-fergus-club-mallorca-waterpark%2312683.MLFCWF.EINPMI.061026.7.UZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -6550,7 +6153,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 604,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Ffuerteventura%2Fjandia%2Fsbh-maxorata-resort%234745.FUJAN.AMSFUE.220127.6.DE-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -6604,6 +6207,14 @@ const trips = [
         "prijs": 782,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fitalie%2Fsicilie%2Flido-di-noto%2Ffly-go-eloro-hotel%2312511.SLEROF.AMSCTA.121026.7.DZ-A..",
         "_addedAt": "2026-06-19"
+      },
+      {
+        "maand": "oktober",
+        "duur": 7,
+        "airport": "RTM",
+        "prijs": 795,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fitalie%2Fsicilie%2Flido-di-noto%2Ffly-go-eloro-hotel%2312511.SLEROF.RTMCTA.081026.7.DZ-A..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -6656,7 +6267,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 679,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fnessebar%2Fsol-nessebar-mare-bay%23653.VANEM.AMSBOJ.200926.7.DE-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -6707,7 +6318,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 901,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fnessebar%2Ffly-go-festa-panorama%2312594.VAFESF.AMSBOJ.200926.7.DZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -6760,7 +6371,7 @@ const trips = [
         "airport": "RTM",
         "prijs": 1179,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Falgarve%2Fcarvoeiro%2Ftivoli-carvoeiro%238916.POTIC.RTMFAO.231026.7.DS-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -6888,7 +6499,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 844,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fmarsa-alam%2Fpickalbatros-oasis-hotel%2312756.MSOAS.AMSRMF.051226.7.DZG-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -6950,7 +6561,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 888,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fmarsa-alam%2Fpickalbatros-palace-hotel%2312761.MSPPH.AMSRMF.051226.7.DZG-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -7025,7 +6636,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 581,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Ffuerteventura%2Fjandia%2Fsbh-club-paraiso-playa%239356.FUSPP.AMSFUE.220127.6.DE-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -7079,7 +6690,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1099,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fkaapverdie%2Fsal%2Fsanta-maria%2Froyal-horizon-ponta-sino%239746.CVHPS.AMSSID.011226.7.DZP-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -7133,7 +6744,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 890,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fpomorie%2Ffly-go-via-pontica-resort%2312598.VAPONF.AMSBOJ.200926.7.DZ-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -7191,9 +6802,9 @@ const trips = [
         "maand": "oktober",
         "duur": 8,
         "airport": "AMS",
-        "prijs": 729,
+        "prijs": 737,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fitalie%2Fsardinie%2Fcastelsardo%2Ffly-go-castelsardo-resort-village%2312037.SACASF.AMSOLB.121026.8.DZL-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -7244,7 +6855,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 393,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Falgarve%2Fferragudo%2Fa%2Ffly-go-vitors-village%2312738.POVVIF.AMSFAO.211026.7.2AZ-U..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -7295,7 +6906,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 743,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Falgarve%2Flagos%2Fiberostar-selection-lagos-algarve%2311562.POIBL.AMSFAO.211026.7.DZ-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -7347,7 +6958,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 702,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Falgarve%2Fvilamoura%2Ffly-go-pestana-vila-sol%2312729.POPVSF.AMSFAO.211026.7.DSG-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -7398,7 +7009,7 @@ const trips = [
         "airport": "EIN",
         "prijs": 497,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcosta-brava%2Fpineda-de-mar%2Ffergus-club-pineda-splash%2313877.CBFPI.EINBCN.150926.7.DD1-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -7451,7 +7062,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 738,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fsozopol%2Fvilla-list%231632.VAVIL.AMSBOJ.130926.7.DE-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -7501,7 +7112,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 753,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Ffuerteventura%2Fcosta-calma%2Ffly-go-sbh-costa-calma-palace%2313817.FUSCPF.AMSFUE.270826.7.DZI-H..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "januari",
@@ -7571,7 +7182,7 @@ const trips = [
         "airport": "EIN",
         "prijs": 849,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fbalearen%2Fibiza%2Fplaya-den-bossa%2Ffly-go-fergus-style-bahamas%2312154.IBFSBF.EINIBZ.061026.7.DZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -7620,9 +7231,9 @@ const trips = [
         "maand": "augustus",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 638,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Ffuerteventura%2Fcosta-calma%2Fsbh-costa-calma-palace%239376.FUSCP.AMSFUE.270826.7.DZI-H..",
-        "_addedAt": "2026-06-18"
+        "prijs": 655,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Ffuerteventura%2Fcosta-calma%2Fsbh-costa-calma-palace%239376.FUSCP.AMSFUE.230826.7.DZM-H..",
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "september",
@@ -7689,7 +7300,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 839,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Flanzarote%2Fpuerto-del-carmen%2Ffariones-hotel%234650.LAFAR.AMSACE.110127.4.DSM-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -7750,7 +7361,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 870,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fitalie%2Fsardinie%2Fsan-teodoro%2Fclub-hotel-li-suari%2312169.SALSU.AMSOLB.280926.7.DB1-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -7803,7 +7414,7 @@ const trips = [
         "airport": "EIN",
         "prijs": 967,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fitalie%2Fsardinie%2Fsan-teodoro%2Ffly-go-club-hotel-li-suari%2314194.SALSUF.EINOLB.061026.7.DB1-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -7859,6 +7470,14 @@ const trips = [
         "prijs": 1299,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fwillemstad%2Fthe-rif-at-mangrove-beach-corendon-curio-by-hilton%2311211.CWRIF.AMSCUR.280626.5.DDG-X..",
         "_addedAt": "2026-06-13"
+      },
+      {
+        "maand": "september",
+        "duur": 6,
+        "airport": "AMS",
+        "prijs": 1319,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fwillemstad%2Fthe-rif-at-mangrove-beach-corendon-curio-by-hilton%2311211.CWRIF.AMSCUR.220926.5.DDG-X..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -7906,7 +7525,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 610,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Falgarve%2Flagos%2Ffly-go-ancora-park%2313376.POACPF.AMSFAO.211026.7.DZP-U..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "september",
@@ -7919,6 +7538,60 @@ const trips = [
     ],
     "prijsPeilDatum": "juni 2026",
     "tripDesc": "in Lagos, 4-sterren, gastwaardering 9,3.",
+    "_score": 165
+  },
+  {
+    "id": "corendon-fly-go-hard-rock-hotel-tenerife-teharf",
+    "title": "Luxe resort Tenerife",
+    "destination": "Tenerife, Spanje",
+    "hotelName": "Fly & Go Hard Rock Hotel Tenerife",
+    "sfeer": [
+      "comfort",
+      "strand",
+      "resort"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Ontbijt",
+    "vluchtduur": "2u30",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "Luxe verblijf in Playa Paraiso, Spanje — direct aan zee",
+    "whyThisTrip": "Teide-vulkaan, walvissen spotten en zwarte lavastranden in het zuiden. Van woestijnlandschap tot tropisch groen.",
+    "tags": [
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "snorkelen",
+      "wifi",
+      "wandelen"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: 8,5",
+      "Logies en ontbijt",
+      "Vlucht inbegrepen",
+      "3 buitenzwembad(en)"
+    ],
+    "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
+    "imageUrl": "https://images.corendonresources.com/L1E11814A5W0H0.jpg?v=260119173804",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "juni",
+        "duur": 7,
+        "airport": "EIN",
+        "prijs": 1120,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Ftenerife%2Fplaya-paraiso%2Ffly-go-hard-rock-hotel-tenerife%2311814.TEHARF.EINTFS.230626.7.DD1-F..",
+        "_addedAt": "2026-06-08"
+      }
+    ],
+    "prijsPeilDatum": "juni 2026",
+    "tripDesc": "in Playa Paraiso, met ontbijt, 5-sterren, gastwaardering 8,5.",
     "_score": 165
   },
   {
@@ -7959,7 +7632,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 916,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Fmadeira%2Frondreizen-madeira%2Ffly-drive-quintas-van-madeira%237806.FNQDV.AMSFNC.241126.7.DZ-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -8026,7 +7699,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1142,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fitalie%2Fsardinie%2Fsan-teodoro%2Ffly-go-club-marina-seada-beach%2313769.SAADAF.AMSOLB.280926.7.DZG-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -8082,6 +7755,14 @@ const trips = [
         "prijs": 1499,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fwillemstad%2Fthe-rif-at-mangrove-beach-corendon-curio-by-hilton-incl-3-dagen-huurauto%2313314.CWRIFA.AMSCUR.280626.5.DDG-X..",
         "_addedAt": "2026-06-13"
+      },
+      {
+        "maand": "september",
+        "duur": 6,
+        "airport": "AMS",
+        "prijs": 1519,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fwillemstad%2Fthe-rif-at-mangrove-beach-corendon-curio-by-hilton-incl-3-dagen-huurauto%2313314.CWRIFA.AMSCUR.220926.5.DDG-X..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -8137,6 +7818,14 @@ const trips = [
         "prijs": 1403,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fwillemstad%2Ffly-go-the-rif-at-mangrove-beach%2311212.CWRIFF.AMSCUR.280626.5.DDG-X..",
         "_addedAt": "2026-06-13"
+      },
+      {
+        "maand": "september",
+        "duur": 6,
+        "airport": "AMS",
+        "prijs": 1378,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fwillemstad%2Ffly-go-the-rif-at-mangrove-beach-corendon-curio-by-hilton%2311212.CWRIFF.AMSCUR.220926.5.DDG-X..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -8192,7 +7881,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1349,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fwillemstad%2Fmangrove-beach-corendon-curio-by-hilton%239404.CWMBR.AMSCUR.150926.5.DZ-X..",
-        "_addedAt": "2026-06-13"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -8246,9 +7935,64 @@ const trips = [
         "maand": "september",
         "duur": 6,
         "airport": "AMS",
-        "prijs": 1458,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fwillemstad%2Ffly-go-corendon-mangrove-beach%239782.CWMBRF.AMSCUR.150926.5.DZ-X..",
-        "_addedAt": "2026-06-13"
+        "prijs": 1408,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fwillemstad%2Ffly-go-mangrove-beach-corendon-curio-by-hilton%239782.CWMBRF.AMSCUR.150926.5.DZ-X..",
+        "_addedAt": "2026-06-20"
+      }
+    ],
+    "prijsPeilDatum": "juni 2026",
+    "tripDesc": "all-inclusive, 5-sterren, beoordeeld met een 8,3.",
+    "_score": 163
+  },
+  {
+    "id": "corendon-curacao-north-sea-jazz-arrangement-corendon-mangrove-beach-resort-cwmbj",
+    "title": "Ultra all-inclusive resort Willemstad",
+    "destination": "Willemstad, Curaçao",
+    "hotelName": "Curaçao North Sea Jazz arrangement Corendon Mangrove Beach Resort",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand",
+      "resort"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Ultra all-inclusive",
+    "vluchtduur": "9u30",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "Ultra all-inclusive in Willemstad, Curaçao — met privéstrand",
+    "whyThisTrip": "Handelskade in pastelkleuren, snorkelen bij Tugboat Beach en Blue Curaçao proeven. Caribisch met een Nederlandse twist.",
+    "tags": [
+      "allinclusive",
+      "ultra-allinclusive",
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: 8,3",
+      "Ultra All Inclusive",
+      "Vlucht inbegrepen"
+    ],
+    "description": "Kom onbezorgd vakantie vieren in Corendon Mangrove Beach Resort op tropisch Curaçao en pik meteen het grootste festival van het eiland mee: Curaçao North Sea Jazz! Dit prachtige resort, onderdeel van Curio Collection by Hilton, ligt te midden van een",
+    "imageUrl": "https://images.corendonresources.com/L1E12559A1W1024H684.jpg?v=260508102716",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "september",
+        "duur": 6,
+        "airport": "AMS",
+        "prijs": 1819,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fwillemstad%2Fa%2Fcuracao-north-sea-jazz-arrangement-corendon-mangrove-beach-resort%2312559.CWMBJ.AMSCUR.010926.5.DZ-X..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -8293,11 +8037,67 @@ const trips = [
         "airport": "AMS",
         "prijs": 622,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fbingoreizen-bulgarije%2Fbingo-bulgarije-4%234716.VAB4A.AMSBOJ.200926.7.DZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
     "tripDesc": "all-inclusive, 4-sterren.",
+    "_score": 163
+  },
+  {
+    "id": "corendon-santa-monica-suites-hotel-plsam",
+    "title": "Zonvakantie hotel Gran Canaria",
+    "destination": "Gran Canaria, Spanje",
+    "hotelName": "Santa Monica Suites Hotel",
+    "sfeer": [
+      "comfort",
+      "strand"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Ontbijt",
+    "vluchtduur": "2u30",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "Zonvakantie in Playa del Ingles, Spanje — direct aan zee",
+    "whyThisTrip": "Duinen van Maspalomas, het koloniale Vegueta in Las Palmas en bergdorpjes in het binnenland. Mini-continent.",
+    "tags": [
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "wifi"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: 9,5",
+      "Logies en ontbijt",
+      "Vlucht inbegrepen",
+      "Strand op 250m"
+    ],
+    "description": "Welkom bij Santa Monica Suites! Dit moderne 4-sterrenhotel verwelkomt je met open armen in de badplaats Playa des Ingles. Met een unieke ligging, aan het strand en aan de duinen van Playa des Ingles, zorgt dit gloednieuwe luxe hotel voor een fantasti",
+    "imageUrl": "https://images.corendonresources.com/L1E7525A1W1024H684.jpg?v=220521201244",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "juni",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 944,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Fgran-canaria%2Fplaya-del-ingles%2Fsanta-monica-suites-hotel%237525.PLSAM.AMSLPA.280626.7.JZX-F..",
+        "_addedAt": "2026-06-10"
+      },
+      {
+        "maand": "juni",
+        "duur": 7,
+        "airport": "EIN",
+        "prijs": 869,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Fgran-canaria%2Fplaya-del-ingles%2Fsanta-monica-suites-hotel%237525.PLSAM.EINLPA.270626.7.JZX-F..",
+        "_addedAt": "2026-06-08"
+      }
+    ],
+    "prijsPeilDatum": "juni 2026",
+    "tripDesc": "in Playa del Ingles, met ontbijt, 4-sterren, gastwaardering 9,5.",
     "_score": 163
   },
   {
@@ -8345,7 +8145,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 955,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fsozopol%2Ffly-go-villa-list%2312254.VAVILF.AMSBOJ.130926.7.DE-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -8394,7 +8194,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 506,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Fmadeira%2Fcanico%2Fthe-views-oasis-hotel%237788.FNOAS.AMSFNC.011226.7.DZI-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -8446,11 +8246,62 @@ const trips = [
         "airport": "AMS",
         "prijs": 803,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Fmadeira%2Ffunchal%2Ffly-go-quinta-do-monte-panoramic%2313036.FNQDMF.AMSFNC.221026.7.DZ-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
     "tripDesc": "in Funchal, met ontbijt, 5-sterren, beoordeeld met een 8,2.",
+    "_score": 162
+  },
+  {
+    "id": "corendon-fly-go-iberostar-waves-malaga-playa-mgimpf",
+    "title": "Halfpension hotel Costa del Sol",
+    "destination": "Costa del Sol, Spanje",
+    "hotelName": "Fly & Go Iberostar Waves Malaga Playa",
+    "sfeer": [
+      "comfort",
+      "strand"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Halfpension",
+    "vluchtduur": "2u30",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "Halfpension in Torrox, Spanje — direct aan zee",
+    "whyThisTrip": "Málaga's Picasso-museum, witte dorpen in de bergen en lange zandstranden. Strand met culturele diepgang.",
+    "tags": [
+      "halfpension",
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "wifi"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: 8,9",
+      "Halfpension",
+      "Vlucht inbegrepen",
+      "Strand op 50m"
+    ],
+    "description": "Op een met tropische beplanting begroeid terrein van maar liefst 18.000 m2 bevindt zich het 4-sterrenhotel Iberostar Waves Malaga Playa. Met een ideale ligging naast de wandelboulevard, waar ook het zandstrand aan gelegen is, hoef je eigenlijk niet m",
+    "imageUrl": "https://images.corendonresources.com/L1E12042A5W0H0.jpg?v=260116162753",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "oktober",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 764,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcosta-del-sol%2Ftorrox%2Ffly-go-iberostar-waves-malaga-playa%2312042.MGIMPF.AMSAGP.311026.7.DZ1-H..",
+        "_addedAt": "2026-06-20"
+      }
+    ],
+    "prijsPeilDatum": "juni 2026",
+    "tripDesc": "in Torrox, halfpension, 4-sterren, gastwaardering 8,9.",
     "_score": 162
   },
   {
@@ -8496,7 +8347,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 771,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Fmadeira%2Fsanta-cruz%2Ffly-go-vila-gale-santa-cruz%2313602.FNVGSF.AMSFNC.221026.7.DZ-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -8545,7 +8396,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 494,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Falgarve%2Folhos-dagua%2Ffly-go-oceanus-aparthotel%2313373.POOCEF.AMSFAO.211026.7.SE1-U..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -8595,11 +8446,56 @@ const trips = [
         "airport": "AMS",
         "prijs": 1208,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Fmadeira%2Ffunchal%2Fhotel-porto-mare%2312679.FNHPM.AMSFNC.211026.7.DZM-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
     "tripDesc": "in Funchal, met ontbijt, 4-sterren, gastwaardering 9,5.",
+    "_score": 160
+  },
+  {
+    "id": "corendon-rondreis-hoogtepunten-van-egypte-eghve",
+    "title": "Luxe resort Rondreizen",
+    "destination": "Rondreizen, Egypte",
+    "hotelName": "Rondreis Hoogtepunten van Egypte",
+    "sfeer": [
+      "comfort",
+      "strand"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Zie beschrijving",
+    "vluchtduur": "5u",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "Luxe verblijf in Rondreizen Egypte, Egypte — 5 sterren",
+    "whyThisTrip": "ontdek Rondreizen in Egypte.",
+    "tags": [
+      "5-sterren",
+      "luxe",
+      "strand",
+      "wellness"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: 8,6",
+      "Zie beschrijving",
+      "Vlucht inbegrepen"
+    ],
+    "description": "Deze onvergetelijke reis naar Egypte biedt een unieke combinatie van cultuur, avontuur en ontspanning. Je reist naar Hurghada, waar je de iconen van het oude Egypte ontdekt, verblijft in luxe accommodaties en geniet van een rondreis langs de belangri",
+    "imageUrl": "https://images.corendonresources.com/L1E13256A1W1024H684.jpg?v=251107122708",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "september",
+        "duur": 11,
+        "airport": "AMS",
+        "prijs": 1899,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frondreizen%2Frondreizen-egypte%2Frondreis-hoogtepunten-van-egypte%2313256.EGHVE.AMSHRG.100926.11.DZ-L..",
+        "_addedAt": "2026-06-20"
+      }
+    ],
+    "prijsPeilDatum": "juni 2026",
+    "tripDesc": "5-sterren, gastwaardering 8,6.",
     "_score": 160
   },
   {
@@ -8654,7 +8550,7 @@ const trips = [
         "airport": "RTM",
         "prijs": 987,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fitalie%2Fsicilie%2Ftaormina%2Ffly-go-caparena%2311757.SLCPRF.RTMCTA.081026.7.DZ-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -8769,7 +8665,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 496,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Fmadeira%2Fcanico%2Ffly-go-sentido-galosol%2313466.FNSGAF.AMSFNC.101226.4.DZG-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -8822,7 +8718,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 836,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fobzor%2Fhvd-club-hotel-miramar%235116.VAMIR.AMSBOJ.200926.7.DZ1-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -8875,7 +8771,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1153,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fobzor%2Fhvd-reina-del-mar%239902.VARDM.AMSBOJ.200926.7.DZL-X..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -8924,7 +8820,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 586,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Falgarve%2Fferragudo%2Ffly-go-agua-hotel-riverside%2311683.PORIVF.AMSFAO.211026.7.DZ-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -8982,7 +8878,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1208,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Fmadeira%2Ffunchal%2Fsuite-hotel-eden-mar%2312680.FNEDM.AMSFNC.221026.7.SS-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -9088,7 +8984,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1371,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fitalie%2Fsardinie%2Fcastelsardo%2Ffly-go-bluserena-is-serenas-badesi%2313768.SABSEF.AMSOLB.060926.7.DZ-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -9145,7 +9041,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 749,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fitalie%2Fsicilie%2Fgiardini-naxos%2Ffly-go-etna-hotel%238898.SLETNF.AMSCTA.141026.7.DZ-U..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -9193,14 +9089,6 @@ const trips = [
     "affiliatePartner": "Corendon",
     "variants": [
       {
-        "maand": "juni",
-        "duur": 6,
-        "airport": "AMS",
-        "prijs": 907,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fsint-willibrordus%2Ffly-go-kunuku-aqua-resort-trademark-collection-by-wyndham%2313335.CWKUNF.AMSCUR.230626.5.DZ-A..",
-        "_addedAt": "2026-06-05"
-      },
-      {
         "maand": "september",
         "duur": 6,
         "airport": "AMS",
@@ -9212,6 +9100,61 @@ const trips = [
     "prijsPeilDatum": "juni 2026",
     "tripDesc": "all-inclusive, 4-sterren, beoordeeld met een 7,9.",
     "_score": 152
+  },
+  {
+    "id": "corendon-curacao-north-sea-jazz-arrangement-the-rif-at-mangrove-beach-cwrij",
+    "title": "Ultra all-inclusive resort Willemstad",
+    "destination": "Willemstad, Curaçao",
+    "hotelName": "Curaçao North Sea Jazz arrangement The Rif at Mangrove Beach",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand",
+      "resort"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Ultra all-inclusive",
+    "vluchtduur": "9u30",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "Ultra all-inclusive in Willemstad, Curaçao — met privéstrand",
+    "whyThisTrip": "Handelskade in pastelkleuren, snorkelen bij Tugboat Beach en Blue Curaçao proeven. Caribisch met een Nederlandse twist.",
+    "tags": [
+      "allinclusive",
+      "ultra-allinclusive",
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: N.A.",
+      "Ultra All Inclusive",
+      "Vlucht inbegrepen",
+      "5 buitenzwembad(en)"
+    ],
+    "description": "Relax to the max Een relaxed vakantiegevoel! Dat is wat je tijdens je verblijf in The Rif at Mangrove Beach zult ervaren. En je pikt ook meteen het grootste festival van het eiland mee: North Sea Jazz Curaçao! Hoe leuk is dat?! In dit exclusieve 5-st",
+    "imageUrl": "https://images.corendonresources.com/L1E12560A1W1024H684.jpg?v=260505094606",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "september",
+        "duur": 6,
+        "airport": "AMS",
+        "prijs": 1879,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fwillemstad%2Fcuracao-north-sea-jazz-arrangement-the-rif-at-mangrove-beach-corendon-curio-by-hilton%2312560.CWRIJ.AMSCUR.010926.5.DDG-X..",
+        "_addedAt": "2026-06-20"
+      }
+    ],
+    "prijsPeilDatum": "juni 2026",
+    "tripDesc": "all-inclusive, 5-sterren.",
+    "_score": 150
   },
   {
     "id": "corendon-belnem-house-bonaire-bnbhb",
@@ -9281,7 +9224,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1137,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbonaire%2Fkralendijk%2Fbelnem-house-bonaire%239318.BNBHB.AMSBON.250826.5.SZ1-U..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -9340,7 +9283,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 849,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fjan-thiel-baai%2Flivingstone-curacao%233845.CWLIS.AMSCUR.220926.5.DZ-U..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -9394,9 +9337,9 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 752,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fitalie%2Fsardinie%2Falghero%2Ffly-go-rina-hotel%239173.SARIHF.AMSOLB.131026.7.DZG-F..",
-        "_addedAt": "2026-06-19"
+        "prijs": 753,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fitalie%2Fsardinie%2Falghero%2Ffly-go-rina-hotel%239173.SARIHF.AMSOLB.141026.7.DZG-F..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -9494,8 +9437,8 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 617,
-        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fitalie%2Fsicilie%2Fgiardini-naxos%2Ffly-go-il-borgo-luxury-country-resort%239144.SLBLCF.AMSCTA.121026.7.DZ-F..",
-        "_addedAt": "2026-06-19"
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fitalie%2Fsicilie%2Fgiardini-naxos%2Ffly-go-il-borgo-luxury-country-resort%239144.SLBLCF.AMSCTA.141026.7.DZ-F..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -9549,7 +9492,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1235,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fkaapverdie%2Fsal%2Fsanta-maria%2Foasis-belorizonte%239779.CVBEL.AMSSID.050327.7.DB-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -9649,7 +9592,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 646,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbulgarije%2Fzwarte-zee%2Fpomorie%2Ffesta-pomorie%23813.VAFEP.AMSBOJ.200926.7.DZ-H..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -9704,7 +9647,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1120,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fkaapverdie%2Fsal%2Fsanta-maria%2Fsol-dunas-family-fun%2314242.CVSOL.AMSSID.241126.7.DZW-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -9868,9 +9811,9 @@ const trips = [
         "maand": "augustus",
         "duur": 6,
         "airport": "AMS",
-        "prijs": 1235,
+        "prijs": 1246,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbonaire%2Fkralendijk%2Ffly-go-belnem-house-bonaire%2310847.BNBHBF.AMSBON.250826.5.SZ1-U..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       },
       {
         "maand": "oktober",
@@ -9937,7 +9880,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1108,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fjan-thiel-baai%2Ffly-go-culinair-livingstone-curacao%2313247.CWLFC.AMSCUR.220926.5.DZ-U..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -9996,7 +9939,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 999,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fjan-thiel-baai%2Flivingstone-curacao-culinair-curacao%2313236.CWLIC.AMSCUR.220926.5.DZ-U..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -10055,7 +9998,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1163,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fjan-thiel-baai%2Flivingstone-curacao-villas-appartementen%2313544.CWLSS.AMSCUR.280826.5.2AZ-U..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -10125,7 +10068,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 902,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fitalie%2Fsardinie%2Fvalledoria%2Ffly-go-bellevue-resort-by-melia%2313767.SABLLF.AMSOLB.280926.7.DZG-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -10176,7 +10119,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 956,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fitalie%2Fsardinie%2Fsanta-teresa-gallura%2Ffly-go-gh-diana-hotel%2313772.SADIAF.AMSOLB.060926.7.DZ-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -10235,7 +10178,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 908,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fjan-thiel-baai%2Ffly-go-livingstone-curacao%234133.CWLISF.AMSCUR.220926.5.DZ-U..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -10304,7 +10247,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 934,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbonaire%2Fkralendijk%2Fresort-bonaire%2312415.BNRSB.AMSBON.061026.5.2AZ-U..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -10359,7 +10302,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1427,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fkaapverdie%2Fsal%2Fsanta-maria%2Fvoi-vila-do-farol-resort%2314266.CVVOV.AMSSID.050327.7.D1-A..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -10427,6 +10370,14 @@ const trips = [
         "prijs": 1562,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbonaire%2Fkralendijk%2Ffly-go-grand-windsock-dive-beach-resort%2313140.BNGRWF.AMSBON.241126.7.2AE-U..",
         "_addedAt": "2026-06-16"
+      },
+      {
+        "maand": "mei",
+        "duur": 8,
+        "airport": "AMS",
+        "prijs": 1565,
+        "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbonaire%2Fkralendijk%2Ffly-go-grand-windsock-dive-beach-resort%2313140.BNGRWF.AMSBON.180527.7.2AE-U..",
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -10499,9 +10450,9 @@ const trips = [
         "maand": "oktober",
         "duur": 6,
         "airport": "AMS",
-        "prijs": 996,
+        "prijs": 1007,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbonaire%2Fkralendijk%2Ffly-go-resort-bonaire%2312557.BNRSBF.AMSBON.061026.5.2AZ-U..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -10552,7 +10503,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 864,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fkaapverdie%2Fsal%2Fsanta-maria%2Fsobrado%2313355.CVSOB.AMSSID.241126.7.DZ-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -10604,7 +10555,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1390,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fkaapverdie%2Fsal%2Fsanta-maria%2Fhilton-cabo-verde-sal-resort%239814.CVHCA.AMSSID.241126.7.DZ-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
@@ -10654,7 +10605,7 @@ const trips = [
         "airport": "AMS",
         "prijs": 1053,
         "affiliateUrl": "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fkaapverdie%2Fsal%2Fsanta-maria%2Fmorabeza%239817.CVMOR.AMSSID.081226.7.DZL-F..",
-        "_addedAt": "2026-06-19"
+        "_addedAt": "2026-06-20"
       }
     ],
     "prijsPeilDatum": "juni 2026",
