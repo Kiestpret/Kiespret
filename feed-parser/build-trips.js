@@ -25,6 +25,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const feedTripsPath = join(__dirname, 'trips.json');
 const outputPath = join(__dirname, '..', 'trips.js');
+const affiliateMapPath = join(__dirname, '..', '.data', 'affiliate-map.json');
 
 // ── Config ──────────────────────────────────────────────────────────────
 
@@ -187,6 +188,25 @@ const curated = curateTrips(feedTrips);
 // Combineer: handmatige trips eerst, dan gecureerde Corendon
 const allTrips = [...manualTrips, ...curated.map(cleanTrip)];
 
+// ── Genereer affiliate-map.json (intern, voor /api/go) ──
+
+const affiliateMap = {};
+for (const trip of allTrips) {
+  const urls = trip.variants.map(v => v.affiliateUrl).filter(Boolean);
+  if (urls.length > 0) {
+    affiliateMap[trip.id] = urls;
+  }
+}
+
+writeFileSync(affiliateMapPath, JSON.stringify(affiliateMap, null, 2), 'utf-8');
+console.log(`\n🔒 affiliate-map.json geschreven (${Object.keys(affiliateMap).length} trips met URLs)`);
+
+// Strip affiliateUrl uit trips voor publieke output
+const publicTrips = allTrips.map(trip => ({
+  ...trip,
+  variants: trip.variants.map(({ affiliateUrl, ...rest }) => rest)
+}));
+
 // ── Schrijf trips.js ──
 
 const header = `// trips.js — Kiespret dataset
@@ -203,7 +223,7 @@ const header = `// trips.js — Kiespret dataset
 
 const trips = `;
 
-const output = header + JSON.stringify(allTrips, null, 2) + ';\n';
+const output = header + JSON.stringify(publicTrips, null, 2) + ';\n';
 
 writeFileSync(outputPath, output, 'utf-8');
 

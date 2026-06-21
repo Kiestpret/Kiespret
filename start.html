@@ -1723,7 +1723,8 @@
         // Wire click handler via JS (geen inline onclick → geen string-injection risk)
         const bookBtn = card.querySelector('[data-book-btn]');
         if (bookBtn) {
-          bookBtn.addEventListener('click', () => openOutbound(trip.aanbieder, v.affiliateUrl));
+          const vIdx = trip.variants.indexOf(v);
+          bookBtn.addEventListener('click', () => openOutbound(trip.aanbieder, trip.id, vIdx >= 0 ? vIdx : 0));
         }
         list.appendChild(card);
       });
@@ -1753,10 +1754,11 @@
     }
 
     // ── OUTBOUND MODAL (bouwplan: tussenstap voor affiliate klik) ──────────
-    function openOutbound(aanbieder, url) {
+    function openOutbound(aanbieder, tripId, variantIdx) {
       const modal = document.getElementById('outboundModal');
       const safeAanbieder = escapeHtml(aanbieder);
-      const safeOutboundUrl = safeUrl(url);
+      // Bouw redirect-URL via /api/go — affiliate-URLs staan niet meer in trips.js
+      const goUrl = '/api/go?id=' + encodeURIComponent(tripId) + '&v=' + encodeURIComponent(variantIdx);
       document.getElementById('modalTitle').textContent = 'Jullie topkeuze staat klaar';
       document.getElementById('modalBody').innerHTML =
         `Je boekt zo direct bij <strong>${safeAanbieder}</strong> — op hun website zie je de actuele prijs en beschikbaarheid. Geen extra kosten via Kiespret.`;
@@ -1764,8 +1766,8 @@
       goBtn.textContent = `Ga naar ${aanbieder} →`;
       goBtn.onclick = () => {
         // Event: outbound_click
-        kiespretTrack('outbound_click', { provider: aanbieder, url: safeOutboundUrl });
-        if (safeOutboundUrl) window.open(safeOutboundUrl, '_blank', 'noopener');
+        kiespretTrack('outbound_click', { provider: aanbieder, trip: tripId });
+        window.open(goUrl, '_blank', 'noopener');
         closeModal();
       };
       modal.classList.add('active');
@@ -2164,7 +2166,8 @@
           </div>`;
         const bookBtn = card.querySelector('[data-book-btn]');
         if (bookBtn) {
-          bookBtn.addEventListener('click', () => openOutbound(trip.aanbieder, v.affiliateUrl));
+          const vIdx = trip.variants.indexOf(v);
+          bookBtn.addEventListener('click', () => openOutbound(trip.aanbieder, trip.id, vIdx >= 0 ? vIdx : 0));
         }
         list.appendChild(card);
       });
