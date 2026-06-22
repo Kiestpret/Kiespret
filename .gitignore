@@ -2,3 +2,4 @@
 VacationSwipe/
 web-preview/
 *.xcodeproj
+.claude/worktrees/
