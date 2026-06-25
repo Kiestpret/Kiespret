@@ -213,6 +213,33 @@ nav {
 }
 .cta-block .cta-btn:hover { opacity: 0.88; }
 
+/* ── PRIJS-INDICATIE (dynamisch via gids-prices.js) ── */
+.gids-price {
+  margin: 0 auto 18px;
+  max-width: 460px;
+}
+.gids-price-line {
+  font-size: 15px;
+  color: var(--night);
+  margin: 0 0 4px;
+  line-height: 1.5;
+}
+.gids-price-line strong {
+  font-weight: 700;
+  white-space: nowrap;
+}
+.gids-price-sep { color: var(--ocean); padding: 0 2px; }
+.gids-price-note {
+  font-size: 12px;
+  color: var(--stone);
+  margin: 0;
+  line-height: 1.4;
+}
+@media (max-width: 480px) {
+  .gids-price-line { font-size: 14px; }
+  .gids-price-line strong { white-space: normal; }
+}
+
 /* ── WIDGET PLACEHOLDER ── */
 .kiespret-widget {
   background: var(--shell);
