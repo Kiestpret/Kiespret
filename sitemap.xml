@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://www.kiespret.nl/gids/eilanden/sicilie-of-sardinie/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -104,7 +104,7 @@
   </url>
   <url>
     <loc>https://www.kiespret.nl/gids/zonvakantie-juni/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -494,6 +494,24 @@
   </url>
   <url>
     <loc>https://www.kiespret.nl/gids/egypte-of-griekenland/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kiespret.nl/gids/spanje/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.kiespret.nl/gids/goedkope-zonvakantie/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kiespret.nl/gids/griekenland-of-italie/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
