@@ -80,6 +80,36 @@
   // Maak track functie globaal beschikbaar voor inline calls
   window.kiespretTrack = track;
 
+  // ─── Cluster-event helper ───
+  // Stuurt extra event per land-cluster (bijv. liked_turkije, skipped_griekenland)
+  // zodat Plausible op het gratis plan laat zien welke landen winnen.
+  var countryMap = {
+    'turkije': 'turkije', 'griekenland': 'griekenland', 'spanje': 'spanje',
+    'kroatië': 'kroatie', 'kroatie': 'kroatie', 'albanië': 'albanie', 'albanie': 'albanie',
+    'egypte': 'egypte', 'bulgarije': 'bulgarije',
+    'italië': 'italie', 'italie': 'italie',
+    'portugal': 'portugal', 'montenegro': 'montenegro', 'cyprus': 'cyprus',
+    'malta': 'malta', 'marokko': 'marokko', 'tunesië': 'tunesie', 'tunesie': 'tunesie',
+    'kaapverdië': 'kaapverdie', 'kaapverdie': 'kaapverdie',
+    'curaçao': 'caribisch', 'curacao': 'caribisch', 'bonaire': 'caribisch', 'aruba': 'caribisch'
+  };
+
+  function getCluster(destination) {
+    if (!destination) return null;
+    var lower = destination.toLowerCase();
+    for (var key in countryMap) {
+      if (lower.indexOf(key) !== -1) return countryMap[key];
+    }
+    return null;
+  }
+
+  window.kiespretClusterTrack = function(action, destination) {
+    var cluster = getCluster(destination);
+    if (cluster) {
+      track(action + '_' + cluster);
+    }
+  };
+
   // ─── Gids/SEO page tracking (auto-detect) ───
   if (window.location.pathname.indexOf('/gids/') === 0) {
     initGidsTracking();

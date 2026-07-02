@@ -1542,6 +1542,7 @@
 
         // Event: swipe_right
         kiespretTrack('swipe_right', { trip: trip.id, destination: trip.title });
+        kiespretClusterTrack('liked', trip.destination);
 
         liked.push(trip);
         saveShortlist();
@@ -1567,6 +1568,7 @@
 
         // Event: swipe_left
         kiespretTrack('swipe_left', { trip: skipTrip.id, destination: skipTrip.title });
+        kiespretClusterTrack('skipped', skipTrip.destination);
       }
 
       currentIndex++;
@@ -1767,6 +1769,8 @@
       goBtn.onclick = () => {
         // Event: outbound_click
         kiespretTrack('outbound_click', { provider: aanbieder, trip: tripId });
+        var clickedTrip = currentTrips.find(t => t.id === tripId) || liked.find(t => t.id === tripId);
+        if (clickedTrip) kiespretClusterTrack('booked', clickedTrip.destination);
         window.open(goUrl, '_blank', 'noopener');
         closeModal();
       };
