@@ -180,7 +180,7 @@
       adviceBox.innerHTML = '';
       list.innerHTML = `
         <div style="text-align:center;padding:48px 24px">
-          <div style="font-size:40px;margin-bottom:12px">🤷</div>
+          <div style="margin-bottom:12px"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--stone)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M8 11h6"/></svg></div>
           <h3 style="margin-bottom:8px;font-family:'Plus Jakarta Sans',sans-serif">Geen vakanties gevonden</h3>
           <p style="color:var(--stone);margin-bottom:24px">We konden geen vakanties vinden die bij jullie voorkeuren passen. Probeer een andere maand of reisduur.</p>
           <button class="cta-btn" data-action="restart" style="max-width:300px;margin:0 auto">Opnieuw beginnen</button>
@@ -292,12 +292,12 @@
       const duur = Number(v.duur) || 0;
       const maand = shortMaand(v.maand);
       const vlucht = escapeHtml(trip.vluchtduur);
-      const compactInfo = `${duur} nch · ${escapeHtml(maand)} · ✈ ${vlucht}`;
+      const compactInfo = `${duur} nch · ${escapeHtml(maand)} · <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg> ${vlucht}`;
 
       // Badges (max 3): rating, boardType, stars
       const badges = [];
       const rating = extractRating(trip);
-      if (rating) badges.push(`<span class="tag">⭐ ${escapeHtml(rating)}</span>`);
+      if (rating) badges.push(`<span class="tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="vertical-align:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> ${escapeHtml(rating)}</span>`);
       if (trip.boardType) badges.push(`<span class="tag">${escapeHtml(trip.boardType)}</span>`);
       const stars = extractStars(trip);
       if (stars) badges.push(`<span class="tag">${escapeHtml(stars)}-sterren</span>`);
@@ -612,7 +612,7 @@
       if (top3.length === 0) {
         list.innerHTML = `
           <div style="text-align:center;padding:48px 24px">
-            <div style="font-size:40px;margin-bottom:12px">🤔</div>
+            <div style="margin-bottom:12px"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--stone)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r="0.5" fill="var(--stone)" stroke="none"/></svg></div>
             <h3 style="margin-bottom:8px;font-family:'Plus Jakarta Sans',sans-serif">Geen favorieten</h3>
             <p style="color:var(--stone);margin-bottom:24px">Je hebt alle kaarten overgeslagen. Probeer het opnieuw met ruimere voorkeuren.</p>
             <button class="cta-btn" data-action="restart" style="max-width:300px;margin:0 auto">Opnieuw beginnen</button>
@@ -638,7 +638,11 @@
           </div>`;
       }
 
-      const medals = ['🥇', '🥈', '🥉'];
+      const rankIcons = [
+        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>',
+        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px"><circle cx="12" cy="12" r="10"/><path d="M12 8v0"/><text x="12" y="16" text-anchor="middle" font-size="11" font-weight="600" fill="currentColor" stroke="none">2</text></svg>',
+        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" font-size="11" font-weight="600" fill="currentColor" stroke="none">3</text></svg>'
+      ];
       const rankLabels = ['Beste match', 'Goede optie', 'Ook een aanrader'];
       const rankClasses = ['rank-1', 'rank-2', 'rank-3'];
 
@@ -676,18 +680,18 @@
         card.className = 'result-card';
         card.innerHTML = `
           <div class="result-rank-banner ${rankClasses[i]}">
-            ${medals[i]} ${rankLabels[i]}
+            ${rankIcons[i]} ${rankLabels[i]}
           </div>
           <img class="result-img" src="${escapeHtml(safeUrl(trip.imageUrl))}" alt="${destSafe}">
           <div class="result-body">
             <div class="result-title">${hotelName}</div>
-            <div class="result-dest">📍 ${destSafe}</div>
+            <div class="result-dest"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> ${destSafe}</div>
             ${whyText ? `<p style="font-size:13px;color:var(--stone);margin-bottom:10px;line-height:1.5">${whyText}</p>` : ''}
             <div class="result-dims">
               <span class="dim-label">Sfeer</span><span class="dim-value">${escapeHtml(sfeerLabel)}</span>
               <span class="dim-label">Prijs</span><span class="dim-value">€${Number(v.prijs) || 0} p.p. · ${escapeHtml(v.maand)} · ${Number(v.duur) || 0} nachten</span>
               <span class="dim-label">Vluchtduur</span><span class="dim-value">${escapeHtml(trip.vluchtduur)} vanaf Schiphol</span>
-              <span class="dim-label">Boardtype</span><span class="dim-value">${escapeHtml(trip.boardType)}${starsVal ? ' · ' + escapeHtml(starsVal) + '-sterren' : ''}${ratingVal ? ' · ⭐ ' + escapeHtml(ratingVal) : ''}</span>
+              <span class="dim-label">Boardtype</span><span class="dim-value">${escapeHtml(trip.boardType)}${starsVal ? ' · ' + escapeHtml(starsVal) + '-sterren' : ''}${ratingVal ? ' · <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="vertical-align:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> ' + escapeHtml(ratingVal) : ''}</span>
               <span class="dim-label">Aanbieder</span><span class="dim-value">${aanbiederSafe}</span>
             </div>
             <div class="result-row">
@@ -825,7 +829,7 @@
         // Geen nieuwe trips beschikbaar — toon gestylede melding
         var stack = document.getElementById('cardStack');
         stack.innerHTML = '<div style="text-align:center;padding:48px 24px">' +
-          '<div style="font-size:40px;margin-bottom:12px">🏖️</div>' +
+          '<div style="margin-bottom:12px"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--ocean)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><path d="M12 8v13"/><path d="M6 21c1-3 3-5 6-5s5 2 6 5"/><path d="M3 21h18"/></svg></div>' +
           '<h3 style="margin-bottom:8px;font-family:\'Plus Jakarta Sans\',sans-serif">Alles bekeken!</h3>' +
           '<p style="color:var(--stone);margin-bottom:24px">Er zijn geen extra vakanties beschikbaar met deze filters.</p>' +
           '<button class="cta-btn" data-action="showResults" style="max-width:300px;margin:0 auto">Bekijk je top 3 →</button>' +
@@ -851,12 +855,12 @@
       const stack = document.getElementById('cardStack');
       stack.innerHTML = `
         <div style="text-align:center;padding:32px 16px">
-          <div style="font-size:40px;margin-bottom:12px">🎯</div>
+          <div style="margin-bottom:12px"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--ocean)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
           <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:700;margin-bottom:8px">Je hebt ${liked.length} vakantie${liked.length > 1 ? 's' : ''} bewaard!</h2>
           <p style="font-size:14px;color:var(--stone);margin-bottom:28px">Wat wil je nu doen?</p>
 
           <button class="cta-btn" data-action="createDuoSession" style="margin-bottom:12px;background:var(--ocean)">
-            🔗 Deel met mijn partner
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> Deel met mijn partner
           </button>
           <p style="font-size:12px;color:var(--stone);margin-bottom:24px">Je partner swipt dezelfde vakanties en jullie zien de match</p>
 
@@ -1055,17 +1059,17 @@
       }
 
       if (overlapType === 'perfect') {
-        header.querySelector('.results-emoji').textContent = '💕';
+        header.querySelector('.results-emoji').innerHTML = '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--sunset)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>';
         header.querySelector('h2').textContent = 'Jullie zijn het eens!';
         sub.textContent = matchedTrips.length === 1
           ? 'Jullie hebben allebei dezelfde vakantie gekozen — perfecte match!'
           : 'Jullie hebben ' + matchedTrips.length + ' vakanties allebei leuk gevonden!';
       } else if (overlapType === 'bijna') {
-        header.querySelector('.results-emoji').textContent = '🤝';
+        header.querySelector('.results-emoji').innerHTML = '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--ocean)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>';
         header.querySelector('h2').textContent = 'Bijna een match!';
         sub.textContent = 'Jullie hebben 1 vakantie allebei leuk gevonden. Bekijk de details hieronder.';
       } else {
-        header.querySelector('.results-emoji').textContent = '🤔';
+        header.querySelector('.results-emoji').innerHTML = '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--stone)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r="0.5" fill="var(--stone)" stroke="none"/></svg>';
         header.querySelector('h2').textContent = 'Jullie smaak verschilt';
         sub.textContent = 'Geen overlap dit keer. Probeer het opnieuw met andere instellingen!';
         list.innerHTML = `
@@ -1095,18 +1099,18 @@
         card.className = 'result-card';
         card.innerHTML = `
           <div class="result-rank-banner rank-1">
-            💕 Jullie match ${matchedTrips.length > 1 ? (i + 1) : ''}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> Jullie match ${matchedTrips.length > 1 ? (i + 1) : ''}
           </div>
           <img class="result-img" src="${escapeHtml(safeUrl(trip.imageUrl))}" alt="${destSafe}">
           <div class="result-body">
             <div class="result-title">${hotelName}</div>
-            <div class="result-dest">📍 ${destSafe}</div>
+            <div class="result-dest"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> ${destSafe}</div>
             ${whyText ? `<p style="font-size:13px;color:var(--stone);margin-bottom:10px;line-height:1.5">${whyText}</p>` : ''}
             <div class="result-dims">
               <span class="dim-label">Sfeer</span><span class="dim-value">${escapeHtml(sfeerLabel)}</span>
               <span class="dim-label">Prijs</span><span class="dim-value">€${Number(v.prijs) || 0} p.p. · ${escapeHtml(v.maand)} · ${Number(v.duur) || 0} nachten</span>
               <span class="dim-label">Vluchtduur</span><span class="dim-value">${escapeHtml(trip.vluchtduur)} vanaf Schiphol</span>
-              <span class="dim-label">Boardtype</span><span class="dim-value">${escapeHtml(trip.boardType)}${starsVal ? ' · ' + escapeHtml(starsVal) + '-sterren' : ''}${ratingVal ? ' · ⭐ ' + escapeHtml(ratingVal) : ''}</span>
+              <span class="dim-label">Boardtype</span><span class="dim-value">${escapeHtml(trip.boardType)}${starsVal ? ' · ' + escapeHtml(starsVal) + '-sterren' : ''}${ratingVal ? ' · <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="vertical-align:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> ' + escapeHtml(ratingVal) : ''}</span>
               <span class="dim-label">Aanbieder</span><span class="dim-value">${aanbiederSafe}</span>
             </div>
             <div class="result-row">
