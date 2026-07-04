@@ -860,6 +860,14 @@
       currentTrips = currentTrips.concat(extra);
       currentIndex = currentTrips.length - extra.length;
 
+      // Herstel knoppen die door showPostSwipeChoice verborgen waren
+      var actions = document.querySelector('.swipe-actions');
+      var undo = document.querySelector('.undo-wrap');
+      if (actions) actions.style.display = '';
+      if (undo) undo.style.display = '';
+      var counter = document.getElementById('swipeCounter');
+      if (counter) counter.style.display = '';
+
       setProgress(100, 'Meer opties', null);
       showScreen('screen-swipe');
       renderCards();
@@ -1234,6 +1242,14 @@
       prefs.duur = null;
       likedTags = {};
       dislikedTags = {};
+
+      // Herstel swipe-knoppen voor volgende sessie
+      var actions = document.querySelector('.swipe-actions');
+      var undo = document.querySelector('.undo-wrap');
+      if (actions) actions.style.display = '';
+      if (undo) undo.style.display = '';
+      var counter = document.getElementById('swipeCounter');
+      if (counter) counter.style.display = '';
 
       document.querySelectorAll('.sfeer-card, .option-btn, .period-btn, .duur-btn')
         .forEach(el => el.classList.remove('selected'));
