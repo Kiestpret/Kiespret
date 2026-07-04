@@ -975,7 +975,7 @@
           'resort': 'Resort & comfort', 'comfort': 'Resort & comfort', 'allinclusive': 'Resort & comfort'
         };
         const sfeerLabel = dp.sfeer ? dp.sfeer.map(s => sfeerMap[s] || s).filter((v,i,a) => a.indexOf(v) === i).join(', ') : '';
-        const maandMap = { mei: 'mei', jun: 'juni', jul: 'juli', aug: 'augustus', sep: 'september', okt: 'oktober' };
+        const maandMap = { mei: 'mei', jun: 'juni', jul: 'juli', aug: 'augustus', sep: 'september', okt: 'oktober', nov: 'november', dec: 'december' };
         const maanden = dp.maanden ? dp.maanden.map(m => maandMap[m] || m).join(', ') : '';
         const budgetLabel = dp.budgetMax === 9999 ? 'geen limiet' : 'tot €' + dp.budgetMax + ' p.p.';
         const duurLabel = dp.duur === 0 ? 'flexibel' : dp.duur + ' nachten';
