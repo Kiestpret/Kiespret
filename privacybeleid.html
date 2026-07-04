@@ -32,6 +32,25 @@
       --night: #1A1A1A;
       --stone: #666666;
       --border: #E8E8E4;
+      /* Radius tokens */
+      --radius-s: 8px;
+      --radius-m: 12px;
+      --radius-l: 16px;
+      --radius-xl: 24px;
+
+      /* Type scale */
+      --text-xs: 12px;
+      --text-sm: 13px;
+      --text-base: 14px;
+      --text-md: 16px;
+      --text-lg: 18px;
+      --text-xl: 22px;
+      --text-display: clamp(26px, 5vw, 40px);
+
+      /* Shadow levels */
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --shadow-lg: 0 16px 48px rgba(0,0,0,0.15);
     }
     html { scroll-behavior: smooth; }
     body {
@@ -51,14 +70,14 @@
     }
     .nav-logo {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 20px; font-weight: 800;
+      font-size: var(--text-xl); font-weight: 800;
       color: var(--night); text-decoration: none; letter-spacing: -0.3px;
     }
     .nav-logo span { color: var(--sunset); }
     .nav-cta {
       background: var(--sunset); color: #fff; border: none;
-      padding: 8px 18px; border-radius: 10px;
-      font-size: 14px; font-weight: 600;
+      padding: 8px 18px; border-radius: var(--radius-m);
+      font-size: var(--text-base); font-weight: 600;
       font-family: 'DM Sans', sans-serif; cursor: pointer;
       transition: opacity 0.15s; text-decoration: none;
     }
@@ -76,26 +95,26 @@
       margin-bottom: 8px;
     }
     .page-updated {
-      font-size: 13px;
+      font-size: var(--text-sm);
       color: var(--stone);
       margin-bottom: 32px;
     }
     .page-content h2 {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 18px;
+      font-size: var(--text-lg);
       font-weight: 700;
       margin-top: 32px;
       margin-bottom: 8px;
     }
     .page-content p {
-      font-size: 15px;
+      font-size: var(--text-md);
       color: var(--night);
       line-height: 1.7;
       margin-bottom: 12px;
     }
     .page-content ul {
       margin: 8px 0 16px 20px;
-      font-size: 15px;
+      font-size: var(--text-md);
       line-height: 1.7;
       color: var(--night);
     }
@@ -108,10 +127,10 @@
     }
     footer .footer-logo {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 8px;
+      font-size: var(--text-md); font-weight: 700; color: #fff; margin-bottom: 8px;
     }
     footer .footer-logo span { color: var(--sunset); }
-    footer p { font-size: 12px; color: #555; margin-bottom: 4px; line-height: 1.6; }
+    footer p { font-size: var(--text-xs); color: #555; margin-bottom: 4px; line-height: 1.6; }
     footer a { color: #777; text-decoration: none; }
     footer a:hover { color: #aaa; }
   </style>

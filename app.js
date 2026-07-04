@@ -686,19 +686,23 @@
           <div class="result-body">
             <div class="result-title">${hotelName}</div>
             <div class="result-dest"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> ${destSafe}</div>
-            ${whyText ? `<p style="font-size:13px;color:var(--stone);margin-bottom:10px;line-height:1.5">${whyText}</p>` : ''}
+            ${ratingVal ? `<div class="result-rating"><svg width="13" height="13" viewBox="0 0 24 24" fill="var(--sunset)" stroke="none" style="vertical-align:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> ${escapeHtml(ratingVal)} gastenscore</div>` : ''}
+            ${whyText ? `<p style="font-size:var(--text-sm);color:var(--stone);margin-bottom:10px;line-height:1.5">${whyText}</p>` : ''}
             <div class="result-dims">
               <span class="dim-label">Sfeer</span><span class="dim-value">${escapeHtml(sfeerLabel)}</span>
               <span class="dim-label">Prijs</span><span class="dim-value">€${Number(v.prijs) || 0} p.p. · ${escapeHtml(v.maand)} · ${Number(v.duur) || 0} nachten</span>
               <span class="dim-label">Vluchtduur</span><span class="dim-value">${escapeHtml(trip.vluchtduur)} vanaf Schiphol</span>
-              <span class="dim-label">Boardtype</span><span class="dim-value">${escapeHtml(trip.boardType)}${starsVal ? ' · ' + escapeHtml(starsVal) + '-sterren' : ''}${ratingVal ? ' · <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="vertical-align:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> ' + escapeHtml(ratingVal) : ''}</span>
+              <span class="dim-label">Boardtype</span><span class="dim-value">${escapeHtml(trip.boardType)}${starsVal ? ' · ' + escapeHtml(starsVal) + '-sterren' : ''}</span>
               <span class="dim-label">Aanbieder</span><span class="dim-value">${aanbiederSafe}</span>
             </div>
             <div class="result-row">
               <div class="result-price">€${Number(v.prijs) || 0}<small> p.p.</small></div>
-              <button class="book-btn" data-book-btn>
-                Bekijk bij ${aanbiederSafe} →
-              </button>
+              <div class="result-cta-wrap">
+                <button class="book-btn" data-book-btn>
+                  Bekijk bij ${aanbiederSafe} →
+                </button>
+                <span class="result-cta-sub">Alle foto's, kamertypes en actuele prijzen</span>
+              </div>
             </div>
           </div>`;
         // Wire click handler via JS (geen inline onclick → geen string-injection risk)
@@ -711,27 +715,38 @@
       });
     }
 
-    // Bouwplan: redactioneel advies genereren
+    // Redactioneel advies — altijd gebaseerd op top3[0] (= kaart #1)
     function generateAdvice(top3) {
-      const cheapest = top3.reduce((a, b) =>
-        a.matchedVariant.prijs < b.matchedVariant.prijs ? a : b);
-      const bestMatch = top3.reduce((a, b) =>
-        (a.tagScore || 0) > (b.tagScore || 0) ? a : b);
+      var winner = top3[0];
 
-      // Use hotelName and destination for specificity
+      // Label: hotelnaam + bestemming, maar dedupliceer als de plaatsnaam al in de hotelnaam zit
       function tripLabel(trip) {
-        const hotel = trip.hotelName || trip.title || '';
-        const dest = (trip.destination || '').split(',')[0].trim();
-        return hotel + (dest ? ' in ' + dest : '');
+        var hotel = trip.hotelName || trip.title || '';
+        var dest = (trip.destination || '').split(',')[0].trim();
+        if (!dest || hotel.toLowerCase().indexOf(dest.toLowerCase()) !== -1) return hotel;
+        return hotel + ' in ' + dest;
       }
 
-      const bestRating = extractRating(bestMatch);
-      const ratingNote = bestRating ? ' en gastwaardering ' + bestRating : '';
+      var winnerLabel = escapeHtml(tripLabel(winner));
+      var winnerPrijs = Number(winner.matchedVariant.prijs) || 0;
+      var winnerRating = extractRating(winner);
 
-      if (cheapest.id !== bestMatch.id) {
-        return `Als prijs belangrijker is: <strong>${escapeHtml(tripLabel(cheapest))}</strong> (€${Number(cheapest.matchedVariant.prijs) || 0} p.p.). Voor de beste sfeer-match: <strong>${escapeHtml(tripLabel(bestMatch))}</strong>${escapeHtml(ratingNote)}.`;
+      // Zoek goedkoopste als die verschilt van de winnaar
+      var cheapest = top3.reduce(function(a, b) {
+        return a.matchedVariant.prijs < b.matchedVariant.prijs ? a : b;
+      });
+
+      if (cheapest.id !== winner.id) {
+        var cheapLabel = escapeHtml(tripLabel(cheapest));
+        var cheapPrijs = Number(cheapest.matchedVariant.prijs) || 0;
+        var ratingPart = winnerRating ? ' (gastwaardering ' + escapeHtml(winnerRating) + ')' : '';
+        return '<strong>' + winnerLabel + '</strong>' + ratingPart + ' past het beste bij jullie swipe‑patroon (€' + winnerPrijs + ' p.p.). Voordeliger alternatief: <strong>' + cheapLabel + '</strong> (€' + cheapPrijs + ' p.p.).';
       }
-      return `<strong>${escapeHtml(tripLabel(bestMatch))}</strong> heeft de beste combinatie van prijs (€${Number(bestMatch.matchedVariant.prijs) || 0})${escapeHtml(ratingNote)} — de sterkste keuze.`;
+
+      // Winnaar is ook de goedkoopste
+      var parts = ['€' + winnerPrijs + ' p.p.'];
+      if (winnerRating) parts.push('gastwaardering ' + escapeHtml(winnerRating));
+      return '<strong>' + winnerLabel + '</strong> scoort het best op jullie voorkeuren (' + parts.join(', ') + ').';
     }
 
     // ── OUTBOUND MODAL (bouwplan: tussenstap voor affiliate klik) ──────────
@@ -808,7 +823,7 @@
         // Toon optie om door te swipen met extra kaarten
         document.getElementById('confidenceThanks').innerHTML = `
           <p style="margin-bottom:12px">Geen probleem! We kunnen meer opties laden.</p>
-          <button class="cta-btn" data-action="loadMoreTrips" style="max-width:300px;margin:0 auto;font-size:14px">
+          <button class="cta-btn" data-action="loadMoreTrips" style="max-width:300px;margin:0 auto;font-size:var(--text-base)">
             Bekijk meer vakanties →
           </button>
         `;
@@ -852,22 +867,28 @@
 
     // ── POST-SWIPE KEUZE: duo of solo ──────────────────────────────────
     function showPostSwipeChoice() {
+      var actions = document.querySelector('.swipe-actions');
+      var undo = document.querySelector('.undo-wrap');
+      if (actions) actions.style.display = 'none';
+      if (undo) undo.style.display = 'none';
+      var counter = document.getElementById('swipeCounter');
+      if (counter) counter.style.display = 'none';
       const stack = document.getElementById('cardStack');
       stack.innerHTML = `
         <div style="text-align:center;padding:32px 16px">
           <div style="margin-bottom:12px"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--ocean)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
-          <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:700;margin-bottom:8px">Je hebt ${liked.length} vakantie${liked.length > 1 ? 's' : ''} bewaard!</h2>
-          <p style="font-size:14px;color:var(--stone);margin-bottom:28px">Wat wil je nu doen?</p>
+          <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:var(--text-xl);font-weight:700;margin-bottom:8px">Je hebt ${liked.length} vakantie${liked.length > 1 ? 's' : ''} bewaard!</h2>
+          <p style="font-size:var(--text-base);color:var(--stone);margin-bottom:28px">Wat wil je nu doen?</p>
 
           <button class="cta-btn" data-action="createDuoSession" style="margin-bottom:12px;background:var(--ocean)">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> Deel met mijn partner
           </button>
-          <p style="font-size:12px;color:var(--stone);margin-bottom:24px">Je partner swipt dezelfde vakanties en jullie zien de match</p>
+          <p style="font-size:var(--text-xs);color:var(--stone);margin-bottom:24px">Je partner swipt dezelfde vakanties en jullie zien de match</p>
 
           <button class="cta-btn" data-action="showResults" style="background:var(--sunset)">
             Bekijk mijn top 3 →
           </button>
-          <p style="font-size:12px;color:var(--stone);margin-top:4px">Ga direct naar je resultaten (solo)</p>
+          <p style="font-size:var(--text-xs);color:var(--stone);margin-top:4px">Ga direct naar je resultaten (solo)</p>
         </div>`;
     }
 
@@ -1105,19 +1126,23 @@
           <div class="result-body">
             <div class="result-title">${hotelName}</div>
             <div class="result-dest"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> ${destSafe}</div>
-            ${whyText ? `<p style="font-size:13px;color:var(--stone);margin-bottom:10px;line-height:1.5">${whyText}</p>` : ''}
+            ${ratingVal ? `<div class="result-rating"><svg width="13" height="13" viewBox="0 0 24 24" fill="var(--sunset)" stroke="none" style="vertical-align:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> ${escapeHtml(ratingVal)} gastenscore</div>` : ''}
+            ${whyText ? `<p style="font-size:var(--text-sm);color:var(--stone);margin-bottom:10px;line-height:1.5">${whyText}</p>` : ''}
             <div class="result-dims">
               <span class="dim-label">Sfeer</span><span class="dim-value">${escapeHtml(sfeerLabel)}</span>
               <span class="dim-label">Prijs</span><span class="dim-value">€${Number(v.prijs) || 0} p.p. · ${escapeHtml(v.maand)} · ${Number(v.duur) || 0} nachten</span>
               <span class="dim-label">Vluchtduur</span><span class="dim-value">${escapeHtml(trip.vluchtduur)} vanaf Schiphol</span>
-              <span class="dim-label">Boardtype</span><span class="dim-value">${escapeHtml(trip.boardType)}${starsVal ? ' · ' + escapeHtml(starsVal) + '-sterren' : ''}${ratingVal ? ' · <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="vertical-align:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> ' + escapeHtml(ratingVal) : ''}</span>
+              <span class="dim-label">Boardtype</span><span class="dim-value">${escapeHtml(trip.boardType)}${starsVal ? ' · ' + escapeHtml(starsVal) + '-sterren' : ''}</span>
               <span class="dim-label">Aanbieder</span><span class="dim-value">${aanbiederSafe}</span>
             </div>
             <div class="result-row">
               <div class="result-price">€${Number(v.prijs) || 0}<small> p.p.</small></div>
-              <button class="book-btn" data-book-btn>
-                Bekijk bij ${aanbiederSafe} →
-              </button>
+              <div class="result-cta-wrap">
+                <button class="book-btn" data-book-btn>
+                  Bekijk bij ${aanbiederSafe} →
+                </button>
+                <span class="result-cta-sub">Alle foto's, kamertypes en actuele prijzen</span>
+              </div>
             </div>
           </div>`;
         const bookBtn = card.querySelector('[data-book-btn]');

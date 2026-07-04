@@ -57,6 +57,25 @@
       --night: #1A1A1A;
       --stone: #666666;
       --border: #E8E8E4;
+      /* Radius tokens */
+      --radius-s: 8px;
+      --radius-m: 12px;
+      --radius-l: 16px;
+      --radius-xl: 24px;
+
+      /* Type scale */
+      --text-xs: 12px;
+      --text-sm: 13px;
+      --text-base: 14px;
+      --text-md: 16px;
+      --text-lg: 18px;
+      --text-xl: 22px;
+      --text-display: clamp(26px, 5vw, 40px);
+
+      /* Shadow levels */
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --shadow-lg: 0 16px 48px rgba(0,0,0,0.15);
     }
     html { scroll-behavior: smooth; }
     body {
@@ -76,14 +95,14 @@
     }
     .nav-logo {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 20px; font-weight: 800;
+      font-size: var(--text-xl); font-weight: 800;
       color: var(--night); text-decoration: none; letter-spacing: -0.3px;
     }
     .nav-logo span { color: var(--sunset); }
     .nav-cta {
       background: var(--sunset); color: #fff; border: none;
-      padding: 8px 18px; border-radius: 10px;
-      font-size: 14px; font-weight: 600;
+      padding: 8px 18px; border-radius: var(--radius-m);
+      font-size: var(--text-base); font-weight: 600;
       font-family: 'DM Sans', sans-serif; cursor: pointer;
       transition: opacity 0.15s; text-decoration: none;
     }
@@ -102,25 +121,25 @@
     }
     .page-content h2 {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 18px;
+      font-size: var(--text-lg);
       font-weight: 700;
       margin-top: 32px;
       margin-bottom: 8px;
     }
     .page-content p {
-      font-size: 15px;
+      font-size: var(--text-md);
       color: var(--night);
       line-height: 1.7;
       margin-bottom: 12px;
     }
     .highlight-box {
       background: var(--sunset-light);
-      border-radius: 14px;
+      border-radius: var(--radius-l);
       padding: 24px;
       margin: 28px 0;
     }
     .highlight-box p {
-      font-size: 16px;
+      font-size: var(--text-md);
       font-weight: 500;
       color: var(--night);
       margin-bottom: 0;
@@ -137,25 +156,25 @@
       align-items: flex-start;
       background: #fff;
       padding: 18px;
-      border-radius: 12px;
+      border-radius: var(--radius-m);
       border: 1px solid var(--border);
     }
     .value-icon {
       width: 36px; height: 36px;
-      border-radius: 10px;
+      border-radius: var(--radius-m);
       background: var(--ocean-light);
       display: flex; align-items: center; justify-content: center;
-      font-size: 16px; flex-shrink: 0;
+      font-size: var(--text-md); flex-shrink: 0;
     }
     .value-title {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 15px; font-weight: 600; margin-bottom: 2px;
+      font-size: var(--text-md); font-weight: 600; margin-bottom: 2px;
     }
-    .value-desc { font-size: 14px; color: var(--stone); line-height: 1.5; }
+    .value-desc { font-size: var(--text-base); color: var(--stone); line-height: 1.5; }
 
     .contact-box {
       background: var(--shell);
-      border-radius: 14px;
+      border-radius: var(--radius-l);
       padding: 24px;
       margin-top: 32px;
     }
@@ -172,10 +191,10 @@
     }
     footer .footer-logo {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 8px;
+      font-size: var(--text-md); font-weight: 700; color: #fff; margin-bottom: 8px;
     }
     footer .footer-logo span { color: var(--sunset); }
-    footer p { font-size: 12px; color: #555; margin-bottom: 4px; line-height: 1.6; }
+    footer p { font-size: var(--text-xs); color: #555; margin-bottom: 4px; line-height: 1.6; }
     footer a { color: #777; text-decoration: none; }
     footer a:hover { color: #aaa; }
   </style>

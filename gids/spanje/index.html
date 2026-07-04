@@ -24,18 +24,18 @@
   <link rel="stylesheet" href="/gids/gids.css">
   <style>
     .hub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
-    .hub-card { background: var(--shell); border-radius: 12px; padding: 18px 20px; text-decoration: none; color: var(--night); transition: box-shadow 0.15s; }
+    .hub-card { background: var(--shell); border-radius: var(--radius-m); padding: 18px 20px; text-decoration: none; color: var(--night); transition: box-shadow 0.15s; }
     .hub-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
-    .hub-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 16px; font-weight: 700; margin: 0 0 6px; color: var(--ocean); }
-    .hub-card p { font-size: 14px; color: var(--stone); margin: 0; line-height: 1.5; }
+    .hub-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: var(--text-md); font-weight: 700; margin: 0 0 6px; color: var(--ocean); }
+    .hub-card p { font-size: var(--text-base); color: var(--stone); margin: 0; line-height: 1.5; }
     .hub-card.featured { border: 2px solid var(--sunset); }
-    .maybe-block { padding: 14px 18px; background: var(--shell); border-radius: 10px; margin-top: 16px; font-size: 14px; color: var(--stone); }
+    .maybe-block { padding: 14px 18px; background: var(--shell); border-radius: var(--radius-m); margin-top: 16px; font-size: var(--text-base); color: var(--stone); }
     .maybe-block a { color: var(--ocean); font-weight: 500; }
     @media (max-width: 600px) {
       .hub-grid { grid-template-columns: 1fr; }
-      .article h1 { font-size: 24px; } .article h2 { font-size: 18px; margin-top: 32px; }
+      .article h1 { font-size: var(--text-xl); } .article h2 { font-size: var(--text-lg); margin-top: 32px; }
       .article { padding: 24px 16px 60px; }
-      .compare-table { font-size: 13px; display: block; overflow-x: auto; }
+      .compare-table { font-size: var(--text-sm); display: block; overflow-x: auto; }
       .compare-table th, .compare-table td { padding: 8px 10px; min-width: 110px; }
     }
   </style>
@@ -101,7 +101,7 @@
   <h1>Vakantie Spanje voor koppels: welke regio past bij jullie?</h1>
   <p class="subtitle">Spanje is een van de meest veelzijdige vakantielanden voor koppels uit Nederland en Belgie. Van de Costa del Sol tot de Balearen, van tapas in Andalusie tot winterzon op de Canarische Eilanden. Maar welke regio past bij jullie? Wij vergelijken de populairste Spaanse bestemmingen op strand, sfeer, prijs en bereikbaarheid.</p>
 
-  <img src="https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=800&q=80" alt="Spaanse kustlijn met helder blauw water en rotsen" width="800" height="534" style="width:100%;height:auto;border-radius:12px;margin:20px 0;">
+  <img src="https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=800&q=80" alt="Spaanse kustlijn met helder blauw water en rotsen" width="800" height="534" style="width:100%;height:auto;border-radius: var(--radius-m);margin:20px 0;">
 
   <div class="tldr">
     <strong>Kort antwoord:</strong> Costa del Sol voor zon en betaalbaar strandresort. Costa Brava voor cultuur en strand dicht bij Barcelona. Mallorca voor eilandsfeer met variatie. Canarische Eilanden voor winterzon. Gebruik onze vergelijkingen hieronder of de <a href="/start/?sfeer=strand,zon&hint=spanje" style="color:var(--sunset);font-weight:600;">keuzehulp</a> om in 2 minuten jullie top 3 te vinden.
@@ -120,7 +120,7 @@
       <tr><td class="dim">Canarische Eilanden</td><td>Winterzon, wandelen</td><td>Ontspannen, divers</td><td>&euro;600-900 p.p.</td><td>4,5 uur</td></tr>
     </tbody>
   </table>
-  <p style="font-size:13px;color:var(--stone);margin-top:4px;">Prijzen zijn indicatief per persoon voor een week inclusief vlucht, seizoensafhankelijk.</p>
+  <p style="font-size: var(--text-sm);color:var(--stone);margin-top:4px;">Prijzen zijn indicatief per persoon voor een week inclusief vlucht, seizoensafhankelijk.</p>
 
   <div class="cta-block">
     <h3>Op zoek naar een vakantie in Spanje?</h3>
@@ -159,28 +159,28 @@
   </div>
 
   <h2>Costa del Sol: zon, strand en Andalusische steden</h2>
-  <img src="https://images.unsplash.com/photo-1509840841025-9088ba78a826?w=800&q=80" alt="Witte dorpjes aan de kust van Andalusie" width="800" height="534" loading="lazy" style="width:100%;height:auto;border-radius:12px;margin:16px 0;">
+  <img src="https://images.unsplash.com/photo-1509840841025-9088ba78a826?w=800&q=80" alt="Witte dorpjes aan de kust van Andalusie" width="800" height="534" loading="lazy" style="width:100%;height:auto;border-radius: var(--radius-m);margin:16px 0;">
   <p>De Costa del Sol, de zuidkust van Spanje rond Malaga, is de populairste strandbestemming voor Nederlandse koppels. Het gebied biedt meer dan 300 dagen zon per jaar, een breed aanbod aan hotels en appartementen, en directe vluchten vanaf Schiphol en Eindhoven (2,5-3 uur).</p>
   <p>Malaga zelf is de afgelopen jaren uitgegroeid tot een culturele stad met het Picasso-museum, een levendig tapascentrum en een gerenoveerde haven. Langs de kust vind je rustigere plaatsen als Nerja (authentiek, spectaculaire balkon boven zee) en Marbella (chiquer, met de oude wijk als verborgen parel). Frigiliana, een van de mooiste witte dorpen van Andalusie, ligt op een halfuur rijden.</p>
   <p>De stranden zijn overwegend grof zand met helder water. Geen Caribisch wit poeder, maar prima om te zwemmen en te zonnen. Het seizoen loopt van mei tot oktober, met temperaturen tussen 25 en 35 graden. Het eten is een groot pluspunt: tapas vanaf 2-4 euro per portie, verse vis op strandtenten (chiringuitos) en lokale wijn voor een paar euro per glas.</p>
   <p>Indicatieve kosten: een week Costa del Sol kost indicatief 650-950 euro per persoon inclusief vlucht en verblijf, afhankelijk van seizoen en hotelkeuze. Seizoensafhankelijk.</p>
 
   <h2>Costa Brava: cultuur, natuur en strand bij Barcelona</h2>
-  <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800&q=80" alt="Rotsachtige kustlijn van de Costa Brava met turquoise water" width="800" height="534" loading="lazy" style="width:100%;height:auto;border-radius:12px;margin:16px 0;">
+  <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800&q=80" alt="Rotsachtige kustlijn van de Costa Brava met turquoise water" width="800" height="534" loading="lazy" style="width:100%;height:auto;border-radius: var(--radius-m);margin:16px 0;">
   <p>De Costa Brava is de noordoostelijke kust van Spanje, van Barcelona tot de Franse grens. Het gebied is ruwer en groener dan het zuiden: rotsachtige kliffen, verborgen baaien (calas) en pijnboombossen tot aan het water. Voor koppels die strand willen combineren met cultuur en natuur is dit een sterke keuze.</p>
   <p>Tossa de Mar en Cadaques zijn de meest fotogenieke plaatsen. Girona, op een halfuur van de kust, is een onderschatte cultuurstad met een middeleeuwse oude wijk. Het Salvador Dali-museum in Figueres trekt kunstliefhebbers. Barcelona ligt op een tot anderhalf uur rijden, wat een dagtrip haalbaar maakt.</p>
   <p>De Costa Brava is iets koeler dan het zuiden: reken op 24-30 graden in de zomer. Het water is helder maar kan fris aanvoelen in juni. Het gebied is minder massatoeristisch dan de Costa del Sol, met meer lokale restaurants en minder grote resorts.</p>
   <p>Vliegtijd naar Barcelona-El Prat: circa 2 uur vanaf Schiphol of Eindhoven. Indicatieve kosten: 700-1.000 euro p.p. per week inclusief vlucht, seizoensafhankelijk.</p>
 
   <h2>Balearen: Mallorca, Menorca en Ibiza</h2>
-  <img src="https://images.unsplash.com/photo-1570077188403-40b471c0b16a?w=800&q=80" alt="Turquoise baai op Mallorca met boten" width="800" height="534" loading="lazy" style="width:100%;height:auto;border-radius:12px;margin:16px 0;">
+  <img src="https://images.unsplash.com/photo-1570077188403-40b471c0b16a?w=800&q=80" alt="Turquoise baai op Mallorca met boten" width="800" height="534" loading="lazy" style="width:100%;height:auto;border-radius: var(--radius-m);margin:16px 0;">
   <p>De Balearen zijn de eilandengroep ten oosten van het Spaanse vasteland, met directe vluchten vanaf Schiphol en Eindhoven (circa 2,5 uur). Elk eiland heeft een eigen karakter.</p>
   <p><strong>Mallorca</strong> is het meest veelzijdige eiland: spectaculaire bergwegen door de Serra de Tramuntana, verborgen calas met turquoise water (Cala Llombards, Es Trenc), de gezellige hoofdstad Palma met winkels en restaurants, en dorpjes als Deia en Valldemossa. Mallorca past bij koppels die variatie willen en het niet erg vinden om een huurauto te huren. Indicatief: 750-1.100 euro p.p. per week.</p>
   <p><strong>Menorca</strong> is kleiner, rustiger en ongerepter. Het eiland heeft de mooiste ongerepte stranden van de Balearen (Cala Turqueta, Cala Macarella) en is ideaal voor koppels die liever natuur en rust kiezen boven nachtleven. Menorca is sinds 1993 een UNESCO-biosfeerreservaat. Indicatief: 700-1.000 euro p.p. per week.</p>
   <p><strong>Ibiza</strong> heeft twee gezichten. De zuidkant en het centrum (Playa d'en Bossa, San Antonio) zijn levendig met clubs en beachbars. De noordkant (San Juan, Portinatx) is verrassend rustig met hippiemarktjes en yogastudio's. Ibiza past bij koppels die sfeer en uitgaan waarderen, maar ook als je de rustige kant opzoekt. Wel het duurst van de drie: indicatief 800-1.200 euro p.p. per week.</p>
 
   <h2>Canarische Eilanden: winterzon en vulkaanlandschappen</h2>
-  <img src="https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&q=80" alt="Vulkaanlandschap op de Canarische Eilanden" width="800" height="534" loading="lazy" style="width:100%;height:auto;border-radius:12px;margin:16px 0;">
+  <img src="https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&q=80" alt="Vulkaanlandschap op de Canarische Eilanden" width="800" height="534" loading="lazy" style="width:100%;height:auto;border-radius: var(--radius-m);margin:16px 0;">
   <p>De Canarische Eilanden liggen voor de kust van Afrika en bieden het hele jaar door aangenaam weer: 20-28 graden, ook in de winter. Dat maakt ze de beste optie voor koppels die in november tot maart op zoek zijn naar zon. Vliegtijd: circa 4,5 uur vanaf Schiphol.</p>
   <p><strong>Tenerife</strong> is het meest bezochte eiland, met het spectaculaire vulkaanlandschap van de Teide (3.718 meter), de zwarte stranden van het zuiden en het groene noorden. <strong>Gran Canaria</strong> wordt een minicontinent genoemd vanwege de variatie: duinen (Maspalomas), bergen en koloniale stadjes. <strong>Fuerteventura</strong> heeft de langste en breedste zandstranden, ideaal als strand de topprioriteit is. <strong>Lanzarote</strong> is het meest bijzondere eiland met maanlandschappen en de kunst van Cesar Manrique.</p>
   <p>De Canarische Eilanden zijn het hele jaar bereikbaar met directe vluchten en het prijsniveau is verrassend betaalbaar: indicatief 600-900 euro p.p. per week inclusief vlucht, seizoensafhankelijk. All inclusive is hier meer gangbaar dan op het Spaanse vasteland.</p>
@@ -201,7 +201,7 @@
     <li><strong>Ibiza:</strong> 800-1.200 euro (hogere accommodatieprijzen)</li>
     <li><strong>Canarische Eilanden:</strong> 600-900 euro (betaalbaar, ook in de winter)</li>
   </ul>
-  <p style="font-size:13px;color:var(--stone);">Alle prijzen zijn indicatief en seizoensafhankelijk. Vroeg boeken (3-6 maanden van tevoren) levert vaak de beste prijzen op.</p>
+  <p style="font-size: var(--text-sm);color:var(--stone);">Alle prijzen zijn indicatief en seizoensafhankelijk. Vroeg boeken (3-6 maanden van tevoren) levert vaak de beste prijzen op.</p>
 
   <h2>Bereikbaarheid: vliegen naar Spanje</h2>
   <p>Spanje is een van de best bereikbare vakantielanden vanuit Nederland. Er zijn directe vluchten vanaf Schiphol en Eindhoven naar vrijwel alle populaire bestemmingen:</p>

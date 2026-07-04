@@ -24,16 +24,16 @@
   <link rel="stylesheet" href="/gids/gids.css">
   <style>
     .hub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
-    .hub-card { background: var(--shell); border-radius: 12px; padding: 18px 20px; text-decoration: none; color: var(--night); transition: box-shadow 0.15s; }
+    .hub-card { background: var(--shell); border-radius: var(--radius-m); padding: 18px 20px; text-decoration: none; color: var(--night); transition: box-shadow 0.15s; }
     .hub-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
-    .hub-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 16px; font-weight: 700; margin: 0 0 6px; color: var(--ocean); }
-    .hub-card p { font-size: 14px; color: var(--stone); margin: 0; line-height: 1.5; }
+    .hub-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: var(--text-md); font-weight: 700; margin: 0 0 6px; color: var(--ocean); }
+    .hub-card p { font-size: var(--text-base); color: var(--stone); margin: 0; line-height: 1.5; }
     .hub-card.featured { border: 2px solid var(--sunset); }
-    .maybe-block { padding: 14px 18px; background: var(--shell); border-radius: 10px; margin-top: 16px; font-size: 14px; color: var(--stone); }
+    .maybe-block { padding: 14px 18px; background: var(--shell); border-radius: var(--radius-m); margin-top: 16px; font-size: var(--text-base); color: var(--stone); }
     .maybe-block a { color: var(--ocean); font-weight: 500; }
     @media (max-width: 600px) {
       .hub-grid { grid-template-columns: 1fr; }
-      .article h1 { font-size: 24px; } .article h2 { font-size: 18px; margin-top: 32px; }
+      .article h1 { font-size: var(--text-xl); } .article h2 { font-size: var(--text-lg); margin-top: 32px; }
       .article { padding: 24px 16px 60px; }
     }
   </style>
