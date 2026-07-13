@@ -34,6 +34,15 @@
       .compare-table { font-size: var(--text-sm); display: block; overflow-x: auto; }
       .compare-table th, .compare-table td { padding: 8px 10px; min-width: 110px; }
     }
+    .season-bars { margin: 24px 0 32px; }
+    .season-bar-row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+    .season-label { width: 180px; flex-shrink: 0; font-size: var(--text-base); font-weight: 600; color: var(--night); }
+    .season-bar { background: linear-gradient(90deg, var(--sunset), #e8725a); border-radius: var(--radius-s); padding: 6px 12px; color: #fff; font-size: var(--text-sm); font-weight: 500; white-space: nowrap; min-width: fit-content; }
+    @media (max-width: 600px) {
+      .season-bar-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+      .season-label { width: auto; }
+      .season-bar { font-size: var(--text-xs); padding: 5px 10px; }
+    }
   </style>
   <script type="application/ld+json">
   { "@context": "https://schema.org", "@type": "Article",
@@ -153,13 +162,55 @@
 
   <h2>Kroatië en Montenegro in september: rustige kusten en cultuur</h2>
   <p>September is de perfecte maand voor <a href="/gids/kroatie/">Kroatië</a>: de zomerdrukte in <a href="/gids/dubrovnik-of-split/">Dubrovnik en Split</a> is voorbij, het water is warm (23-25°C) en de temperatuur (24-28°C) is comfortabel voor stadsbezoek en strand te combineren. De Kroatische eilanden Hvar en Brač zijn in september betaalbaar en rustig — precies de sfeer die je wilt als koppel. Een week kost rond €500-850 p.p.</p>
-  <p><a href="/gids/montenegro/">Montenegro</a> is de budgetoptie: <a href="/gids/montenegro/kotor-of-budva/">Kotor en Budva</a> combineren fjordachtige landschappen met stranden, en de prijzen liggen 20-30% onder Kroatië. Het seizoen loopt in Montenegro iets korter — eind september kan het frisser zijn — maar begin tot half september is het ideaal. Twijfel? Lees de <a href="/gids/kroatie-of-montenegro/">vergelijking Kroatië of Montenegro</a> of <a href="/gids/albanie-of-kroatie/">Albanië of Kroatië</a>.</p>
+  <p><a href="/gids/montenegro/">Montenegro</a> is de budgetoptie: <a href="/gids/montenegro/kotor-of-budva/">Kotor en Budva</a> combineren fjordachtige landschappen met stranden, en de prijzen liggen 25-40% onder Kroatië. Het seizoen loopt in Montenegro iets korter — eind september kan het frisser zijn — maar begin tot half september is het ideaal. Twijfel? Lees de <a href="/gids/kroatie-of-montenegro/">vergelijking Kroatië of Montenegro</a> of <a href="/gids/albanie-of-kroatie/">Albanië of Kroatië</a>.</p>
 
   <h2>Cyprus in september: het warmste zeewater en het langste strandseizoen</h2>
   <img class="section-img" src="https://images.unsplash.com/photo-1558551649-e44c8f992010?w=780&q=80" alt="Helder blauw water aan de kust van Cyprus" loading="lazy" width="780" height="320">
   <p>Cyprus is de ultieme nazomerbestemming: nergens in de Middellandse Zee is het zeewater in september zo warm als hier. Met watertemperaturen van 26-28°C en luchttemperaturen rond de 28-32°C voelt september op Cyprus als volle zomer. Het grote verschil met andere bestemmingen: het seizoen loopt op Cyprus moeiteloos door tot ver in oktober en zelfs november — ideaal als je flexibel bent en het liefst zo laat mogelijk in het jaar naar de zon wilt.</p>
   <p>De zuidkust rond Ayia Napa en Protaras biedt de mooiste stranden met kristalhelder water, terwijl Paphos aan de westkust cultuur en natuur combineert met de kust. Limassol is de beste keuze voor koppels die strand willen combineren met uitgaan en een levendige restaurantscene. Het eiland is compact genoeg om in een week meerdere regio's te ontdekken, van de Troodosbergen met charmante wijndorpjes tot de ruige Akamas-schiereiland voor wandelingen langs verborgen baaien.</p>
   <p>Vanaf Schiphol vlieg je direct naar Larnaca in circa 4 uur met onder andere Transavia en TUI fly. De prijzen zijn vergelijkbaar met Griekenland: reken op €450-800 p.p. voor een week inclusief vlucht en verblijf. Het all-inclusive aanbod is beperkter dan in Turkije, maar er zijn voldoende resorts — vooral rond Ayia Napa en Paphos. Praktisch voordeel: er wordt op Cyprus links gereden en Engels is overal gangbaar, wat het makkelijk maakt om zelf met een huurauto het eiland te verkennen.</p>
+
+  <h2>Waar loopt het seizoen wanneer af?</h2>
+  <p>Niet overal rond de Middellandse Zee duurt het seizoen even lang. Deze balk laat zien tot wanneer je kunt rekenen op strandweer.</p>
+
+  <div class="season-bars">
+    <div class="season-bar-row">
+      <span class="season-label">Kreta &amp; Rhodos</span>
+      <div class="season-bar" style="width: 100%;" title="Tot eind oktober">
+        <span>tot eind oktober</span>
+      </div>
+    </div>
+    <div class="season-bar-row">
+      <span class="season-label">Cyprus</span>
+      <div class="season-bar" style="width: 95%;" title="Tot half oktober">
+        <span>tot half oktober</span>
+      </div>
+    </div>
+    <div class="season-bar-row">
+      <span class="season-label">Turkije (zuidkust)</span>
+      <div class="season-bar" style="width: 90%;" title="Tot begin oktober">
+        <span>tot begin oktober</span>
+      </div>
+    </div>
+    <div class="season-bar-row">
+      <span class="season-label">Kos &amp; Corfu</span>
+      <div class="season-bar" style="width: 75%;" title="Tot eind september">
+        <span>tot eind september</span>
+      </div>
+    </div>
+    <div class="season-bar-row">
+      <span class="season-label">Kroati&euml; &amp; Montenegro</span>
+      <div class="season-bar" style="width: 70%;" title="Tot half/eind september">
+        <span>tot half/eind september</span>
+      </div>
+    </div>
+    <div class="season-bar-row">
+      <span class="season-label">Kleine eilanden (Karpathos, Milos)</span>
+      <div class="season-bar" style="width: 55%;" title="Tot half september">
+        <span>tot half september</span>
+      </div>
+    </div>
+  </div>
 
   <h2>Wat kost een zonvakantie in september? Prijzen per bestemming vergeleken</h2>
   <p>September is gemiddeld 20-35% goedkoper dan augustus, en vaak ook voordeliger dan juni. De prijsdaling zit in twee factoren: het einde van de schoolvakanties en de afloop van het hoogseizoen bij touroperators. Een week all-inclusive in Turkije start in september bij grote aanbieders als Corendon vanaf circa €200 p.p. voor basislocaties en €300-450 p.p. voor 4-sterren resorts aan de Turkse Rivièra. Griekenland zit iets hoger: vanaf circa €300-500 p.p. all-inclusive. De Balearen en Italiaanse eilanden zijn duurder: €450-850 p.p., maar dan inclusief een kortere vliegtijd en meer culinaire ervaring.</p>
