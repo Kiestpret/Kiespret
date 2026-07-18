@@ -61,6 +61,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.kiespret.nl/gids/griekenland/beste-eilanden-koppels/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kiespret.nl/gids/griekenland/kos-of-rhodos-of-zakynthos/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.kiespret.nl/gids/griekenland/corfu-of-zakynthos/</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -297,6 +309,12 @@
   <url>
     <loc>https://www.kiespret.nl/gids/albanie/saranda-of-ksamil/</loc>
     <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kiespret.nl/gids/albanie/ksamil/</loc>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
