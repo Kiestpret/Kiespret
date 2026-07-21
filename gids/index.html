@@ -29,6 +29,12 @@
     .hub-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: var(--text-md); font-weight: 700; margin: 0 0 6px; color: var(--ocean); }
     .hub-card p { font-size: var(--text-base); color: var(--stone); margin: 0; line-height: 1.5; }
     .hub-card.featured { border: 2px solid var(--sunset); }
+    .index-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 26px 24px; margin: 24px 0 8px; }
+    .index-col h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: var(--text-md); font-weight: 700; margin: 0 0 10px; color: var(--night); }
+    .index-col ul { list-style: none; margin: 0; padding: 0; }
+    .index-col li { margin: 0 0 7px; line-height: 1.45; }
+    .index-col a { color: var(--stone); text-decoration: none; font-size: var(--text-base); }
+    .index-col a:hover { color: var(--ocean); text-decoration: underline; }
     .maybe-block { padding: 14px 18px; background: var(--shell); border-radius: var(--radius-m); margin-top: 16px; font-size: var(--text-base); color: var(--stone); }
     .maybe-block a { color: var(--ocean); font-weight: 500; }
     @media (max-width: 600px) {
@@ -69,7 +75,19 @@
 
 <nav>
   <a class="nav-logo" href="/"><span>k</span>iespret</a>
-  <a class="nav-gids" href="/gids/">Gids</a>
+  <div class="nav-dropdown">
+    <a class="nav-gids" href="/gids/">Gids <span class="nav-caret" aria-hidden="true">&#9662;</span></a>
+    <div class="nav-menu">
+      <a href="/gids/griekenland/">Griekenland</a>
+      <a href="/gids/turkije/">Turkije</a>
+      <a href="/gids/kroatie/">Kroati&euml;</a>
+      <a href="/gids/spanje/">Spanje</a>
+      <a href="/gids/albanie/">Albani&euml;</a>
+      <a href="/gids/montenegro/">Montenegro</a>
+      <a href="/gids/eilanden/">Eilanden</a>
+      <a class="nav-menu-all" href="/gids/">Alle gidsen &rarr;</a>
+    </div>
+  </div>
   <a class="nav-cta" href="/start/">Vind jullie top 3</a>
 </nav>
 
@@ -317,6 +335,155 @@
     <p>Kiespret toont zonvakanties die bij jullie passen als koppel.</p>
     <a class="cta-btn" href="/start/">Vind jullie perfecte zonvakantie →</a>
   </div>
+
+  <h2 id="alle-gidsen">Alle gidsen op een rij</h2>
+  <p>Alle 98 gidsen, gegroepeerd. Zoek je een land, kijk dan bij het landoverzicht; vergelijk je twee bestemmingen, kijk bij landenvergelijkingen.</p>
+  <div class="index-grid">
+    <div class="index-col">
+      <h3>Griekenland</h3>
+      <ul>
+        <li><a href="/gids/griekenland/">Griekenland als koppel (overzicht)</a></li>
+        <li><a href="/gids/griekenland/beste-eilanden-koppels/">Beste Griekse eilanden voor koppels</a></li>
+        <li><a href="/gids/griekenland/corfu-of-zakynthos/">Corfu of Zakynthos</a></li>
+        <li><a href="/gids/griekenland/eilandhoppen/">Eilandhoppen Griekenland</a></li>
+        <li><a href="/gids/griekenland/kos-of-kreta/">Kos of Kreta</a></li>
+        <li><a href="/gids/griekenland/kos-of-rhodos-of-zakynthos/">Kos, Rhodos of Zakynthos</a></li>
+        <li><a href="/gids/griekenland/kos-of-rhodos/">Kos of Rhodos</a></li>
+        <li><a href="/gids/griekenland/kreta-of-rhodos/">Kreta of Rhodos</a></li>
+        <li><a href="/gids/griekenland/lefkada-of-kefalonia/">Lefkada of Kefalonia</a></li>
+        <li><a href="/gids/griekenland/naxos-of-paros/">Naxos of Paros</a></li>
+        <li><a href="/gids/griekenland/rhodos-of-zakynthos/">Rhodos of Zakynthos</a></li>
+        <li><a href="/gids/griekenland/romantisch-grieks-eiland/">Romantisch Grieks eiland kiezen</a></li>
+        <li><a href="/gids/griekenland/rustige-eilanden/">Rustige Griekse eilanden</a></li>
+      </ul>
+    </div>
+    <div class="index-col">
+      <h3>Turkije</h3>
+      <ul>
+        <li><a href="/gids/turkije/">Turkije als koppel (overzicht)</a></li>
+        <li><a href="/gids/turkije/all-inclusive/">All inclusive Turkije</a></li>
+        <li><a href="/gids/turkije/antalya-of-side/">Antalya of Side</a></li>
+        <li><a href="/gids/turkije/beste-reistijd/">Beste reistijd Turkije</a></li>
+        <li><a href="/gids/turkije/bodrum-of-antalya/">Bodrum of Antalya</a></li>
+        <li><a href="/gids/turkije/lycische-kust/">Lycische kust Turkije</a></li>
+        <li><a href="/gids/turkije/side-of-alanya/">Side of Alanya</a></li>
+        <li><a href="/gids/turkije/strandvakantie/">Strandvakantie Turkije</a></li>
+        <li><a href="/gids/turkije/turkse-riviera/">Turkse Rivièra</a></li>
+      </ul>
+    </div>
+    <div class="index-col">
+      <h3>Kroatië</h3>
+      <ul>
+        <li><a href="/gids/kroatie/">Kroatië als koppel (overzicht)</a></li>
+        <li><a href="/gids/kroatie/beste-reistijd/">Beste reistijd Kroatië</a></li>
+        <li><a href="/gids/kroatie/eilanden/">Kroatische eilanden</a></li>
+        <li><a href="/gids/kroatie/istrie-of-dalmatie/">Istrië of Dalmatië</a></li>
+        <li><a href="/gids/kroatie/kosten/">Kosten vakantie Kroatië</a></li>
+        <li><a href="/gids/kroatie/split-of-zadar/">Split of Zadar</a></li>
+        <li><a href="/gids/kroatie/strandvakantie/">Strandvakantie Kroatië</a></li>
+      </ul>
+    </div>
+    <div class="index-col">
+      <h3>Albanië</h3>
+      <ul>
+        <li><a href="/gids/albanie/">Vakantie Albanië voor koppels (overzicht)</a></li>
+        <li><a href="/gids/albanie/albanese-riviera/">Albanese Riviera</a></li>
+        <li><a href="/gids/albanie/beste-reistijd/">Beste reistijd Albanië</a></li>
+        <li><a href="/gids/albanie/kosten/">Wat kost een vakantie naar Albanië? Concrete prijzen voor koppels</a></li>
+        <li><a href="/gids/albanie/ksamil/">Ksamil</a></li>
+        <li><a href="/gids/albanie/saranda-of-himare/">Saranda of Himarë</a></li>
+        <li><a href="/gids/albanie/saranda-of-ksamil/">Saranda of Ksamil</a></li>
+        <li><a href="/gids/albanie/strandvakantie/">Strandvakantie Albanië</a></li>
+        <li><a href="/gids/albanie/veiligheid/">Is Albanië veilig? Reisadvies voor koppels</a></li>
+      </ul>
+    </div>
+    <div class="index-col">
+      <h3>Montenegro</h3>
+      <ul>
+        <li><a href="/gids/montenegro/">Montenegro als koppel (overzicht)</a></li>
+        <li><a href="/gids/montenegro/all-inclusive/">All inclusive Montenegro</a></li>
+        <li><a href="/gids/montenegro/budva/">Budva</a></li>
+        <li><a href="/gids/montenegro/kotor-of-budva/">Kotor of Budva</a></li>
+        <li><a href="/gids/montenegro/kotor/">Kotor</a></li>
+        <li><a href="/gids/montenegro/montenegro-of-griekenland/">Montenegro of Griekenland</a></li>
+        <li><a href="/gids/montenegro/stranden/">Stranden Montenegro</a></li>
+        <li><a href="/gids/montenegro/tips/">Montenegro vakantie tips</a></li>
+      </ul>
+    </div>
+    <div class="index-col">
+      <h3>Eilanden</h3>
+      <ul>
+        <li><a href="/gids/eilanden/">Eilandvakantie als koppel (overzicht)</a></li>
+        <li><a href="/gids/eilanden/canarische-eilanden-vergelijken/">Canarische Eilanden vergelijken</a></li>
+        <li><a href="/gids/eilanden/cyprus-of-kreta/">Cyprus of Kreta</a></li>
+        <li><a href="/gids/eilanden/ibiza-of-mallorca/">Ibiza of Mallorca</a></li>
+        <li><a href="/gids/eilanden/lanzarote-of-fuerteventura/">Lanzarote of Fuerteventura</a></li>
+        <li><a href="/gids/eilanden/mallorca-of-menorca/">Mallorca of Menorca</a></li>
+        <li><a href="/gids/eilanden/malta-of-cyprus/">Malta of Cyprus</a></li>
+        <li><a href="/gids/eilanden/sicilie-of-sardinie/">Sicilië of Sardinië</a></li>
+        <li><a href="/gids/eilanden/tenerife-of-gran-canaria/">Tenerife of Gran Canaria</a></li>
+      </ul>
+    </div>
+    <div class="index-col">
+      <h3>Landenvergelijkingen</h3>
+      <ul>
+        <li><a href="/gids/albanie-of-griekenland/">Albanië of Griekenland</a></li>
+        <li><a href="/gids/albanie-of-kroatie/">Albanie of Kroatie</a></li>
+        <li><a href="/gids/albanie-of-montenegro/">Albanië of Montenegro</a></li>
+        <li><a href="/gids/curacao-of-bonaire/">Curaçao of Bonaire</a></li>
+        <li><a href="/gids/dubrovnik-of-split/">Dubrovnik of Split</a></li>
+        <li><a href="/gids/egypte-of-griekenland/">Egypte of Griekenland</a></li>
+        <li><a href="/gids/griekenland-of-italie/">Griekenland of Italië</a></li>
+        <li><a href="/gids/hurghada-of-sharm-el-sheikh/">Hurghada of Sharm el Sheikh</a></li>
+        <li><a href="/gids/kroatie-of-griekenland/">Kroatië of Griekenland</a></li>
+        <li><a href="/gids/kroatie-of-italie/">Kroatië of Italië</a></li>
+        <li><a href="/gids/kroatie-of-montenegro/">Kroatië of Montenegro</a></li>
+        <li><a href="/gids/kroatie-of-spanje/">Kroatië of Spanje</a></li>
+        <li><a href="/gids/spanje-of-griekenland/">Spanje of Griekenland</a></li>
+        <li><a href="/gids/spanje-of-turkije/">Spanje of Turkije</a></li>
+        <li><a href="/gids/turkije-of-egypte/">Turkije of Egypte</a></li>
+        <li><a href="/gids/turkije-of-griekenland/">Turkije of Griekenland</a></li>
+      </ul>
+    </div>
+    <div class="index-col">
+      <h3>Seizoen en reistijd</h3>
+      <ul>
+        <li><a href="/gids/all-inclusive-2027/">All inclusive vakantie 2027</a></li>
+        <li><a href="/gids/herfstvakantie-zon/">Herfstvakantie zon</a></li>
+        <li><a href="/gids/meivakantie-2027-zon/">Meivakantie 2027 in de zon</a></li>
+        <li><a href="/gids/wanneer-vakantie-boeken-goedkoopst/">Wanneer boek je een vakantie het goedkoopst?</a></li>
+        <li><a href="/gids/winterzon-canarische-eilanden/">Winterzon Canarische Eilanden</a></li>
+        <li><a href="/gids/zonvakantie-2027/">Zonvakantie 2027</a></li>
+        <li><a href="/gids/zonvakantie-augustus/">Zonvakantie augustus</a></li>
+        <li><a href="/gids/zonvakantie-juli/">Zonvakantie juli</a></li>
+        <li><a href="/gids/zonvakantie-juni/">Zonvakantie juni 2027</a></li>
+        <li><a href="/gids/zonvakantie-mei/">Zonvakantie in mei</a></li>
+        <li><a href="/gids/zonvakantie-november/">Zonvakantie november</a></li>
+        <li><a href="/gids/zonvakantie-oktober/">Zonvakantie oktober</a></li>
+        <li><a href="/gids/zonvakantie-september/">Zonvakantie september</a></li>
+      </ul>
+    </div>
+    <div class="index-col">
+      <h3>Thema en type</h3>
+      <ul>
+        <li><a href="/gids/adults-only-all-inclusive/">Adults only all inclusive</a></li>
+        <li><a href="/gids/adults-only-griekenland/">Adults only vakantie Griekenland</a></li>
+        <li><a href="/gids/adults-only-hotel-griekenland/">Adults only hotels in Griekenland</a></li>
+        <li><a href="/gids/adults-only-spanje/">Adults only vakantie Spanje</a></li>
+        <li><a href="/gids/adults-only-turkije/">Adults only vakantie Turkije</a></li>
+        <li><a href="/gids/adults-only/">Adults only zonvakantie voor koppels</a></li>
+        <li><a href="/gids/goedkope-zonvakantie/">Goedkope zonvakantie 2027</a></li>
+        <li><a href="/gids/methodologie/">Hoe Kiespret vergelijkt</a></li>
+        <li><a href="/gids/romantische-vakantie-europa/">Romantische vakantie in Europa</a></li>
+        <li><a href="/gids/samen-vakantie-kiezen/">Samen vakantie kiezen</a></li>
+        <li><a href="/gids/spanje/">Vakantie Spanje voor koppels</a></li>
+        <li><a href="/gids/vakantie-twee-personen/">Vakantie met z&#x27;n tweeën</a></li>
+        <li><a href="/gids/vakantie-zonder-kinderen/">Vakantie zonder kinderen</a></li>
+        <li><a href="/gids/welke-vakantie-past-bij-mij/">Welke vakantie past bij mij? Keuzehulp voor koppels</a></li>
+      </ul>
+    </div>
+  </div>
+
 </article>
 
 <footer>
