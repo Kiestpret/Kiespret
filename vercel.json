@@ -2,17 +2,62 @@
   "cleanUrls": true,
   "trailingSlash": true,
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" }
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    }
   ],
   "redirects": [
-    { "source": "/index.html", "destination": "/", "statusCode": 301 },
-    { "source": "/app", "destination": "/start/", "statusCode": 301 },
-    { "source": "/app/", "destination": "/start/", "statusCode": 301 },
-    { "source": "/app.html", "destination": "/start/", "statusCode": 301 },
-    { "source": "/gids/montenegro/montenegro-of-kroatie/", "destination": "/gids/kroatie-of-montenegro/", "statusCode": 301 },
-    { "source": "/gids/montenegro/montenegro-of-kroatie", "destination": "/gids/kroatie-of-montenegro/", "statusCode": 301 },
-    { "source": "/gids/montenegro/montenegro-of-albanie/", "destination": "/gids/albanie-of-montenegro/", "statusCode": 301 },
-    { "source": "/gids/montenegro/montenegro-of-albanie", "destination": "/gids/albanie-of-montenegro/", "statusCode": 301 }
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/app",
+      "destination": "/start/",
+      "statusCode": 301
+    },
+    {
+      "source": "/app/",
+      "destination": "/start/",
+      "statusCode": 301
+    },
+    {
+      "source": "/app.html",
+      "destination": "/start/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gids/montenegro/montenegro-of-kroatie/",
+      "destination": "/gids/kroatie-of-montenegro/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gids/montenegro/montenegro-of-kroatie",
+      "destination": "/gids/kroatie-of-montenegro/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gids/montenegro/montenegro-of-albanie/",
+      "destination": "/gids/albanie-of-montenegro/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gids/montenegro/montenegro-of-albanie",
+      "destination": "/gids/albanie-of-montenegro/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gids/turkije/turkse-riviera",
+      "destination": "/gids/turkije/lycische-kust/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gids/turkije/turkse-riviera/",
+      "destination": "/gids/turkije/lycische-kust/",
+      "statusCode": 301
+    }
   ],
   "headers": [
     {
