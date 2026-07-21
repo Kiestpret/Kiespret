@@ -54,17 +54,20 @@ Vuistregel: **de Albanese Rivièra en de Adriatische kust zijn overwegend kiezel
 
 Schrijfregel: noem bij veerboten **altijd beide boottypes**; "30 minuten" alleen is onjuist.
 
-## 3b. Griekse ferryprijzen — OPEN, NOG TE HARMONISEREN
+## 3b. Griekse ferryprijzen (geverifieerd juli 2026)
 
-Vier pagina's noemen vier verschillende prijsbeelden voor dezelfde overtochten. Niet gebruiken tot dit is uitgezocht en hier vastgelegd.
+Altijd **per persoon, enkele reis**, en altijd het boottype erbij noemen — "de ferry kost X" zonder type is misleidend, want highspeed is grofweg het dubbele.
 
-| Pagina | Wat er nu staat |
-|---|---|
-| griekenland-of-italie | €10-45 p.p. per overtocht |
-| griekenland/eilandhoppen | €50-80+ per overtocht |
-| griekenland/romantisch-grieks-eiland | €40-60 highspeed / €20-25 regulier |
+| Traject | Reguliere veerboot | Highspeed-catamaran |
+|---|---|---|
+| Algemeen bereik (alle routes) | €10-45 | €50-80+ |
+| Naxos – Paros (kort) | €10-15 | — |
+| Santorini – Naxos | €30-35 (ca. 2 uur) | €55-60 (ca. 1u20) |
+| Athene (Piraeus) – Santorini | €40-45 | €60-80 |
+| Saranda – Korfu | €19-22 (70-90 min) | idem tarief, 30 min |
 
-Te doen: per traject vastleggen met twee kolommen (**regulier** vs. **highspeed**), bijvoorbeeld Athene (Piraeus)–Santorini, Naxos–Paros, Corfu–Saranda. Daarna alle vier de pagina's hierop aansluiten.
+Operators: Blue Star Ferries (regulier), Seajets (highspeed). Prijzen lopen in juli-augustus iets op.
+Bron: Ferryhopper/Direct Ferries, gecontroleerd juli 2026.
 
 ## 4. Prijsankers
 
