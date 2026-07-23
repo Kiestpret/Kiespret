@@ -487,6 +487,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.kiespret.nl/gids/montenegro/montenegro-of-albanie/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kiespret.nl/gids/montenegro/montenegro-of-kroatie/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.kiespret.nl/gids/montenegro/tips/</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -545,6 +557,12 @@
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kiespret.nl/gids/hotelreviews/corendon-mangrove-beach-resort/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.kiespret.nl/gids/spanje-of-turkije/</loc>

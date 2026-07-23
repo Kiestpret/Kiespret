@@ -283,6 +283,68 @@ nav {
 .related-links a { color: var(--ocean); text-decoration: none; font-size: var(--text-md); font-weight: 500; }
 .related-links a:hover { text-decoration: underline; }
 
+/* ── AUTHOR BOX ── */
+.author-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 40px 0;
+  padding: 18px 22px;
+  background: var(--shell);
+  border-radius: var(--radius-l);
+}
+.author-box .avatar {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--sunset-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: var(--text-xl);
+  color: var(--sunset);
+}
+.author-box .author-text { font-size: var(--text-base); line-height: 1.5; }
+.author-box .author-name { font-weight: 700; color: var(--night); }
+.author-box .author-bio { color: var(--stone); margin: 2px 0 0; }
+.author-box a { color: var(--ocean); font-weight: 500; text-decoration: none; }
+.author-box a:hover { text-decoration: underline; }
+
+/* ── HOTELREVIEW (herbruikbaar patroon) ── */
+.review-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 4px 0 20px; }
+.review-score { display: inline-flex; align-items: baseline; gap: 4px; background: var(--sunset); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; padding: 6px 14px; border-radius: var(--radius-m); }
+.review-score .max { font-size: var(--text-sm); font-weight: 500; opacity: .85; }
+.review-meta .review-sub { font-size: var(--text-base); color: var(--stone); }
+.pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+.pros, .cons { padding: 16px 20px; border-radius: var(--radius-l); }
+.pros { background: #EAF6EF; }
+.cons { background: #FBEDE8; }
+.pros h3, .cons h3 { margin: 0 0 8px; font-size: var(--text-md); }
+.pros ul, .cons ul { margin: 0; padding-left: 18px; }
+.pros li, .cons li { margin-bottom: 6px; font-size: var(--text-base); line-height: 1.45; }
+.verdict-box { padding: 18px 22px; background: var(--sunset-light); border-radius: var(--radius-l); margin: 24px 0; }
+.verdict-box strong { color: var(--sunset); }
+.review-teaser { display: flex; gap: 14px; align-items: flex-start; padding: 16px 20px; background: var(--shell); border-radius: var(--radius-l); margin: 28px 0; }
+.review-teaser .rt-score { flex: 0 0 auto; background: var(--sunset); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; padding: 6px 12px; border-radius: var(--radius-m); font-size: var(--text-md); }
+.review-teaser .rt-body { font-size: var(--text-base); line-height: 1.5; }
+.review-teaser a { color: var(--ocean); font-weight: 600; text-decoration: none; }
+.review-teaser a:hover { text-decoration: underline; }
+.disclosure { font-size: var(--text-sm); color: var(--stone); margin-top: 10px; }
+.review-media { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+.review-media figure { margin: 0; }
+.review-media video, .review-media img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-l); display: block; background: var(--shell); }
+.review-media figcaption { font-size: var(--text-sm); color: var(--stone); margin-top: 6px; text-align: center; }
+.review-media.three { grid-template-columns: 1fr 1fr 1fr; }
+.tip-box { padding: 18px 22px; background: var(--ocean-light); border-radius: var(--radius-l); margin: 24px 0; }
+.tip-box .tip-label { font-size: var(--text-sm); letter-spacing: 2px; text-transform: uppercase; color: var(--ocean); font-weight: 600; }
+.tip-box a.tip-link { color: var(--ocean); font-weight: 600; text-decoration: none; }
+.tip-box a.tip-link:hover { text-decoration: underline; }
+@media (max-width: 700px) { .review-media.three { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .pros-cons, .review-media { grid-template-columns: 1fr; } }
+
 /* ── FOOTER ── */
 footer {
   background: var(--night);
