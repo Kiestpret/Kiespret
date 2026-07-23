@@ -345,6 +345,14 @@ nav {
 @media (max-width: 700px) { .review-media.three { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .pros-cons, .review-media { grid-template-columns: 1fr; } }
 
+/* ── SEIZOENSHUB (auto-surfacing per maand) ── */
+.season-hub { margin: 8px 0 32px; padding: 20px 24px; background: var(--sunset-light); border-radius: var(--radius-l); }
+.season-hub .season-hub-kop { margin: 0 0 4px; font-size: var(--text-lg); }
+.season-hub .season-hub-sub { margin: 0 0 14px; font-size: var(--text-sm); color: var(--stone); }
+.season-hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+.season-hub-grid a { display: block; padding: 12px 16px; background: #fff; border-radius: var(--radius-m); color: var(--night); text-decoration: none; font-weight: 500; font-size: var(--text-base); }
+.season-hub-grid a:hover { color: var(--sunset); }
+
 /* ── FOOTER ── */
 footer {
   background: var(--night);
