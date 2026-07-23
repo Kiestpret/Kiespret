@@ -1,0 +1,38 @@
+/* Gids-dropdown in de nav — klik-gebaseerd, werkt op desktop, tablet en mobiel.
+   Sitebreed geladen; standaard dicht (SEO-veilig: links staan in de HTML). */
+.nav-dropdown { position: relative; display: inline-block; }
+.nav-dropdown > .nav-gids {
+  display: inline-flex; align-items: center; gap: 5px;
+  cursor: pointer; background: none; border: none; padding: 0;
+  font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; color: #666666;
+}
+.nav-dropdown > .nav-gids:hover { color: #1A1A1A; }
+.nav-caret { font-size: 0.6em; line-height: 1; transition: transform 0.18s ease; }
+.nav-dropdown.open .nav-caret { transform: rotate(180deg); }
+
+.nav-menu {
+  position: absolute; top: calc(100% + 10px); left: 0;
+  background: #fff; border: 1px solid #ececec;
+  border-radius: 12px; box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+  padding: 6px; min-width: 200px; display: flex; flex-direction: column;
+  opacity: 0; visibility: hidden; transform: translateY(-6px); pointer-events: none;
+  transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s;
+  z-index: 200;
+}
+.nav-dropdown.open .nav-menu { opacity: 1; visibility: visible; transform: none; pointer-events: auto; }
+
+.nav-menu a {
+  padding: 10px 14px; border-radius: 8px; color: #1A1A1A;
+  text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500;
+  white-space: nowrap; transition: background 0.12s;
+}
+.nav-menu a:hover { background: #F5F5F2; }
+.nav-menu .nav-menu-all {
+  color: #E07830; font-weight: 600;
+  border-top: 1px solid #ececec; margin-top: 5px; padding-top: 11px; border-radius: 0;
+}
+
+@media (max-width: 700px) {
+  .nav-dropdown { position: static; }
+  .nav-menu { left: 12px; right: 12px; min-width: 0; }
+}
