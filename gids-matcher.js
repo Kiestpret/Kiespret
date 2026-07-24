@@ -94,10 +94,19 @@
       });
       var found={};
       subset.forEach(function(t){(t.variants||[]).forEach(function(v){found[v.maand]=1;});});
-      var months=MONTH_ORDER.filter(function(m){return found[m];});
+      // Sorteer op werkelijke vertrekvolgorde vanaf nu: maanden die dit jaar al voorbij
+      // zijn schuiven naar volgend jaar (bijv. april 2027 komt ná november 2026).
+      var now=new Date().getMonth(), yr=new Date().getFullYear();
+      var idx=function(m){return MONTH_ORDER.indexOf(m);};
+      var ahead=function(m){return (idx(m)-now+12)%12;};
+      var months=Object.keys(found).sort(function(a,b){return ahead(a)-ahead(b);});
       monthRow.innerHTML='';
       if(!months.length){ monthRow.innerHTML='<span class="ghm-mhint">Voor deze bestemming maakt de maand weinig uit.</span>'; monthsBuilt=true; return; }
-      months.forEach(function(m){ var b=chip(cap(m),'ghm-sm'); b.addEventListener('click',function(){ toggle(state.maand,m,b); }); monthRow.appendChild(b); });
+      months.forEach(function(m){
+        var jaar = idx(m) < now ? yr+1 : yr;
+        var lbl = cap(m) + (jaar!==yr ? ' ’'+String(jaar).slice(2) : '');
+        var b=chip(lbl,'ghm-sm'); b.addEventListener('click',function(){ toggle(state.maand,m,b); }); monthRow.appendChild(b);
+      });
       monthsBuilt=true;
     }
 
