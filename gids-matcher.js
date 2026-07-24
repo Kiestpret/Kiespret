@@ -3,7 +3,9 @@
      data-land   = "Turkije" (of "Griekenland,Spanje")  → harde filter
      data-adults = "true" | "false"                      → harde filter (weglaten = geen filter)
    De trips-data (/trips.js) wordt PAS geladen bij de eerste labelklik → interactie-gated,
-   dus Google indexeert de commerciële hotels niet. */
+   dus Google indexeert de commerciële hotels niet.
+   NB: trips.js declareert `const trips`, wat NIET op window komt. We lezen daarom de bare
+   global `trips` via een typeof-guard, niet window.trips. */
 (function () {
   "use strict";
 
@@ -12,7 +14,6 @@
   function vluchtUren(v){ if(!v) return 99; var m=String(v).match(/(\d+)u(\d+)?/); if(!m) return 99; return parseInt(m[1],10)+(m[2]?parseInt(m[2],10)/60:0); }
   function plaats(dest){ return (dest||'').split(',')[0].trim(); }
 
-  // sfeer-labels → ranking (weglaten van land/adults: die zijn vast per gids)
   var SFEER = [
     { id:'rustig',      label:'Rustig & intiem',   w:3, test:function(t){return t.sfeer.indexOf('rustig')>-1;},  why:'rustig' },
     { id:'levendig',    label:'Levendig',          w:3, test:function(t){return t.sfeer.indexOf('rustig')===-1;}, why:'levendig' },
@@ -32,12 +33,13 @@
 
   // ---- trips lazy-loader (1x per pagina) ----
   var tripsPromise = null;
+  function currentTrips(){ return (typeof trips !== 'undefined' && Array.isArray(trips)) ? trips : null; }
   function loadTrips(){
-    if (typeof window.trips !== 'undefined') return Promise.resolve(window.trips);
+    var t = currentTrips(); if (t) return Promise.resolve(t);
     if (tripsPromise) return tripsPromise;
     tripsPromise = new Promise(function(resolve, reject){
       var s=document.createElement('script'); s.src='/trips.js';
-      s.onload=function(){ resolve(window.trips||[]); };
+      s.onload=function(){ resolve(currentTrips()||[]); };
       s.onerror=function(){ reject(new Error('trips.js kon niet laden')); };
       document.head.appendChild(s);
     });
@@ -48,6 +50,7 @@
     var lands = (root.dataset.land||'').split(',').map(function(x){return x.trim();}).filter(Boolean);
     var adults = root.dataset.adults; // "true" | "false" | undefined
     var state = { sfeer:{}, budget:null, maand:{} };
+    var monthsBuilt = false;
 
     var labelsWrap = root.querySelector('.ghm-labels');
     var goBtn = root.querySelector('.ghm-go');
@@ -58,21 +61,39 @@
 
     // sfeer (multi)
     var gS=group('Sfeer');
-    SFEER.forEach(function(w){ var b=chip(w.label); b.addEventListener('click',function(){ toggle(state.sfeer,w.id,b); }); gS._row.appendChild(b); });
+    SFEER.forEach(function(w){ var b=chip(w.label); b.addEventListener('click',function(){ ensureTrips(); toggle(state.sfeer,w.id,b); }); gS._row.appendChild(b); });
     labelsWrap.appendChild(gS);
 
     // budget (single)
     var gB=group('Budget'); var bBtns=[];
     BUDGET.forEach(function(w){ var b=chip(w.label,'ghm-budget'); bBtns.push(b);
-      b.addEventListener('click',function(){ var on=state.budget===w.id; bBtns.forEach(function(x){x.setAttribute('aria-pressed','false');}); state.budget=on?null:w.id; b.setAttribute('aria-pressed',on?'false':'true'); enableGo(); });
+      b.addEventListener('click',function(){ ensureTrips(); var on=state.budget===w.id; bBtns.forEach(function(x){x.setAttribute('aria-pressed','false');}); state.budget=on?null:w.id; b.setAttribute('aria-pressed',on?'false':'true'); enableGo(); });
       gB._row.appendChild(b); });
     labelsWrap.appendChild(gB);
 
-    // maand (multi) — placeholder tot trips geladen; vullen we na eerste load, maar we
-    // tonen alvast de meest voorkomende reismaanden statisch zodat de gebruiker kan kiezen.
-    var gM=group('Wanneer'); gM._row.innerHTML=''; var monthsReady=false;
-    ['mei','juni','juli','september','oktober'].forEach(function(m){ var b=chip(cap(m),'ghm-sm'); b.addEventListener('click',function(){ toggle(state.maand,m,b); }); gM._row.appendChild(b); });
+    // maand (multi) — dynamisch gevuld zodra trips geladen zijn (echte maanden uit dit aanbod)
+    var gM=group('Wanneer'); var monthRow=gM._row;
+    monthRow.innerHTML='<span class="ghm-mhint">Kies hierboven iets — dan verschijnen de beschikbare maanden.</span>';
     labelsWrap.appendChild(gM);
+
+    function buildMonths(allTrips){
+      if(monthsBuilt) return;
+      var subset=allTrips.filter(function(t){
+        if(lands.length && !lands.some(function(l){return (t.destination||'').indexOf(l)>-1;})) return false;
+        if(adults==='true' && t.adultsOnly!==true) return false;
+        if(adults==='false' && t.adultsOnly===true) return false;
+        return true;
+      });
+      var found={};
+      subset.forEach(function(t){(t.variants||[]).forEach(function(v){found[v.maand]=1;});});
+      var months=MONTH_ORDER.filter(function(m){return found[m];});
+      monthRow.innerHTML='';
+      if(!months.length){ monthRow.innerHTML='<span class="ghm-mhint">Voor deze bestemming maakt de maand weinig uit.</span>'; monthsBuilt=true; return; }
+      months.forEach(function(m){ var b=chip(cap(m),'ghm-sm'); b.addEventListener('click',function(){ toggle(state.maand,m,b); }); monthRow.appendChild(b); });
+      monthsBuilt=true;
+    }
+
+    function ensureTrips(){ loadTrips().then(function(all){ buildMonths(all); }).catch(function(){}); }
 
     function toggle(bag,key,btn){ if(bag[key]){delete bag[key];btn.setAttribute('aria-pressed','false');} else {bag[key]=true;btn.setAttribute('aria-pressed','true');} enableGo(); }
     function count(){ return Object.keys(state.sfeer).length + (state.budget?1:0) + Object.keys(state.maand).length; }
@@ -81,9 +102,10 @@
 
     goBtn.addEventListener('click', function(){
       goBtn.disabled=true; goBtn.textContent='Even zoeken…';
-      loadTrips().then(function(trips){
+      loadTrips().then(function(all){
+        buildMonths(all);
         goBtn.textContent='Toon passende hotels'; goBtn.disabled=false;
-        render(trips);
+        render(all);
       }).catch(function(){ resBox.hidden=false; resBox.innerHTML='<p class="ghm-empty">De hotels konden even niet laden. Probeer het zo nog eens.</p>'; goBtn.textContent='Toon passende hotels'; goBtn.disabled=false; });
     });
 
@@ -95,11 +117,11 @@
       return vs[0];
     }
 
-    function match(trips){
+    function match(allTrips){
       var cap = state.budget ? (BUDGET.filter(function(b){return b.id===state.budget;})[0].cap) : 99999;
       var sfeerSel = SFEER.filter(function(w){ return state.sfeer[w.id]; });
       var out=[];
-      trips.forEach(function(t){
+      allTrips.forEach(function(t){
         if(lands.length && !lands.some(function(l){ return (t.destination||'').indexOf(l)>-1; })) return;
         if(adults==='true' && t.adultsOnly!==true) return;
         if(adults==='false' && t.adultsOnly===true) return;
@@ -111,7 +133,6 @@
         out.push({ t:t, v:v, score:score, rate:rate, why:why });
       });
       out.sort(function(a,b){ return b.score-a.score || b.rate-a.rate || a.v.prijs-b.v.prijs; });
-      // max 2 per plaats voor variatie
       var per={}, res=[];
       out.forEach(function(s){ var p=plaats(s.t.destination); per[p]=(per[p]||0)+1; if(per[p]<=2) res.push(s); });
       return res;
@@ -126,13 +147,13 @@
       return zin;
     }
 
-    function render(trips){
-      var res=match(trips);
+    function render(allTrips){
+      var res=match(allTrips);
       resBox.hidden=false;
       if(!res.length){ resBox.innerHTML='<p class="ghm-empty">Met deze combinatie vonden we niks. Laat een label of maand los — dan tonen we de dichtstbijzijnde matches.</p>'; resBox.scrollIntoView({behavior:'smooth',block:'nearest'}); return; }
       var top=res.slice(0,3);
       var html='<div class="ghm-advies">'+advies(top)+'</div>';
-      top.forEach(function(s,i){
+      top.forEach(function(s){
         var t=s.t, v=s.v, vIdx=t.variants.indexOf(v);
         var why=s.why.filter(function(x,idx,a){return a.indexOf(x)===idx;}).slice(0,4).map(function(x){return '<span>'+esc(x)+'</span>';}).join('');
         html+='<div class="ghm-card">'+

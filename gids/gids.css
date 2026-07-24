@@ -407,3 +407,4 @@ footer a:hover { color: #aaa; }
 .ghm-foot { color: var(--stone); font-size: var(--text-sm); margin: 10px 2px 0; }
 .ghm-empty { color: var(--stone); font-size: var(--text-base); }
 @media (max-width: 560px){ .ghm { padding: 18px 16px; } .ghm-card img { width: 92px; } }
+.ghm-mhint { color: var(--stone); font-size: var(--text-sm); }
