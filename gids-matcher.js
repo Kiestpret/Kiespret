@@ -14,15 +14,19 @@
   function vluchtUren(v){ if(!v) return 99; var m=String(v).match(/(\d+)u(\d+)?/); if(!m) return 99; return parseInt(m[1],10)+(m[2]?parseInt(m[2],10)/60:0); }
   function plaats(dest){ return (dest||'').split(',')[0].trim(); }
 
+  // Volledige pool. Per pagina kies je via data-labels welke hiervan getoond worden
+  // (alleen de labels die binnen dat aanbod echt onderscheiden). Zonder data-labels: alles.
   var SFEER = [
-    { id:'rustig',      label:'Rustig & intiem',   w:3, test:function(t){return t.sfeer.indexOf('rustig')>-1;},  why:'rustig' },
-    { id:'levendig',    label:'Levendig',          w:3, test:function(t){return t.sfeer.indexOf('rustig')===-1;}, why:'levendig' },
-    { id:'resort',      label:'Groot resort',      w:3, test:function(t){return t.sfeer.indexOf('resort')>-1;},  why:'groot resort' },
-    { id:'natuur',      label:'Natuur & rust',     w:3, test:function(t){return t.sfeer.indexOf('natuur')>-1;},  why:'natuur' },
-    { id:'actief',      label:'Actief',            w:3, test:function(t){return t.sfeer.indexOf('actief')>-1||t.sfeer.indexOf('avontuur')>-1;}, why:'actief' },
-    { id:'wellness',    label:'Wellness',          w:2, test:function(t){return t.sfeer.indexOf('rustig')>-1||t.sfeer.indexOf('resort')>-1;}, why:'wellness' },
-    { id:'allin',       label:'Alles inclusief',   w:4, test:function(t){return t.boardType==='All-inclusive'||t.boardType==='Ultra all-inclusive';}, why:'all-inclusive' },
-    { id:'kortvliegen', label:'Kort vliegen',      w:3, test:function(t){return vluchtUren(t.vluchtduur)<=4;}, why:'korte vlucht' }
+    { id:'rustig',      label:'Rustig & intiem',       w:3, test:function(t){return t.sfeer.indexOf('rustig')>-1;},  why:'rustig' },
+    { id:'levendig',    label:'Levendig',              w:3, test:function(t){return t.sfeer.indexOf('rustig')===-1;}, why:'levendig' },
+    { id:'resort',      label:'Groot resort',          w:3, test:function(t){return t.sfeer.indexOf('resort')>-1;},  why:'groot resort' },
+    { id:'natuur',      label:'Natuur & rust',         w:3, test:function(t){return t.sfeer.indexOf('natuur')>-1;},  why:'natuur' },
+    { id:'actief',      label:'Actief',                w:3, test:function(t){return t.sfeer.indexOf('actief')>-1||t.sfeer.indexOf('avontuur')>-1;}, why:'actief' },
+    { id:'wellness',    label:'Wellness',              w:2, test:function(t){return t.sfeer.indexOf('rustig')>-1||t.sfeer.indexOf('resort')>-1;}, why:'wellness' },
+    { id:'allin',       label:'Alles inclusief',       w:4, test:function(t){return t.boardType==='All-inclusive'||t.boardType==='Ultra all-inclusive';}, why:'all-inclusive' },
+    { id:'ontdekken',   label:'Zelf uit eten',         w:4, test:function(t){return ['Ontbijt','Logies','Halfpension'].indexOf(t.boardType)>-1;}, why:'zelf ontdekken' },
+    { id:'kortvliegen', label:'Kort vliegen',          w:3, test:function(t){return vluchtUren(t.vluchtduur)<=4;}, why:'korte vlucht' },
+    { id:'verweg',      label:'Ver weg mag',           w:3, test:function(t){return vluchtUren(t.vluchtduur)>=6;}, why:'verre bestemming' }
   ];
   var BUDGET = [
     { id:'b700',  label:'Tot €700 p.p.',  cap:700 },
@@ -49,8 +53,12 @@
   function initBlock(root){
     var lands = (root.dataset.land||'').split(',').map(function(x){return x.trim();}).filter(Boolean);
     var adults = root.dataset.adults; // "true" | "false" | undefined
+    // Per-pagina labelselectie: alleen de labels die hier onderscheiden.
+    var pick = (root.dataset.labels||'').split(',').map(function(x){return x.trim();}).filter(Boolean);
+    var sfeerList = pick.length ? pick.map(function(id){ return SFEER.filter(function(w){return w.id===id;})[0]; }).filter(Boolean) : SFEER;
     var state = { sfeer:{}, budget:null, maand:{} };
     var monthsBuilt = false;
+    var revealed = false; // pas na eerste "Toon"-klik updaten we live
 
     var labelsWrap = root.querySelector('.ghm-labels');
     var goBtn = root.querySelector('.ghm-go');
@@ -59,15 +67,15 @@
     function chip(label, cls){ var b=document.createElement('button'); b.type='button'; b.className='ghm-chip '+(cls||''); b.textContent=label; b.setAttribute('aria-pressed','false'); return b; }
     function group(title){ var g=document.createElement('div'); g.className='ghm-group'; var h=document.createElement('span'); h.className='ghm-glabel'; h.textContent=title; g.appendChild(h); var row=document.createElement('div'); row.className='ghm-row'; g.appendChild(row); g._row=row; return g; }
 
-    // sfeer (multi)
+    // sfeer (multi) — alleen de per-pagina gekozen labels
     var gS=group('Sfeer');
-    SFEER.forEach(function(w){ var b=chip(w.label); b.addEventListener('click',function(){ ensureTrips(); toggle(state.sfeer,w.id,b); }); gS._row.appendChild(b); });
+    sfeerList.forEach(function(w){ var b=chip(w.label); b.addEventListener('click',function(){ ensureTrips(); toggle(state.sfeer,w.id,b); }); gS._row.appendChild(b); });
     labelsWrap.appendChild(gS);
 
     // budget (single)
     var gB=group('Budget'); var bBtns=[];
     BUDGET.forEach(function(w){ var b=chip(w.label,'ghm-budget'); bBtns.push(b);
-      b.addEventListener('click',function(){ ensureTrips(); var on=state.budget===w.id; bBtns.forEach(function(x){x.setAttribute('aria-pressed','false');}); state.budget=on?null:w.id; b.setAttribute('aria-pressed',on?'false':'true'); enableGo(); });
+      b.addEventListener('click',function(){ ensureTrips(); var on=state.budget===w.id; bBtns.forEach(function(x){x.setAttribute('aria-pressed','false');}); state.budget=on?null:w.id; b.setAttribute('aria-pressed',on?'false':'true'); enableGo(); liveUpdate(); });
       gB._row.appendChild(b); });
     labelsWrap.appendChild(gB);
 
@@ -95,9 +103,11 @@
 
     function ensureTrips(){ loadTrips().then(function(all){ buildMonths(all); }).catch(function(){}); }
 
-    function toggle(bag,key,btn){ if(bag[key]){delete bag[key];btn.setAttribute('aria-pressed','false');} else {bag[key]=true;btn.setAttribute('aria-pressed','true');} enableGo(); }
+    function toggle(bag,key,btn){ if(bag[key]){delete bag[key];btn.setAttribute('aria-pressed','false');} else {bag[key]=true;btn.setAttribute('aria-pressed','true');} enableGo(); liveUpdate(); }
     function count(){ return Object.keys(state.sfeer).length + (state.budget?1:0) + Object.keys(state.maand).length; }
     function enableGo(){ goBtn.disabled = count()===0; }
+    // Zodra de resultaten één keer getoond zijn, meteen meebewegen met elke wijziging.
+    function liveUpdate(){ if(!revealed) return; var all=currentTrips(); if(!all) return; if(count()===0){ resBox.hidden=true; return; } render(all); }
     enableGo();
 
     goBtn.addEventListener('click', function(){
@@ -148,6 +158,7 @@
     }
 
     function render(allTrips){
+      revealed=true;
       var res=match(allTrips);
       resBox.hidden=false;
       if(!res.length){ resBox.innerHTML='<p class="ghm-empty">Met deze combinatie vonden we niks. Laat een label of maand los — dan tonen we de dichtstbijzijnde matches.</p>'; resBox.scrollIntoView({behavior:'smooth',block:'nearest'}); return; }
