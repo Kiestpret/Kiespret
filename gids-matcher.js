@@ -9,6 +9,9 @@
 (function () {
   "use strict";
 
+  // Plausible-tracking via de bestaande globale wrapper (met queue). Faalt stil.
+  function track(name, props){ try{ if(typeof window.kiespretTrack==='function') window.kiespretTrack(name, props||{}); }catch(e){} }
+
   function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
   function cap(s){ return s ? s.charAt(0).toUpperCase()+s.slice(1) : s; }
   function vluchtUren(v){ if(!v) return 99; var m=String(v).match(/(\d+)u(\d+)?/); if(!m) return 99; return parseInt(m[1],10)+(m[2]?parseInt(m[2],10)/60:0); }
@@ -56,6 +59,7 @@
     // Per-pagina labelselectie: alleen de labels die hier onderscheiden.
     var pick = (root.dataset.labels||'').split(',').map(function(x){return x.trim();}).filter(Boolean);
     var sfeerList = pick.length ? pick.map(function(id){ return SFEER.filter(function(w){return w.id===id;})[0]; }).filter(Boolean) : SFEER;
+    var page = location.pathname;
     var state = { sfeer:{}, budget:null, maand:{} };
     var monthsBuilt = false;
     var revealed = false; // pas na eerste "Toon"-klik updaten we live
@@ -69,13 +73,13 @@
 
     // sfeer (multi) — alleen de per-pagina gekozen labels
     var gS=group('Sfeer');
-    sfeerList.forEach(function(w){ var b=chip(w.label); b.addEventListener('click',function(){ ensureTrips(); toggle(state.sfeer,w.id,b); }); gS._row.appendChild(b); });
+    sfeerList.forEach(function(w){ var b=chip(w.label); b.addEventListener('click',function(){ ensureTrips(); toggle(state.sfeer,w.id,b); if(state.sfeer[w.id]) track('kieshulp_label',{label:w.id, soort:'sfeer', pagina:page}); }); gS._row.appendChild(b); });
     labelsWrap.appendChild(gS);
 
     // budget (single)
     var gB=group('Budget'); var bBtns=[];
     BUDGET.forEach(function(w){ var b=chip(w.label,'ghm-budget'); bBtns.push(b);
-      b.addEventListener('click',function(){ ensureTrips(); var on=state.budget===w.id; bBtns.forEach(function(x){x.setAttribute('aria-pressed','false');}); state.budget=on?null:w.id; b.setAttribute('aria-pressed',on?'false':'true'); enableGo(); liveUpdate(); });
+      b.addEventListener('click',function(){ ensureTrips(); var on=state.budget===w.id; bBtns.forEach(function(x){x.setAttribute('aria-pressed','false');}); state.budget=on?null:w.id; b.setAttribute('aria-pressed',on?'false':'true'); enableGo(); liveUpdate(); if(state.budget) track('kieshulp_label',{label:w.id, soort:'budget', pagina:page}); });
       gB._row.appendChild(b); });
     labelsWrap.appendChild(gB);
 
@@ -105,7 +109,7 @@
       months.forEach(function(m){
         var jaar = idx(m) < now ? yr+1 : yr;
         var lbl = cap(m) + (jaar!==yr ? ' ’'+String(jaar).slice(2) : '');
-        var b=chip(lbl,'ghm-sm'); b.addEventListener('click',function(){ toggle(state.maand,m,b); }); monthRow.appendChild(b);
+        var b=chip(lbl,'ghm-sm'); b.addEventListener('click',function(){ toggle(state.maand,m,b); if(state.maand[m]) track('kieshulp_label',{label:m, soort:'maand', pagina:page}); }); monthRow.appendChild(b);
       });
       monthsBuilt=true;
     }
@@ -120,6 +124,7 @@
     enableGo();
 
     goBtn.addEventListener('click', function(){
+      track('kieshulp_zoek',{ land:root.dataset.land||'-', labels:Object.keys(state.sfeer).join('|')||'-', budget:state.budget||'-', maanden:Object.keys(state.maand).join('|')||'-', pagina:page });
       goBtn.disabled=true; goBtn.textContent='Even zoeken…';
       loadTrips().then(function(all){
         buildMonths(all);
@@ -184,13 +189,16 @@
             (why?'<p class="ghm-why"><em>past omdat:</em> '+why+'</p>':'')+
             '<div class="ghm-cbot">'+
               '<span class="ghm-price">€'+(Number(v.prijs)||0)+' <small>p.p. · '+esc(cap(v.maand))+'</small></span>'+
-              '<a class="ghm-go-link" href="/api/go?id='+encodeURIComponent(t.id)+'&v='+encodeURIComponent(vIdx>=0?vIdx:0)+'" target="_blank" rel="sponsored noopener">Bekijk bij '+esc(t.aanbieder)+' →</a>'+
+              '<a class="ghm-go-link" data-trip="'+esc(t.id)+'" data-aanbieder="'+esc(t.aanbieder)+'" href="/api/go?id='+encodeURIComponent(t.id)+'&v='+encodeURIComponent(vIdx>=0?vIdx:0)+'" target="_blank" rel="sponsored noopener">Bekijk bij '+esc(t.aanbieder)+' →</a>'+
             '</div>'+
           '</div>'+
         '</div>';
       });
       html+='<p class="ghm-foot">Prijzen en beschikbaarheid staan bij de aanbieder. Wij verdienen een kleine commissie als je boekt via onze link — jij betaalt niet meer.</p>';
       resBox.innerHTML=html;
+      [].slice.call(resBox.querySelectorAll('.ghm-go-link')).forEach(function(a){
+        a.addEventListener('click',function(){ track('kieshulp_klik',{ trip:a.getAttribute('data-trip')||'-', aanbieder:a.getAttribute('data-aanbieder')||'-', pagina:page }); });
+      });
       resBox.scrollIntoView({behavior:'smooth',block:'nearest'});
     }
   }
