@@ -322,7 +322,7 @@ nav {
 .pros, .cons { padding: 16px 20px; border-radius: var(--radius-l); }
 .pros { background: #EAF6EF; }
 .cons { background: #FBEDE8; }
-.pros h3, .cons h3 { margin: 0 0 8px; font-size: var(--text-md); }
+.pros .pc-kop, .cons .pc-kop { margin: 0 0 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: var(--text-md); }
 .pros ul, .cons ul { margin: 0; padding-left: 18px; }
 .pros li, .cons li { margin-bottom: 6px; font-size: var(--text-base); line-height: 1.45; }
 .verdict-box { padding: 18px 22px; background: var(--sunset-light); border-radius: var(--radius-l); margin: 24px 0; }

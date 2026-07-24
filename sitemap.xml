@@ -559,6 +559,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.kiespret.nl/gids/hotelreviews/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.kiespret.nl/gids/hotelreviews/corendon-mangrove-beach-resort/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
