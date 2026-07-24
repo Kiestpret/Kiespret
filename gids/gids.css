@@ -375,3 +375,35 @@ footer a:hover { color: #aaa; }
 }
 
 /* Gids-dropdown in de nav: zie /nav.css (sitebreed, klik-gebaseerd) */
+
+/* ---- Gids-matcher blok (herbruikbaar keuzeblok onderaan gidspagina's) ---- */
+.ghm { margin: 40px 0 8px; padding: 24px; border: 1px solid var(--border); border-radius: var(--radius-l); background: var(--sand); }
+.ghm h2 { margin-top: 0; }
+.ghm-intro { color: var(--stone); font-size: var(--text-base); margin: 0 0 18px; }
+.ghm-group { margin-bottom: 14px; }
+.ghm-glabel { display: block; font-size: var(--text-sm); font-weight: 700; color: var(--stone); text-transform: uppercase; letter-spacing: .03em; margin-bottom: 8px; }
+.ghm-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.ghm-chip { border: 1.5px solid var(--border); background: #fff; color: var(--night); border-radius: 999px; padding: 8px 15px; font: inherit; font-size: var(--text-base); font-weight: 600; cursor: pointer; transition: all .12s ease; line-height: 1.2; }
+.ghm-chip.ghm-sm { padding: 7px 13px; font-size: var(--text-sm); }
+.ghm-chip:hover { border-color: var(--sunset); }
+.ghm-chip[aria-pressed="true"] { background: var(--sunset); border-color: var(--sunset); color: #fff; }
+.ghm-chip.ghm-budget[aria-pressed="true"] { background: var(--ocean); border-color: var(--ocean); }
+.ghm-go { margin-top: 6px; background: var(--sunset); color: #fff; border: none; border-radius: var(--radius-m); padding: 12px 22px; font: inherit; font-weight: 700; font-size: var(--text-base); cursor: pointer; }
+.ghm-go:disabled { opacity: .45; cursor: not-allowed; }
+.ghm-results { margin-top: 22px; }
+.ghm-advies { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--sunset); border-radius: var(--radius-m); padding: 14px 16px; font-size: var(--text-md); line-height: 1.5; margin-bottom: 16px; }
+.ghm-card { display: flex; gap: 14px; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-m); overflow: hidden; margin-bottom: 12px; }
+.ghm-card img { width: 120px; height: auto; object-fit: cover; flex: none; background: #eee; }
+.ghm-cbody { padding: 12px 14px 12px 2px; flex: 1; min-width: 0; }
+.ghm-cname { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: var(--text-base); margin: 0 0 2px; }
+.ghm-cmeta { color: var(--stone); font-size: var(--text-sm); margin: 0 0 8px; }
+.ghm-why { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 10px; font-size: var(--text-sm); }
+.ghm-why em { font-style: normal; color: var(--stone); }
+.ghm-why span { background: var(--shell); border: 1px solid var(--border); border-radius: 999px; padding: 2px 9px; color: var(--night); }
+.ghm-cbot { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.ghm-price { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: var(--text-md); }
+.ghm-price small { font-weight: 500; color: var(--stone); font-size: var(--text-sm); }
+.ghm-go-link { background: var(--night); color: #fff; border-radius: var(--radius-m); padding: 8px 14px; font-weight: 700; font-size: var(--text-sm); text-decoration: none; white-space: nowrap; }
+.ghm-foot { color: var(--stone); font-size: var(--text-sm); margin: 10px 2px 0; }
+.ghm-empty { color: var(--stone); font-size: var(--text-base); }
+@media (max-width: 560px){ .ghm { padding: 18px 16px; } .ghm-card img { width: 92px; } }
