@@ -6,6 +6,9 @@ Disallow: /dashboard
 Disallow: /start/?shortlist=
 Disallow: /start/?duo=
 
+# Interne testpagina (vibe-cloud keuzehulp) — niet indexeren
+Disallow: /kieshulp-test/
+
 # AI-crawlers expliciet toestaan (GEO/AI-search readiness)
 User-agent: GPTBot
 Allow: /

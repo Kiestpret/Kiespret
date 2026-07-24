@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kieshulp (test) — Kiespret</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Interne testversie van de vibe-cloud keuzehulp. Niet voor publiek.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/gids/gids.css">
+  <style>
+    /* Fallback-waarden zodat de pagina ook standalone (zonder gids.css) rendert.
+       gids.css overschrijft deze op de live site. */
+    :root {
+      --wolk-gap: 10px;
+      --sunset: #E07830; --sunset-light: #FFF0E6;
+      --night: #1A1A1A; --stone: #666666; --border: #E8E8E4;
+      --mist: #F5F7F8; --sea: #0E7C86;
+      --radius-s: 8px; --radius-m: 12px; --radius-l: 16px; --radius-xl: 24px;
+      --text-xs: 12px; --text-sm: 13px; --text-base: 14px; --text-md: 16px;
+      --text-lg: 18px; --text-xl: 22px; --text-xxl: 28px;
+      font-family: 'DM Sans', sans-serif;
+    }
+    body { font-family: 'DM Sans', sans-serif; color: var(--night); margin: 0; }
+    .kh { max-width: 860px; margin: 0 auto; padding: 28px 18px 80px; }
+    .kh-flag { display:inline-block; background:#fff3cd; color:#8a6d00; border:1px solid #f2e2a8; font-size:var(--text-sm); font-weight:700; padding:4px 12px; border-radius:var(--radius-m); margin-bottom:14px; }
+    .kh h1 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:var(--text-xxl); margin:0 0 6px; line-height:1.15; }
+    .kh .lead { color:var(--stone); font-size:var(--text-md); margin:0 0 26px; }
+    .kh h2 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:var(--text-md); margin:30px 0 4px; }
+    .kh .hint { color:var(--stone); font-size:var(--text-base); margin:0 0 14px; }
+    .cloud { display:flex; flex-wrap:wrap; gap:var(--wolk-gap); }
+    .chip { border:1.5px solid var(--border); background:#fff; color:var(--night); border-radius:999px; padding:9px 16px; font-size:var(--text-base); font-weight:600; cursor:pointer; transition:all .12s ease; user-select:none; line-height:1.2; }
+    .chip:hover { border-color:var(--sunset); }
+    .chip[aria-pressed="true"] { background:var(--sunset); border-color:var(--sunset); color:#fff; }
+    .chip.chip-ko[aria-pressed="true"] { background:var(--night); border-color:var(--night); }
+    .chip.chip-land[aria-pressed="true"] { background:var(--sea, #0e7c86); border-color:var(--sea, #0e7c86); }
+    .month-strip { display:flex; flex-wrap:wrap; gap:8px; }
+    .chip-sm { padding:7px 13px; font-size:var(--text-sm); }
+    .wens { position:sticky; bottom:0; margin-top:30px; background:linear-gradient(180deg, rgba(255,255,255,0) 0%, #fff 22%); padding-top:16px; }
+    .wens-card { background:var(--mist,#f5f7f8); border:1px solid var(--border); border-radius:var(--radius-l); padding:16px 18px; }
+    .wens-card .wl { font-size:var(--text-sm); font-weight:700; color:var(--stone); text-transform:uppercase; letter-spacing:.03em; margin:0 0 6px; }
+    .wens-card .ws { font-family:'Plus Jakarta Sans',sans-serif; font-size:var(--text-md); font-weight:600; margin:0 0 14px; line-height:1.4; }
+    .wens-actions { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .btn-primary { background:var(--sunset); color:#fff; border:none; border-radius:var(--radius-m); padding:12px 22px; font-weight:700; font-size:var(--text-base); cursor:pointer; }
+    .btn-primary:disabled { opacity:.45; cursor:not-allowed; }
+    .btn-ghost { background:none; border:none; color:var(--stone); font-size:var(--text-base); cursor:pointer; text-decoration:underline; }
+    .results { margin-top:34px; }
+    .res-head { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:var(--text-lg); margin:0 0 4px; }
+    .res-sub { color:var(--stone); font-size:var(--text-base); margin:0 0 18px; }
+    .res-card { display:flex; gap:14px; border:1px solid var(--border); border-radius:var(--radius-l); overflow:hidden; background:#fff; margin-bottom:14px; }
+    .res-card.top { border-color:var(--sunset); box-shadow:0 4px 18px rgba(0,0,0,.06); }
+    .res-card img { width:132px; height:auto; object-fit:cover; flex:none; background:#eee; }
+    .rc-in { padding:14px 16px 14px 4px; flex:1; min-width:0; }
+    .rc-rank { display:inline-block; background:var(--sunset); color:#fff; font-size:var(--text-sm); font-weight:700; padding:1px 9px; border-radius:999px; margin-bottom:6px; }
+    .rc-name { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:var(--text-base); margin:0 0 2px; }
+    .rc-dest { color:var(--stone); font-size:var(--text-sm); margin:0 0 8px; }
+    .rc-why { display:flex; flex-wrap:wrap; gap:6px; margin:0 0 10px; }
+    .rc-why span { background:var(--mist,#f5f7f8); border:1px solid var(--border); border-radius:999px; font-size:var(--text-sm); padding:3px 9px; color:var(--night); }
+    .rc-bot { display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+    .rc-price { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:var(--text-md); }
+    .rc-price small { font-weight:500; color:var(--stone); font-size:var(--text-sm); }
+    .rc-go { background:var(--night); color:#fff; border:none; border-radius:var(--radius-m); padding:9px 15px; font-weight:700; font-size:var(--text-sm); cursor:pointer; text-decoration:none; display:inline-block; }
+    .empty { background:#fff3cd; border:1px solid #f2e2a8; border-radius:var(--radius-l); padding:16px 18px; color:#6b5600; }
+    @media (max-width:560px){ .res-card img{ width:100px; } .kh h1{ font-size:var(--text-xl); } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/"><span>k</span>iespret</a>
+  <div class="nav-dropdown">
+    <a class="nav-gids" href="/gids/">Gids <span class="nav-caret" aria-hidden="true">&#9662;</span></a>
+    <div class="nav-menu">
+      <a href="/gids/griekenland/">Griekenland</a>
+      <a href="/gids/turkije/">Turkije</a>
+      <a href="/gids/kroatie/">Kroati&euml;</a>
+      <a href="/gids/spanje/">Spanje</a>
+      <a href="/gids/albanie/">Albani&euml;</a>
+      <a href="/gids/montenegro/">Montenegro</a>
+      <a href="/gids/eilanden/">Eilanden</a>
+      <a class="nav-menu-all" href="/gids/">Alle gidsen &rarr;</a>
+    </div>
+  </div>
+  <a class="nav-cta" href="/start/">Vind jullie top 3</a>
+</nav>
+
+<main class="kh">
+  <span class="kh-flag">Interne test — niet gedeeld</span>
+  <h1>Waar hebben jullie zin in?</h1>
+  <p class="lead">Tik de woorden aan die kloppen. Hoe meer je aantikt, hoe scherper de match. Niks verplicht.</p>
+
+  <h2>De sfeer</h2>
+  <p class="hint">Kies gerust meerdere — of niks als je nog nergens aan vastzit.</p>
+  <div class="cloud" id="cloudSmaak"></div>
+
+  <h2>Al een land in gedachten?</h2>
+  <p class="hint">Optioneel. Meerdere mag — misschien twijfelen jullie nog.</p>
+  <div class="cloud" id="cloudLand"></div>
+
+  <h2>Wanneer willen jullie weg?</h2>
+  <p class="hint">Optioneel. Kies een of meer maanden.</p>
+  <div class="month-strip" id="cloudMaand"></div>
+
+  <div class="wens">
+    <div class="wens-card">
+      <p class="wl">Dit begrepen we</p>
+      <p class="ws" id="wensZin">Nog niks gekozen — tik hierboven wat woorden aan.</p>
+      <div class="wens-actions">
+        <button class="btn-primary" id="btnMatch">Toon wat past</button>
+        <button class="btn-ghost" id="btnReset">Begin opnieuw</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="results" id="results" hidden></section>
+</main>
+
+<footer>
+  <div class="footer-logo"><span>k</span>iespret</div>
+  <p>Keuzehulp voor koppels — geen boekingssite</p>
+  <p>Wij verdienen een kleine commissie als je boekt via onze link. Jij betaalt niet meer.</p>
+</footer>
+
+<script src="/trips.js"></script>
+<link rel="stylesheet" href="/nav.css">
+<script src="/nav.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var TRIPS = (typeof trips !== 'undefined') ? trips : [];
+
+  // ---------- helpers ----------
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+  function vluchtUren(v){ // "3u30" -> 3.5
+    if(!v) return 99; var m=String(v).match(/(\d+)u(\d+)?/); if(!m) return 99;
+    return parseInt(m[1],10) + (m[2]?parseInt(m[2],10)/60:0);
+  }
+  function cap(s){ return s ? s.charAt(0).toUpperCase()+s.slice(1) : s; }
+
+  // ---------- woordenlijst → signaal ----------
+  // type: ko = knock-out, r = ranking. eval(trip, ranking-context) -> bool of score-bijdrage
+  var SMAAK = [
+    { id:'rustig',      label:'Rustig aan',                 type:'r',  w:3, test:function(t){return t.sfeer.indexOf('rustig')>-1;} },
+    { id:'levendig',    label:'Lekker levendig',            type:'r',  w:3, test:function(t){return t.sfeer.indexOf('rustig')===-1;} },
+    { id:'romantisch',  label:"Romantisch met z'n tweeën",  type:'r',  w:3, test:function(t){return t.adultsOnly || t.sfeer.indexOf('rustig')>-1;} },
+    { id:'adultsonly',  label:'Adults only',                type:'ko', ko:function(t){return t.adultsOnly===true;} },
+    { id:'allin',       label:'Geen omkijken (all-in)',     type:'r',  w:5, test:function(t){return t.boardType==='All-inclusive'||t.boardType==='Ultra all-inclusive';} },
+    { id:'ontdekken',   label:'Zelf uit eten / ontdekken',  type:'r',  w:5, test:function(t){return ['Ontbijt','Logies','Halfpension'].indexOf(t.boardType)>-1;} },
+    { id:'kleinbudget', label:'Klein budget',               type:'ko', ko:function(t){return t.__v && t.__v.prijs<=600;} },
+    { id:'magkosten',   label:'Mag wat kosten',             type:'r',  w:2, test:function(t){return t.boardType==='Ultra all-inclusive'||t.sfeer.indexOf('resort')>-1;} },
+    { id:'kortvliegen', label:'Kort vliegen',               type:'r',  w:3, test:function(t){return vluchtUren(t.vluchtduur)<=4;} },
+    { id:'verweg',      label:'Ver weg mag',                type:'r',  w:3, test:function(t){return vluchtUren(t.vluchtduur)>=6;} },
+    { id:'actief',      label:'Actief / avontuur',          type:'r',  w:3, test:function(t){return t.sfeer.indexOf('actief')>-1||t.sfeer.indexOf('avontuur')>-1;} },
+    { id:'natuur',      label:'Natuur',                     type:'r',  w:3, test:function(t){return t.sfeer.indexOf('natuur')>-1;} },
+    { id:'resort',      label:'Groot resort',               type:'r',  w:3, test:function(t){return t.sfeer.indexOf('resort')>-1;} },
+    { id:'wellness',    label:'Wellness / ontspanning',     type:'r',  w:2, test:function(t){return t.sfeer.indexOf('rustig')>-1||t.sfeer.indexOf('resort')>-1;} },
+    { id:'goedeten',    label:'Goed eten',                  type:'r',  w:2, test:function(t){return t.boardType==='Ultra all-inclusive'||/Itali|Griekenland/.test(t.destination);} }
+  ];
+  // korte "past omdat"-labels per woord
+  var WHY = { rustig:'rustig', levendig:'levendig', romantisch:'romantisch', adultsonly:'adults only',
+    allin:'all-inclusive', ontdekken:'zelf ontdekken', kleinbudget:'binnen klein budget', magkosten:'wat meer luxe',
+    kortvliegen:'korte vlucht', verweg:'verre bestemming', actief:'actief', natuur:'natuur', resort:'groot resort',
+    wellness:'wellness', goedeten:'goed eten' };
+
+  var LANDEN = ['Turkije','Griekenland','Spanje','Egypte','Bulgarije','Portugal','Italië','Curaçao','Kaapverdië','Bonaire'];
+
+  // maanden uit echte feed, in kalendervolgorde
+  var MONTH_ORDER = ['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
+  var monthsInFeed = (function(){
+    var s={}; TRIPS.forEach(function(t){(t.variants||[]).forEach(function(v){s[v.maand]=1;});});
+    return MONTH_ORDER.filter(function(m){return s[m];});
+  })();
+
+  // ---------- state ----------
+  var state = { smaak:{}, land:{}, maand:{} };
+
+  // ---------- render chips ----------
+  function chip(label, cls, pressed){
+    var b=document.createElement('button');
+    b.className='chip '+cls; b.type='button'; b.textContent=label;
+    b.setAttribute('aria-pressed', pressed?'true':'false');
+    return b;
+  }
+  var cloudSmaak=document.getElementById('cloudSmaak');
+  SMAAK.forEach(function(w){
+    var b=chip(w.label, w.type==='ko'?'chip-ko':'', false);
+    b.addEventListener('click',function(){ toggle(state.smaak,w.id,b); });
+    cloudSmaak.appendChild(b);
+  });
+  var cloudLand=document.getElementById('cloudLand');
+  LANDEN.forEach(function(l){
+    var b=chip(l,'chip-land chip-sm',false);
+    b.addEventListener('click',function(){ toggle(state.land,l,b); });
+    cloudLand.appendChild(b);
+  });
+  var cloudMaand=document.getElementById('cloudMaand');
+  monthsInFeed.forEach(function(m){
+    var b=chip(cap(m),'chip-sm',false);
+    b.addEventListener('click',function(){ toggle(state.maand,m,b); });
+    cloudMaand.appendChild(b);
+  });
+
+  function toggle(bag,key,btn){
+    if(bag[key]){ delete bag[key]; btn.setAttribute('aria-pressed','false'); }
+    else { bag[key]=true; btn.setAttribute('aria-pressed','true'); }
+    updateWens();
+  }
+
+  // ---------- wens-bevestiging ----------
+  function updateWens(){
+    var smaak=Object.keys(state.smaak), land=Object.keys(state.land), maand=Object.keys(state.maand);
+    var parts=[];
+    if(smaak.length){
+      var words=smaak.map(function(id){var w=SMAAK.filter(function(x){return x.id===id;})[0];return (WHY[id]||w.label).toLowerCase();});
+      parts.push('een vakantie die <strong>'+words.join(' &middot; ')+'</strong> is');
+    }
+    if(land.length) parts.push('in <strong>'+land.join(' of ')+'</strong>');
+    if(maand.length) parts.push('in <strong>'+maand.map(cap).join(' of ')+'</strong>');
+    var el=document.getElementById('wensZin');
+    if(!parts.length){ el.textContent='Nog niks gekozen — tik hierboven wat woorden aan.'; }
+    else { el.innerHTML='Jullie zoeken '+parts.join(', ')+'.'; }
+    document.getElementById('btnMatch').disabled = (smaak.length+land.length+maand.length)===0;
+  }
+
+  // ---------- matching ----------
+  function bestVariant(trip){
+    // kies variant: filter op maand indien gekozen; anders alle. pak goedkoopste (AMS-voorkeur bij gelijk).
+    var maand=Object.keys(state.maand);
+    var vs=(trip.variants||[]).filter(function(v){ return !maand.length || maand.indexOf(v.maand)>-1; });
+    if(!vs.length) return null;
+    vs=vs.slice().sort(function(a,b){ return a.prijs-b.prijs; });
+    return vs[0];
+  }
+
+  function match(){
+    var smaakIds=Object.keys(state.smaak), lands=Object.keys(state.land);
+    var koWords=SMAAK.filter(function(w){ return w.type==='ko' && state.smaak[w.id]; });
+    var rankWords=SMAAK.filter(function(w){ return w.type==='r' && state.smaak[w.id]; });
+
+    var scored=[];
+    TRIPS.forEach(function(t){
+      // knock-out: land
+      if(lands.length){
+        var hit=lands.some(function(l){ return (t.destination||'').indexOf(l)>-1; });
+        if(!hit) return;
+      }
+      // knock-out: maand (variant moet bestaan)
+      var v=bestVariant(t);
+      if(!v) return;
+      var tt=Object.assign({},t,{__v:v});
+      // knock-out: smaak-ko's (adults-only, klein budget)
+      var koPass=koWords.every(function(w){ return w.ko(tt); });
+      if(!koPass) return;
+
+      // ranking
+      var score=0, why=[];
+      rankWords.forEach(function(w){
+        if(w.test(tt)){ score+=w.w; if(WHY[w.id]) why.push(WHY[w.id]); }
+      });
+      // ko-woorden ook als "past omdat" tonen
+      koWords.forEach(function(w){ if(WHY[w.id]) why.push(WHY[w.id]); });
+      // tie-break: lichte bonus goede reviewscore
+      var rate=parseFloat(String(t.highlights&&t.highlights.join(' ')||'').replace(',','.').match(/(\d+\.\d)/)?RegExp.$1:'0');
+      scored.push({ trip:t, v:v, score:score, reviewBonus:rate, why:why });
+    });
+
+    scored.sort(function(a,b){
+      if(b.score!==a.score) return b.score-a.score;
+      if(b.reviewBonus!==a.reviewBonus) return b.reviewBonus-a.reviewBonus;
+      return a.v.prijs-b.v.prijs;
+    });
+    // bestemmingsdiversiteit: max 2 per land
+    var perLand={}, out=[];
+    scored.forEach(function(s){
+      var land=(s.trip.destination||'').split(',').pop().trim();
+      perLand[land]=(perLand[land]||0)+1;
+      if(perLand[land]<=2) out.push(s);
+    });
+    return out;
+  }
+
+  // ---------- render results ----------
+  function renderResults(){
+    var res=match();
+    var box=document.getElementById('results');
+    box.hidden=false;
+    if(!res.length){
+      box.innerHTML='<div class="empty"><strong>Niks gevonden met deze combinatie.</strong> Probeer een woord of maand los te laten — de knock-outs (adults only, klein budget, maand, land) zijn streng.</div>';
+      box.scrollIntoView({behavior:'smooth',block:'start'}); return;
+    }
+    var top=res.slice(0,8);
+    var html='<p class="res-head">Dit past het best bij jullie</p><p class="res-sub">'+res.length+' passende vakanties gevonden. De eerste drie zijn de sterkste match.</p>';
+    top.forEach(function(s,i){
+      var t=s.trip, v=s.v, vIdx=t.variants.indexOf(v);
+      var img=esc(t.imageUrl||'');
+      var why=s.why.slice(0,4).map(function(w){return '<span>'+esc(w)+'</span>';}).join('');
+      html+='<div class="res-card'+(i<3?' top':'')+'">'+
+        (img?'<img src="'+img+'" alt="'+esc(t.hotelName||t.title)+'" loading="lazy" width="132" height="150">':'')+
+        '<div class="rc-in">'+
+          (i<3?'<span class="rc-rank">#'+(i+1)+' match</span>':'')+
+          '<p class="rc-name">'+esc(t.hotelName||t.title)+'</p>'+
+          '<p class="rc-dest">'+esc(t.destination)+' &middot; '+esc(t.boardType)+' &middot; '+esc(t.vluchtduur)+' vliegen</p>'+
+          (why?'<p class="rc-why"><em style="color:var(--stone);font-size:var(--text-sm);font-style:normal">past omdat:</em> '+why+'</p>':'')+
+          '<div class="rc-bot">'+
+            '<span class="rc-price">&euro;'+(Number(v.prijs)||0)+' <small>p.p. &middot; '+esc(cap(v.maand))+'</small></span>'+
+            '<a class="rc-go" href="/api/go?id='+encodeURIComponent(t.id)+'&v='+encodeURIComponent(vIdx>=0?vIdx:0)+'" target="_blank" rel="noopener">Bekijk bij '+esc(t.aanbieder)+' &rarr;</a>'+
+          '</div>'+
+        '</div>'+
+      '</div>';
+    });
+    box.innerHTML=html;
+    box.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+
+  document.getElementById('btnMatch').addEventListener('click', renderResults);
+  document.getElementById('btnReset').addEventListener('click', function(){
+    state={smaak:{},land:{},maand:{}};
+    document.querySelectorAll('.chip').forEach(function(b){b.setAttribute('aria-pressed','false');});
+    document.getElementById('results').hidden=true;
+    updateWens();
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  updateWens();
+})();
+</script>
+</body>
+</html>
