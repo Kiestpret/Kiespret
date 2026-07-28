@@ -933,11 +933,18 @@
           showScreen('screen-duo-wait');
           kiespretTrack('share_link_created', { method: 'duo', sessionId: duoSessionId });
         } else {
-          alert('Er ging iets mis bij het aanmaken van de sessie. Probeer het opnieuw.');
+          duoCreateFallback();
         }
       } catch (e) {
-        alert('Verbindingsfout. Controleer je internet en probeer het opnieuw.');
+        duoCreateFallback();
       }
+    }
+
+    // Vangnet: als de duo-opslag (KV) niet bereikbaar is, val terug op de
+    // client-side deel-optie zodat de knop nooit doodloopt.
+    function duoCreateFallback() {
+      showResults();
+      alert('Live samen swipen lukt nu even niet. Geen zorgen: je kunt hieronder je top 3 met je partner delen via een link.');
     }
 
     function copyDuoLink() {
