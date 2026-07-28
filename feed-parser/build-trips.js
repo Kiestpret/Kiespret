@@ -198,6 +198,21 @@ for (const trip of allTrips) {
   }
 }
 
+// Handmatige affiliate-links buiten de Corendon-feed (bijv. 333travel).
+// Deze horen niet in de swipe-deck (trips.js) maar worden wel gebruikt door
+// losse reviewpagina's via /api/go. Hier bijgehouden zodat ze een feed-rebuild
+// overleven.
+const manualAffiliates = {
+  // Villa Nautica, Paradise Island (Malediven, 5*) via 333travel/TradeTracker.
+  // Gebruikt als vergelijkbaar zusterresort op de Villa Park Sun Island review.
+  '333travel-villa-nautica-paradise-island': [
+    'https://merchant.333travel.nl/c?c=4015&m=1949941&a=509815&r=&u=https%3A%2F%2Fwww.333travel.nl%2Fmalediven%2Fstrandvakantie%2Fvilla-nautica-paradise-island'
+  ]
+};
+for (const [id, urls] of Object.entries(manualAffiliates)) {
+  if (!affiliateMap[id]) affiliateMap[id] = urls;
+}
+
 writeFileSync(affiliateMapPath, JSON.stringify(affiliateMap, null, 2), 'utf-8');
 console.log(`\n🔒 affiliate-map.json geschreven (${Object.keys(affiliateMap).length} trips met URLs)`);
 

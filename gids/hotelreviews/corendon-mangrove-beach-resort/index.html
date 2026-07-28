@@ -131,11 +131,11 @@
   <h2>Onze eigen beelden</h2>
   <div class="review-media">
     <figure>
-      <video class="lazy-video" muted loop playsinline preload="none" poster="/images/tessa/mangrove/mangrove-2-poster.jpg" aria-label="Rondje door onze hotelkamer in het Corendon Mangrove Beach Resort"><source src="/images/tessa/mangrove/mangrove-2.mp4" type="video/mp4"></video>
+      <video class="lazy-video" controls playsinline preload="none" poster="/images/tessa/mangrove/mangrove-2-poster.jpg" aria-label="Rondje door onze hotelkamer in het Corendon Mangrove Beach Resort"><source src="/images/tessa/mangrove/mangrove-2.mp4" type="video/mp4"></video>
       <figcaption>Onze kamer</figcaption>
     </figure>
     <figure>
-      <video class="lazy-video" muted loop playsinline preload="none" poster="/images/tessa/mangrove/mangrove-1-poster.jpg" aria-label="Het dessertbuffet in het Corendon Mangrove Beach Resort"><source src="/images/tessa/mangrove/mangrove-1.mp4" type="video/mp4"></video>
+      <video class="lazy-video" controls playsinline preload="none" poster="/images/tessa/mangrove/mangrove-1-poster.jpg" aria-label="Het dessertbuffet in het Corendon Mangrove Beach Resort"><source src="/images/tessa/mangrove/mangrove-1.mp4" type="video/mp4"></video>
       <figcaption>Het dessertbuffet</figcaption>
     </figure>
   </div>
@@ -197,15 +197,15 @@
   </div>
   <div class="review-media three">
     <figure>
-      <video class="lazy-video" muted loop playsinline preload="none" poster="/images/tessa/yellow-sba/sba-strand-poster.jpg" aria-label="Snorkelstrand met turquoise water op Curaçao"><source src="/images/tessa/yellow-sba/sba-strand.mp4" type="video/mp4"></video>
+      <video class="lazy-video" controls playsinline preload="none" poster="/images/tessa/yellow-sba/sba-strand-poster.jpg" aria-label="Snorkelstrand met turquoise water op Curaçao"><source src="/images/tessa/yellow-sba/sba-strand.mp4" type="video/mp4"></video>
       <figcaption>Snorkelen bij het strand</figcaption>
     </figure>
     <figure>
-      <video class="lazy-video" muted loop playsinline preload="none" poster="/images/tessa/yellow-sba/sba-blowhole-poster.jpg" aria-label="Blowhole aan de ruige noordkust van Curaçao"><source src="/images/tessa/yellow-sba/sba-blowhole.mp4" type="video/mp4"></video>
+      <video class="lazy-video" controls playsinline preload="none" poster="/images/tessa/yellow-sba/sba-blowhole-poster.jpg" aria-label="Blowhole aan de ruige noordkust van Curaçao"><source src="/images/tessa/yellow-sba/sba-blowhole.mp4" type="video/mp4"></video>
       <figcaption>Blowhole aan de noordkust</figcaption>
     </figure>
     <figure>
-      <video class="lazy-video" muted loop playsinline preload="none" poster="/images/tessa/yellow-sba/sba-mondi-poster.jpg" aria-label="Groen binnenland van Curaçao met windmolens"><source src="/images/tessa/yellow-sba/sba-mondi.mp4" type="video/mp4"></video>
+      <video class="lazy-video" controls playsinline preload="none" poster="/images/tessa/yellow-sba/sba-mondi-poster.jpg" aria-label="Groen binnenland van Curaçao met windmolens"><source src="/images/tessa/yellow-sba/sba-mondi.mp4" type="video/mp4"></video>
       <figcaption>Het groene binnenland</figcaption>
     </figure>
   </div>
@@ -222,7 +222,7 @@
       <figcaption>Klein Curaçao</figcaption>
     </figure>
     <figure>
-      <video class="lazy-video" muted loop playsinline preload="none" poster="/images/tessa/klein-curacao/kc-2-poster.jpg" aria-label="Turquoise water en wit strand op Klein Curaçao"><source src="/images/tessa/klein-curacao/kc-2.mp4" type="video/mp4"></video>
+      <video class="lazy-video" controls playsinline preload="none" poster="/images/tessa/klein-curacao/kc-2-poster.jpg" aria-label="Turquoise water en wit strand op Klein Curaçao"><source src="/images/tessa/klein-curacao/kc-2.mp4" type="video/mp4"></video>
       <figcaption>Glashelder water</figcaption>
     </figure>
   </div>
@@ -252,20 +252,6 @@
   <p style="margin-top:12px"><a href="/gids/">Gids</a> · <a href="/over/">Over Kiespret</a> · <a href="/privacybeleid/">Privacybeleid</a> · <a href="/voorwaarden/">Voorwaarden</a> · <button type="button" onclick="openCookieSettings()" style="background:none;border:none;padding:0;color:inherit;font:inherit;cursor:pointer;text-decoration:underline">Cookie-instellingen</button> · <a href="mailto:hallo@kiespret.nl">Contact</a></p>
 </footer>
 
-<script>
-(function(){
-  var vids = document.querySelectorAll('video.lazy-video');
-  if (!('IntersectionObserver' in window)) { vids.forEach(function(v){ v.play().catch(function(){}); }); return; }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      var v = e.target;
-      if (e.isIntersecting) { v.play().catch(function(){}); }
-      else { v.pause(); }
-    });
-  }, { threshold: 0.25 });
-  vids.forEach(function(v){ io.observe(v); });
-})();
-</script>
 <script src="/analytics.js"></script>
 <script src="/cookie-consent.js"></script>
 <script src="/nav.js" defer></script>
