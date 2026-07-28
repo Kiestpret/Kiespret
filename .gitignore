@@ -3,3 +3,6 @@ VacationSwipe/
 web-preview/
 *.xcodeproj
 .claude/worktrees/
+
+# Losse video-originelen (transferbestanden), niet in repo
+images/IMG_*.MOV

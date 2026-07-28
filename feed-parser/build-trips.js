@@ -207,6 +207,15 @@ const manualAffiliates = {
   // Gebruikt als vergelijkbaar zusterresort op de Villa Park Sun Island review.
   '333travel-villa-nautica-paradise-island': [
     'https://merchant.333travel.nl/c?c=4015&m=1949941&a=509815&r=&u=https%3A%2F%2Fwww.333travel.nl%2Fmalediven%2Fstrandvakantie%2Fvilla-nautica-paradise-island'
+  ],
+  // Safari-tour die de noordelijke parken (Tarangire/Serengeti/Ngorongoro) dekt,
+  // gebruikt op de eigen huwelijksreis-review (Tanzania + Zanzibar).
+  '333travel-highlights-noordelijk-tanzania': [
+    'https://merchant.333travel.nl/c?c=4015&m=1949941&a=509815&r=&u=https%3A%2F%2Fwww.333travel.nl%2Ftanzania%2Frondreis%2Fde-highlights-van-noordelijk-tanzania'
+  ],
+  // Vergelijkbaar Zanzibar-strandhotel (The Mora zelf zit niet in de feed).
+  '333travel-ocean-paradise-resort-zanzibar': [
+    'https://merchant.333travel.nl/c?c=4015&m=1949941&a=509815&r=&u=https%3A%2F%2Fwww.333travel.nl%2Ftanzania%2Fstrandvakantie%2Focean-paradise-resort'
   ]
 };
 for (const [id, urls] of Object.entries(manualAffiliates)) {

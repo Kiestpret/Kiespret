@@ -151,6 +151,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.kiespret.nl/gids/huwelijksreis/</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.kiespret.nl/gids/eilanden/malta-of-cyprus/</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -615,6 +621,12 @@
   <url>
     <loc>https://www.kiespret.nl/gids/hotelreviews/villa-park-sun-island/</loc>
     <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kiespret.nl/gids/hotelreviews/huwelijksreis-tanzania-zanzibar/</loc>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
