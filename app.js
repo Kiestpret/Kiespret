@@ -117,6 +117,20 @@
       // Event: onboarding_complete
       kiespretTrack('onboarding_complete');
 
+      // Onboarding-keuzes meten via de event-naam zelf (werkt zonder Plausible
+      // custom properties, dus op elk plan). Per keuze verschijnt een 'goal'.
+      try {
+        var _sf = prefs.sfeer || [];
+        if (_sf.indexOf('strand') > -1) kiespretTrack('kies_sfeer_strand_rust');
+        if (_sf.indexOf('resort') > -1) kiespretTrack('kies_sfeer_resort_luxe');
+        if (_sf.indexOf('actief') > -1) kiespretTrack('kies_sfeer_actief_natuur');
+        var _b = prefs.budgetMax;
+        var _bl = (!_b || _b >= 9999) ? 'geen_limiet' : ('tot_' + _b);
+        kiespretTrack('kies_budget_' + _bl);
+        (prefs.maanden || []).forEach(function (m) { kiespretTrack('kies_maand_' + m); });
+        if (prefs.airport) kiespretTrack('kies_airport_' + prefs.airport);
+      } catch (e) {}
+
       const origBudget = prefs.budgetMax;
 
       currentTrips = filterTripsCustom(prefs);
