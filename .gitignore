@@ -6,3 +6,6 @@ web-preview/
 
 # Losse video-originelen (transferbestanden), niet in repo
 images/IMG_*.MOV
+images/IMG_*.jpeg
+images/IMG_*.JPG
+images/IMG_*.jpg
