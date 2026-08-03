@@ -59,3 +59,58 @@ Elke week pakt de taak de eerstvolgende 10 pagina's uit de sitemap die nog niet 
 3. **Titellengte** `Sicilië of Sardinië: welk eiland past bij jullie? (2026) | Kiespret` is 67 tekens, iets boven de ~60-richtlijn. Niet aangepast (kleine overschrijding, geen harde fout).
 
 ---
+
+## Ronde 1, batch 2 — 2026-08-03
+
+**Gecontroleerde pagina's (sitemap-posities 11 t/m 20):**
+1. `/gids/griekenland/beste-eilanden-koppels/`
+2. `/gids/griekenland/kos-of-rhodos-of-zakynthos/`
+3. `/gids/griekenland/corfu-of-zakynthos/`
+4. `/gids/eilanden/mallorca-of-menorca/`
+5. `/gids/adults-only-hotel-griekenland/`
+6. `/gids/vakantie-zonder-kinderen/`
+7. `/gids/eilanden/ibiza-of-mallorca/`
+8. `/gids/adults-only-turkije/`
+9. `/gids/adults-only-spanje/`
+10. `/gids/zonvakantie-juni/`
+
+### Bevindingen per pagina
+
+**`/gids/griekenland/beste-eilanden-koppels/`** — 11 gedachtestreepjes vervangen (o.a. de caldera-tussenzin naar haakjes, twee zinssplitsingen met een punt, één dubbele punt bij het Naxos-eten). JSON-LD (Article/FAQPage/BreadcrumbList) geldig, FAQ-volgorde komt overeen met de `<h3>`-volgorde. Links en foto's in orde. `dateModified` 2026-07-18 → 2026-08-03.
+
+**`/gids/griekenland/kos-of-rhodos-of-zakynthos/`** — 11 gedachtestreepjes vervangen. Daarnaast één consistentiefix: in de kieshulp-uitkomst stond "(2-2,5u ferry)" terwijl het FAQ-antwoord op dezelfde pagina "per catamaran in 2 tot 2,5 uur" zegt; conform de FEITENTABEL-schrijfregel (altijd boottype erbij) gewijzigd naar "(2-2,5u per catamaran)". `dateModified` bijgewerkt naar 2026-08-03.
+
+**`/gids/griekenland/corfu-of-zakynthos/`** — 12 gedachtestreepjes vervangen (2 tabelcellen → middot; het FAQ-antwoord over de reisduur is zowel in het JSON-LD als in de zichtbare tekst identiek aangepast, dus die blijven in sync). **Fotoconflict gevonden**: `photo-1543412560-1538feff707d` staat hier als "Paleokastritsa baai, Corfu" en op `/gids/griekenland/kos-of-rhodos-of-zakynthos/` als "Turquoise baai met steile kliffen op Zakynthos". Eén van de twee alt-teksten is fout; niet gegokt, zie open punten. `dateModified` bijgewerkt naar 2026-08-03.
+
+**`/gids/eilanden/mallorca-of-menorca/`** — 8 gedachtestreepjes vervangen (2 tabelcellen → middot). Foto's (mix van eigen `/images/mallorca/`-bestanden en Unsplash) kloppen met de bijschriften, geen duplicaten. `dateModified` bijgewerkt naar 2026-08-03.
+
+**`/gids/adults-only-hotel-griekenland/`** — 11 gedachtestreepjes vervangen. Hotelprijzen (€750-1.300 p.p./week) staan niet in `FEITENTABEL.md` en zijn niet te toetsen; ongemoeid gelaten. `dateModified` bijgewerkt naar 2026-08-03.
+
+**`/gids/vakantie-zonder-kinderen/`** — 8 gedachtestreepjes vervangen. Watertemperaturen (22-26°C) staan niet in de feitentabel, niet toetsbaar. `dateModified` bijgewerkt naar 2026-08-03.
+
+**`/gids/eilanden/ibiza-of-mallorca/`** — 9 gedachtestreepjes vervangen (2 tussenzinnen naar haakjes, 2 tabelcellen → middot). `dateModified` bijgewerkt naar 2026-08-03.
+
+**`/gids/adults-only-turkije/`** — 10 gedachtestreepjes vervangen. **Feitelijke correctie**: het prijsanker voor de Turkse Rivièra stond op "±€550-800 p.p. per week met vlucht all-inclusive", terwijl `FEITENTABEL.md` €650-900 p.p. voorschrijft. Gecorrigeerd naar **±€650-900**. De Bodrum-indicatie (€700-950 p.p.) valt binnen/boven het anker en is als boutique-premium plausibel; ongemoeid gelaten. `dateModified` bijgewerkt naar 2026-08-03.
+
+**`/gids/adults-only-spanje/`** — 7 gedachtestreepjes vervangen. Spaanse prijzen staan niet in de feitentabel. `dateModified` bijgewerkt naar 2026-08-03.
+
+**`/gids/zonvakantie-juni/`** — 17 gedachtestreepjes vervangen (2 tussenzinnen naar haakjes, het FAQ-antwoord over stedenhitte in JSON-LD én zichtbare tekst identiek aangepast). **Prijsafwijking gevonden, niet aangepast**: de pagina noemt tweemaal "vanaf circa 219 euro p.p." voor een week all-inclusive Turkije (en €350-450 p.p. voor 4-sterren), terwijl het anker in `FEITENTABEL.md` €650-900 p.p. is. Zie open punten. `dateModified` bijgewerkt naar 2026-08-03.
+
+### Sitebreed resultaat deze batch
+- **104 gedachtestreepjes** vervangen over 10 pagina's. Verdeling: komma's waar het een losse bijzin was, dubbele punten waar uitleg of een opsomming volgt, haakjes bij tussenzinnen met eigen komma's, punt-splitsingen bij twee volwaardige zinnen, en een middot voor de vaste meta-labels (`Geschreven door Tessa · Maker van Kiespret`, `Keuzehulp voor koppels · geen boekingssite`) en tabelcellen. Alle 10 pagina's bevatten nu 0 gedachtestreepjes.
+- JSON-LD: alle 30 `<script type="application/ld+json">`-blokken opnieuw gevalideerd na de wijzigingen, allemaal geldige JSON.
+- FAQ-volgorde: op alle 10 pagina's komt de schema-volgorde overeen met de zichtbare `<h3>`-volgorde.
+- Interne links: 0 gebroken `href="/..."`-links gevonden.
+- Auteursnaam: overal "Tessa van Kiespret" / "Maker van Kiespret", geen achternaam zichtbaar (LinkedIn-`sameAs` blijft staan zoals afgesproken).
+- Trema's/diakrieten: geen fouten gevonden (Andalusië, Sicilië, Deià, Kaş, Málaga, Egeïsche correct).
+- Andere AI-tells: geen overmatig gebruik van "bovendien/daarnaast/kortom" (maximaal 1 per pagina).
+- Titels: 9 van de 10 ≤ 60 tekens. Meta descriptions liggen tussen 120 en 164 tekens.
+
+### Open punten (niet zelf aangepast)
+1. **Fotoconflict `photo-1543412560-1538feff707d`**: gebruikt als Corfu (Paleokastritsa) op `/gids/griekenland/corfu-of-zakynthos/` én als Zakynthos op `/gids/griekenland/kos-of-rhodos-of-zakynthos/`. Eén alt-tekst is per definitie fout. Voorstel: de foto verifiëren op Unsplash, de juiste bestemming aanhouden en de andere pagina een geverifieerde vervanger geven. Daarna vastleggen in de geverifieerde-fotolijst.
+2. **Turkije-prijsanker op `/gids/zonvakantie-juni/`**: "vanaf circa 219 euro p.p." (Mahmutlar/Alanya, Corendon) en "350-450 euro p.p." voor 4-sterren staan ver onder het anker van €650-900 p.p. uit `FEITENTABEL.md`. Beide zijn expliciet als "vanaf" en "indicatief" geformuleerd en aan een operator gekoppeld, dus niet zonder meer fout, maar de site spreekt zichzelf nu tegen (`/gids/adults-only-turkije/` zegt €650-900). Voorstel: óf de juni-prijzen optrekken naar het anker, óf het anker in `FEITENTABEL.md` verbreden naar bijvoorbeeld "€650-900 p.p. gangbaar, vanaf ±€250 p.p. bij budgetlocaties buiten de topweken" en dat overal consistent doorvoeren.
+3. **Titellengte `/gids/zonvakantie-juni/`**: "Zonvakantie juni 2027: 6 beste bestemmingen voor koppels | Kiespret" is 67 tekens. Voorstel: "Zonvakantie juni 2027: 6 bestemmingen voor koppels | Kiespret" (61) of het jaartal laten vallen.
+4. **Korte meta descriptions**: `/gids/eilanden/ibiza-of-mallorca/` (120 tekens) en `/gids/vakantie-zonder-kinderen/` (125 tekens) blijven onder de richtlijn van 150-160. Voorstel: aanvullen met een concreet onderscheidend detail (prijsindicatie of vliegtijd). Niet aangepast omdat het geen fout is.
+5. **Niet-toetsbare cijfers**: hotelprijzen (Griekenland/Spanje), watertemperaturen en vliegtijden op deze pagina's staan niet in `FEITENTABEL.md`. Overweging: watertemperaturen per bestemming en vliegtijden vanuit Nederland als extra secties aan de feitentabel toevoegen, zodat toekomstige batches ze wel kunnen toetsen.
+
+---
