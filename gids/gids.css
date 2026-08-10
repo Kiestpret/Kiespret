@@ -408,3 +408,9 @@ footer a:hover { color: #aaa; }
 .ghm-empty { color: var(--stone); font-size: var(--text-base); }
 @media (max-width: 560px){ .ghm { padding: 18px 16px; } .ghm-card img { width: 92px; } }
 .ghm-mhint { color: var(--stone); font-size: var(--text-sm); }
+.ghm-ross { margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--line, #e2e2e2); }
+.ghm-ross-kop { font-weight: 600; margin: 0 0 2px; }
+.ghm-ross-sub { color: var(--stone); font-size: var(--text-sm); margin: 0 0 10px; }
+.ghm-ross-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.ghm-ross-link { display: inline-block; padding: 8px 14px; border: 1px solid var(--ocean); border-radius: var(--radius-m); color: var(--ocean); font-weight: 500; font-size: var(--text-sm); text-decoration: none; }
+.ghm-ross-link:hover { background: var(--ocean-light); }

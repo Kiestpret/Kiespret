@@ -140,7 +140,9 @@
       dislikedTags = {};
 
       // Fallback: budget loslaten als te weinig resultaten
+      var budgetRelaxed = false;
       if (currentTrips.length < 3) {
+        if (origBudget && origBudget < 9999) budgetRelaxed = true;
         prefs.budgetMax = 9999;
         currentTrips = filterTripsCustom(prefs);
       }
@@ -177,6 +179,25 @@
         // Echt geen resultaten — toon nette melding
         showNoResults();
         return;
+      }
+
+      // Meet hoe groot het getoonde deck is (bucket in de event-naam → werkt op elk plan)
+      try {
+        var _n = currentTrips.length;
+        var _bkt = _n <= 2 ? '1_2' : (_n <= 5 ? '3_5' : (_n <= 8 ? '6_8' : '9_plus'));
+        kiespretTrack('deck_getoond_' + _bkt);
+      } catch (e) {}
+
+      // Eerlijke melding + meting als we het budget hebben moeten loslaten
+      var _bn = document.getElementById('budgetNotice');
+      if (budgetRelaxed) {
+        if (_bn) {
+          _bn.textContent = 'Binnen jullie budget vonden we er maar een paar, dus we tonen ook een paar iets duurdere opties.';
+          _bn.hidden = false;
+        }
+        try { kiespretTrack('budget_losgelaten'); } catch (e) {}
+      } else if (_bn) {
+        _bn.hidden = true;
       }
 
       setProgress(100, 'Swipen', null);
@@ -920,6 +941,10 @@
 
     // Partner A: maak duo-sessie aan na swipen
     async function createDuoSession() {
+      // Meet de intentie zelf, los van of de KV-opslag lukt — zo zien we of
+      // mensen op "Deel met mijn partner" klikken (voorheen ongemeten).
+      try { kiespretTrack('deel_partner_klik'); } catch (e) {}
+
       const top3Ids = liked.slice(0, 3).map(t => t.id);
       const allLikedIds = liked.map(t => t.id);
 
@@ -957,6 +982,9 @@
     // Vangnet: als de duo-opslag (KV) niet bereikbaar is, val terug op de
     // client-side deel-optie zodat de knop nooit doodloopt.
     function duoCreateFallback() {
+      // Meet hoe vaak de live duo-opslag (KV) faalt, zodat we 'kapot' kunnen
+      // onderscheiden van 'ongebruikt'.
+      try { kiespretTrack('deel_partner_kv_fout'); } catch (e) {}
       showResults();
       alert('Live samen swipen lukt nu even niet. Geen zorgen: je kunt hieronder je top 3 met je partner delen via een link.');
     }

@@ -38,6 +38,14 @@
   ];
   var MONTH_ORDER = ['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
 
+  // Ross Holidays: appartementen/studio's op Griekse eilanden (ander producttype
+  // dan de hotels — self-catering, geen sterren). Getoond als apart, eerlijk
+  // gelabeld blok. Per pagina geactiveerd via data-ross="corfu,zakynthos".
+  var ROSS = {
+    corfu:     { label:'Corfu',     from:1018, go:'ross-appartementen-corfu' },
+    zakynthos: { label:'Zakynthos', from:524,  go:'ross-appartementen-zakynthos' }
+  };
+
   // ---- trips lazy-loader (1x per pagina) ----
   var tripsPromise = null;
   function currentTrips(){ return (typeof trips !== 'undefined' && Array.isArray(trips)) ? trips : null; }
@@ -171,11 +179,31 @@
       return zin;
     }
 
+    // Apart, eerlijk gelabeld appartement-blok (Ross Holidays). Alleen op pagina's
+    // met data-ross. Bewust NIET vermengd met de hotels (ander producttype).
+    function rossBlock(){
+      var keys=(root.dataset.ross||'').split(',').map(function(x){return x.trim();}).filter(Boolean);
+      var items=keys.map(function(k){ var r=ROSS[k]; return r?{key:k,r:r}:null; }).filter(Boolean);
+      if(!items.length) return '';
+      var links=items.map(function(o){
+        return '<a class="ghm-ross-link" data-eiland="'+esc(o.key)+'" href="/api/go?id='+encodeURIComponent(o.r.go)+'&v=0" target="_blank" rel="sponsored noopener">'+esc(o.r.label)+' vanaf &euro;'+(Number(o.r.from)||0)+' p.p. &rarr;</a>';
+      }).join('');
+      return '<div class="ghm-ross">'+
+        '<p class="ghm-ross-kop">Liever zelfstandig, een appartement op eigen houtje?</p>'+
+        '<p class="ghm-ross-sub">Studio\'s en appartementen (zonder maaltijden) via Ross Holidays:</p>'+
+        '<div class="ghm-ross-links">'+links+'</div></div>';
+    }
+    function wireRoss(){
+      [].slice.call(resBox.querySelectorAll('.ghm-ross-link')).forEach(function(a){
+        a.addEventListener('click',function(){ track('ross_klik',{ eiland:a.getAttribute('data-eiland')||'-', pagina:page }); });
+      });
+    }
+
     function render(allTrips){
       revealed=true;
       var res=match(allTrips);
       resBox.hidden=false;
-      if(!res.length){ resBox.innerHTML='<p class="ghm-empty">Met deze combinatie vonden we niks. Laat een label of maand los — dan tonen we de dichtstbijzijnde matches.</p>'; resBox.scrollIntoView({behavior:'smooth',block:'nearest'}); return; }
+      if(!res.length){ resBox.innerHTML='<p class="ghm-empty">Met deze combinatie vonden we niks. Laat een label of maand los — dan tonen we de dichtstbijzijnde matches.</p>'+rossBlock(); wireRoss(); resBox.scrollIntoView({behavior:'smooth',block:'nearest'}); return; }
       var top=res.slice(0,3);
       var html='<div class="ghm-advies">'+advies(top)+'</div>';
       top.forEach(function(s){
@@ -195,10 +223,12 @@
         '</div>';
       });
       html+='<p class="ghm-foot">Prijzen en beschikbaarheid staan bij de aanbieder. Wij verdienen een kleine commissie als je boekt via onze link — jij betaalt niet meer.</p>';
+      html+=rossBlock();
       resBox.innerHTML=html;
       [].slice.call(resBox.querySelectorAll('.ghm-go-link')).forEach(function(a){
         a.addEventListener('click',function(){ track('kieshulp_klik',{ trip:a.getAttribute('data-trip')||'-', aanbieder:a.getAttribute('data-aanbieder')||'-', pagina:page }); });
       });
+      wireRoss();
       resBox.scrollIntoView({behavior:'smooth',block:'nearest'});
     }
   }

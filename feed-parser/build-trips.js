@@ -216,6 +216,14 @@ const manualAffiliates = {
   // Vergelijkbaar Zanzibar-strandhotel (The Mora zelf zit niet in de feed).
   '333travel-ocean-paradise-resort-zanzibar': [
     'https://merchant.333travel.nl/c?c=4015&m=1949941&a=509815&r=&u=https%3A%2F%2Fwww.333travel.nl%2Ftanzania%2Fstrandvakantie%2Focean-paradise-resort'
+  ],
+  // Ross Holidays (appartementen/studio's op Griekse eilanden) via TradeTracker.
+  // Gelinkt vanaf de vibekiezer op Griekse-eilandengidsen naar het eiland-aanbod.
+  'ross-appartementen-corfu': [
+    'https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fcorfu'
+  ],
+  'ross-appartementen-zakynthos': [
+    'https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fzakynthos'
   ]
 };
 for (const [id, urls] of Object.entries(manualAffiliates)) {

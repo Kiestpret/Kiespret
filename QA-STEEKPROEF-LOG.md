@@ -114,3 +114,60 @@ Elke week pakt de taak de eerstvolgende 10 pagina's uit de sitemap die nog niet 
 5. **Niet-toetsbare cijfers**: hotelprijzen (Griekenland/Spanje), watertemperaturen en vliegtijden op deze pagina's staan niet in `FEITENTABEL.md`. Overweging: watertemperaturen per bestemming en vliegtijden vanuit Nederland als extra secties aan de feitentabel toevoegen, zodat toekomstige batches ze wel kunnen toetsen.
 
 ---
+
+## Ronde 1, batch 3 — 2026-08-10
+
+**Gecontroleerde pagina's (sitemap-posities 21 t/m 30):**
+1. `/gids/zonvakantie-september/`
+2. `/gids/winterzon-canarische-eilanden/`
+3. `/gids/griekenland/rhodos-of-zakynthos/`
+4. `/gids/eilanden/cyprus-of-kreta/`
+5. `/gids/romantische-vakantie-europa/`
+6. `/gids/huwelijksreis/`
+7. `/gids/eilanden/malta-of-cyprus/`
+8. `/gids/dubrovnik-of-split/`
+9. `/gids/welke-vakantie-past-bij-mij/`
+10. `/gids/vakantie-twee-personen/`
+
+### Bevindingen per pagina
+
+**`/gids/zonvakantie-september/`** — 24 gedachtestreepjes vervangen, de meeste van alle pagina's in deze batch. Verdeling: 6 dubbele punten (waar uitleg volgt), 9 komma's, 2 punt-splitsingen ("Tot half oktober is het comfortabel.", "Zo gebruik je maar 5 vakantiedagen voor 9 nachten."), 2 haakjesparen (Montenegro-seizoen, "meer cultuur (Sicilië, Kroatië, Kreta)"), 2 middots (auteursregel, footer) en 1 alt-tekst herschreven naar "Rustig strand in de nazomer in september". Ook één AI-tell weggehaald: "is bovendien beperkt" → "is ook beperkt". **Prijsafwijking gevonden, niet aangepast**: tweemaal "vanaf circa €200 p.p." en "€300-450 p.p. voor 4-sterren" voor een week all-inclusive Turkije, tegenover het anker van €650-900 p.p. in `FEITENTABEL.md`. Zelfde patroon als op `/gids/zonvakantie-juni/` (batch 2). Zie open punten. `dateModified` 2026-07-14 → 2026-08-10.
+
+**`/gids/winterzon-canarische-eilanden/`** — 11 gedachtestreepjes vervangen: 7 tabelcellen → middot, 1 komma in het FAQ-antwoord over de watertemperatuur (JSON-LD), de alt-tekst van de eigen foto ("Zonsondergang op de rotskust van Tenerife, eigen foto Kiespret") en de twee vaste meta-labels. Foto's kloppen met de bijschriften (Tenerife-kust, eigen foto, Maspalomas-duinen, Timanfaya), geen duplicaten op de pagina. `dateModified` 2026-07-13 → 2026-08-10.
+
+**`/gids/griekenland/rhodos-of-zakynthos/`** — 9 gedachtestreepjes vervangen: 2 tabelcellen → middot, 2 punt-splitsingen, 1 dubbele punt bij St. Paul's Bay en de vaste labels. Het St. Paul's Bay-antwoord staat zowel in het FAQ-schema als in de zichtbare tekst en is in beide identiek aangepast, dus die blijven in sync. De kieshulp-intro is herschreven van "Tik aan wat bij jullie past — we tonen dan hotels" naar "Tik aan wat bij jullie past, dan tonen we hotels". Oppervlaktes (Rhodos 1.401 km², Zakynthos 406 km²) kloppen. `dateModified` 2026-07-13 → 2026-08-10.
+
+**`/gids/eilanden/cyprus-of-kreta/`** — 10 gedachtestreepjes vervangen: 2 tabelcellen → middot, 1 haakjespaar bij de julihitte, 2 dubbele punten, rest komma's + vaste labels. Het FAQ-antwoord over de vlucht Heraklion–Larnaca is in JSON-LD én zichtbare tekst identiek aangepast. Oppervlaktes (Kreta 8.336 km², Cyprus 9.251 km²) kloppen en zijn consistent met `/gids/eilanden/malta-of-cyprus/`. `dateModified` 2026-07-13 → 2026-08-10.
+
+**`/gids/romantische-vakantie-europa/`** — 8 gedachtestreepjes vervangen: 3 dubbele punten, 3 komma's/voegwoord ("mei of september-oktober, want in de zomer zijn de paden overvol") en de vaste labels. De 8 budgetranges in de tabel komen overeen met de bedragen in de lopende tekst. `dateModified` 2026-07-18 → 2026-08-10.
+
+**`/gids/huwelijksreis/`** — **0 gedachtestreepjes**, de enige schone pagina in deze batch. JSON-LD geldig, FAQ-volgorde komt overeen met de `<h3>`-volgorde, links in orde. Enige punt: de meta description is 208 tekens en wordt in de zoekresultaten afgekapt (zie open punten). Geen inhoudelijke wijziging, dus `dateModified` bewust op 2026-07-28 gelaten.
+
+**`/gids/eilanden/malta-of-cyprus/`** — 16 gedachtestreepjes vervangen, waarvan 9 in de "wie kiest wat"-tabel → middot. Verder 1 haakjespaar bij de julihitte, 2 dubbele punten (Ramla Bay, "micro-culturen") en 1 komma. `daarnaast` komt 1x voor, binnen de norm. `dateModified` 2026-07-14 → 2026-08-10.
+
+**`/gids/dubrovnik-of-split/`** — 3 gedachtestreepjes vervangen (1 komma + de 2 vaste labels). Prijzen gecontroleerd: de €50-70 en €35 p.p. gaan over een diner voor twee en de stadsmuurwandeling, niet over ligbedden, dus het Kroatië-ligbedanker (€15-30 per set) is hier niet van toepassing. Zlatni Rat wordt genoemd zonder strandtype-claim, dus geen conflict met de kiezel-regel uit `FEITENTABEL.md`. `dateModified` 2026-07-13 → 2026-08-10.
+
+**`/gids/welke-vakantie-past-bij-mij/`** — 4 gedachtestreepjes vervangen: de `<h2>` "Stap 1: bepaal jullie sfeer — strand, cultuur of mix" naar haakjes, 1 dubbele punt en de vaste labels. De budgettabel en de bedragen in het FAQ-schema komen overeen. `dateModified` 2026-05-05 → 2026-08-10.
+
+**`/gids/vakantie-twee-personen/`** — 4 gedachtestreepjes vervangen (1 komma, 1 dubbele punt, 2 vaste labels). De totaalbedragen per koppel (€1.000-2.400) en de p.p.-bedragen (€500-1.200) zijn intern consistent en volgen de schrijfregel "weekbudget per koppel". `dateModified` 2026-05-05 → 2026-08-10.
+
+### Sitebreed resultaat deze batch
+- **89 gedachtestreepjes** vervangen over 9 pagina's; `/gids/huwelijksreis/` was al schoon. Alle 10 pagina's staan nu op 0, ook in HTML-comments en attributen.
+- JSON-LD: alle 30 `<script type="application/ld+json">`-blokken (3 per pagina: Article, FAQPage, BreadcrumbList) opnieuw gevalideerd na de wijzigingen, allemaal geldige JSON.
+- FAQ-volgorde: op alle 10 pagina's komt de schema-volgorde overeen met de zichtbare `<h3>`-volgorde. De extra `<h3>` "Lees ook" op 6 pagina's is een sectiekop, geen FAQ-item, en verstoort de volgorde niet.
+- Interne links: 0 gebroken `href="/..."`-links.
+- Auteursnaam: overal "Tessa van Kiespret" / "Maker van Kiespret"; geen achternaam in zichtbare tekst. De LinkedIn-`sameAs` in het schema blijft staan zoals afgesproken.
+- Trema's/diakrieten: geen fouten (Kroatië, Italië, Sicilië, Sardinië, Rivièra, Brač, Šolta, Koločep, Kaş correct).
+- Andere AI-tells: na de fix op `/gids/zonvakantie-september/` komt "bovendien" nergens meer voor; "daarnaast" 1x, "kortom" en "tevens" 0x.
+- Foto's: geen enkele pagina heeft twee identieke zichtbare foto's. Wel drie Unsplash-ID's die over pagina's heen terugkomen, met consistente alt-teksten (zie open punten).
+- `dateModified`: op alle 9 gewijzigde pagina's bijgewerkt naar 2026-08-10.
+
+### Open punten (niet zelf aangepast)
+1. **Turkije-prijsanker nu op twee pagina's in conflict.** `/gids/zonvakantie-september/` noemt "vanaf circa €200 p.p." en "€300-450 p.p. voor 4-sterren", `/gids/zonvakantie-juni/` noemt "vanaf circa 219 euro p.p." en "€350-450 p.p.", terwijl `/gids/adults-only-turkije/` sinds batch 2 op het anker van €650-900 p.p. staat. Dit is dezelfde open kwestie als batch 2, maar hij raakt nu meerdere seizoenspagina's, dus het is de moeite waard om hem te sluiten. Voorstel: `FEITENTABEL.md` verbreden naar "€650-900 p.p. gangbaar voor 4-sterren all-inclusive in het hoogseizoen; vanaf ±€200-450 p.p. bij budgetlocaties en resthoteldeals in het naseizoen", en die formulering op alle Turkije-pagina's aanhouden. Zolang dat niet is besloten blijven de bedragen ongemoeid.
+2. **Meta description `/gids/huwelijksreis/` is 208 tekens** en wordt afgekapt. Voorstel: inkorten tot ±155 tekens, bijvoorbeeld "Waar op huwelijksreis? Vergelijk de Malediven, Mauritius en Bali met romantische bestemmingen dichter bij huis, op sfeer, budget en vliegtijd."
+3. **Meta descriptions onder de richtlijn**: `/gids/griekenland/rhodos-of-zakynthos/` (121), `/gids/eilanden/cyprus-of-kreta/` (123), `/gids/eilanden/malta-of-cyprus/` (123) en `/gids/dubrovnik-of-split/` (130) blijven onder de 150-160. Voorstel: aanvullen met een concreet cijfer (vliegtijd of prijsindicatie). Geen fout, dus niet aangepast.
+4. **Titels boven de ~60 tekens**: `/gids/zonvakantie-september/` (74), `/gids/vakantie-twee-personen/` (69), `/gids/romantische-vakantie-europa/` (67) en `/gids/welke-vakantie-past-bij-mij/` (62). De 74-tekens-titel is de sterkste kandidaat om in te korten; "Zonvakantie september: 7 bestemmingen voor koppels | Kiespret" is 61 tekens.
+5. **Unsplash-ID's die over pagina's heen terugkomen** (geen duplicaten binnen één pagina, dus geen harde fout): `photo-1613395877344` (Oia/Santorini) op `/gids/romantische-vakantie-europa/` en `/gids/huwelijksreis/`; `photo-1507525428034` en `photo-1567335991483` (generiek tropisch strand) op `/gids/huwelijksreis/` en `/gids/welke-vakantie-past-bij-mij/`. De alt-teksten spreken elkaar niet tegen. Overweging: op termijn variëren voor visueel onderscheid.
+6. **Niet-toetsbare cijfers in deze batch**: watertemperaturen per maand (19-28°C), vliegtijden vanuit Nederland (2-4,5 uur Europa, 10,5 uur Malediven, 12 uur Mauritius), de ferry Lanzarote–Fuerteventura (30 min) en de seizoensvlucht Heraklion–Larnaca (±1,5 uur) staan niet in `FEITENTABEL.md`. Dit is dezelfde aanbeveling als in batch 2 en wordt nu voor de tweede keer geraakt. Voorstel: secties "watertemperatuur per bestemming per maand", "vliegtijden vanuit Nederland" en "korte veerverbindingen" toevoegen aan de feitentabel.
+
+---

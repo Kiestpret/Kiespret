@@ -1,5 +1,7 @@
 # Kiespret — Strategisch SEO-plan
 
+> ⚠️ **Achterhaald door [SEO-STRATEGY-v1.1.md](SEO-STRATEGY-v1.1.md) (aug 2026).** Dit v1.0-document blijft bewaard als audit-trail (soft-launch context, mei 2026). Voor de actuele stand, herprioritering en KPI's: zie v1.1.
+
 **Versie:** 1.0 (mei 2026)
 **Site:** https://www.kiespret.nl
 **Niche:** NL-talige keuzehulp voor zonvakanties — primair koppels (29-34, tweeverdieners, geen kinderen)
