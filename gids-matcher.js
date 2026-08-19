@@ -189,8 +189,8 @@
         return '<a class="ghm-ross-link" data-eiland="'+esc(o.key)+'" href="/api/go?id='+encodeURIComponent(o.r.go)+'&v=0" target="_blank" rel="sponsored noopener">'+esc(o.r.label)+' vanaf &euro;'+(Number(o.r.from)||0)+' p.p. &rarr;</a>';
       }).join('');
       return '<div class="ghm-ross">'+
-        '<p class="ghm-ross-kop">Liever zelfstandig, een appartement op eigen houtje?</p>'+
-        '<p class="ghm-ross-sub">Studio\'s en appartementen (zonder maaltijden) via Ross Holidays:</p>'+
+        '<p class="ghm-ross-kop">Liever kleinschalig Griekenland?</p>'+
+        '<p class="ghm-ross-sub">Appartementen, studio\'s en villa\'s in authentiek Griekenland, vlucht + verblijf via Ross Holidays:</p>'+
         '<div class="ghm-ross-links">'+links+'</div></div>';
     }
     function wireRoss(){

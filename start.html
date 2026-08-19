@@ -1043,14 +1043,10 @@
       <h2 class="question-title">Wanneer willen jullie weg?</h2>
       <p class="question-sub">Kies een of meerdere maanden die uitkomen.</p>
 
-      <div class="period-grid">
-        <button class="period-btn" data-maand="juli"      data-action="toggleMaand">jul</button>
-        <button class="period-btn" data-maand="augustus"  data-action="toggleMaand">aug</button>
-        <button class="period-btn" data-maand="september" data-action="toggleMaand">sep</button>
-        <button class="period-btn" data-maand="oktober"   data-action="toggleMaand">okt</button>
-        <button class="period-btn" data-maand="november"  data-action="toggleMaand">nov</button>
-        <button class="period-btn" data-maand="december"  data-action="toggleMaand">dec</button>
-      </div>
+      <!-- Maandknoppen worden dynamisch gevuld door app.js (buildMaandButtons),
+           op basis van de maanden die echt in het deck (trips.js) zitten, in
+           kalendervolgorde vanaf de huidige maand. Zo blijft dit nooit stale. -->
+      <div class="period-grid" id="maandGrid"></div>
 
       <button class="cta-btn" id="btnPeriode" data-action="startSwipen" disabled>
         Toon mijn vakanties →
@@ -1197,6 +1193,7 @@
   </div>
 
   <script src="/trips.js"></script>
+  <script src="/ross-trips.js"></script>
   <script src="/analytics.js"></script>
   <script src="/cookie-consent.js"></script>
   <script src="/app.js"></script>

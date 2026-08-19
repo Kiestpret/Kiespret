@@ -20,7 +20,14 @@
       duur: null,      // 0 = maakt niet uit
       airport: 'AMS',
       focusLands: [],   // vanuit gids-pagina: prioriteer deze landen/regio's (kan meerdere zijn bij vergelijkingen)
+      focusHint: '',    // vanuit gids-pagina (hint=): land/cluster-focus — verruimt de cap + lichte boost, ónder focusLands
     };
+
+    // Normaliseer voor land-vergelijking: kleine letters + diakrieten weg
+    // ("Italië" ↔ "italie", "Griekenland" ↔ "griekenland").
+    function normLand(s) {
+      return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    }
 
     let currentTrips = [];
     let currentIndex = 0;
@@ -84,28 +91,69 @@
     }
 
     function filterTripsCustom(prefs) {
+      // Focus-land(en) afleiden uit de data zelf: het land van elk focus-eiland
+      // (land=), plus een eventuele expliciete hint=. Zo krijgt hetzelfde land een
+      // fallback-boost + ruimere cap wanneer de specifieke eilanden weinig of geen
+      // aanbod hebben in de gekozen maand. Werkt voor élke vergelijkingspagina,
+      // ook zonder hint= in de URL.
+      const focusCountries = new Set();
+      if (prefs.focusHint) focusCountries.add(normLand(prefs.focusHint));
+      prefs.focusLands.forEach(l => {
+        const nl = normLand(l);
+        const hit = trips.find(t => {
+          const p = (t.destination || '').split(',');
+          return normLand((p[0] || '').trim()).includes(nl) ||
+                 normLand((p[p.length - 1] || '').trim()) === nl;
+        });
+        if (hit) {
+          const p = hit.destination.split(',');
+          focusCountries.add(normLand((p[p.length - 1] || '').trim()));
+        }
+      });
+
       const sorted = trips
         .map(trip => {
           const variant = matchVariantCustom(trip, prefs);
           if (!variant) return null;
           // Sfeer als ranking: match geeft hogere score, maar geen uitsluiting
           let tagScore = trip.sfeer.filter(s => prefs.sfeer.includes(s)).length;
-          // Focus-boost: trips uit het land/regio van de gids-pagina krijgen prioriteit
-          if (prefs.focusLands.length > 0) {
-            const dest = (trip.destination || '').toLowerCase();
-            if (prefs.focusLands.some(l => dest.includes(l.toLowerCase()))) tagScore += 5;
+          const dest = (trip.destination || '').toLowerCase();
+          const parts0 = (trip.destination || '').split(',');
+          const country0 = normLand((parts0[parts0.length - 1] || '').trim());
+          // Primaire focus (land=): de eilanden/regio's van de gids-pagina leiden.
+          // Eerder in de lijst = hogere boost, zodat de volgorde de kopkaart bepaalt
+          // (bijv. ?land=Zakynthos,Corfu → Zakynthos vooraan).
+          let focusIdx = -1;
+          for (let i = 0; i < prefs.focusLands.length; i++) {
+            if (dest.includes(prefs.focusLands[i].toLowerCase())) { focusIdx = i; break; }
+          }
+          if (focusIdx >= 0) {
+            // Positie-boost dominant over sfeer (max +3), zodat de volgorde van
+            // land= de kopkaarten hard bepaalt: alle 1e-land-kaarten vóór alle
+            // 2e-land, enz. Sfeer ordent alleen nog binnen dezelfde plek.
+            tagScore += 100 - focusIdx * 10;   // 1e land +100, 2e +90, 3e +80 …
+          } else if (focusCountries.size && focusCountries.has(country0)) {
+            // Secundaire focus: zelfde land als de gids-pagina → onder de focus-
+            // eilanden, boven niet-focus (fallback als de eilanden weinig aanbod
+            // hebben in de gekozen maand).
+            tagScore += 20;
           }
           return { ...trip, matchedVariant: variant, tagScore };
         })
         .filter(Boolean)
         .sort((a, b) => b.tagScore - a.tagScore);
 
-      // Bestemmingsdiversiteit: max 2 trips per land (of 4 als het het focus-land is)
+      // Bestemmingsdiversiteit: max 2 trips per land, of 4 als het land de focus is
+      // (specifiek eiland óf afgeleid focus-land). Zo krijgt een Grieks-gerichte
+      // pagina tot 4 Griekse kaarten in plaats van 2.
       const countPerCountry = {};
       return sorted.filter(t => {
         const parts = (t.destination || '').split(',');
         const c = (parts[parts.length - 1] || 'unknown').trim();
-        const isFocus = prefs.focusLands.length > 0 && prefs.focusLands.some(l => c.toLowerCase().includes(l.toLowerCase()));
+        const cl = c.toLowerCase();
+        const isFocus =
+          (prefs.focusLands.length > 0 && prefs.focusLands.some(l => cl.includes(l.toLowerCase()))) ||
+          focusCountries.has(normLand(c));
         const maxForCountry = isFocus ? 4 : 2;
         countPerCountry[c] = (countPerCountry[c] || 0) + 1;
         return countPerCountry[c] <= maxForCountry;
@@ -798,6 +846,9 @@
       goBtn.onclick = () => {
         // Event: outbound_click
         kiespretTrack('outbound_click', { provider: aanbieder, trip: tripId });
+        // Aparte goal voor de kleinschalig-Griekenland-kaarten (Ross) — zichtbaar
+        // op het gratis Plausible-plan zonder property-filter.
+        if (String(tripId).indexOf('ross-') === 0) kiespretTrack('ross_deck_klik');
         var clickedTrip = currentTrips.find(t => t.id === tripId) || liked.find(t => t.id === tripId);
         if (clickedTrip) kiespretClusterTrack('booked', clickedTrip.destination);
         window.open(goUrl, '_blank', 'noopener');
@@ -1328,6 +1379,13 @@
         if (landParam) {
           prefs.focusLands = landParam.split(',').map(l => l.trim());
         }
+        // Land/cluster-hint (bijv. ?hint=griekenland): secundaire focus die de
+        // diversiteitscap voor dat land naar 4 verruimt + andere kaarten van dat
+        // land een lichte boost geeft, ónder de specifieke land=-eilanden.
+        const hintParam = params.get('hint');
+        if (hintParam) {
+          prefs.focusHint = hintParam.trim();
+        }
 
         if (sfeerParam) {
           // Pre-fill stap 1 met sfeer uit URL, bijv. ?sfeer=strand,rustig
@@ -1384,5 +1442,36 @@
         case 'answerConfidence': answerConfidence(btn.getAttribute('data-answer')); break;
       }
     });
+
+    // ── Maandknoppen dynamisch opbouwen uit de deck-data ──────────────────
+    // Toont alleen maanden die echt in trips.js zitten, in kalendervolgorde
+    // vanaf de huidige maand. Voorbije maanden vallen vanzelf weg en nieuwe
+    // (volgend jaar) verschijnen automatisch zodra de feed ze bevat.
+    // Kleinschalig Griekenland (Ross Holidays) in het deck mengen — los onderhouden
+    // in ross-trips.js zodat een feed-rebuild van trips.js ze niet overschrijft.
+    if (typeof rossTrips !== 'undefined' && Array.isArray(rossTrips) && typeof trips !== 'undefined') {
+      var _bestaand = {};
+      trips.forEach(function (t) { _bestaand[t.id] = true; });
+      rossTrips.forEach(function (t) { if (!_bestaand[t.id]) trips.push(t); });
+    }
+
+    var MAAND_NAMEN = ['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
+    var MAAND_KORT  = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+    function buildMaandButtons() {
+      var grid = document.getElementById('maandGrid');
+      if (!grid || typeof trips === 'undefined') return;
+      var aanwezig = {};
+      trips.forEach(function (t) {
+        (t.variants || []).forEach(function (v) { if (v.maand) aanwezig[v.maand] = true; });
+      });
+      var nu = new Date().getMonth(); // 0 = januari
+      var lijst = [];
+      for (var i = 0; i < 12; i++) if (aanwezig[MAAND_NAMEN[i]]) lijst.push(i);
+      lijst.sort(function (a, b) { return ((a - nu + 12) % 12) - ((b - nu + 12) % 12); });
+      grid.innerHTML = lijst.map(function (i) {
+        return '<button class="period-btn" data-maand="' + MAAND_NAMEN[i] + '" data-action="toggleMaand">' + MAAND_KORT[i] + '</button>';
+      }).join('');
+    }
+    buildMaandButtons();
 
     })();

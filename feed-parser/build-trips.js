@@ -220,10 +220,22 @@ const manualAffiliates = {
   // Ross Holidays (appartementen/studio's op Griekse eilanden) via TradeTracker.
   // Gelinkt vanaf de vibekiezer op Griekse-eilandengidsen naar het eiland-aanbod.
   'ross-appartementen-corfu': [
-    'https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fcorfu'
+    'https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fbestemmingen%2Fcorfu'
   ],
   'ross-appartementen-zakynthos': [
-    'https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fzakynthos'
+    'https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fbestemmingen%2Fzakynthos'
+  ],
+  // Kleinschalig-Griekenland deckkaarten (ross-trips.js). Eén URL per maand-variant
+  // (aug/sep/okt → index 0/1/2), alle drie naar dezelfde accommodatiepagina.
+  'ross-myrties-zakynthos': [
+    'https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fzakynthos%2Fmyrties',
+    'https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fzakynthos%2Fmyrties',
+    'https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fzakynthos%2Fmyrties'
+  ],
+  'ross-akrogiali-kefalonia': [
+    'https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fkefalonia%2Fakrogiali-studios',
+    'https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fkefalonia%2Fakrogiali-studios',
+    'https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fkefalonia%2Fakrogiali-studios'
   ]
 };
 for (const [id, urls] of Object.entries(manualAffiliates)) {

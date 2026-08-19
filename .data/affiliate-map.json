@@ -668,9 +668,19 @@
     "https://merchant.333travel.nl/c?c=4015&m=1949941&a=509815&r=&u=https%3A%2F%2Fwww.333travel.nl%2Ftanzania%2Fstrandvakantie%2Focean-paradise-resort"
   ],
   "ross-appartementen-corfu": [
-    "https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fcorfu"
+    "https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fbestemmingen%2Fcorfu"
   ],
   "ross-appartementen-zakynthos": [
-    "https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fzakynthos"
+    "https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fbestemmingen%2Fzakynthos"
+  ],
+  "ross-myrties-zakynthos": [
+    "https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fzakynthos%2Fmyrties",
+    "https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fzakynthos%2Fmyrties",
+    "https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fzakynthos%2Fmyrties"
+  ],
+  "ross-akrogiali-kefalonia": [
+    "https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fkefalonia%2Fakrogiali-studios",
+    "https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fkefalonia%2Fakrogiali-studios",
+    "https://ht.rossholidays.nl/c?c=20148&m=862200&a=509815&r=&u=https%3A%2F%2Fwww.rossholidays.nl%2Fvakanties%2Fappartementen%2Fkefalonia%2Fakrogiali-studios"
   ]
 }
