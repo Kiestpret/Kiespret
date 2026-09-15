@@ -91,19 +91,15 @@
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Flesbos%2Feftalou%2Faquamare%2310431.LEAQM.AMSMJT.021026.7.DZM-A..",
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Flesbos%2Feftalou%2Faquamare%2310431.LEAQM.AMSMJT.180926.7.DZM-A.."
   ],
+  "corendon-lango-design-hotel-spa-kolan": [
+    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fkos%2Fkos-stad-lambi%2Flango-design-hotel-spa%238786.KOLAN.BRUKGS.191026.7.DD-F.."
+  ],
   "corendon-fly-go-meandros-boutique-hotel-spa-zameaf": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fzakynthos%2Fkalamaki%2Ffly-go-meandros-boutique-hotel-spa%2312204.ZAMEAF.AMSZTH.131027.7.DR1-H..",
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fzakynthos%2Fkalamaki%2Ffly-go-meandros-boutique-hotel-spa%2312204.ZAMEAF.EINZTH.071027.7.DR1-H.."
   ],
   "corendon-fly-go-aquamare-leaqmf": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Flesbos%2Feftalou%2Ffly-go-aquamare%2312578.LEAQMF.AMSMJT.051026.7.DZP-A.."
-  ],
-  "corendon-lango-design-hotel-spa-kolan": [
-    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fkos%2Fkos-stad-lambi%2Flango-design-hotel-spa%238786.KOLAN.AMSKGS.181026.7.DD-F.."
-  ],
-  "corendon-fly-go-trs-ibiza-hotel-ibtrsf": [
-    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fbalearen%2Fibiza%2Fcala-gracio%2Ffly-go-trs-ibiza-hotel%2312159.IBTRSF.AMSIBZ.151026.7.DD4-F..",
-    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fbalearen%2Fibiza%2Fcala-gracio%2Ffly-go-trs-ibiza-hotel%2312159.IBTRSF.EINIBZ.121026.7.DD4-F.."
   ],
   "corendon-casa-cook-samos-sscas": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fsamos%2Fpythagorion%2Fcasa-cook-samos%2310113.SSCAS.AMSSMI.051026.7.U2-F..",
@@ -138,6 +134,10 @@
   ],
   "corendon-lindos-grand-resort-spa-rhlga": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Frhodos%2Flindos%2Flindos-grand-resort-spa%2310078.RHLGA.AMSRHO.221026.7.DDG-F.."
+  ],
+  "corendon-fly-go-trs-ibiza-hotel-ibtrsf": [
+    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fbalearen%2Fibiza%2Fcala-gracio%2Ffly-go-trs-ibiza-hotel%2312159.IBTRSF.AMSIBZ.151026.7.DD4-F..",
+    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fbalearen%2Fibiza%2Fcala-gracio%2Ffly-go-trs-ibiza-hotel%2312159.IBTRSF.EINIBZ.121026.7.DD4-F.."
   ],
   "corendon-fly-go-casa-cook-samos-sscasf": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fgriekenland%2Fsamos%2Fpythagorion%2Ffly-go-casa-cook-samos%2312144.SSCASF.AMSSMI.051026.7.U2-F..",
@@ -193,6 +193,9 @@
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fmarsa-alam%2Ftrue-beach-resort%2312688.MSTRU.AMSHRG.111226.7.DSS-A..",
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fmarsa-alam%2Ftrue-beach-resort%2312688.MSTRU.AMSHRG.080127.7.DSS-A..",
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fegypte%2Frode-zee%2Fmarsa-alam%2Ftrue-beach-resort%2312688.MSTRU.AMSHRG.241126.7.DSS-A.."
+  ],
+  "corendon-liberty-hotels-lykia-felwo": [
+    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fegeische-kust%2Ffethiye%2Foludeniz%2Fliberty-hotels-lykia%231842.FELWO.AMSDLM.241026.7.DZL-X.."
   ],
   "corendon-nirvana-dolce-vita-keama": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fturkse-riviera%2Fkemer%2Ftekirova%2Fnirvana-dolce-vita%2365.KEAMA.AMSAYT.071126.7.DC-X.."
@@ -258,9 +261,6 @@
   ],
   "corendon-fly-go-side-mare-resort-sidemf": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fturkse-riviera%2Fside%2Fkumkoy%2Ffly-go-side-mare-resort%2312503.SIDEMF.AMSAYT.301026.7.DX-A.."
-  ],
-  "corendon-labranda-mares-marmaris-hotel-mamdo": [
-    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fturkije%2Fegeische-kust%2Fmarmaris%2Fmarmaris-centrum%2Flabranda-mares-marmaris-hotel%231843.MAMDO.AMSDLM.201026.7.DBG-A.."
   ],
   "corendon-esencia-de-la-palma-by-princess-lpepp": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Fla-palma%2Ffuencaliente%2Fesencia-de-la-palma-by-princess%2314039.LPEPP.AMSSPC.041226.7.DZ-H.."
@@ -341,7 +341,7 @@
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Ffuerteventura%2Fjandia%2Fsbh-club-paraiso-playa%239356.FUSPP.AMSFUE.220127.6.DE-A.."
   ],
   "corendon-fly-go-sbh-monica-beach-fumonf": [
-    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Ffuerteventura%2Fcosta-calma%2Ffly-go-sbh-monica-beach%2312603.FUMONF.AMSFUE.220127.7.DE-A..",
+    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Ffuerteventura%2Fcosta-calma%2Ffly-go-sbh-monica-beach%2312603.FUMONF.AMSFUE.280127.7.DE-A..",
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fcanarische-eilanden%2Ffuerteventura%2Fcosta-calma%2Ffly-go-sbh-monica-beach%2312603.FUMONF.AMSFUE.031226.7.DE-A.."
   ],
   "corendon-royal-horizon-ponta-sino-cvhps": [
@@ -436,14 +436,8 @@
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fbalearen%2Fmallorca%2Falcudia%2Ffly-go-viva-sunrise%2311783.MLVISF.EINPMI.121026.7.SZ-F..",
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fspanje%2Fbalearen%2Fmallorca%2Falcudia%2Ffly-go-viva-sunrise%2311783.MLVISF.AMSPMI.061026.7.SZ-F.."
   ],
-  "corendon-van-der-valk-plaza-royal-residence-bonaire-bnvpi": [
-    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbonaire%2Fkralendijk%2Fvan-der-valk-plaza-royal-residence-bonaire%239790.BNVPI.AMSBON.150926.5.2AZ-A.."
-  ],
   "corendon-fly-go-vila-gale-santa-cruz-fnvgsf": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Fmadeira%2Fsanta-cruz%2Ffly-go-vila-gale-santa-cruz%2313602.FNVGSF.AMSFNC.221026.7.DZM-F.."
-  ],
-  "corendon-fly-go-van-der-valk-plaza-royal-residence-bonaire-bnvpif": [
-    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbonaire%2Fkralendijk%2Ffly-go-van-der-valk-plaza-royal-residence-bonaire%239823.BNVPIF.AMSBON.150926.5.2AZ-A.."
   ],
   "corendon-fly-go-naxos-beach-slnaxf": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fitalie%2Fsicilie%2Fgiardini-naxos%2Ffly-go-naxos-beach%2311758.SLNAXF.AMSCTA.221026.7.DE-F.."
@@ -478,19 +472,12 @@
   "corendon-oasis-belorizonte-cvbel": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fkaapverdie%2Fsal%2Fsanta-maria%2Foasis-belorizonte%239779.CVBEL.AMSSID.090327.7.DB-A.."
   ],
-  "corendon-belnem-house-bonaire-bnbhb": [
-    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbonaire%2Fkralendijk%2Fbelnem-house-bonaire%239318.BNBHB.AMSBON.150926.5.SZ1-U.."
-  ],
   "corendon-pestana-cr7-funchal-fnpef": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Fmadeira%2Ffunchal%2Fpestana-cr7-funchal%238964.FNPEF.AMSFNC.221026.7.DZ-F..",
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Fmadeira%2Ffunchal%2Fpestana-cr7-funchal%238964.FNPEF.AMSFNC.230926.7.DS-F.."
   ],
   "corendon-the-cliff-bay-hotel-resort-fntcb": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Fmadeira%2Ffunchal%2Fthe-cliff-bay-hotel-resort%2313192.FNTCB.AMSFNC.151026.7.DZ-F.."
-  ],
-  "corendon-fly-go-belnem-house-bonaire-bnbhbf": [
-    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbonaire%2Fkralendijk%2Ffly-go-belnem-house-bonaire%2310847.BNBHBF.AMSBON.150926.5.SZ1-U..",
-    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbonaire%2Fkralendijk%2Ffly-go-belnem-house-bonaire%2310847.BNBHBF.AMSBON.110527.7.SZ1-U.."
   ],
   "corendon-harbor-hotel-casino-curacao-cwhar": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fwillemstad%2Fharbor-hotel-casino-curacao%2310542.CWHAR.AMSCUR.220926.5.DZ-U.."
@@ -511,6 +498,9 @@
   ],
   "corendon-fly-go-the-kontiki-beach-house-cwbehf": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fmambo-beach%2Ffly-go-the-kontiki-beach-house%239255.CWBEHF.AMSCUR.290926.5.UZP-U.."
+  ],
+  "corendon-fly-go-belnem-house-bonaire-bnbhbf": [
+    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbonaire%2Fkralendijk%2Ffly-go-belnem-house-bonaire%2310847.BNBHBF.AMSBON.110527.7.SZ1-U.."
   ],
   "corendon-courtyard-by-marriott-curacao-cwcmc": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fcuracao%2Fwillemstad%2Fcourtyard-by-marriott-curacao%2310637.CWCMC.AMSCUR.290926.5.DZ1-U..",
@@ -572,9 +562,6 @@
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Fporto%2Ffly-drive-heart-of-portugal-4%2314396.OPFHE.AMSOPO.041226.11.DZ-F..",
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fportugal%2Fporto%2Ffly-drive-heart-of-portugal-4%2314396.OPFHE.AMSOPO.310127.11.DZ-F.."
   ],
-  "corendon-fly-go-resort-bonaire-bnrsbf": [
-    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbonaire%2Fkralendijk%2Ffly-go-resort-bonaire%2312557.BNRSBF.AMSBON.150926.5.2AZ-U.."
-  ],
   "corendon-sobrado-cvsob": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fkaapverdie%2Fsal%2Fsanta-maria%2Fsobrado%2313355.CVSOB.AMSSID.080127.7.DZ-F.."
   ],
@@ -584,6 +571,9 @@
   ],
   "corendon-fly-go-eden-beach-resort-bnedef": [
     "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbonaire%2Fkralendijk%2Ffly-go-eden-beach-resort%2312675.BNEDEF.AMSBON.290926.5.DE-U.."
+  ],
+  "corendon-grand-windsock-dive-beach-villas-bngrv": [
+    "https://referral.corendon.nl/c?c=38108&m=2315769&a=509815&r=&u=https%3A%2F%2Fwww.corendon.nl%2Fbonaire%2Fkralendijk%2Fgrand-windsock-dive-beach-villas%2313821.BNGRV.AMSBON.290926.7.2AE-U.."
   ],
   "333travel-villa-nautica-paradise-island": [
     "https://merchant.333travel.nl/c?c=4015&m=1949941&a=509815&r=&u=https%3A%2F%2Fwww.333travel.nl%2Fmalediven%2Fstrandvakantie%2Fvilla-nautica-paradise-island"
