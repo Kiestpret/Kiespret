@@ -1,10 +1,10 @@
 // trips.js — Kiespret dataset
 // Automatisch gegenereerd door feed-parser/build-trips.js
-// Laatste update: 2026-09-15
+// Laatste update: 2026-09-16
 //
 // Handmatige trips (TUI/Sunweb): 0
-// Corendon feed-trips: 167 (gecureerd uit 2528)
-// Totaal: 167
+// Corendon feed-trips: 170 (gecureerd uit 2528)
+// Totaal: 170
 //
 // Scope: uitsluitend zonvakanties voor Nederlandse koppels 28–45
 // Curatie: 4+ sterren, rating ≥ 7.5, AMS/EIN, max 8/regio, max 25/land
@@ -58,7 +58,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 871,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "december",
@@ -129,7 +129,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 961,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -182,7 +182,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1017,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -244,7 +244,7 @@ const trips = [
         "duur": 7,
         "airport": "MST",
         "prijs": 1598,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -299,7 +299,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1276,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -357,7 +357,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1277,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -412,7 +412,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 654,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -467,7 +467,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 752,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -525,7 +525,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1149,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -581,7 +581,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1089,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "december",
@@ -640,8 +640,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1550,
-        "_addedAt": "2026-09-15"
+        "prijs": 1585,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -753,7 +753,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1050,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -814,7 +814,7 @@ const trips = [
         "duur": 7,
         "airport": "MST",
         "prijs": 768,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -869,7 +869,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 669,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -922,8 +922,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1144,
-        "_addedAt": "2026-09-15"
+        "prijs": 1154,
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "oktober",
@@ -973,7 +973,7 @@ const trips = [
     ],
     "highlights": [
       "5-sterren accommodatie",
-      "Gastwaardering: 8,5",
+      "Gastwaardering: 8,8",
       "Ultra All Inclusive",
       "Adults only",
       "Vlucht inbegrepen"
@@ -987,11 +987,11 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 879,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
-    "tripDesc": "in Avsallar, adults only, all-inclusive, 5-sterren, gastwaardering 8,5.",
+    "tripDesc": "in Avsallar, adults only, all-inclusive, 5-sterren, gastwaardering 8,8.",
     "_score": 233
   },
   {
@@ -1045,7 +1045,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 743,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -1101,7 +1101,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1210,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "december",
@@ -1162,7 +1162,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1175,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "oktober",
@@ -1222,7 +1222,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 845,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -1273,7 +1273,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 761,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "oktober",
@@ -1348,7 +1348,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 714,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -1401,8 +1401,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 908,
-        "_addedAt": "2026-09-15"
+        "prijs": 918,
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "oktober",
@@ -1460,7 +1460,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1005,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -1515,13 +1515,6 @@ const trips = [
         "airport": "AMS",
         "prijs": 650,
         "_addedAt": "2026-09-03"
-      },
-      {
-        "maand": "september",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 699,
-        "_addedAt": "2026-09-01"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -1571,7 +1564,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1177,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -1624,7 +1617,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 872,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "oktober",
@@ -1684,7 +1677,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 993,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -1741,7 +1734,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1262,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -1795,8 +1788,8 @@ const trips = [
         "maand": "april",
         "duur": 7,
         "airport": "MST",
-        "prijs": 709,
-        "_addedAt": "2026-09-15"
+        "prijs": 702,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -1853,12 +1846,69 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1191,
-        "_addedAt": "2026-09-15"
+        "prijs": 1220,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
     "tripDesc": "in Palma Nova, adults only, met ontbijt, 5-sterren, gastwaardering 9,0.",
+    "_score": 220
+  },
+  {
+    "id": "corendon-steigenberger-resort-alay-mssra",
+    "title": "Adults only resort Marsa Alam",
+    "destination": "Marsa Alam, Egypte",
+    "hotelName": "Steigenberger Resort Alay",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand",
+      "rustig",
+      "resort",
+      "actief"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "All-inclusive",
+    "vluchtduur": "5u",
+    "adultsOnly": true,
+    "audience": "couples",
+    "matchReason": "Adults only all-inclusive in Marsa Alam, Egypte — met spa & wellness",
+    "whyThisTrip": "Dugongs spotten, huisriffen om vanaf het strand te snorkelen en rustige baaien. Rode Zee zonder de drukte van Hurghada.",
+    "tripDesc": "adults only, all-inclusive, 5-sterren.",
+    "tags": [
+      "adults-only",
+      "allinclusive",
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: N.A.",
+      "All Inclusive",
+      "Adults only",
+      "Vlucht inbegrepen"
+    ],
+    "description": "Droom je van zon, zee en een vakantie waarin je volledig kunt opladen? Dan zit je goed bij Steigenberger Resort Alaya in Marsa Alam. Begin je dag met uitzicht op de Rode Zee, zoek de verkoeling op bij het zwembad of kies voor een actief moment met sp",
+    "imageUrl": "https://images.corendonresources.com/L1E14456A1W1024H684.jpg?v=260824094552",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "januari",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 1182,
+        "_addedAt": "2026-09-16"
+      }
+    ],
+    "prijsPeilDatum": "september 2026",
     "_score": 220
   },
   {
@@ -1915,7 +1965,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 873,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -1967,7 +2017,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 983,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2073,7 +2123,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 726,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2126,7 +2176,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 942,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2180,7 +2230,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 945,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2233,7 +2283,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 898,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2291,6 +2341,13 @@ const trips = [
         "airport": "EIN",
         "prijs": 1245,
         "_addedAt": "2026-09-14"
+      },
+      {
+        "maand": "oktober",
+        "duur": 7,
+        "airport": "RTM",
+        "prijs": 1281,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2348,7 +2405,7 @@ const trips = [
         "duur": 8,
         "airport": "AMS",
         "prijs": 1524,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2398,69 +2455,12 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 747,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
     "tripDesc": "in Gouves, adults only, met ontbijt, 5-sterren, beoordeeld met een 8,1.",
     "_score": 216
-  },
-  {
-    "id": "corendon-steigenberger-resort-alay-mssra",
-    "title": "Adults only resort Marsa Alam",
-    "destination": "Marsa Alam, Egypte",
-    "hotelName": "Steigenberger Resort Alay",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand",
-      "rustig",
-      "resort",
-      "actief"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "5u",
-    "adultsOnly": true,
-    "audience": "couples",
-    "matchReason": "Adults only all-inclusive in Marsa Alam, Egypte — met spa & wellness",
-    "whyThisTrip": "Dugongs spotten, huisriffen om vanaf het strand te snorkelen en rustige baaien. Rode Zee zonder de drukte van Hurghada.",
-    "tripDesc": "adults only, all-inclusive, 5-sterren.",
-    "tags": [
-      "adults-only",
-      "allinclusive",
-      "5-sterren",
-      "luxe",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "snorkelen",
-      "wifi"
-    ],
-    "highlights": [
-      "5-sterren accommodatie",
-      "Gastwaardering: N.A.",
-      "All Inclusive",
-      "Adults only",
-      "Vlucht inbegrepen"
-    ],
-    "description": "Droom je van zon, zee en een vakantie waarin je volledig kunt opladen? Dan zit je goed bij Steigenberger Resort Alaya in Marsa Alam. Begin je dag met uitzicht op de Rode Zee, zoek de verkoeling op bij het zwembad of kies voor een actief moment met sp",
-    "imageUrl": "https://images.corendonresources.com/L1E14456A1W1024H684.jpg?v=260824094552",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "januari",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 1200,
-        "_addedAt": "2026-09-15"
-      }
-    ],
-    "prijsPeilDatum": "september 2026",
-    "_score": 215
   },
   {
     "id": "corendon-the-views-baia-fnfvb",
@@ -2505,7 +2505,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 584,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2556,7 +2556,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 800,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2607,7 +2607,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 763,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2667,7 +2667,7 @@ const trips = [
         "duur": 4,
         "airport": "AMS",
         "prijs": 1052,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2719,7 +2719,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 868,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2769,6 +2769,13 @@ const trips = [
         "airport": "EIN",
         "prijs": 893,
         "_addedAt": "2026-09-15"
+      },
+      {
+        "maand": "oktober",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 977,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2821,7 +2828,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 650,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2879,7 +2886,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 503,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2941,7 +2948,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1444,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2998,7 +3005,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 665,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -3052,7 +3059,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1121,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -3107,7 +3114,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 693,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -3169,7 +3176,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 600,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "november",
@@ -3230,7 +3237,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1190,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -3285,7 +3292,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1121,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -3338,7 +3345,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 666,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -3401,7 +3408,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 601,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -3455,7 +3462,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1190,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -3497,7 +3504,7 @@ const trips = [
       "Gastwaardering: 8,7",
       "All Inclusive",
       "Vlucht inbegrepen",
-      "Strand op 200m"
+      "6 buitenzwembad(en)"
     ],
     "description": "Pickalbatros Laguna Vista (voorheen Laguna Vista Beach) ligt direct aan het strand en het beschikt over tal van faciliteiten. De schitterende tuin lijkt op een lagune met meerdere zwembaden, zonneterrassen en schaduwrijke plekjes.",
     "imageUrl": "https://images.corendonresources.com/L1E3809A1W1024H684.jpg?v=230809144403",
@@ -3508,7 +3515,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 734,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "januari",
@@ -3583,7 +3590,7 @@ const trips = [
         "duur": 4,
         "airport": "AMS",
         "prijs": 1235,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -3636,7 +3643,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1094,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -3695,7 +3702,7 @@ const trips = [
         "duur": 4,
         "airport": "AMS",
         "prijs": 901,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -3749,7 +3756,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1039,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "oktober",
@@ -3863,7 +3870,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1889,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -3915,7 +3922,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 721,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -3968,7 +3975,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 641,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -4023,7 +4030,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 871,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "januari",
@@ -4083,7 +4090,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 732,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "januari",
@@ -4143,7 +4150,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 768,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -4198,7 +4205,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 967,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -4251,7 +4258,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 806,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -4304,7 +4311,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 995,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -4355,8 +4362,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 814,
-        "_addedAt": "2026-09-15"
+        "prijs": 824,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -4417,7 +4424,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 749,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -4472,7 +4479,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 847,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "januari",
@@ -4484,6 +4491,58 @@ const trips = [
     ],
     "prijsPeilDatum": "september 2026",
     "_score": 187
+  },
+  {
+    "id": "corendon-aqua-paradise-resort-vaaqu",
+    "title": "All-inclusive hotel Nessebar",
+    "destination": "Nessebar, Bulgarije",
+    "hotelName": "Aqua Paradise Resort",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand",
+      "resort"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "All-inclusive",
+    "vluchtduur": "2u45",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "All-inclusive in Nessebar, Bulgarije — met spa & wellness",
+    "whyThisTrip": "UNESCO-oude stad op een schiereiland, omringd door stranden. Bulgaarse geschiedenis aan de Zwarte Zee.",
+    "tags": [
+      "allinclusive",
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "wifi"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: 8,8",
+      "All Inclusive",
+      "Vlucht inbegrepen",
+      "Strand op 500m"
+    ],
+    "description": "Aqua Paradise Resort in Bulgarije doet zijn naam eer aan - dit is hét ultieme waterparadijs voor het hele gezin! Direct naast het grootste aquapark van het land, met razendsnelle glijbanen, kronkelende lazy rivers en spetterend waterplezier voor jong",
+    "imageUrl": "https://images.corendonresources.com/L1E8564A1W1024H684.jpg?v=260106065514",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "mei",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 438,
+        "_addedAt": "2026-09-16"
+      }
+    ],
+    "prijsPeilDatum": "september 2026",
+    "tripDesc": "all-inclusive, 4-sterren, gastwaardering 8,8.",
+    "_score": 186
   },
   {
     "id": "corendon-sunrise-diamond-beach-resort-grand-select-shsdb",
@@ -4534,7 +4593,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 817,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "januari",
@@ -4594,11 +4653,63 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 785,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
     "_score": 184
+  },
+  {
+    "id": "corendon-diamant-residence-hotel-spa-vadre",
+    "title": "All-inclusive hotel Sunny Beach",
+    "destination": "Sunny Beach, Bulgarije",
+    "hotelName": "Diamant Residence Hotel & Spa",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "All-inclusive",
+    "vluchtduur": "2u45",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "All-inclusive in Sunny Beach, Bulgarije — vlakbij het centrum",
+    "whyThisTrip": "Lang zandstrand aan de Zwarte Zee, betaalbare restaurants en een levendig uitgaansleven. Meeste waar voor je geld.",
+    "tripDesc": "all-inclusive, 4-sterren, beoordeeld met een 8,4.",
+    "tags": [
+      "allinclusive",
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: 8,4",
+      "All Inclusive",
+      "Vlucht inbegrepen",
+      "Strand op 450m"
+    ],
+    "description": "Diamant Residence Hotel & Spa is precies wat je nodig hebt als je even helemaal wilt ontspannen. Dit fijne 4-sterrenhotel ligt in het zonnige Sunny Beach, op slechts een paar minuten lopen van het langgerekte zandstrand en vlak bij de charmante oude ",
+    "imageUrl": "https://images.corendonresources.com/L1E558A1W1024H684.jpg?v=251111154123",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "mei",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 409,
+        "_addedAt": "2026-09-16"
+      }
+    ],
+    "prijsPeilDatum": "september 2026",
+    "_score": 182
   },
   {
     "id": "corendon-barcel-royal-beach-vabar",
@@ -4647,11 +4758,63 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 849,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
     "_score": 182
+  },
+  {
+    "id": "corendon-fly-go-aqua-paradise-resort-vaaquf",
+    "title": "All-inclusive hotel Nessebar",
+    "destination": "Nessebar, Bulgarije",
+    "hotelName": "Fly & Go Aqua Paradise Resort",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand",
+      "resort"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "All-inclusive",
+    "vluchtduur": "2u45",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "All-inclusive in Nessebar, Bulgarije — direct aan zee",
+    "whyThisTrip": "UNESCO-oude stad op een schiereiland, omringd door stranden. Bulgaarse geschiedenis aan de Zwarte Zee.",
+    "tripDesc": "all-inclusive, 4-sterren, gastwaardering 8,8.",
+    "tags": [
+      "allinclusive",
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "wifi"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: 8,8",
+      "All Inclusive",
+      "Vlucht inbegrepen",
+      "Strand op 500m"
+    ],
+    "description": "Aqua Paradise Resort is een fijne keuze voor gezinnen die houden van waterpret en comfort. Dit moderne viersterrenresort ligt direct naast het grootste aquapark van Bulgarije en staat garant voor volop plezier voor jong en oud. Van spectaculaire glij",
+    "imageUrl": "https://images.corendonresources.com/L1E12583A5W0H0.jpg?v=260106070058",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "mei",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 639,
+        "_addedAt": "2026-09-16"
+      }
+    ],
+    "prijsPeilDatum": "september 2026",
+    "_score": 181
   },
   {
     "id": "corendon-tiara-beach-vatia",
@@ -4697,7 +4860,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 705,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -4747,8 +4910,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "EIN",
-        "prijs": 1198,
-        "_addedAt": "2026-09-15"
+        "prijs": 1191,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -4858,7 +5021,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 528,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -4911,7 +5074,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1367,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -4962,7 +5125,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1008,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "oktober",
@@ -5080,7 +5243,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 665,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -5133,7 +5296,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 685,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -5185,7 +5348,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 614,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -5228,7 +5391,7 @@ const trips = [
       "Strand op 20m"
     ],
     "description": "Het DIT Majestic Beach is een ideaal 4-sterrenhotel, beschikt over 2 ruime zwembaden gelegen in een fraaie tuin, heeft tal van faciliteiten en erg mooie kamers. Een uniek hotel en dat ook nog eens op een toplocatie! Het DIT Majestic Beach biedt een i",
-    "imageUrl": "https://images.corendonresources.com/L1E1317A1W1024H684.jpg?v=251125115217",
+    "imageUrl": "https://images.corendonresources.com/L1E1317A1W1024H684.jpg?v=260915144051",
     "affiliatePartner": "Corendon",
     "variants": [
       {
@@ -5236,7 +5399,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 875,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -5287,7 +5450,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 737,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -5338,7 +5501,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 815,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -5391,6 +5554,13 @@ const trips = [
         "airport": "AMS",
         "prijs": 608,
         "_addedAt": "2026-09-15"
+      },
+      {
+        "maand": "december",
+        "duur": 6,
+        "airport": "AMS",
+        "prijs": 611,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -5442,7 +5612,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 703,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -5500,57 +5670,6 @@ const trips = [
     "_score": 170
   },
   {
-    "id": "corendon-laguna-park-valun",
-    "title": "All-inclusive hotel Sunny Beach",
-    "destination": "Sunny Beach, Bulgarije",
-    "hotelName": "Laguna Park",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "2u45",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "All-inclusive in Sunny Beach, Bulgarije — met spa & wellness",
-    "whyThisTrip": "Lang zandstrand aan de Zwarte Zee, betaalbare restaurants en een levendig uitgaansleven. Meeste waar voor je geld.",
-    "tags": [
-      "allinclusive",
-      "4-sterren",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "wifi"
-    ],
-    "highlights": [
-      "4-sterren accommodatie",
-      "Gastwaardering: 7,9",
-      "All Inclusive",
-      "Vlucht inbegrepen",
-      "Strand op 300m"
-    ],
-    "description": "Laguna Park is een ideaal hotel voor jong en oud met een centrale ligging. Het levendige Sunny Beach en het strand liggen op loopafstand. De vele faciliteiten, zoals zwembaden met glijbanen, een Spa Center en animatie voor groot en klein, zullen ervo",
-    "imageUrl": "https://images.corendonresources.com/L1E8060A1W1024H684.jpg?v=250311141443",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "mei",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 776,
-        "_addedAt": "2026-09-15"
-      }
-    ],
-    "prijsPeilDatum": "september 2026",
-    "tripDesc": "all-inclusive, 4-sterren, beoordeeld met een 7,9.",
-    "_score": 170
-  },
-  {
     "id": "corendon-sbh-club-paraiso-playa-fuspp",
     "title": "All-inclusive hotel Fuerteventura",
     "destination": "Fuerteventura, Spanje",
@@ -5593,7 +5712,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 585,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -5644,8 +5763,8 @@ const trips = [
         "maand": "januari",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 813,
-        "_addedAt": "2026-09-15"
+        "prijs": 814,
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "december",
@@ -5705,7 +5824,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 999,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -5754,7 +5873,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 489,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "december",
@@ -5813,8 +5932,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "EIN",
-        "prijs": 886,
-        "_addedAt": "2026-09-15"
+        "prijs": 908,
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "oktober",
@@ -5878,7 +5997,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 698,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -5926,13 +6045,6 @@ const trips = [
         "_addedAt": "2026-09-09"
       },
       {
-        "maand": "februari",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 546,
-        "_addedAt": "2026-09-01"
-      },
-      {
         "maand": "november",
         "duur": 7,
         "airport": "AMS",
@@ -5944,7 +6056,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 564,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -5995,7 +6107,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 930,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "oktober",
@@ -6053,8 +6165,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 831,
-        "_addedAt": "2026-09-15"
+        "prijs": 814,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -6106,7 +6218,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1032,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "oktober",
@@ -6167,7 +6279,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1482,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -6224,8 +6336,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "RTM",
-        "prijs": 894,
-        "_addedAt": "2026-09-15"
+        "prijs": 877,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -6283,7 +6395,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 899,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -6337,7 +6449,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1739,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -6391,7 +6503,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1594,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -6460,7 +6572,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1559,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -6511,8 +6623,8 @@ const trips = [
         "maand": "april",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 776,
-        "_addedAt": "2026-09-15"
+        "prijs": 787,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -6576,6 +6688,13 @@ const trips = [
         "airport": "AMS",
         "prijs": 1399,
         "_addedAt": "2026-09-12"
+      },
+      {
+        "maand": "juni",
+        "duur": 6,
+        "airport": "AMS",
+        "prijs": 1447,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -6625,7 +6744,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 891,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -6681,13 +6800,64 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "RTM",
-        "prijs": 755,
-        "_addedAt": "2026-09-15"
+        "prijs": 766,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
     "tripDesc": "in Torrox, halfpension, 4-sterren, gastwaardering 9,0.",
     "_score": 162
+  },
+  {
+    "id": "corendon-viva-cala-mesquida-resort-spa-mlmes",
+    "title": "Zonvakantie hotel Mallorca",
+    "destination": "Mallorca, Spanje",
+    "hotelName": "Viva Cala Mesquida Resort & Spa",
+    "sfeer": [
+      "comfort",
+      "strand",
+      "rustig",
+      "resort"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Ontbijt",
+    "vluchtduur": "2u30",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "Zonvakantie in Cala Mesquida, Spanje — direct aan zee",
+    "whyThisTrip": "Serra de Tramuntana, verborgen baaien (calas), Palma's kathedraal en wijngaarden in Binissalem. Veel meer dan massatoerisme.",
+    "tags": [
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "centraal",
+      "wifi",
+      "romantisch"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: N.A.",
+      "Logies en ontbijt",
+      "Vlucht inbegrepen",
+      "Strand op 25m"
+    ],
+    "description": "In Viva Cala Mesquida Resort & Spa ervaar je de VIVA Mood, wat synoniem staat voor geluk, comfort en plezier aan zee. Een spectaculair 4-sterren Aparthotel met een breed scala aan (à-la carte) restaurants, meerdere zwembaden met waanzinnig uitzicht, ",
+    "imageUrl": "https://images.corendonresources.com/L1E9660A1W1024H684.jpg?v=250122134426",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "oktober",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 982,
+        "_addedAt": "2026-09-08"
+      }
+    ],
+    "prijsPeilDatum": "september 2026",
+    "tripDesc": "in Cala Mesquida, met ontbijt, 4-sterren.",
+    "_score": 161
   },
   {
     "id": "corendon-fly-go-seaside-los-jameos-lasljf",
@@ -6732,7 +6902,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 1027,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -6782,7 +6952,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1202,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -6834,6 +7004,13 @@ const trips = [
         "airport": "AMS",
         "prijs": 873,
         "_addedAt": "2026-09-15"
+      },
+      {
+        "maand": "oktober",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 907,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -6890,8 +7067,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "RTM",
-        "prijs": 982,
-        "_addedAt": "2026-09-15"
+        "prijs": 965,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -7050,12 +7227,70 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 797,
-        "_addedAt": "2026-09-15"
+        "prijs": 817,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
     "tripDesc": "in Alcudia, met ontbijt, 4-sterren, gastwaardering 8,5.",
+    "_score": 158
+  },
+  {
+    "id": "corendon-fly-go-h10-suites-lanzarote-gardens-lagarf",
+    "title": "Halfpension appartement Lanzarote",
+    "destination": "Lanzarote, Spanje",
+    "hotelName": "Fly & Go H10 Suites Lanzarote Gardens",
+    "sfeer": [
+      "comfort",
+      "strand"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Halfpension",
+    "vluchtduur": "2u30",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "Halfpension in Costa Teguise, Spanje — direct aan zee",
+    "whyThisTrip": "Vulkaanlandschap van Timanfaya, César Manrique-kunst en wijnbouw op lava. Anders dan elk ander eiland.",
+    "tags": [
+      "halfpension",
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: 8,5",
+      "Halfpension",
+      "Vlucht inbegrepen",
+      "Strand op 300m"
+    ],
+    "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
+    "imageUrl": "https://images.corendonresources.com/L1E11748A5W0H0.jpg?v=260116143230",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "december",
+        "duur": 7,
+        "airport": "EIN",
+        "prijs": 798,
+        "_addedAt": "2026-09-16"
+      },
+      {
+        "maand": "december",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 814,
+        "_addedAt": "2026-09-08"
+      }
+    ],
+    "prijsPeilDatum": "september 2026",
+    "tripDesc": "in Costa Teguise, halfpension, 4-sterren, gastwaardering 8,5.",
     "_score": 158
   },
   {
@@ -7101,6 +7336,13 @@ const trips = [
         "airport": "AMS",
         "prijs": 873,
         "_addedAt": "2026-09-10"
+      },
+      {
+        "maand": "januari",
+        "duur": 3,
+        "airport": "AMS",
+        "prijs": 388,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -7149,8 +7391,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1051,
-        "_addedAt": "2026-09-15"
+        "prijs": 1075,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -7200,8 +7442,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 901,
-        "_addedAt": "2026-09-15"
+        "prijs": 925,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -7251,8 +7493,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 919,
-        "_addedAt": "2026-09-06"
+        "prijs": 931,
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "oktober",
@@ -7385,105 +7627,6 @@ const trips = [
     "_score": 153
   },
   {
-    "id": "corendon-bluebay-banus-mgblu",
-    "title": "Zonvakantie hotel Costa del Sol",
-    "destination": "Costa del Sol, Spanje",
-    "hotelName": "Bluebay Banus",
-    "sfeer": [
-      "comfort",
-      "strand"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "Ontbijt",
-    "vluchtduur": "2u30",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "Zonvakantie in Marbella - San Pedro, Spanje — met spa & wellness",
-    "whyThisTrip": "Málaga's Picasso-museum, witte dorpen in de bergen en lange zandstranden. Strand met culturele diepgang.",
-    "tags": [
-      "4-sterren",
-      "strand",
-      "pool",
-      "wellness",
-      "entertainment",
-      "centraal",
-      "wifi"
-    ],
-    "highlights": [
-      "4-sterren accommodatie",
-      "Gastwaardering: 7,5",
-      "Logies en ontbijt",
-      "Vlucht inbegrepen",
-      "2 buitenzwembad(en)"
-    ],
-    "description": "Bluebay Banús is een ruim opgezet complex in de stijl van een Andalusisch dorp en beschikt over een prachtig onderhouden subtropische tuin. De traditionele sfeer van het complex zal je verblijf in Bluebay Banús aangenaam verrassen. Geniet van de mooi",
-    "imageUrl": "https://images.corendonresources.com/L1E5009A1W1024H684.jpg?v=251113125556",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "november",
-        "duur": 7,
-        "airport": "EIN",
-        "prijs": 385,
-        "_addedAt": "2026-09-15"
-      }
-    ],
-    "prijsPeilDatum": "september 2026",
-    "tripDesc": "in Marbella - San Pedro, met ontbijt, 4-sterren, beoordeeld met een 7,5.",
-    "_score": 153
-  },
-  {
-    "id": "corendon-palladium-hotel-menorca-mnpal",
-    "title": "All-inclusive hotel Menorca",
-    "destination": "Menorca, Spanje",
-    "hotelName": "Palladium Hotel Menorca",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "2u30",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "All-inclusive in Arenal d&apos;en Castell, Spanje — met spa & wellness",
-    "whyThisTrip": "Ongerepte baaien, de oude hoofdstad Ciutadella en het langzaamste levenstempo van de Balearen. Perfecte digital detox.",
-    "tags": [
-      "allinclusive",
-      "4-sterren",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "centraal",
-      "snorkelen",
-      "wifi"
-    ],
-    "highlights": [
-      "4-sterren accommodatie",
-      "Gastwaardering: N.A.",
-      "All Inclusive",
-      "Vlucht inbegrepen",
-      "Strand op 300m"
-    ],
-    "description": "Palladium Hotel Menorca ligt op een prachtig plekje boven de baai van Arenal d'en Castell, waar het uitzicht elke dag weer een cadeautje is. Dit moderne Selections hotel combineert comfort met een relaxte vakantiesfeer en biedt voor iedereen iets moo",
-    "imageUrl": "https://images.corendonresources.com/L1E13738A1W1024H684.jpg?v=251127154320",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "september",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 1420,
-        "_addedAt": "2026-09-02"
-      }
-    ],
-    "prijsPeilDatum": "september 2026",
-    "tripDesc": "in Arenal d'en Castell, all-inclusive, 4-sterren.",
-    "_score": 153
-  },
-  {
     "id": "corendon-fly-go-kunuku-aqua-resort-trademark-collection-by-wyndham-cwkunf",
     "title": "All-inclusive hotel Sint Willibrordus",
     "destination": "Sint Willibrordus, Curaçao",
@@ -7575,7 +7718,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 815,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -7628,7 +7771,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1171,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -7676,7 +7819,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1114,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "september",
@@ -7732,8 +7875,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1729,
-        "_addedAt": "2026-09-15"
+        "prijs": 1794,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -7945,7 +8088,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1126,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -7989,7 +8132,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 765,
-        "_addedAt": "2026-09-12"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "januari",
@@ -8050,6 +8193,56 @@ const trips = [
     "_score": 142
   },
   {
+    "id": "corendon-belnem-house-bonaire-bnbhb",
+    "title": "Zonvakantie appartement Kralendijk",
+    "destination": "Kralendijk, Bonaire",
+    "hotelName": "Belnem House Bonaire",
+    "sfeer": [
+      "comfort",
+      "strand",
+      "rustig",
+      "resort"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Logies",
+    "vluchtduur": "9u30",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "Zonvakantie in Kralendijk, Bonaire — 9,3/10 reviews",
+    "whyThisTrip": "Bonaire's huisriffen, flamingo's bij Gotomeer en windsurfen op Lac Bay. Het rustigste ABC-eiland.",
+    "tripDesc": "4-sterren, gastwaardering 9,3.",
+    "tags": [
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: 9,3",
+      "Logies",
+      "Vlucht inbegrepen",
+      "Strand op 250m"
+    ],
+    "description": "Ben je op zoek naar een ontspannen vakantie als strandliefhebber of als duiker? Dan ben je bij Belnem House Bonaire, een adult friendly resort, aan het juiste adres. Het complex ligt aan de rand van Kralendijk, in de villawijk Belnem, en op loopafsta",
+    "imageUrl": "https://images.corendonresources.com/L1E9318A1W1024H684.jpg?v=260703155840",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "mei",
+        "duur": 8,
+        "airport": "AMS",
+        "prijs": 1276,
+        "_addedAt": "2026-09-16"
+      }
+    ],
+    "prijsPeilDatum": "september 2026",
+    "_score": 141
+  },
+  {
     "id": "corendon-fly-go-belnem-house-bonaire-bnbhbf",
     "title": "Zonvakantie appartement Kralendijk",
     "destination": "Kralendijk, Bonaire",
@@ -8092,7 +8285,7 @@ const trips = [
         "duur": 8,
         "airport": "AMS",
         "prijs": 1433,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -8149,7 +8342,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1029,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -8248,7 +8441,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1072,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -8344,8 +8537,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "EIN",
-        "prijs": 886,
-        "_addedAt": "2026-09-15"
+        "prijs": 921,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -8390,8 +8583,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1059,
-        "_addedAt": "2026-09-15"
+        "prijs": 1068,
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "oktober",
@@ -8448,7 +8641,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1084,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -8502,7 +8695,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1363,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -8548,8 +8741,8 @@ const trips = [
         "maand": "november",
         "duur": 11,
         "airport": "EIN",
-        "prijs": 1164,
-        "_addedAt": "2026-09-12"
+        "prijs": 1155,
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "januari",
@@ -8610,7 +8803,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 854,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "maart",
@@ -8718,7 +8911,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1031,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -8767,7 +8960,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1246,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -8821,8 +9014,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1916,
-        "_addedAt": "2026-09-15"
+        "prijs": 1966,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -8872,8 +9065,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "RTM",
-        "prijs": 1257,
-        "_addedAt": "2026-09-15"
+        "prijs": 1240,
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -8971,7 +9164,7 @@ const trips = [
         "duur": 11,
         "airport": "AMS",
         "prijs": 1308,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       },
       {
         "maand": "december",
@@ -9034,7 +9227,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 833,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -9092,7 +9285,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1471,
-        "_addedAt": "2026-09-15"
+        "_addedAt": "2026-09-16"
       }
     ],
     "prijsPeilDatum": "september 2026",
