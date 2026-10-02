@@ -1,142 +1,16 @@
 // trips.js — Kiespret dataset
 // Automatisch gegenereerd door feed-parser/build-trips.js
-// Laatste update: 2026-10-01
+// Laatste update: 2026-10-02
 //
 // Handmatige trips (TUI/Sunweb): 0
-// Corendon feed-trips: 167 (gecureerd uit 2432)
-// Totaal: 167
+// Corendon feed-trips: 169 (gecureerd uit 2437)
+// Totaal: 169
 //
 // Scope: uitsluitend zonvakanties voor Nederlandse koppels 28–45
 // Curatie: 4+ sterren, rating ≥ 7.5, AMS/EIN, max 8/regio, max 25/land
 // Prijs: per persoon inclusief vlucht
 
 const trips = [
-  {
-    "id": "corendon-kaisol-romance-resort-ex-sunrise-romance-resort-grand-select-hugsr",
-    "title": "Adults only resort Hurghada",
-    "destination": "Hurghada, Egypte",
-    "hotelName": "KaiSol Romance Resort (ex. Sunrise Romance Resort Grand Select)",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand",
-      "rustig",
-      "resort"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "5u",
-    "adultsOnly": true,
-    "audience": "couples",
-    "matchReason": "Adults only all-inclusive in Sahl Hasheesh, Egypte — met privéstrand",
-    "whyThisTrip": "Rode Zee-snorkelen bij Giftun Island, woestijnsafari's en all-inclusive aan een eindeloos zandstrand.",
-    "tags": [
-      "adults-only",
-      "allinclusive",
-      "5-sterren",
-      "luxe",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "snorkelen",
-      "wifi",
-      "romantisch"
-    ],
-    "highlights": [
-      "5-sterren accommodatie",
-      "Gastwaardering: 9,1",
-      "All Inclusive",
-      "Adults only",
-      "Vlucht inbegrepen"
-    ],
-    "description": "Het KaiSol Romance Resort (voorheen Sunrise Romance Resort -Grand Select-) is een romantisch toevluchtsoord, ideaal voor koppels die samen willen ontspannen in luxe. Het resort ligt in een rustige omgeving, direct aan een prachtig privéstrand, waar j",
-    "imageUrl": "https://images.corendonresources.com/L1E9123A1W1024H684.jpg?v=251009165247",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "december",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 670,
-        "_addedAt": "2026-10-01"
-      },
-      {
-        "maand": "januari",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 921,
-        "_addedAt": "2026-09-21"
-      },
-      {
-        "maand": "februari",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 960,
-        "_addedAt": "2026-09-19"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "in Sahl Hasheesh, adults only, all-inclusive, 5-sterren, gastwaardering 9,1.",
-    "_score": 246
-  },
-  {
-    "id": "corendon-steigenberger-pure-life-style-huspl",
-    "title": "Adults only resort Hurghada",
-    "destination": "Hurghada, Egypte",
-    "hotelName": "Steigenberger Pure Life Style",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand",
-      "resort"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "5u",
-    "adultsOnly": true,
-    "audience": "couples",
-    "matchReason": "Adults only all-inclusive in Hurghada-Stad, Egypte — met privéstrand",
-    "whyThisTrip": "Rode Zee-snorkelen bij Giftun Island, woestijnsafari's en all-inclusive aan een eindeloos zandstrand.",
-    "tags": [
-      "adults-only",
-      "allinclusive",
-      "5-sterren",
-      "luxe",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "snorkelen",
-      "wifi"
-    ],
-    "highlights": [
-      "5-sterren accommodatie",
-      "Gastwaardering: 9,4",
-      "All Inclusive",
-      "Adults only",
-      "Vlucht inbegrepen"
-    ],
-    "description": "Het Steigenberger Pure Lifestyle Hotel is het ultieme Only Adult resort voor wie op zoek is naar luxe, ontspanning en een beetje extra flair. Gelegen aan het strand, biedt dit hotel een oase van rust en stijl voor gasten vanaf 16 jaar. Hier kun je ge",
-    "imageUrl": "https://images.corendonresources.com/L1E9393A1W1024H684.jpg?v=260402110815",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "december",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 970,
-        "_addedAt": "2026-10-01"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "in Hurghada-Stad, adults only, all-inclusive, 5-sterren, gastwaardering 9,4.",
-    "_score": 244
-  },
   {
     "id": "corendon-pickalbatros-blu-spa-resort-huabl",
     "title": "Adults only resort Hurghada",
@@ -190,13 +64,84 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 595,
-        "_addedAt": "2026-10-01"
+        "prijs": 1015,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
     "tripDesc": "in Hurghada-Stad, adults only, all-inclusive, 5-sterren, gastwaardering 9,3.",
     "_score": 243
+  },
+  {
+    "id": "corendon-kaisol-romance-resort-ex-sunrise-romance-resort-grand-select-hugsr",
+    "title": "Adults only resort Hurghada",
+    "destination": "Hurghada, Egypte",
+    "hotelName": "KaiSol Romance Resort (ex. Sunrise Romance Resort Grand Select)",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand",
+      "rustig",
+      "resort"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "All-inclusive",
+    "vluchtduur": "5u",
+    "adultsOnly": true,
+    "audience": "couples",
+    "matchReason": "Adults only all-inclusive in Sahl Hasheesh, Egypte — met privéstrand",
+    "whyThisTrip": "Rode Zee-snorkelen bij Giftun Island, woestijnsafari's en all-inclusive aan een eindeloos zandstrand.",
+    "tags": [
+      "adults-only",
+      "allinclusive",
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "snorkelen",
+      "wifi",
+      "romantisch"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: 9,1",
+      "All Inclusive",
+      "Adults only",
+      "Vlucht inbegrepen"
+    ],
+    "description": "Het KaiSol Romance Resort (voorheen Sunrise Romance Resort -Grand Select-) is een romantisch toevluchtsoord, ideaal voor koppels die samen willen ontspannen in luxe. Het resort ligt in een rustige omgeving, direct aan een prachtig privéstrand, waar j",
+    "imageUrl": "https://images.corendonresources.com/L1E9123A1W1024H684.jpg?v=251009165247",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "december",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 910,
+        "_addedAt": "2026-10-02"
+      },
+      {
+        "maand": "januari",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 921,
+        "_addedAt": "2026-09-21"
+      },
+      {
+        "maand": "februari",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 960,
+        "_addedAt": "2026-09-19"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "tripDesc": "in Sahl Hasheesh, adults only, all-inclusive, 5-sterren, gastwaardering 9,1.",
+    "_score": 241
   },
   {
     "id": "corendon-flora-garden-beach-siflo",
@@ -243,8 +188,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 937,
-        "_addedAt": "2026-09-30"
+        "prijs": 884,
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "oktober",
@@ -320,12 +265,67 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 1473,
-        "_addedAt": "2026-09-30"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
     "tripDesc": "in Kiotari, adults only, all-inclusive, 5-sterren, gastwaardering 9,6.",
     "_score": 240
+  },
+  {
+    "id": "corendon-steigenberger-pure-life-style-huspl",
+    "title": "Adults only resort Hurghada",
+    "destination": "Hurghada, Egypte",
+    "hotelName": "Steigenberger Pure Life Style",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand",
+      "resort"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "All-inclusive",
+    "vluchtduur": "5u",
+    "adultsOnly": true,
+    "audience": "couples",
+    "matchReason": "Adults only all-inclusive in Hurghada-Stad, Egypte — met privéstrand",
+    "whyThisTrip": "Rode Zee-snorkelen bij Giftun Island, woestijnsafari's en all-inclusive aan een eindeloos zandstrand.",
+    "tags": [
+      "adults-only",
+      "allinclusive",
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: 9,4",
+      "All Inclusive",
+      "Adults only",
+      "Vlucht inbegrepen"
+    ],
+    "description": "Het Steigenberger Pure Lifestyle Hotel is het ultieme Only Adult resort voor wie op zoek is naar luxe, ontspanning en een beetje extra flair. Gelegen aan het strand, biedt dit hotel een oase van rust en stijl voor gasten vanaf 16 jaar. Hier kun je ge",
+    "imageUrl": "https://images.corendonresources.com/L1E9393A1W1024H684.jpg?v=260402110815",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "december",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 1200,
+        "_addedAt": "2026-10-02"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "tripDesc": "in Hurghada-Stad, adults only, all-inclusive, 5-sterren, gastwaardering 9,4.",
+    "_score": 239
   },
   {
     "id": "corendon-liberty-hotels-lykia-adult-only-ex-sentido-lykia-resort-fesen",
@@ -378,7 +378,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1227,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -446,8 +446,8 @@ const trips = [
         "maand": "april",
         "duur": 4,
         "airport": "AMS",
-        "prijs": 460,
-        "_addedAt": "2026-09-30"
+        "prijs": 461,
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "maart",
@@ -460,68 +460,6 @@ const trips = [
     "prijsPeilDatum": "oktober 2026",
     "tripDesc": "in Colakli, adults only, all-inclusive, 5-sterren, gastwaardering 8,5.",
     "_score": 239
-  },
-  {
-    "id": "corendon-pickalbatros-royal-grand-sharg",
-    "title": "Adults only resort Sharm el Sheikh",
-    "destination": "Sharm el Sheikh, Egypte",
-    "hotelName": "Pickalbatros Royal Grand",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand",
-      "actief"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "5u",
-    "adultsOnly": true,
-    "audience": "couples",
-    "matchReason": "Adults only all-inclusive in Ras Um El Sid, Egypte — met privéstrand",
-    "whyThisTrip": "Ras Mohammed-koraalriffen, duiken en snorkelen in de Rode Zee. Woestijn ontmoet onderwaterwereld.",
-    "tags": [
-      "adults-only",
-      "allinclusive",
-      "5-sterren",
-      "luxe",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "snorkelen",
-      "wifi"
-    ],
-    "highlights": [
-      "5-sterren accommodatie",
-      "Gastwaardering: 8,3",
-      "All Inclusive",
-      "Adults only",
-      "Vlucht inbegrepen"
-    ],
-    "description": "Pickalbatros Royal Grand is wellicht de mooiste plek aan de Rode Zee waar jij je vakantie wilt vieren. En eigenlijk weet je dat nog niet, maar je komt hier helemaal tot rust. De luxe en ruime kamers hebben zicht op het zwembad of op de Rode Zee, die ",
-    "imageUrl": "https://images.corendonresources.com/L1E10315A1W1024H684.jpg?v=241106153813",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "januari",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 769,
-        "_addedAt": "2026-10-01"
-      },
-      {
-        "maand": "december",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 692,
-        "_addedAt": "2026-09-19"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "in Ras Um El Sid, adults only, all-inclusive, 5-sterren, beoordeeld met een 8,3.",
-    "_score": 238
   },
   {
     "id": "corendon-sunrise-holidays-resort-select-husrh",
@@ -575,6 +513,13 @@ const trips = [
         "airport": "AMS",
         "prijs": 1148,
         "_addedAt": "2026-10-01"
+      },
+      {
+        "maand": "juni",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 839,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -636,8 +581,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 635,
-        "_addedAt": "2026-10-01"
+        "prijs": 865,
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "februari",
@@ -649,67 +594,6 @@ const trips = [
     ],
     "prijsPeilDatum": "oktober 2026",
     "_score": 237
-  },
-  {
-    "id": "corendon-ella-alkyna-colgv",
-    "title": "Adults only resort Corfu",
-    "destination": "Corfu, Griekenland",
-    "hotelName": "Ella Alkyna",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "3u",
-    "adultsOnly": true,
-    "audience": "couples",
-    "matchReason": "Adults only all-inclusive in Agios Gordios, Griekenland — direct aan zee",
-    "whyThisTrip": "Venetiaanse architectuur in Kerkyra, olijfboomgaarden en de beroemde Canal d'Amour bij Sidari. Groener dan de meeste Griekse eilanden.",
-    "tags": [
-      "adults-only",
-      "allinclusive",
-      "5-sterren",
-      "luxe",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "snorkelen",
-      "wifi"
-    ],
-    "highlights": [
-      "5-sterren accommodatie",
-      "Gastwaardering: 9,1",
-      "All Inclusive",
-      "Adults only",
-      "Vlucht inbegrepen"
-    ],
-    "description": "Ella Alkyna is een Only Adult hotel met een geweldige ligging, tegen een heuvel aan en aan het strand. Het centrum van Agios Gordios vind je op loopafstand. Kom tot rust in het Spa Center, neem een duik in het zwembad of de zee, geniet van heerlijke ",
-    "imageUrl": "https://images.corendonresources.com/L1E6419A1W1024H684.jpg?v=230125153042",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "oktober",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 1585,
-        "_addedAt": "2026-09-17"
-      },
-      {
-        "maand": "oktober",
-        "duur": 7,
-        "airport": "RTM",
-        "prijs": 1665,
-        "_addedAt": "2026-09-24"
-      }
-    ],
-    "prijsPeilDatum": "september 2026",
-    "tripDesc": "in Agios Gordios, adults only, all-inclusive, 5-sterren, gastwaardering 9,1.",
-    "_score": 235
   },
   {
     "id": "corendon-blue-lagoon-ocean-koblo",
@@ -887,8 +771,8 @@ const trips = [
         "maand": "januari",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 697,
-        "_addedAt": "2026-09-30"
+        "prijs": 691,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -896,54 +780,65 @@ const trips = [
     "_score": 233
   },
   {
-    "id": "corendon-proteas-blu-resort-sspro",
-    "title": "Adults only resort Samos",
-    "destination": "Samos, Griekenland",
-    "hotelName": "Proteas Blu Resort",
+    "id": "corendon-pickalbatros-royal-grand-sharg",
+    "title": "Adults only resort Sharm el Sheikh",
+    "destination": "Sharm el Sheikh, Egypte",
+    "hotelName": "Pickalbatros Royal Grand",
     "sfeer": [
+      "allinclusive",
       "comfort",
       "strand",
-      "resort"
+      "actief"
     ],
     "aanbieder": "Corendon",
-    "boardType": "Ontbijt",
-    "vluchtduur": "3u",
+    "boardType": "All-inclusive",
+    "vluchtduur": "5u",
     "adultsOnly": true,
     "audience": "couples",
-    "matchReason": "Adults only in Pythagorion, Griekenland — met privéstrand",
-    "whyThisTrip": "Pythagorio, bergwandelingen en rustige kiezelstranden. Klein en authentiek eiland voor koppels die drukte willen vermijden.",
+    "matchReason": "Adults only all-inclusive in Ras Um El Sid, Egypte — met privéstrand",
+    "whyThisTrip": "Ras Mohammed-koraalriffen, duiken en snorkelen in de Rode Zee. Woestijn ontmoet onderwaterwereld.",
     "tags": [
       "adults-only",
+      "allinclusive",
       "5-sterren",
       "luxe",
       "strand",
       "pool",
       "wellness",
       "fitness",
+      "entertainment",
       "centraal",
+      "snorkelen",
       "wifi"
     ],
     "highlights": [
       "5-sterren accommodatie",
-      "Gastwaardering: 9,1",
-      "Logies en ontbijt",
+      "Gastwaardering: 8,3",
+      "All Inclusive",
       "Adults only",
       "Vlucht inbegrepen"
     ],
-    "description": "Je kunt in alle rust genieten van je vakantie in het Only Adult hotel Proteas Blu Resort. Dit resort biedt een uitgebreid aanbod aan luxe faciliteiten en diensten, waardoor je verblijf zo ontspannen en aangenaam mogelijk zal zijn. Je kunt in de drie ",
-    "imageUrl": "https://images.corendonresources.com/L1E8537A1W1024H684.jpg?v=250207155929",
+    "description": "Pickalbatros Royal Grand is wellicht de mooiste plek aan de Rode Zee waar jij je vakantie wilt vieren. En eigenlijk weet je dat nog niet, maar je komt hier helemaal tot rust. De luxe en ruime kamers hebben zicht op het zwembad of op de Rode Zee, die ",
+    "imageUrl": "https://images.corendonresources.com/L1E10315A1W1024H684.jpg?v=241106153813",
     "affiliatePartner": "Corendon",
     "variants": [
       {
-        "maand": "mei",
+        "maand": "januari",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 522,
-        "_addedAt": "2026-10-01"
+        "prijs": 860,
+        "_addedAt": "2026-10-02"
+      },
+      {
+        "maand": "december",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 692,
+        "_addedAt": "2026-09-19"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "in Pythagorion, adults only, met ontbijt, 5-sterren, gastwaardering 9,1.",
+    "tripDesc": "in Ras Um El Sid, adults only, all-inclusive, 5-sterren, beoordeeld met een 8,3.",
     "_score": 233
   },
   {
@@ -1057,7 +952,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 839,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "oktober",
@@ -1119,8 +1014,8 @@ const trips = [
         "maand": "januari",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1227,
-        "_addedAt": "2026-10-01"
+        "prijs": 1555,
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "december",
@@ -1181,71 +1076,12 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1180,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
     "tripDesc": "adults only, all-inclusive, 5-sterren, beoordeeld met een 8,0.",
     "_score": 230
-  },
-  {
-    "id": "corendon-meandros-boutique-hotel-spa-zamea",
-    "title": "Adults only resort Zakynthos",
-    "destination": "Zakynthos, Griekenland",
-    "hotelName": "Meandros Boutique Hotel & SPA",
-    "sfeer": [
-      "comfort",
-      "strand",
-      "rustig"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "Halfpension",
-    "vluchtduur": "3u",
-    "adultsOnly": true,
-    "audience": "couples",
-    "matchReason": "Adults only in Kalamaki, Griekenland — met spa & wellness",
-    "whyThisTrip": "Navagio Beach, schildpadden spotten bij Laganas Bay en boottochtjes naar de Blue Caves. Rustig Ionisch eiland met turquoise baaien.",
-    "tags": [
-      "adults-only",
-      "halfpension",
-      "5-sterren",
-      "luxe",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "centraal",
-      "wifi"
-    ],
-    "highlights": [
-      "5-sterren accommodatie",
-      "Gastwaardering: 9,5",
-      "Halfpension",
-      "Adults only",
-      "Vlucht inbegrepen"
-    ],
-    "description": "Meandros Boutique Hotel & SPA (voorheen Meandros Hotel) is een stijlvol boetiekhotel gelegen in het hart van Kalamaki op Zakynthos. Het mooie strand vind je op wandelafstand. Hier kun je met een beetje geluk de zeldzame Caretta-Caretta schildpadden s",
-    "imageUrl": "https://images.corendonresources.com/L1E4061A1W1024H684.jpg?v=230511084439",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "oktober",
-        "duur": 7,
-        "airport": "EIN",
-        "prijs": 798,
-        "_addedAt": "2026-09-30"
-      },
-      {
-        "maand": "mei",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 496,
-        "_addedAt": "2026-10-01"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "in Kalamaki, adults only, halfpension, 5-sterren, gastwaardering 9,5.",
-    "_score": 229
   },
   {
     "id": "corendon-sunrise-meraki-resort-humki",
@@ -1300,8 +1136,8 @@ const trips = [
         "maand": "januari",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 655,
-        "_addedAt": "2026-09-30"
+        "prijs": 804,
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "februari",
@@ -1370,6 +1206,57 @@ const trips = [
     "_score": 229
   },
   {
+    "id": "corendon-proteas-blu-resort-sspro",
+    "title": "Adults only resort Samos",
+    "destination": "Samos, Griekenland",
+    "hotelName": "Proteas Blu Resort",
+    "sfeer": [
+      "comfort",
+      "strand",
+      "resort"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Ontbijt",
+    "vluchtduur": "3u",
+    "adultsOnly": true,
+    "audience": "couples",
+    "matchReason": "Adults only in Pythagorion, Griekenland — met privéstrand",
+    "whyThisTrip": "Pythagorio, bergwandelingen en rustige kiezelstranden. Klein en authentiek eiland voor koppels die drukte willen vermijden.",
+    "tags": [
+      "adults-only",
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "centraal",
+      "wifi"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: 9,1",
+      "Logies en ontbijt",
+      "Adults only",
+      "Vlucht inbegrepen"
+    ],
+    "description": "Je kunt in alle rust genieten van je vakantie in het Only Adult hotel Proteas Blu Resort. Dit resort biedt een uitgebreid aanbod aan luxe faciliteiten en diensten, waardoor je verblijf zo ontspannen en aangenaam mogelijk zal zijn. Je kunt in de drie ",
+    "imageUrl": "https://images.corendonresources.com/L1E8537A1W1024H684.jpg?v=250207155929",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "mei",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 902,
+        "_addedAt": "2026-10-02"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "tripDesc": "in Pythagorion, adults only, met ontbijt, 5-sterren, gastwaardering 9,1.",
+    "_score": 228
+  },
+  {
     "id": "corendon-lango-design-hotel-spa-kolan",
     "title": "Adults only resort Kos",
     "destination": "Kos, Griekenland",
@@ -1415,8 +1302,8 @@ const trips = [
         "maand": "april",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 879,
-        "_addedAt": "2026-09-30"
+        "prijs": 897,
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "mei",
@@ -1474,7 +1361,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 806,
-        "_addedAt": "2026-09-30"
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "oktober",
@@ -1546,6 +1433,65 @@ const trips = [
     "_score": 225
   },
   {
+    "id": "corendon-meandros-boutique-hotel-spa-zamea",
+    "title": "Adults only resort Zakynthos",
+    "destination": "Zakynthos, Griekenland",
+    "hotelName": "Meandros Boutique Hotel & SPA",
+    "sfeer": [
+      "comfort",
+      "strand",
+      "rustig"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Halfpension",
+    "vluchtduur": "3u",
+    "adultsOnly": true,
+    "audience": "couples",
+    "matchReason": "Adults only in Kalamaki, Griekenland — met spa & wellness",
+    "whyThisTrip": "Navagio Beach, schildpadden spotten bij Laganas Bay en boottochtjes naar de Blue Caves. Rustig Ionisch eiland met turquoise baaien.",
+    "tags": [
+      "adults-only",
+      "halfpension",
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "centraal",
+      "wifi"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: 9,5",
+      "Halfpension",
+      "Adults only",
+      "Vlucht inbegrepen"
+    ],
+    "description": "Meandros Boutique Hotel & SPA (voorheen Meandros Hotel) is een stijlvol boetiekhotel gelegen in het hart van Kalamaki op Zakynthos. Het mooie strand vind je op wandelafstand. Hier kun je met een beetje geluk de zeldzame Caretta-Caretta schildpadden s",
+    "imageUrl": "https://images.corendonresources.com/L1E4061A1W1024H684.jpg?v=230511084439",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "oktober",
+        "duur": 7,
+        "airport": "EIN",
+        "prijs": 812,
+        "_addedAt": "2026-10-02"
+      },
+      {
+        "maand": "mei",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 496,
+        "_addedAt": "2026-10-01"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "tripDesc": "in Kalamaki, adults only, halfpension, 5-sterren, gastwaardering 9,5.",
+    "_score": 224
+  },
+  {
     "id": "corendon-fly-go-meandros-boutique-hotel-spa-zameaf",
     "title": "Adults only resort Zakynthos",
     "destination": "Zakynthos, Griekenland",
@@ -1591,7 +1537,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 923,
-        "_addedAt": "2026-09-30"
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "mei",
@@ -1659,7 +1605,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 1135,
-        "_addedAt": "2026-09-30"
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "mei",
@@ -1777,68 +1723,11 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1325,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
     "tripDesc": "in Palma Nova, adults only, met ontbijt, 5-sterren, gastwaardering 9,0.",
-    "_score": 220
-  },
-  {
-    "id": "corendon-steigenberger-resort-alay-mssra",
-    "title": "Adults only resort Marsa Alam",
-    "destination": "Marsa Alam, Egypte",
-    "hotelName": "Steigenberger Resort Alay",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand",
-      "rustig",
-      "resort",
-      "actief"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "5u",
-    "adultsOnly": true,
-    "audience": "couples",
-    "matchReason": "Adults only all-inclusive in Marsa Alam, Egypte — met spa & wellness",
-    "whyThisTrip": "Dugongs spotten, huisriffen om vanaf het strand te snorkelen en rustige baaien. Rode Zee zonder de drukte van Hurghada.",
-    "tripDesc": "adults only, all-inclusive, 5-sterren.",
-    "tags": [
-      "adults-only",
-      "allinclusive",
-      "5-sterren",
-      "luxe",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "snorkelen",
-      "wifi"
-    ],
-    "highlights": [
-      "5-sterren accommodatie",
-      "Gastwaardering: N.A.",
-      "All Inclusive",
-      "Adults only",
-      "Vlucht inbegrepen"
-    ],
-    "description": "Droom je van zon, zee en een vakantie waarin je volledig kunt opladen? Dan zit je goed bij Steigenberger Resort Alaya in Marsa Alam. Begin je dag met uitzicht op de Rode Zee, zoek de verkoeling op bij het zwembad of kies voor een actief moment met sp",
-    "imageUrl": "https://images.corendonresources.com/L1E14456A1W1024H684.jpg?v=260824094552",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "januari",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 1133,
-        "_addedAt": "2026-10-01"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
     "_score": 220
   },
   {
@@ -1888,7 +1777,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 812,
-        "_addedAt": "2026-09-30"
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "januari",
@@ -1960,8 +1849,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 933,
-        "_addedAt": "2026-10-01"
+        "prijs": 961,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -2068,7 +1957,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1142,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -2121,8 +2010,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 895,
-        "_addedAt": "2026-10-01"
+        "prijs": 923,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -2175,7 +2064,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1098,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -2233,13 +2122,6 @@ const trips = [
         "airport": "EIN",
         "prijs": 1245,
         "_addedAt": "2026-09-30"
-      },
-      {
-        "maand": "oktober",
-        "duur": 7,
-        "airport": "RTM",
-        "prijs": 1281,
-        "_addedAt": "2026-09-17"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -2305,6 +2187,63 @@ const trips = [
     "_score": 216
   },
   {
+    "id": "corendon-steigenberger-resort-alay-mssra",
+    "title": "Adults only resort Marsa Alam",
+    "destination": "Marsa Alam, Egypte",
+    "hotelName": "Steigenberger Resort Alay",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand",
+      "rustig",
+      "resort",
+      "actief"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "All-inclusive",
+    "vluchtduur": "5u",
+    "adultsOnly": true,
+    "audience": "couples",
+    "matchReason": "Adults only all-inclusive in Marsa Alam, Egypte — met spa & wellness",
+    "whyThisTrip": "Dugongs spotten, huisriffen om vanaf het strand te snorkelen en rustige baaien. Rode Zee zonder de drukte van Hurghada.",
+    "tripDesc": "adults only, all-inclusive, 5-sterren.",
+    "tags": [
+      "adults-only",
+      "allinclusive",
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: N.A.",
+      "All Inclusive",
+      "Adults only",
+      "Vlucht inbegrepen"
+    ],
+    "description": "Droom je van zon, zee en een vakantie waarin je volledig kunt opladen? Dan zit je goed bij Steigenberger Resort Alaya in Marsa Alam. Begin je dag met uitzicht op de Rode Zee, zoek de verkoeling op bij het zwembad of kies voor een actief moment met sp",
+    "imageUrl": "https://images.corendonresources.com/L1E14456A1W1024H684.jpg?v=260824094552",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "januari",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 1301,
+        "_addedAt": "2026-10-02"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "_score": 215
+  },
+  {
     "id": "corendon-the-views-baia-fnfvb",
     "title": "Adults only hotel Madeira",
     "destination": "Madeira, Portugal",
@@ -2347,7 +2286,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 582,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "december",
@@ -2456,7 +2395,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 742,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -2562,8 +2501,8 @@ const trips = [
         "maand": "november",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 477,
-        "_addedAt": "2026-09-30"
+        "prijs": 483,
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "april",
@@ -2622,7 +2561,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 842,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -2771,7 +2710,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 683,
-        "_addedAt": "2026-09-30"
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "mei",
@@ -2880,12 +2819,80 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 643,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
     "tripDesc": "all-inclusive, 5-sterren, gastwaardering 9,7.",
     "_score": 202
+  },
+  {
+    "id": "corendon-pelagos-suites-hotel-spa-kopeg",
+    "title": "All-inclusive resort Kos",
+    "destination": "Kos, Griekenland",
+    "hotelName": "Pelagos Suites Hotel & Spa",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand",
+      "rustig",
+      "resort"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "All-inclusive",
+    "vluchtduur": "3u",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "All-inclusive in Kos-Stad Lambi, Griekenland — met privéstrand",
+    "whyThisTrip": "Compact eiland waar je alles op de fiets bereikt. Rustige stranden, Griekse taverna's in Kos-stad en de Asclepion-ruïnes.",
+    "tags": [
+      "allinclusive",
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "wifi"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: 9,1",
+      "All Inclusive",
+      "Vlucht inbegrepen",
+      "Strand op 100m"
+    ],
+    "description": "Dompel je onder in de luxe van het 5 sterren Pelagos Suites Hotel & Spa, waar kwaliteit, gastvrijheid en een perfect serviceniveau naadloos samenkomen. Vanaf het moment dat je binnenstapt, doet het personeel er alles aan om je een onvergetelijke vaka",
+    "imageUrl": "https://images.corendonresources.com/L1E9442A1W1024H684.jpg?v=260226113212",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "april",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 415,
+        "_addedAt": "2026-10-01"
+      },
+      {
+        "maand": "oktober",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 986,
+        "_addedAt": "2026-09-25"
+      },
+      {
+        "maand": "mei",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 901,
+        "_addedAt": "2026-10-02"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "tripDesc": "in Kos-Stad Lambi, all-inclusive, 5-sterren, gastwaardering 9,1.",
+    "_score": 201
   },
   {
     "id": "corendon-sbh-crystal-beach-hotel-fucry",
@@ -2931,7 +2938,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 519,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -2992,8 +2999,8 @@ const trips = [
         "maand": "april",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1133,
-        "_addedAt": "2026-10-01"
+        "prijs": 1271,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -3057,136 +3064,12 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 633,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
     "tripDesc": "all-inclusive, 5-sterren, gastwaardering 9,5.",
     "_score": 200
-  },
-  {
-    "id": "corendon-alba-resort-sialb",
-    "title": "Ultra all-inclusive resort Side",
-    "destination": "Side, Turkije",
-    "hotelName": "Alba Resort",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand",
-      "rustig",
-      "resort"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "Ultra all-inclusive",
-    "vluchtduur": "3u30",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "Ultra all-inclusive in Colakli, Turkije — met privéstrand",
-    "whyThisTrip": "Romeinse ruïnes naast het strand, de Manavgat-waterval en een gezellige oude binnenstad. Cultuur en zon in één.",
-    "tags": [
-      "allinclusive",
-      "ultra-allinclusive",
-      "5-sterren",
-      "luxe",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "wifi"
-    ],
-    "highlights": [
-      "5-sterren accommodatie",
-      "Gastwaardering: 8,9",
-      "Ultra All Inclusive",
-      "Vlucht inbegrepen",
-      "Strand op 500m"
-    ],
-    "description": "Alba Resort is gelegen in een rustige omgeving, maar toch met diverse winkels en uitgaansgelegenheden op korte afstand. Een ideale combinatie volgens velen die je voorgingen. Jong en oud kunnen hier prima terecht. Lange (strand)wandelingen of slenter",
-    "imageUrl": "https://images.corendonresources.com/L1E175A1W1024H684.jpg?v=230609083906",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "november",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 392,
-        "_addedAt": "2026-10-01"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "in Colakli, all-inclusive, 5-sterren, gastwaardering 8,9.",
-    "_score": 199
-  },
-  {
-    "id": "corendon-pickalbatros-sea-world-resort-huasw",
-    "title": "All-inclusive resort Marsa Alam",
-    "destination": "Marsa Alam, Egypte",
-    "hotelName": "Pickalbatros Sea World Resort",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand",
-      "rustig",
-      "resort"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "5u",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "All-inclusive in Marsa Alam, Egypte — met privéstrand",
-    "whyThisTrip": "Dugongs spotten, huisriffen om vanaf het strand te snorkelen en rustige baaien. Rode Zee zonder de drukte van Hurghada.",
-    "tripDesc": "all-inclusive, 5-sterren, gastwaardering 8,8.",
-    "tags": [
-      "allinclusive",
-      "5-sterren",
-      "luxe",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "snorkelen",
-      "wifi"
-    ],
-    "highlights": [
-      "5-sterren accommodatie",
-      "Gastwaardering: 8,8",
-      "All Inclusive",
-      "Vlucht inbegrepen",
-      "18 buitenzwembad(en)"
-    ],
-    "description": "Pickalbatros Sea World Resort ligt op een rustige locatie direct aan het strand en biedt alles voor een ontspannen vakantie. Het resort beschikt over diverse zwembaden, waaronder een aquapark met glijbanen, perfect voor zowel kinderen als volwassenen",
-    "imageUrl": "https://images.corendonresources.com/L1E9367A1W1024H684.jpg?v=251202120542",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "december",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 310,
-        "_addedAt": "2026-10-01"
-      },
-      {
-        "maand": "januari",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 601,
-        "_addedAt": "2026-09-18"
-      },
-      {
-        "maand": "februari",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 556,
-        "_addedAt": "2026-09-19"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
-    "_score": 198
   },
   {
     "id": "corendon-nirvana-mediterranean-excellence-kenir",
@@ -3236,6 +3119,13 @@ const trips = [
         "airport": "AMS",
         "prijs": 914,
         "_addedAt": "2026-10-01"
+      },
+      {
+        "maand": "oktober",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 1653,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -3295,7 +3185,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 748,
-        "_addedAt": "2026-09-30"
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "oktober",
@@ -3310,14 +3200,15 @@ const trips = [
     "_score": 195
   },
   {
-    "id": "corendon-fly-go-corendon-playa-kemer-keyelf",
-    "title": "Ultra all-inclusive resort Kemer",
-    "destination": "Kemer, Turkije",
-    "hotelName": "Fly & Go Corendon Playa Kemer",
+    "id": "corendon-alba-resort-sialb",
+    "title": "Ultra all-inclusive resort Side",
+    "destination": "Side, Turkije",
+    "hotelName": "Alba Resort",
     "sfeer": [
       "allinclusive",
       "comfort",
       "strand",
+      "rustig",
       "resort"
     ],
     "aanbieder": "Corendon",
@@ -3325,77 +3216,8 @@ const trips = [
     "vluchtduur": "3u30",
     "adultsOnly": false,
     "audience": "couples",
-    "matchReason": "Ultra all-inclusive in Beldibi, Turkije — met privéstrand",
-    "whyThisTrip": "Bossen, bergen en kiezelstranden aan de voet van het Taurusgebergte. Rustige tegenhanger van druk Antalya.",
-    "tags": [
-      "allinclusive",
-      "ultra-allinclusive",
-      "5-sterren",
-      "luxe",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "snorkelen",
-      "wifi"
-    ],
-    "highlights": [
-      "5-sterren accommodatie",
-      "Gastwaardering: 8,8",
-      "Ultra All Inclusive",
-      "Vlucht inbegrepen",
-      "1 buitenzwembad(en)"
-    ],
-    "description": "Corendon Playa Kemer heeft onder de vlag van Corendon Hotels & Resorts haar deuren geopend. Dit heerlijke All Inclusive hotel ligt direct aan het strand heeft een prima prijs-kwaliteitverhouding. De vele faciliteiten voor jong en oud zorgen voor een ",
-    "imageUrl": "https://images.corendonresources.com/L1E12428A5W0H0.jpg?v=260327091225",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "november",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 677,
-        "_addedAt": "2026-10-01"
-      },
-      {
-        "maand": "oktober",
-        "duur": 7,
-        "airport": "GRQ",
-        "prijs": 888,
-        "_addedAt": "2026-09-22"
-      },
-      {
-        "maand": "oktober",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 1006,
-        "_addedAt": "2026-09-24"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "in Beldibi, all-inclusive, 5-sterren, gastwaardering 8,8.",
-    "_score": 194
-  },
-  {
-    "id": "corendon-ic-hotels-santai-family-resort-besan",
-    "title": "Ultra all-inclusive resort Belek",
-    "destination": "Belek, Turkije",
-    "hotelName": "IC Hotels Santai Family Resort",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand",
-      "resort"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "Ultra all-inclusive",
-    "vluchtduur": "3u30",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "Ultra all-inclusive in Belek, Turkije — met privéstrand",
-    "whyThisTrip": "Brede zandstranden, golfbanen en luxe resorts tussen de dennenbossen. Rustig en groen, vlakbij het oude Aspendos.",
+    "matchReason": "Ultra all-inclusive in Colakli, Turkije — met privéstrand",
+    "whyThisTrip": "Romeinse ruïnes naast het strand, de Manavgat-waterval en een gezellige oude binnenstad. Cultuur en zon in één.",
     "tags": [
       "allinclusive",
       "ultra-allinclusive",
@@ -3411,32 +3233,25 @@ const trips = [
     ],
     "highlights": [
       "5-sterren accommodatie",
-      "Gastwaardering: 8,8",
+      "Gastwaardering: 8,9",
       "Ultra All Inclusive",
       "Vlucht inbegrepen",
-      "Strand op 10m"
+      "Strand op 500m"
     ],
-    "description": "IC Hotels Santai Family Resort staat voor een vakantie van het hoogste niveau in de mondaine badplaats Belek. IC Hotels Santai Family Resort is een luxe hotel dat te midden van het groen gelegen is.",
-    "imageUrl": "https://images.corendonresources.com/L1E757A1W1024H684.jpg?v=240226155149",
+    "description": "Alba Resort is gelegen in een rustige omgeving, maar toch met diverse winkels en uitgaansgelegenheden op korte afstand. Een ideale combinatie volgens velen die je voorgingen. Jong en oud kunnen hier prima terecht. Lange (strand)wandelingen of slenter",
+    "imageUrl": "https://images.corendonresources.com/L1E175A1W1024H684.jpg?v=230609083906",
     "affiliatePartner": "Corendon",
     "variants": [
       {
         "maand": "november",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 631,
-        "_addedAt": "2026-10-01"
-      },
-      {
-        "maand": "oktober",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 987,
-        "_addedAt": "2026-09-24"
+        "prijs": 714,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "all-inclusive, 5-sterren, gastwaardering 8,8.",
+    "tripDesc": "in Colakli, all-inclusive, 5-sterren, gastwaardering 8,9.",
     "_score": 194
   },
   {
@@ -3486,8 +3301,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 719,
-        "_addedAt": "2026-09-30"
+        "prijs": 577,
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "januari",
@@ -3562,70 +3377,11 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1140,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
     "tripDesc": "in Oludeniz, all-inclusive, 5-sterren, gastwaardering 9,5.",
-    "_score": 193
-  },
-  {
-    "id": "corendon-esencia-de-la-palma-by-princess-lpepp",
-    "title": "Adults only hotel La Palma",
-    "destination": "La Palma, Spanje",
-    "hotelName": "Esencia de La Palma by Princess",
-    "sfeer": [
-      "comfort",
-      "strand",
-      "rustig"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "Halfpension",
-    "vluchtduur": "2u30",
-    "adultsOnly": true,
-    "audience": "couples",
-    "matchReason": "Adults only in Fuencaliente, Spanje — met spa & wellness",
-    "whyThisTrip": "Sterrenwacht op de Roque, laurierbossen en wandelroutes door vulkaankraters. Het groenste Canarische eiland.",
-    "tags": [
-      "adults-only",
-      "halfpension",
-      "4-sterren",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "wifi"
-    ],
-    "highlights": [
-      "4-sterren accommodatie",
-      "Gastwaardering: N.A.",
-      "Halfpension",
-      "Adults only",
-      "Vlucht inbegrepen"
-    ],
-    "description": "Esencia de La Palma by Princess is een hotel dat precies begrijpt waar een ontspannen vakantie om draait: rust, comfort en een omgeving waar je vanzelf een tandje terugschakelt. Dit hotel biedt een prettige setting voor wie graag in alle rust verblij",
-    "imageUrl": "https://images.corendonresources.com/L1E14039A1W1024H684.jpg?v=260319153800",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "december",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 780,
-        "_addedAt": "2026-10-01"
-      },
-      {
-        "maand": "april",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 800,
-        "_addedAt": "2026-09-26"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "in Fuencaliente, adults only, halfpension, 4-sterren.",
     "_score": 193
   },
   {
@@ -3681,8 +3437,8 @@ const trips = [
         "maand": "januari",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 766,
-        "_addedAt": "2026-10-01"
+        "prijs": 892,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -3741,8 +3497,8 @@ const trips = [
         "maand": "april",
         "duur": 4,
         "airport": "AMS",
-        "prijs": 218,
-        "_addedAt": "2026-10-01"
+        "prijs": 548,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -3750,25 +3506,27 @@ const trips = [
     "_score": 193
   },
   {
-    "id": "corendon-nirvana-cosmopolitan-anker",
-    "title": "Ultra all-inclusive resort Antalya",
-    "destination": "Antalya, Turkije",
-    "hotelName": "Nirvana Cosmopolitan",
+    "id": "corendon-pickalbatros-sea-world-resort-huasw",
+    "title": "All-inclusive resort Marsa Alam",
+    "destination": "Marsa Alam, Egypte",
+    "hotelName": "Pickalbatros Sea World Resort",
     "sfeer": [
       "allinclusive",
       "comfort",
-      "strand"
+      "strand",
+      "rustig",
+      "resort"
     ],
     "aanbieder": "Corendon",
-    "boardType": "Ultra all-inclusive",
-    "vluchtduur": "3u30",
+    "boardType": "All-inclusive",
+    "vluchtduur": "5u",
     "adultsOnly": false,
     "audience": "couples",
-    "matchReason": "Ultra all-inclusive in Lara, Turkije — met spa & wellness",
-    "whyThisTrip": "Kaleiçi oude stad, Düden-watervallen en het Taurusgebergte als decor. Grote stad met strand, cultuur en nachtleven.",
+    "matchReason": "All-inclusive in Marsa Alam, Egypte — met privéstrand",
+    "whyThisTrip": "Dugongs spotten, huisriffen om vanaf het strand te snorkelen en rustige baaien. Rode Zee zonder de drukte van Hurghada.",
+    "tripDesc": "all-inclusive, 5-sterren, gastwaardering 8,8.",
     "tags": [
       "allinclusive",
-      "ultra-allinclusive",
       "5-sterren",
       "luxe",
       "strand",
@@ -3783,31 +3541,37 @@ const trips = [
     "highlights": [
       "5-sterren accommodatie",
       "Gastwaardering: 8,8",
-      "Ultra All Inclusive",
+      "All Inclusive",
       "Vlucht inbegrepen",
-      "Strand op 500m"
+      "18 buitenzwembad(en)"
     ],
-    "description": "Plezier en vertier voor jong en oud staan centraal tijdens je verblijf in Nirvana Cosmopolitan! In dit prachtige 5-sterrenhotel zul je helemaal niets te kort komen. Neem een duik in 1 van de zwembaden of zet voet op het strand van Lara. De kinderen h",
-    "imageUrl": "https://images.corendonresources.com/L1E432A1W1024H684.jpg?v=230327131750",
+    "description": "Pickalbatros Sea World Resort ligt op een rustige locatie direct aan het strand en biedt alles voor een ontspannen vakantie. Het resort beschikt over diverse zwembaden, waaronder een aquapark met glijbanen, perfect voor zowel kinderen als volwassenen",
+    "imageUrl": "https://images.corendonresources.com/L1E9367A1W1024H684.jpg?v=251202120542",
     "affiliatePartner": "Corendon",
     "variants": [
       {
-        "maand": "november",
+        "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 781,
-        "_addedAt": "2026-10-01"
+        "prijs": 540,
+        "_addedAt": "2026-10-02"
       },
       {
-        "maand": "oktober",
+        "maand": "januari",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1431,
+        "prijs": 601,
+        "_addedAt": "2026-09-18"
+      },
+      {
+        "maand": "februari",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 556,
         "_addedAt": "2026-09-19"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "in Lara, all-inclusive, 5-sterren, gastwaardering 8,8.",
     "_score": 193
   },
   {
@@ -3856,7 +3620,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 677,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -3910,7 +3674,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1140,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -3965,70 +3729,17 @@ const trips = [
         "airport": "AMS",
         "prijs": 753,
         "_addedAt": "2026-10-01"
+      },
+      {
+        "maand": "januari",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 892,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
     "tripDesc": "in Nabq Bay, all-inclusive, 5-sterren, gastwaardering 8,7.",
-    "_score": 192
-  },
-  {
-    "id": "corendon-barcel-royal-beach-vabar",
-    "title": "All-inclusive resort Sunny Beach",
-    "destination": "Sunny Beach, Bulgarije",
-    "hotelName": "Barceló Royal Beach",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "2u45",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "All-inclusive in Sunny Beach, Bulgarije — met spa & wellness",
-    "whyThisTrip": "Lang zandstrand aan de Zwarte Zee, betaalbare restaurants en een levendig uitgaansleven. Meeste waar voor je geld.",
-    "tripDesc": "all-inclusive, 5-sterren, beoordeeld met een 8,2.",
-    "tags": [
-      "allinclusive",
-      "5-sterren",
-      "luxe",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "snorkelen",
-      "wifi"
-    ],
-    "highlights": [
-      "5-sterren accommodatie",
-      "Gastwaardering: 8,2",
-      "All Inclusive",
-      "Vlucht inbegrepen",
-      "Strand op 50m"
-    ],
-    "description": "Barcelo Royal Beach is een prachtig 5-sterren hotel met alle luxe en comfort die je gewend bent van de Barcelo keten. Al bij binnenkomst zul je verrast zijn over de stijlvolle inrichting en ontspannen sfeer. Geniet!",
-    "imageUrl": "https://images.corendonresources.com/L1E2790A1W1024H684.jpg?v=251009165940",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "mei",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 419,
-        "_addedAt": "2026-10-01"
-      },
-      {
-        "maand": "augustus",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 784,
-        "_addedAt": "2026-09-25"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
     "_score": 192
   },
   {
@@ -4084,8 +3795,8 @@ const trips = [
         "maand": "mei",
         "duur": 4,
         "airport": "AMS",
-        "prijs": 660,
-        "_addedAt": "2026-09-30"
+        "prijs": 652,
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "april",
@@ -4132,7 +3843,7 @@ const trips = [
     ],
     "highlights": [
       "5-sterren accommodatie",
-      "Gastwaardering: 9,1",
+      "Gastwaardering: 9,0",
       "Ultra All Inclusive",
       "Vlucht inbegrepen",
       "2 buitenzwembad(en)"
@@ -4147,10 +3858,17 @@ const trips = [
         "airport": "AMS",
         "prijs": 1009,
         "_addedAt": "2026-09-22"
+      },
+      {
+        "maand": "mei",
+        "duur": 4,
+        "airport": "AMS",
+        "prijs": 763,
+        "_addedAt": "2026-10-02"
       }
     ],
-    "prijsPeilDatum": "september 2026",
-    "tripDesc": "in Pamucak, all-inclusive, 5-sterren, gastwaardering 9,1.",
+    "prijsPeilDatum": "oktober 2026",
+    "tripDesc": "in Pamucak, all-inclusive, 5-sterren, gastwaardering 9,0.",
     "_score": 191
   },
   {
@@ -4204,8 +3922,8 @@ const trips = [
         "maand": "mei",
         "duur": 4,
         "airport": "AMS",
-        "prijs": 1166,
-        "_addedAt": "2026-09-30"
+        "prijs": 1164,
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "april",
@@ -4251,7 +3969,7 @@ const trips = [
     ],
     "highlights": [
       "5-sterren accommodatie",
-      "Gastwaardering: 8,6",
+      "Gastwaardering: 8,7",
       "All Inclusive",
       "Vlucht inbegrepen"
     ],
@@ -4264,11 +3982,11 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 690,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "in Marmaris-Centrum, all-inclusive, 5-sterren, gastwaardering 8,6.",
+    "tripDesc": "in Marmaris-Centrum, all-inclusive, 5-sterren, gastwaardering 8,7.",
     "_score": 191
   },
   {
@@ -4316,8 +4034,8 @@ const trips = [
         "maand": "januari",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 611,
-        "_addedAt": "2026-10-01"
+        "prijs": 655,
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "maart",
@@ -4385,18 +4103,18 @@ const trips = [
         "maand": "januari",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 776,
-        "_addedAt": "2026-09-25"
+        "prijs": 1076,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
     "_score": 191
   },
   {
-    "id": "corendon-pickalbatros-palace-resort-shalp",
-    "title": "All-inclusive resort Sharm el Sheikh",
-    "destination": "Sharm el Sheikh, Egypte",
-    "hotelName": "Pickalbatros Palace Resort",
+    "id": "corendon-fly-go-corendon-playa-kemer-keyelf",
+    "title": "Ultra all-inclusive resort Kemer",
+    "destination": "Kemer, Turkije",
+    "hotelName": "Fly & Go Corendon Playa Kemer",
     "sfeer": [
       "allinclusive",
       "comfort",
@@ -4404,14 +4122,15 @@ const trips = [
       "resort"
     ],
     "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "5u",
+    "boardType": "Ultra all-inclusive",
+    "vluchtduur": "3u30",
     "adultsOnly": false,
     "audience": "couples",
-    "matchReason": "All-inclusive in Sharks Bay, Egypte — met privéstrand",
-    "whyThisTrip": "Ras Mohammed-koraalriffen, duiken en snorkelen in de Rode Zee. Woestijn ontmoet onderwaterwereld.",
+    "matchReason": "Ultra all-inclusive in Beldibi, Turkije — met privéstrand",
+    "whyThisTrip": "Bossen, bergen en kiezelstranden aan de voet van het Taurusgebergte. Rustige tegenhanger van druk Antalya.",
     "tags": [
       "allinclusive",
+      "ultra-allinclusive",
       "5-sterren",
       "luxe",
       "strand",
@@ -4425,33 +4144,40 @@ const trips = [
     ],
     "highlights": [
       "5-sterren accommodatie",
-      "Gastwaardering: 8,5",
-      "All Inclusive",
+      "Gastwaardering: 8,8",
+      "Ultra All Inclusive",
       "Vlucht inbegrepen",
-      "5 buitenzwembad(en)"
+      "1 buitenzwembad(en)"
     ],
-    "description": "Het Pickalbatros Palace Resort ligt pal aan de Rode Zee en staat garant voor een geweldige vakantie onder de Egyptische zon. Heerlijk ontstressen in één van de 9 zwembaden, terwijl de kinderen joelend de glijbanen afroetsjen (er zijn maar liefst 15 g",
-    "imageUrl": "https://images.corendonresources.com/L1E10314A1W1024H684.jpg?v=250911145711",
+    "description": "Corendon Playa Kemer heeft onder de vlag van Corendon Hotels & Resorts haar deuren geopend. Dit heerlijke All Inclusive hotel ligt direct aan het strand heeft een prima prijs-kwaliteitverhouding. De vele faciliteiten voor jong en oud zorgen voor een ",
+    "imageUrl": "https://images.corendonresources.com/L1E12428A5W0H0.jpg?v=260327091225",
     "affiliatePartner": "Corendon",
     "variants": [
       {
-        "maand": "december",
+        "maand": "november",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 751,
-        "_addedAt": "2026-10-01"
+        "prijs": 947,
+        "_addedAt": "2026-10-02"
       },
       {
-        "maand": "januari",
+        "maand": "oktober",
+        "duur": 7,
+        "airport": "GRQ",
+        "prijs": 888,
+        "_addedAt": "2026-09-22"
+      },
+      {
+        "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 637,
-        "_addedAt": "2026-09-25"
+        "prijs": 1006,
+        "_addedAt": "2026-09-24"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "in Sharks Bay, all-inclusive, 5-sterren, gastwaardering 8,5.",
-    "_score": 190
+    "tripDesc": "in Beldibi, all-inclusive, 5-sterren, gastwaardering 8,8.",
+    "_score": 189
   },
   {
     "id": "corendon-liberty-kusadasi-kusel",
@@ -4498,8 +4224,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 927,
-        "_addedAt": "2026-10-01"
+        "prijs": 846,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -4552,7 +4278,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 906,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "oktober",
@@ -4617,8 +4343,8 @@ const trips = [
         "maand": "mei",
         "duur": 4,
         "airport": "AMS",
-        "prijs": 514,
-        "_addedAt": "2026-09-30"
+        "prijs": 510,
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "april",
@@ -4633,27 +4359,83 @@ const trips = [
     "_score": 189
   },
   {
-    "id": "corendon-sentido-neptun-beach-vanep",
-    "title": "All-inclusive hotel Sunny Beach",
-    "destination": "Sunny Beach, Bulgarije",
-    "hotelName": "Sentido Neptun Beach",
+    "id": "corendon-xanadu-island-boxan",
+    "title": "Ultra all-inclusive resort Bodrum",
+    "destination": "Bodrum, Turkije",
+    "hotelName": "Xanadu Island",
     "sfeer": [
       "allinclusive",
       "comfort",
       "strand",
-      "resort"
+      "rustig"
     ],
     "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "2u45",
+    "boardType": "Ultra all-inclusive",
+    "vluchtduur": "3u30",
     "adultsOnly": false,
     "audience": "couples",
-    "matchReason": "All-inclusive in Sunny Beach, Bulgarije — met spa & wellness",
-    "whyThisTrip": "Lang zandstrand aan de Zwarte Zee, betaalbare restaurants en een levendig uitgaansleven. Meeste waar voor je geld.",
-    "tripDesc": "all-inclusive, 4-sterren, gastwaardering 9,2.",
+    "matchReason": "Ultra all-inclusive in Turgutreis, Turkije — met privéstrand",
+    "whyThisTrip": "Witte huisjes, het kasteel van Sint-Pieter en strandclubs aan de Egeïsche kust. De chiqueste badplaats van Turkije.",
     "tags": [
       "allinclusive",
-      "4-sterren",
+      "ultra-allinclusive",
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "wifi"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: 9,0",
+      "Ultra All Inclusive",
+      "Vlucht inbegrepen",
+      "2 buitenzwembad(en)"
+    ],
+    "description": "Xanadu Island is zo'n plek waar alles klopt. Op een schiereiland omringd door het helderblauwe water van de Egeïsche Zee vind je alleen maar suites, allemaal met een spectaculair uitzicht. De architectuur is strak en stijlvol, het design tot in de pu",
+    "imageUrl": "https://images.corendonresources.com/L1E116A1W1024H684.jpg?v=220620070431",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "oktober",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 1178,
+        "_addedAt": "2026-10-02"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "tripDesc": "in Turgutreis, all-inclusive, 5-sterren, gastwaardering 9,0.",
+    "_score": 189
+  },
+  {
+    "id": "corendon-my-home-resort-almhr",
+    "title": "Ultra all-inclusive resort Alanya",
+    "destination": "Alanya, Turkije",
+    "hotelName": "My Home Resort",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand",
+      "resort",
+      "actief"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Ultra all-inclusive",
+    "vluchtduur": "3u30",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "Ultra all-inclusive in Avsallar, Turkije — met privéstrand",
+    "whyThisTrip": "Kleopatra Beach, de rode toren en boottochtjes langs grotten. Levendige badplaats met een historisch centrum op de rots.",
+    "tags": [
+      "allinclusive",
+      "ultra-allinclusive",
+      "5-sterren",
+      "luxe",
       "strand",
       "pool",
       "wellness",
@@ -4661,29 +4443,111 @@ const trips = [
       "entertainment",
       "centraal",
       "snorkelen",
+      "wifi",
+      "wandelen"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: 8,3",
+      "Ultra All Inclusive",
+      "Vlucht inbegrepen",
+      "Strand op 500m"
+    ],
+    "description": "My Home Resort in Alanya is een te gekke familieplek met een ongedwongen sfeer. Dit Ultra All Inclusive 5-sterrenhotel is een waar paradijs met plezier voor jong en oud. Hier voel je je al snel thuis door de warme gastvrijheid van het personeel en ge",
+    "imageUrl": "https://images.corendonresources.com/L1E5052A1W1024H684.jpg?v=250704114812",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "november",
+        "duur": 6,
+        "airport": "AMS",
+        "prijs": 612,
+        "_addedAt": "2026-09-18"
+      },
+      {
+        "maand": "oktober",
+        "duur": 4,
+        "airport": "AMS",
+        "prijs": 648,
+        "_addedAt": "2026-09-21"
+      },
+      {
+        "maand": "november",
+        "duur": 5,
+        "airport": "AMS",
+        "prijs": 609,
+        "_addedAt": "2026-09-19"
+      },
+      {
+        "maand": "april",
+        "duur": 5,
+        "airport": "AMS",
+        "prijs": 455,
+        "_addedAt": "2026-10-02"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "tripDesc": "in Avsallar, all-inclusive, 5-sterren, beoordeeld met een 8,3.",
+    "_score": 189
+  },
+  {
+    "id": "corendon-esencia-de-la-palma-by-princess-lpepp",
+    "title": "Adults only hotel La Palma",
+    "destination": "La Palma, Spanje",
+    "hotelName": "Esencia de La Palma by Princess",
+    "sfeer": [
+      "comfort",
+      "strand",
+      "rustig"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Halfpension",
+    "vluchtduur": "2u30",
+    "adultsOnly": true,
+    "audience": "couples",
+    "matchReason": "Adults only in Fuencaliente, Spanje — met spa & wellness",
+    "whyThisTrip": "Sterrenwacht op de Roque, laurierbossen en wandelroutes door vulkaankraters. Het groenste Canarische eiland.",
+    "tags": [
+      "adults-only",
+      "halfpension",
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
       "wifi"
     ],
     "highlights": [
       "4-sterren accommodatie",
-      "Gastwaardering: 9,2",
-      "All Inclusive",
-      "Vlucht inbegrepen",
-      "Strand op 500m"
+      "Gastwaardering: N.A.",
+      "Halfpension",
+      "Adults only",
+      "Vlucht inbegrepen"
     ],
-    "description": "Gelegen in het hart van Sunny Beach met fantastisch uitzicht over de baai van Nessebar vind je Sentido Neptun Beach. In dit resort is het All Inclusive genieten voor jong en oud. Het hotel beschikt over ruime en moderne kamers die van alle gemakken z",
-    "imageUrl": "https://images.corendonresources.com/L1E10143A1W1024H684.jpg?v=260223154053",
+    "description": "Esencia de La Palma by Princess is een hotel dat precies begrijpt waar een ontspannen vakantie om draait: rust, comfort en een omgeving waar je vanzelf een tandje terugschakelt. Dit hotel biedt een prettige setting voor wie graag in alle rust verblij",
+    "imageUrl": "https://images.corendonresources.com/L1E14039A1W1024H684.jpg?v=260319153800",
     "affiliatePartner": "Corendon",
     "variants": [
       {
-        "maand": "mei",
+        "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 330,
-        "_addedAt": "2026-10-01"
+        "prijs": 814,
+        "_addedAt": "2026-10-02"
+      },
+      {
+        "maand": "april",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 800,
+        "_addedAt": "2026-09-26"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
-    "_score": 189
+    "tripDesc": "in Fuencaliente, adults only, halfpension, 4-sterren.",
+    "_score": 188
   },
   {
     "id": "corendon-sunrise-montemare-resort-grand-select--shmom",
@@ -4734,6 +4598,13 @@ const trips = [
         "airport": "AMS",
         "prijs": 866,
         "_addedAt": "2026-10-01"
+      },
+      {
+        "maand": "januari",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 1044,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -4783,8 +4654,8 @@ const trips = [
         "maand": "mei",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 439,
-        "_addedAt": "2026-10-01"
+        "prijs": 440,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -4846,22 +4717,84 @@ const trips = [
         "maand": "januari",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 722,
-        "_addedAt": "2026-09-25"
+        "prijs": 1004,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
     "_score": 186
   },
   {
-    "id": "corendon-tiara-beach-vatia",
-    "title": "All-inclusive hotel Sunny Beach",
-    "destination": "Sunny Beach, Bulgarije",
-    "hotelName": "Tiara Beach",
+    "id": "corendon-pickalbatros-palace-resort-shalp",
+    "title": "All-inclusive resort Sharm el Sheikh",
+    "destination": "Sharm el Sheikh, Egypte",
+    "hotelName": "Pickalbatros Palace Resort",
     "sfeer": [
       "allinclusive",
       "comfort",
-      "strand"
+      "strand",
+      "resort"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "All-inclusive",
+    "vluchtduur": "5u",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "All-inclusive in Sharks Bay, Egypte — met privéstrand",
+    "whyThisTrip": "Ras Mohammed-koraalriffen, duiken en snorkelen in de Rode Zee. Woestijn ontmoet onderwaterwereld.",
+    "tags": [
+      "allinclusive",
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: 8,5",
+      "All Inclusive",
+      "Vlucht inbegrepen",
+      "5 buitenzwembad(en)"
+    ],
+    "description": "Het Pickalbatros Palace Resort ligt pal aan de Rode Zee en staat garant voor een geweldige vakantie onder de Egyptische zon. Heerlijk ontstressen in één van de 9 zwembaden, terwijl de kinderen joelend de glijbanen afroetsjen (er zijn maar liefst 15 g",
+    "imageUrl": "https://images.corendonresources.com/L1E10314A1W1024H684.jpg?v=250911145711",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "december",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 866,
+        "_addedAt": "2026-10-02"
+      },
+      {
+        "maand": "januari",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 637,
+        "_addedAt": "2026-09-25"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "tripDesc": "in Sharks Bay, all-inclusive, 5-sterren, gastwaardering 8,5.",
+    "_score": 185
+  },
+  {
+    "id": "corendon-sentido-neptun-beach-vanep",
+    "title": "All-inclusive hotel Sunny Beach",
+    "destination": "Sunny Beach, Bulgarije",
+    "hotelName": "Sentido Neptun Beach",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand",
+      "resort"
     ],
     "aanbieder": "Corendon",
     "boardType": "All-inclusive",
@@ -4870,6 +4803,7 @@ const trips = [
     "audience": "couples",
     "matchReason": "All-inclusive in Sunny Beach, Bulgarije — met spa & wellness",
     "whyThisTrip": "Lang zandstrand aan de Zwarte Zee, betaalbare restaurants en een levendig uitgaansleven. Meeste waar voor je geld.",
+    "tripDesc": "all-inclusive, 4-sterren, gastwaardering 9,2.",
     "tags": [
       "allinclusive",
       "4-sterren",
@@ -4879,94 +4813,29 @@ const trips = [
       "fitness",
       "entertainment",
       "centraal",
+      "snorkelen",
       "wifi"
     ],
     "highlights": [
       "4-sterren accommodatie",
-      "Gastwaardering: 8,7",
+      "Gastwaardering: 9,2",
       "All Inclusive",
       "Vlucht inbegrepen",
-      "Strand op 200m"
+      "Strand op 500m"
     ],
-    "description": "Zoek je een hotel in Sunny Beach met veel faciliteiten en ruime kamers? Boek dan je vakantie naar Tiara Beach. Terwijl de kinderen zich vermaken in de zwembaden en roetsjen van de waterglijbanen, lig je bij het zwembad met een verkoelend drankje in j",
-    "imageUrl": "https://images.corendonresources.com/L1E2791A1W1024H684.jpg?v=260209121936",
+    "description": "Gelegen in het hart van Sunny Beach met fantastisch uitzicht over de baai van Nessebar vind je Sentido Neptun Beach. In dit resort is het All Inclusive genieten voor jong en oud. Het hotel beschikt over ruime en moderne kamers die van alle gemakken z",
+    "imageUrl": "https://images.corendonresources.com/L1E10143A1W1024H684.jpg?v=260223154053",
     "affiliatePartner": "Corendon",
     "variants": [
       {
         "maand": "mei",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 275,
-        "_addedAt": "2026-10-01"
-      },
-      {
-        "maand": "augustus",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 682,
-        "_addedAt": "2026-09-25"
+        "prijs": 785,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "all-inclusive, 4-sterren, gastwaardering 8,7.",
-    "_score": 184
-  },
-  {
-    "id": "corendon-dit-majestic-beach-vamaj",
-    "title": "Ultra all-inclusive hotel Sunny Beach",
-    "destination": "Sunny Beach, Bulgarije",
-    "hotelName": "DIT Majestic Beach",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "Ultra all-inclusive",
-    "vluchtduur": "2u45",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "Ultra all-inclusive in Sunny Beach, Bulgarije — met spa & wellness",
-    "whyThisTrip": "Lang zandstrand aan de Zwarte Zee, betaalbare restaurants en een levendig uitgaansleven. Meeste waar voor je geld.",
-    "tags": [
-      "allinclusive",
-      "ultra-allinclusive",
-      "4-sterren",
-      "strand",
-      "pool",
-      "wellness",
-      "entertainment",
-      "centraal",
-      "wifi"
-    ],
-    "highlights": [
-      "4-sterren accommodatie",
-      "Gastwaardering: 8,6",
-      "Ultra All Inclusive",
-      "Vlucht inbegrepen",
-      "Strand op 20m"
-    ],
-    "description": "Het DIT Majestic Beach is een ideaal 4-sterrenhotel, beschikt over 2 ruime zwembaden gelegen in een fraaie tuin, heeft tal van faciliteiten en erg mooie kamers. Een uniek hotel en dat ook nog eens op een toplocatie! Het DIT Majestic Beach biedt een i",
-    "imageUrl": "https://images.corendonresources.com/L1E1317A1W1024H684.jpg?v=260915144051",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "mei",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 445,
-        "_addedAt": "2026-10-01"
-      },
-      {
-        "maand": "augustus",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 838,
-        "_addedAt": "2026-09-25"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "all-inclusive, 4-sterren, gastwaardering 8,6.",
     "_score": 184
   },
   {
@@ -5014,8 +4883,68 @@ const trips = [
         "maand": "mei",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 410,
-        "_addedAt": "2026-10-01"
+        "prijs": 411,
+        "_addedAt": "2026-10-02"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "_score": 182
+  },
+  {
+    "id": "corendon-barcel-royal-beach-vabar",
+    "title": "All-inclusive resort Sunny Beach",
+    "destination": "Sunny Beach, Bulgarije",
+    "hotelName": "Barceló Royal Beach",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "All-inclusive",
+    "vluchtduur": "2u45",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "All-inclusive in Sunny Beach, Bulgarije — met spa & wellness",
+    "whyThisTrip": "Lang zandstrand aan de Zwarte Zee, betaalbare restaurants en een levendig uitgaansleven. Meeste waar voor je geld.",
+    "tripDesc": "all-inclusive, 5-sterren, beoordeeld met een 8,2.",
+    "tags": [
+      "allinclusive",
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: 8,2",
+      "All Inclusive",
+      "Vlucht inbegrepen",
+      "Strand op 50m"
+    ],
+    "description": "Barcelo Royal Beach is een prachtig 5-sterren hotel met alle luxe en comfort die je gewend bent van de Barcelo keten. Al bij binnenkomst zul je verrast zijn over de stijlvolle inrichting en ontspannen sfeer. Geniet!",
+    "imageUrl": "https://images.corendonresources.com/L1E2790A1W1024H684.jpg?v=251009165940",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "mei",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 849,
+        "_addedAt": "2026-10-02"
+      },
+      {
+        "maand": "augustus",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 784,
+        "_addedAt": "2026-09-25"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -5066,18 +4995,18 @@ const trips = [
         "maand": "mei",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 640,
-        "_addedAt": "2026-10-01"
+        "prijs": 641,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
     "_score": 181
   },
   {
-    "id": "corendon-dit-evrika-beach-club-hotel-vaevr",
+    "id": "corendon-tiara-beach-vatia",
     "title": "All-inclusive hotel Sunny Beach",
     "destination": "Sunny Beach, Bulgarije",
-    "hotelName": "DIT Evrika Beach Club Hotel",
+    "hotelName": "Tiara Beach",
     "sfeer": [
       "allinclusive",
       "comfort",
@@ -5088,66 +5017,8 @@ const trips = [
     "vluchtduur": "2u45",
     "adultsOnly": false,
     "audience": "couples",
-    "matchReason": "All-inclusive in Sunny Beach, Bulgarije — met privéstrand",
+    "matchReason": "All-inclusive in Sunny Beach, Bulgarije — met spa & wellness",
     "whyThisTrip": "Lang zandstrand aan de Zwarte Zee, betaalbare restaurants en een levendig uitgaansleven. Meeste waar voor je geld.",
-    "tags": [
-      "allinclusive",
-      "4-sterren",
-      "strand",
-      "pool",
-      "wellness",
-      "entertainment",
-      "centraal",
-      "wifi"
-    ],
-    "highlights": [
-      "4-sterren accommodatie",
-      "Gastwaardering: 8,1",
-      "All Inclusive",
-      "Vlucht inbegrepen",
-      "Strand op 10m"
-    ],
-    "description": "DIT Evrika Beach Club Hotel in Sunny Beach is het perfecte vakantieadres en de ideale combinatie van zon, zee, strand én comfort. Een fantastische locatie direct aan een prachtig privéstrand, op loopafstand van de levendige boulevard, een eigen aquap",
-    "imageUrl": "https://images.corendonresources.com/L1E9150A1W1024H684.jpg?v=220521174002",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "mei",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 427,
-        "_addedAt": "2026-10-01"
-      },
-      {
-        "maand": "augustus",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 817,
-        "_addedAt": "2026-09-25"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "all-inclusive, 4-sterren, beoordeeld met een 8,1.",
-    "_score": 179
-  },
-  {
-    "id": "corendon-flamenco-beach-resort-hufia",
-    "title": "All-inclusive hotel Marsa Alam",
-    "destination": "Marsa Alam, Egypte",
-    "hotelName": "Flamenco Beach & Resort",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand",
-      "resort"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "5u",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "All-inclusive in El Quseir, Egypte — met privéstrand",
-    "whyThisTrip": "Dugongs spotten, huisriffen om vanaf het strand te snorkelen en rustige baaien. Rode Zee zonder de drukte van Hurghada.",
     "tags": [
       "allinclusive",
       "4-sterren",
@@ -5157,103 +5028,37 @@ const trips = [
       "fitness",
       "entertainment",
       "centraal",
-      "snorkelen",
       "wifi"
     ],
     "highlights": [
       "4-sterren accommodatie",
-      "Gastwaardering: 7,9",
+      "Gastwaardering: 8,7",
       "All Inclusive",
       "Vlucht inbegrepen",
-      "4 buitenzwembad(en)"
+      "Strand op 200m"
     ],
-    "description": "Flamenco Beach Resort vlak bij El Quseir is een viersterrenresort dat direct aan een privéstrand met een koraalrif ligt. Het resort beschikt over zes zwembaden en biedt directe toegang tot de Rode Zee, ideaal voor snorkel- en duikliefhebbers. De kame",
-    "imageUrl": "https://images.corendonresources.com/L1E1797A1W1024H684.jpg?v=250320153954",
+    "description": "Zoek je een hotel in Sunny Beach met veel faciliteiten en ruime kamers? Boek dan je vakantie naar Tiara Beach. Terwijl de kinderen zich vermaken in de zwembaden en roetsjen van de waterglijbanen, lig je bij het zwembad met een verkoelend drankje in j",
+    "imageUrl": "https://images.corendonresources.com/L1E2791A1W1024H684.jpg?v=260209121936",
     "affiliatePartner": "Corendon",
     "variants": [
       {
-        "maand": "december",
+        "maand": "mei",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 463,
-        "_addedAt": "2026-09-30"
+        "prijs": 705,
+        "_addedAt": "2026-10-02"
       },
       {
-        "maand": "februari",
+        "maand": "augustus",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 478,
-        "_addedAt": "2026-09-19"
-      },
-      {
-        "maand": "november",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 233,
-        "_addedAt": "2026-10-01"
+        "prijs": 682,
+        "_addedAt": "2026-09-25"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "in El Quseir, all-inclusive, 4-sterren, beoordeeld met een 7,9.",
-    "_score": 177
-  },
-  {
-    "id": "corendon-fly-go-taimar-hotel-futaif",
-    "title": "All-inclusive hotel Fuerteventura",
-    "destination": "Fuerteventura, Spanje",
-    "hotelName": "Fly & Go Taimar Hotel",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand",
-      "rustig",
-      "avontuur"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "2u30",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "All-inclusive in Costa Calma, Spanje",
-    "whyThisTrip": "Eindeloze witte stranden, surfen bij El Cotillo en woestijnlandschap. Het rustigste Canarische eiland.",
-    "tags": [
-      "allinclusive",
-      "4-sterren",
-      "strand",
-      "pool",
-      "wellness",
-      "centraal",
-      "wifi"
-    ],
-    "highlights": [
-      "4-sterren accommodatie",
-      "Gastwaardering: 8,4",
-      "All Inclusive",
-      "Vlucht inbegrepen",
-      "Strand op 900m"
-    ],
-    "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E11776A5W0H0.jpg?v=260112153219",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "december",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 787,
-        "_addedAt": "2026-10-01"
-      },
-      {
-        "maand": "april",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 795,
-        "_addedAt": "2026-09-21"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "in Costa Calma, all-inclusive, 4-sterren, beoordeeld met een 8,4.",
-    "_score": 177
+    "tripDesc": "all-inclusive, 4-sterren, gastwaardering 8,7.",
+    "_score": 179
   },
   {
     "id": "corendon-fly-go-princesa-yaiza-suite-hotel-resort-laprif",
@@ -5306,7 +5111,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1182,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -5364,7 +5169,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 500,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -5425,64 +5230,6 @@ const trips = [
     "_score": 176
   },
   {
-    "id": "corendon-laguna-park-valun",
-    "title": "All-inclusive hotel Sunny Beach",
-    "destination": "Sunny Beach, Bulgarije",
-    "hotelName": "Laguna Park",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "2u45",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "All-inclusive in Sunny Beach, Bulgarije — met spa & wellness",
-    "whyThisTrip": "Lang zandstrand aan de Zwarte Zee, betaalbare restaurants en een levendig uitgaansleven. Meeste waar voor je geld.",
-    "tags": [
-      "allinclusive",
-      "4-sterren",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "wifi"
-    ],
-    "highlights": [
-      "4-sterren accommodatie",
-      "Gastwaardering: 7,9",
-      "All Inclusive",
-      "Vlucht inbegrepen",
-      "Strand op 300m"
-    ],
-    "description": "Laguna Park is een ideaal hotel voor jong en oud met een centrale ligging. Het levendige Sunny Beach en het strand liggen op loopafstand. De vele faciliteiten, zoals zwembaden met glijbanen, een Spa Center en animatie voor groot en klein, zullen ervo",
-    "imageUrl": "https://images.corendonresources.com/L1E8060A1W1024H684.jpg?v=250311141443",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "mei",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 306,
-        "_addedAt": "2026-10-01"
-      },
-      {
-        "maand": "augustus",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 730,
-        "_addedAt": "2026-09-25"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "all-inclusive, 4-sterren, beoordeeld met een 7,9.",
-    "_score": 175
-  },
-  {
     "id": "corendon-fly-go-albufeira-sol-poalff",
     "title": "All-inclusive appartement Algarve",
     "destination": "Algarve, Portugal",
@@ -5525,8 +5272,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1015,
-        "_addedAt": "2026-10-01"
+        "prijs": 987,
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "oktober",
@@ -5586,7 +5333,60 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 659,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "tripDesc": "all-inclusive, 5-sterren.",
+    "_score": 175
+  },
+  {
+    "id": "corendon-pickalbatros-palace-hotel-mspph",
+    "title": "All-inclusive resort Marsa Alam",
+    "destination": "Marsa Alam, Egypte",
+    "hotelName": "Pickalbatros Palace Hotel",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "All-inclusive",
+    "vluchtduur": "5u",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "All-inclusive in Marsa Alam, Egypte — met privéstrand",
+    "whyThisTrip": "Dugongs spotten, huisriffen om vanaf het strand te snorkelen en rustige baaien. Rode Zee zonder de drukte van Hurghada.",
+    "tags": [
+      "allinclusive",
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: N.A.",
+      "All Inclusive",
+      "Vlucht inbegrepen",
+      "2 buitenzwembad(en)"
+    ],
+    "description": "Bij het elegante Hotel Albatros Palace Port Ghalib kun je genieten van luxe en comfort in een geweldige omgeving. Dit hotel ligt vlak bij de haven van Port Ghalib en beschikt over een eigen strand met fijn, goudkleurig zand. Naast het strand ligt een",
+    "imageUrl": "https://images.corendonresources.com/L1E12761A1W1024H684.jpg?v=251202155336",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "januari",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 694,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -5645,11 +5445,69 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 563,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
     "tripDesc": "in Costa Calma, all-inclusive, 4-sterren, beoordeeld met een 8,1.",
+    "_score": 174
+  },
+  {
+    "id": "corendon-dit-majestic-beach-vamaj",
+    "title": "Ultra all-inclusive hotel Sunny Beach",
+    "destination": "Sunny Beach, Bulgarije",
+    "hotelName": "DIT Majestic Beach",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Ultra all-inclusive",
+    "vluchtduur": "2u45",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "Ultra all-inclusive in Sunny Beach, Bulgarije — met spa & wellness",
+    "whyThisTrip": "Lang zandstrand aan de Zwarte Zee, betaalbare restaurants en een levendig uitgaansleven. Meeste waar voor je geld.",
+    "tags": [
+      "allinclusive",
+      "ultra-allinclusive",
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "entertainment",
+      "centraal",
+      "wifi"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: 8,6",
+      "Ultra All Inclusive",
+      "Vlucht inbegrepen",
+      "Strand op 20m"
+    ],
+    "description": "Het DIT Majestic Beach is een ideaal 4-sterrenhotel, beschikt over 2 ruime zwembaden gelegen in een fraaie tuin, heeft tal van faciliteiten en erg mooie kamers. Een uniek hotel en dat ook nog eens op een toplocatie! Het DIT Majestic Beach biedt een i",
+    "imageUrl": "https://images.corendonresources.com/L1E1317A1W1024H684.jpg?v=260915144051",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "mei",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 875,
+        "_addedAt": "2026-10-02"
+      },
+      {
+        "maand": "augustus",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 838,
+        "_addedAt": "2026-09-25"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "tripDesc": "all-inclusive, 4-sterren, gastwaardering 8,6.",
     "_score": 174
   },
   {
@@ -5694,13 +5552,6 @@ const trips = [
       {
         "maand": "oktober",
         "duur": 7,
-        "airport": "AMS",
-        "prijs": 751,
-        "_addedAt": "2026-09-17"
-      },
-      {
-        "maand": "oktober",
-        "duur": 7,
         "airport": "EIN",
         "prijs": 775,
         "_addedAt": "2026-09-25"
@@ -5709,6 +5560,117 @@ const trips = [
     "prijsPeilDatum": "september 2026",
     "tripDesc": "in Castelsardo, all-inclusive, 4-sterren, beoordeeld met een 8,1.",
     "_score": 173
+  },
+  {
+    "id": "corendon-fly-go-fergus-style-bahamas-ibfsbf",
+    "title": "All-inclusive hotel Ibiza",
+    "destination": "Ibiza, Spanje",
+    "hotelName": "Fly & Go Fergus Style Bahamas",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand",
+      "rustig",
+      "avontuur"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "All-inclusive",
+    "vluchtduur": "2u30",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "All-inclusive in Playa d&apos;en Bossa, Spanje",
+    "whyThisTrip": "Zonsondergangen bij Café del Mar, verborgen baaien in het noorden en de oude stad Dalt Vila. Feest én rust op één eiland.",
+    "tags": [
+      "allinclusive",
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "wifi"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: 7,9",
+      "All Inclusive",
+      "Vlucht inbegrepen",
+      "Strand op 500m"
+    ],
+    "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
+    "imageUrl": "https://images.corendonresources.com/L1E12154A5W0H0.jpg?v=250210104632",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "oktober",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 781,
+        "_addedAt": "2026-10-02"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "tripDesc": "in Playa d'en Bossa, all-inclusive, 4-sterren, beoordeeld met een 7,9.",
+    "_score": 172
+  },
+  {
+    "id": "corendon-fly-go-taimar-hotel-futaif",
+    "title": "All-inclusive hotel Fuerteventura",
+    "destination": "Fuerteventura, Spanje",
+    "hotelName": "Fly & Go Taimar Hotel",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand",
+      "rustig",
+      "avontuur"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "All-inclusive",
+    "vluchtduur": "2u30",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "All-inclusive in Costa Calma, Spanje",
+    "whyThisTrip": "Eindeloze witte stranden, surfen bij El Cotillo en woestijnlandschap. Het rustigste Canarische eiland.",
+    "tags": [
+      "allinclusive",
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "centraal",
+      "wifi"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: 8,4",
+      "All Inclusive",
+      "Vlucht inbegrepen",
+      "Strand op 900m"
+    ],
+    "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
+    "imageUrl": "https://images.corendonresources.com/L1E11776A5W0H0.jpg?v=260112153219",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "december",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 832,
+        "_addedAt": "2026-10-02"
+      },
+      {
+        "maand": "april",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 795,
+        "_addedAt": "2026-09-21"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "tripDesc": "in Costa Calma, all-inclusive, 4-sterren, beoordeeld met een 8,4.",
+    "_score": 172
   },
   {
     "id": "corendon-egypte-classic-5-huniv",
@@ -5747,8 +5709,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 412,
-        "_addedAt": "2026-10-01"
+        "prijs": 406,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -5806,7 +5768,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 558,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -5909,8 +5871,8 @@ const trips = [
         "maand": "september",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 703,
-        "_addedAt": "2026-09-30"
+        "prijs": 709,
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "augustus",
@@ -5929,6 +5891,121 @@ const trips = [
     ],
     "prijsPeilDatum": "oktober 2026",
     "_score": 171
+  },
+  {
+    "id": "corendon-laguna-park-valun",
+    "title": "All-inclusive hotel Sunny Beach",
+    "destination": "Sunny Beach, Bulgarije",
+    "hotelName": "Laguna Park",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "All-inclusive",
+    "vluchtduur": "2u45",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "All-inclusive in Sunny Beach, Bulgarije — met spa & wellness",
+    "whyThisTrip": "Lang zandstrand aan de Zwarte Zee, betaalbare restaurants en een levendig uitgaansleven. Meeste waar voor je geld.",
+    "tags": [
+      "allinclusive",
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "wifi"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: 7,9",
+      "All Inclusive",
+      "Vlucht inbegrepen",
+      "Strand op 300m"
+    ],
+    "description": "Laguna Park is een ideaal hotel voor jong en oud met een centrale ligging. Het levendige Sunny Beach en het strand liggen op loopafstand. De vele faciliteiten, zoals zwembaden met glijbanen, een Spa Center en animatie voor groot en klein, zullen ervo",
+    "imageUrl": "https://images.corendonresources.com/L1E8060A1W1024H684.jpg?v=250311141443",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "mei",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 785,
+        "_addedAt": "2026-10-02"
+      },
+      {
+        "maand": "augustus",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 730,
+        "_addedAt": "2026-09-25"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "tripDesc": "all-inclusive, 4-sterren, beoordeeld met een 7,9.",
+    "_score": 170
+  },
+  {
+    "id": "corendon-dit-evrika-beach-club-hotel-vaevr",
+    "title": "All-inclusive hotel Sunny Beach",
+    "destination": "Sunny Beach, Bulgarije",
+    "hotelName": "DIT Evrika Beach Club Hotel",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "All-inclusive",
+    "vluchtduur": "2u45",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "All-inclusive in Sunny Beach, Bulgarije — met privéstrand",
+    "whyThisTrip": "Lang zandstrand aan de Zwarte Zee, betaalbare restaurants en een levendig uitgaansleven. Meeste waar voor je geld.",
+    "tags": [
+      "allinclusive",
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "entertainment",
+      "centraal",
+      "wifi"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: 8,1",
+      "All Inclusive",
+      "Vlucht inbegrepen",
+      "Strand op 10m"
+    ],
+    "description": "DIT Evrika Beach Club Hotel in Sunny Beach is het perfecte vakantieadres en de ideale combinatie van zon, zee, strand én comfort. Een fantastische locatie direct aan een prachtig privéstrand, op loopafstand van de levendige boulevard, een eigen aquap",
+    "imageUrl": "https://images.corendonresources.com/L1E9150A1W1024H684.jpg?v=220521174002",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "mei",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 857,
+        "_addedAt": "2026-10-02"
+      },
+      {
+        "maand": "augustus",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 817,
+        "_addedAt": "2026-09-25"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "tripDesc": "all-inclusive, 4-sterren, beoordeeld met een 8,1.",
+    "_score": 169
   },
   {
     "id": "corendon-sbh-club-paraiso-playa-fuspp",
@@ -5980,7 +6057,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 513,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -6052,8 +6129,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 763,
-        "_addedAt": "2026-10-01"
+        "prijs": 757,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -6121,70 +6198,18 @@ const trips = [
         "airport": "AMS",
         "prijs": 1076,
         "_addedAt": "2026-10-01"
+      },
+      {
+        "maand": "april",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 1080,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
     "tripDesc": "in Santa Maria, all-inclusive, 5-sterren, beoordeeld met een 8,4.",
     "_score": 169
-  },
-  {
-    "id": "corendon-laguna-park-sunrise-valps",
-    "title": "All-inclusive hotel Sunny Beach",
-    "destination": "Sunny Beach, Bulgarije",
-    "hotelName": "Laguna Park Sunrise",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand",
-      "actief"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "2u45",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "All-inclusive in Sunny Beach, Bulgarije — scherp geprijsd",
-    "whyThisTrip": "Lang zandstrand aan de Zwarte Zee, betaalbare restaurants en een levendig uitgaansleven. Meeste waar voor je geld.",
-    "tags": [
-      "allinclusive",
-      "4-sterren",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "centraal",
-      "snorkelen",
-      "wifi"
-    ],
-    "highlights": [
-      "4-sterren accommodatie",
-      "Gastwaardering: N.A.",
-      "All Inclusive",
-      "Vlucht inbegrepen",
-      "Strand op 400m"
-    ],
-    "description": "Laguna Park Sunrise is een heerlijk 4-sterrenhotel in het populaire Sunny Beach in Bulgarije. Hier verblijf je op loopafstand van zowel het brede zandstrand als het gezellige centrum vol winkels, restaurants en uitgaansgelegenheden. Het hotel biedt a",
-    "imageUrl": "https://images.corendonresources.com/L1E13362A1W1024H684.jpg?v=250708090949",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "mei",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 271,
-        "_addedAt": "2026-10-01"
-      },
-      {
-        "maand": "augustus",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 688,
-        "_addedAt": "2026-09-25"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "all-inclusive, 4-sterren.",
-    "_score": 168
   },
   {
     "id": "corendon-the-views-oasis-hotel-fnoas",
@@ -6228,7 +6253,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 487,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "december",
@@ -6240,66 +6265,6 @@ const trips = [
     ],
     "prijsPeilDatum": "oktober 2026",
     "tripDesc": "in Caniço, met ontbijt, 4-sterren, gastwaardering 9,0.",
-    "_score": 167
-  },
-  {
-    "id": "corendon-fly-go-fergus-style-bahamas-ibfsbf",
-    "title": "All-inclusive hotel Ibiza",
-    "destination": "Ibiza, Spanje",
-    "hotelName": "Fly & Go Fergus Style Bahamas",
-    "sfeer": [
-      "allinclusive",
-      "comfort",
-      "strand",
-      "rustig",
-      "avontuur"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "All-inclusive",
-    "vluchtduur": "2u30",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "All-inclusive in Playa d&apos;en Bossa, Spanje",
-    "whyThisTrip": "Zonsondergangen bij Café del Mar, verborgen baaien in het noorden en de oude stad Dalt Vila. Feest én rust op één eiland.",
-    "tags": [
-      "allinclusive",
-      "4-sterren",
-      "strand",
-      "pool",
-      "wellness",
-      "fitness",
-      "entertainment",
-      "centraal",
-      "wifi"
-    ],
-    "highlights": [
-      "4-sterren accommodatie",
-      "Gastwaardering: 7,9",
-      "All Inclusive",
-      "Vlucht inbegrepen",
-      "Strand op 500m"
-    ],
-    "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E12154A5W0H0.jpg?v=250210104632",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "oktober",
-        "duur": 7,
-        "airport": "EIN",
-        "prijs": 920,
-        "_addedAt": "2026-09-17"
-      },
-      {
-        "maand": "oktober",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 781,
-        "_addedAt": "2026-10-01"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
-    "tripDesc": "in Playa d'en Bossa, all-inclusive, 4-sterren, beoordeeld met een 7,9.",
     "_score": 167
   },
   {
@@ -6345,7 +6310,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 670,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -6503,7 +6468,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1482,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -6554,11 +6519,65 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 897,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
     "tripDesc": "met ontbijt, 5-sterren, gastwaardering 8,5.",
+    "_score": 165
+  },
+  {
+    "id": "corendon-padelreis-the-rif-at-mangrove-beach-corendon-curio-by-hilton-cwpaf",
+    "title": "Ultra all-inclusive resort Willemstad",
+    "destination": "Willemstad, Curaçao",
+    "hotelName": "Padelreis The Rif at Mangrove Beach Corendon, Curio by Hilton",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand",
+      "resort"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Ultra all-inclusive",
+    "vluchtduur": "9u30",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "Ultra all-inclusive in Willemstad, Curaçao — met privéstrand",
+    "whyThisTrip": "Handelskade in pastelkleuren, snorkelen bij Tugboat Beach en Blue Curaçao proeven. Caribisch met een Nederlandse twist.",
+    "tripDesc": "all-inclusive, 5-sterren, gastwaardering 8,5.",
+    "tags": [
+      "allinclusive",
+      "ultra-allinclusive",
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: 8,5",
+      "Ultra All Inclusive",
+      "Vlucht inbegrepen",
+      "5 buitenzwembad(en)"
+    ],
+    "description": "Unieke samenwerking met Padel Pirates! Combineer een week zon, ontspanning en padel met dit complete padelarrangement van Corendon X Padel Pirates. Je verblijft in het luxe 5-sterren The Rif at Mangrove Beach Corendon, Curio by Hilton, vlak bij Wille",
+    "imageUrl": "https://images.corendonresources.com/L1E14489A1W1024H684.jpg?v=260922124749",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "november",
+        "duur": 6,
+        "airport": "AMS",
+        "prijs": 1899,
+        "_addedAt": "2026-10-02"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
     "_score": 165
   },
   {
@@ -6615,7 +6634,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1829,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -6669,7 +6688,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1594,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -6731,11 +6750,70 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1559,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
     "tripDesc": "all-inclusive, 5-sterren, beoordeeld met een 8,3.",
+    "_score": 163
+  },
+  {
+    "id": "corendon-laguna-park-sunrise-valps",
+    "title": "All-inclusive hotel Sunny Beach",
+    "destination": "Sunny Beach, Bulgarije",
+    "hotelName": "Laguna Park Sunrise",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand",
+      "actief"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "All-inclusive",
+    "vluchtduur": "2u45",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "All-inclusive in Sunny Beach, Bulgarije",
+    "whyThisTrip": "Lang zandstrand aan de Zwarte Zee, betaalbare restaurants en een levendig uitgaansleven. Meeste waar voor je geld.",
+    "tags": [
+      "allinclusive",
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: N.A.",
+      "All Inclusive",
+      "Vlucht inbegrepen",
+      "Strand op 400m"
+    ],
+    "description": "Laguna Park Sunrise is een heerlijk 4-sterrenhotel in het populaire Sunny Beach in Bulgarije. Hier verblijf je op loopafstand van zowel het brede zandstrand als het gezellige centrum vol winkels, restaurants en uitgaansgelegenheden. Het hotel biedt a",
+    "imageUrl": "https://images.corendonresources.com/L1E13362A1W1024H684.jpg?v=250708090949",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "mei",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 750,
+        "_addedAt": "2026-10-02"
+      },
+      {
+        "maand": "augustus",
+        "duur": 7,
+        "airport": "AMS",
+        "prijs": 688,
+        "_addedAt": "2026-09-25"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "tripDesc": "all-inclusive, 4-sterren.",
     "_score": 163
   },
   {
@@ -6783,7 +6861,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 762,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -6846,7 +6924,62 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1447,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "_score": 163
+  },
+  {
+    "id": "corendon-padelreis-mangrove-beach-corendon-curio-by-hilton-cwpam",
+    "title": "Ultra all-inclusive resort Willemstad",
+    "destination": "Willemstad, Curaçao",
+    "hotelName": "Padelreis Mangrove Beach Corendon, Curio by Hilton",
+    "sfeer": [
+      "allinclusive",
+      "comfort",
+      "strand",
+      "resort"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Ultra all-inclusive",
+    "vluchtduur": "9u30",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "Ultra all-inclusive in Willemstad, Curaçao — met privéstrand",
+    "whyThisTrip": "Handelskade in pastelkleuren, snorkelen bij Tugboat Beach en Blue Curaçao proeven. Caribisch met een Nederlandse twist.",
+    "tripDesc": "all-inclusive, 5-sterren, beoordeeld met een 8,3.",
+    "tags": [
+      "allinclusive",
+      "ultra-allinclusive",
+      "5-sterren",
+      "luxe",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "entertainment",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "5-sterren accommodatie",
+      "Gastwaardering: 8,3",
+      "Ultra All Inclusive",
+      "Vlucht inbegrepen",
+      "Strand op 500m"
+    ],
+    "description": "Unieke samenwerking met Padel Pirates! Combineer een week zon, ontspanning en padel met dit complete padelarrangement van Corendon X Padel Pirates. Je verblijft in het luxe 5-sterren Mangrove Beach Corendon, Curio by Hilton. Dit Ultra All Inclusive r",
+    "imageUrl": "https://images.corendonresources.com/L1E14491A1W1024H684.jpg?v=260922124417",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "november",
+        "duur": 6,
+        "airport": "AMS",
+        "prijs": 1849,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -6895,8 +7028,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1095,
-        "_addedAt": "2026-10-01"
+        "prijs": 1102,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -6945,8 +7078,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "EIN",
-        "prijs": 1012,
-        "_addedAt": "2026-10-01"
+        "prijs": 1108,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -7047,7 +7180,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 873,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "december",
@@ -7111,8 +7244,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 754,
-        "_addedAt": "2026-10-01"
+        "prijs": 803,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -7372,13 +7505,6 @@ const trips = [
         "airport": "AMS",
         "prijs": 911,
         "_addedAt": "2026-09-19"
-      },
-      {
-        "maand": "oktober",
-        "duur": 8,
-        "airport": "AMS",
-        "prijs": 951,
-        "_addedAt": "2026-09-17"
       }
     ],
     "prijsPeilDatum": "september 2026",
@@ -7482,7 +7608,7 @@ const trips = [
         "duur": 2,
         "airport": "EIN",
         "prijs": 238,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -7542,7 +7668,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 899,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -7600,7 +7726,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 865,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -7659,7 +7785,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 994,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -7712,8 +7838,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "RTM",
-        "prijs": 762,
-        "_addedAt": "2026-10-01"
+        "prijs": 817,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -7762,11 +7888,11 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1068,
-        "_addedAt": "2026-09-30"
+        "prijs": 1128,
+        "_addedAt": "2026-10-02"
       }
     ],
-    "prijsPeilDatum": "september 2026",
+    "prijsPeilDatum": "oktober 2026",
     "tripDesc": "in Santa Eulalia, met ontbijt, 5-sterren.",
     "_score": 150
   },
@@ -7812,8 +7938,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1062,
-        "_addedAt": "2026-09-30"
+        "prijs": 990,
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "oktober",
@@ -7873,7 +7999,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 799,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -7919,8 +8045,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1146,
-        "_addedAt": "2026-10-01"
+        "prijs": 1081,
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "oktober",
@@ -7976,13 +8102,6 @@ const trips = [
     "affiliatePartner": "Corendon",
     "variants": [
       {
-        "maand": "maart",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 1171,
-        "_addedAt": "2026-09-17"
-      },
-      {
         "maand": "november",
         "duur": 7,
         "airport": "AMS",
@@ -7994,7 +8113,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 920,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -8052,57 +8171,6 @@ const trips = [
     "_score": 145
   },
   {
-    "id": "corendon-harbor-hotel-casino-curacao-culinair-curacao-cwhcr",
-    "title": "Zonvakantie hotel Willemstad",
-    "destination": "Willemstad, Curaçao",
-    "hotelName": "Harbor Hotel & Casino Curaçao Culinair Curaçao",
-    "sfeer": [
-      "comfort",
-      "strand",
-      "rustig",
-      "actief",
-      "avontuur"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "Logies",
-    "vluchtduur": "9u30",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "Zonvakantie in Willemstad, Curaçao — met spa & wellness",
-    "whyThisTrip": "Handelskade in pastelkleuren, snorkelen bij Tugboat Beach en Blue Curaçao proeven. Caribisch met een Nederlandse twist.",
-    "tripDesc": "4-sterren, gastwaardering 9,1.",
-    "tags": [
-      "4-sterren",
-      "strand",
-      "pool",
-      "wellness",
-      "snorkelen",
-      "wifi",
-      "wandelen"
-    ],
-    "highlights": [
-      "4-sterren accommodatie",
-      "Gastwaardering: 9,1",
-      "Logies",
-      "Vlucht inbegrepen",
-      "1 buitenzwembad(en)"
-    ],
-    "description": "Bon bini! Toe aan sunsets and palm trees? In het hart van de historische wijk Otrobanda in Willemstad, ligt Harbor Hotel & Casino Curaçao. Een modern ingericht boutique hotel waar gastvrijheid op nummer 1 staat. Op steenworp afstand vind je de talloz",
-    "imageUrl": "https://images.corendonresources.com/L1E13237A1W1024H684.jpg?v=260818113035",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "oktober",
-        "duur": 6,
-        "airport": "AMS",
-        "prijs": 1158,
-        "_addedAt": "2026-09-28"
-      }
-    ],
-    "prijsPeilDatum": "september 2026",
-    "_score": 144
-  },
-  {
     "id": "corendon-sol-dunas-family-fun-cvsol",
     "title": "All-inclusive hotel Sal",
     "destination": "Sal, Kaapverdië",
@@ -8155,8 +8223,8 @@ const trips = [
         "maand": "april",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 909,
-        "_addedAt": "2026-10-01"
+        "prijs": 1008,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -8207,59 +8275,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 763,
-        "_addedAt": "2026-10-01"
-      }
-    ],
-    "prijsPeilDatum": "oktober 2026",
-    "_score": 143
-  },
-  {
-    "id": "corendon-fly-go-harbor-hotel-casino-curacao-cwharf",
-    "title": "Zonvakantie hotel Willemstad",
-    "destination": "Willemstad, Curaçao",
-    "hotelName": "Fly & Go Harbor Hotel & Casino Curaçao",
-    "sfeer": [
-      "comfort",
-      "strand",
-      "rustig",
-      "actief",
-      "avontuur"
-    ],
-    "aanbieder": "Corendon",
-    "boardType": "Logies",
-    "vluchtduur": "9u30",
-    "adultsOnly": false,
-    "audience": "couples",
-    "matchReason": "Zonvakantie in Willemstad, Curaçao — met spa & wellness",
-    "whyThisTrip": "Handelskade in pastelkleuren, snorkelen bij Tugboat Beach en Blue Curaçao proeven. Caribisch met een Nederlandse twist.",
-    "tripDesc": "4-sterren, gastwaardering 9,0.",
-    "tags": [
-      "4-sterren",
-      "strand",
-      "pool",
-      "wellness",
-      "centraal",
-      "snorkelen",
-      "wifi",
-      "wandelen"
-    ],
-    "highlights": [
-      "4-sterren accommodatie",
-      "Gastwaardering: 9,0",
-      "Logies",
-      "Vlucht inbegrepen",
-      "Strand op 100m"
-    ],
-    "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
-    "imageUrl": "https://images.corendonresources.com/L1E10632A5W0H0.jpg?v=251110125952",
-    "affiliatePartner": "Corendon",
-    "variants": [
-      {
-        "maand": "oktober",
-        "duur": 6,
-        "airport": "AMS",
-        "prijs": 894,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -8361,8 +8377,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1530,
-        "_addedAt": "2026-10-01"
+        "prijs": 1537,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -8476,7 +8492,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1059,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -8526,7 +8542,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1176,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -8584,7 +8600,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1094,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -8641,7 +8657,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 899,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -8804,7 +8820,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 994,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -8872,7 +8888,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1136,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -8926,7 +8942,7 @@ const trips = [
         "duur": 11,
         "airport": "EIN",
         "prijs": 1153,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -8980,7 +8996,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 851,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -9031,7 +9047,7 @@ const trips = [
         "duur": 8,
         "airport": "AMS",
         "prijs": 1436,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -9082,7 +9098,7 @@ const trips = [
         "duur": 8,
         "airport": "AMS",
         "prijs": 1279,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -9138,7 +9154,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 673,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -9189,7 +9205,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 823,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       },
       {
         "maand": "april",
@@ -9201,6 +9217,55 @@ const trips = [
     ],
     "prijsPeilDatum": "oktober 2026",
     "_score": 135
+  },
+  {
+    "id": "corendon-padelreis-livingstone-curacao-cwpal",
+    "title": "Zonvakantie hotel Jan Thiel Baai",
+    "destination": "Jan Thiel Baai, Curaçao",
+    "hotelName": "Padelreis Livingstone Curaçao",
+    "sfeer": [
+      "comfort",
+      "strand"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Ontbijt",
+    "vluchtduur": "9u30",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "Zonvakantie in Jan Thiel Baai, Curaçao — direct aan zee",
+    "whyThisTrip": "Koraalstrand, flamingo's bij het zoutmeer en strandtenten op Curaçao. Caribisch ontspannen.",
+    "tripDesc": "met ontbijt, 4-sterren, gastwaardering 8,6.",
+    "tags": [
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: 8,6",
+      "Logies en ontbijt",
+      "Vlucht inbegrepen",
+      "Strand op 300m"
+    ],
+    "description": "Unieke samenwerking met Padel Pirates! Combineer een week zon, ontspanning en padel met dit complete padelarrangement van Corendon X Padel Pirates. Je verblijft in het luxe 4-sterren Livingstone Curaçao in Jan Thiel, vlak bij Willemstad en direct aan",
+    "imageUrl": "https://images.corendonresources.com/L1E14490A1W1024H684.jpg?v=260922124150",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "november",
+        "duur": 6,
+        "airport": "AMS",
+        "prijs": 1599,
+        "_addedAt": "2026-10-02"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "_score": 134
   },
   {
     "id": "corendon-fly-drive-sardini-4-safd4",
@@ -9346,7 +9411,7 @@ const trips = [
         "duur": 11,
         "airport": "AMS",
         "prijs": 1305,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -9398,7 +9463,7 @@ const trips = [
         "duur": 10,
         "airport": "AMS",
         "prijs": 1082,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -9455,7 +9520,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1129,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -9513,7 +9578,7 @@ const trips = [
         "duur": 8,
         "airport": "AMS",
         "prijs": 1242,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
@@ -9563,7 +9628,57 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1074,
-        "_addedAt": "2026-10-01"
+        "_addedAt": "2026-10-02"
+      }
+    ],
+    "prijsPeilDatum": "oktober 2026",
+    "_score": 123
+  },
+  {
+    "id": "corendon-fly-go-sirena-resort-cwsirf",
+    "title": "Zonvakantie hotel Santa Rosa",
+    "destination": "Santa Rosa, Curaçao",
+    "hotelName": "Fly & Go Sirena Resort",
+    "sfeer": [
+      "comfort",
+      "strand",
+      "resort"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Logies",
+    "vluchtduur": "9u30",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "Zonvakantie in Santa Rosa, Curaçao",
+    "whyThisTrip": "ontdek Santa Rosa in Curaçao.",
+    "tripDesc": "4-sterren.",
+    "tags": [
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "fitness",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: N.A.",
+      "Logies",
+      "Vlucht inbegrepen",
+      "2 buitenzwembad(en)"
+    ],
+    "description": "Waarom een Fly & Go vakantie? * Gemak voorop: pakketreis met vlucht + deze accommodatie + huurauto * De verzekering voor je auto is geregeld * Vrijheid en avontuur: ontdek in je eigen tempo je vakantiebestemming Alvast sfeer proeven? Lees snel onze i",
+    "imageUrl": "https://images.corendonresources.com/L1E14531A5W0H0.jpg?v=260925105935",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "mei",
+        "duur": 6,
+        "airport": "AMS",
+        "prijs": 1196,
+        "_addedAt": "2026-10-02"
       }
     ],
     "prijsPeilDatum": "oktober 2026",
