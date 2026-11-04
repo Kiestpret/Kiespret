@@ -1,10 +1,10 @@
 // trips.js — Kiespret dataset
 // Automatisch gegenereerd door feed-parser/build-trips.js
-// Laatste update: 2026-11-03
+// Laatste update: 2026-11-04
 //
 // Handmatige trips (TUI/Sunweb): 0
-// Corendon feed-trips: 164 (gecureerd uit 2164)
-// Totaal: 164
+// Corendon feed-trips: 165 (gecureerd uit 2166)
+// Totaal: 165
 //
 // Scope: uitsluitend zonvakanties voor Nederlandse koppels 28–45
 // Curatie: 4+ sterren, rating ≥ 7.5, AMS/EIN, max 8/regio, max 25/land
@@ -58,7 +58,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 933,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -129,7 +129,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1133,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -186,7 +186,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1067,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -240,7 +240,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 1473,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -295,7 +295,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1433,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -353,7 +353,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 838,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -409,7 +409,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 854,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -462,7 +462,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 820,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -516,8 +516,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 803,
-        "_addedAt": "2026-11-03"
+        "prijs": 821,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -572,8 +572,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1532,
-        "_addedAt": "2026-11-03"
+        "prijs": 1550,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -625,7 +625,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 920,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -678,8 +678,8 @@ const trips = [
         "maand": "februari",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 913,
-        "_addedAt": "2026-11-03"
+        "prijs": 819,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -730,7 +730,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 864,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -781,7 +781,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 779,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -833,7 +833,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 663,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -883,7 +883,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 833,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -935,7 +935,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 775,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -987,6 +987,13 @@ const trips = [
         "airport": "EIN",
         "prijs": 806,
         "_addedAt": "2026-11-03"
+      },
+      {
+        "maand": "september",
+        "duur": 7,
+        "airport": "EIN",
+        "prijs": 749,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1040,7 +1047,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 763,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1091,7 +1098,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 812,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1143,7 +1150,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 918,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1197,7 +1204,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 899,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1258,7 +1265,7 @@ const trips = [
         "duur": 7,
         "airport": "MST",
         "prijs": 1125,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1308,7 +1315,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 468,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1358,7 +1365,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1159,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1412,7 +1419,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 906,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1464,7 +1471,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 819,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1517,7 +1524,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 831,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1566,7 +1573,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1274,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1616,7 +1623,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 560,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1681,7 +1688,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1546,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1737,7 +1744,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1267,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1785,8 +1792,8 @@ const trips = [
         "maand": "januari",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 583,
-        "_addedAt": "2026-11-03"
+        "prijs": 588,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1843,7 +1850,7 @@ const trips = [
         "duur": 7,
         "airport": "MST",
         "prijs": 506,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1900,7 +1907,7 @@ const trips = [
         "duur": 7,
         "airport": "MST",
         "prijs": 598,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -1949,15 +1956,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 488,
-        "_addedAt": "2026-10-22"
-      },
-      {
-        "maand": "april",
-        "duur": 7,
-        "airport": "MST",
-        "prijs": 489,
-        "_addedAt": "2026-10-20"
+        "prijs": 493,
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "maart",
@@ -2067,7 +2067,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1007,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -2127,8 +2127,8 @@ const trips = [
         "maand": "november",
         "duur": 5,
         "airport": "AMS",
-        "prijs": 961,
-        "_addedAt": "2026-11-03"
+        "prijs": 968,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -2187,8 +2187,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 786,
-        "_addedAt": "2026-11-03"
+        "prijs": 790,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -2246,7 +2246,7 @@ const trips = [
         "duur": 4,
         "airport": "AMS",
         "prijs": 433,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -2299,7 +2299,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 1069,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -2363,7 +2363,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 725,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -2415,7 +2415,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 1138,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -2469,7 +2469,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1035,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -2523,7 +2523,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 566,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -2578,7 +2578,7 @@ const trips = [
         "duur": 7,
         "airport": "MST",
         "prijs": 646,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -2634,7 +2634,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 584,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -2683,8 +2683,8 @@ const trips = [
         "maand": "september",
         "duur": 7,
         "airport": "EIN",
-        "prijs": 516,
-        "_addedAt": "2026-11-03"
+        "prijs": 506,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -2732,7 +2732,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 734,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -2784,8 +2784,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 770,
-        "_addedAt": "2026-11-03"
+        "prijs": 788,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -2899,7 +2899,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 658,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -2954,7 +2954,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1076,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -3006,7 +3006,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 731,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -3100,7 +3100,7 @@ const trips = [
     ],
     "highlights": [
       "5-sterren accommodatie",
-      "Gastwaardering: 8,8",
+      "Gastwaardering: 8,5",
       "Ultra All Inclusive",
       "Vlucht inbegrepen",
       "Strand op 200m"
@@ -3114,11 +3114,11 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 708,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
-    "tripDesc": "in Avsallar, all-inclusive, 5-sterren, gastwaardering 8,8.",
+    "tripDesc": "in Avsallar, all-inclusive, 5-sterren, gastwaardering 8,5.",
     "_score": 190
   },
   {
@@ -3168,7 +3168,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 728,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -3223,7 +3223,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 738,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -3288,7 +3288,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 913,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -3341,8 +3341,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 805,
-        "_addedAt": "2026-11-03"
+        "prijs": 823,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -3395,7 +3395,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 779,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -3450,7 +3450,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 699,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "juni",
@@ -3510,7 +3510,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 699,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -3564,8 +3564,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 1021,
-        "_addedAt": "2026-11-03"
+        "prijs": 1039,
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "januari",
@@ -3628,7 +3628,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 815,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -3679,7 +3679,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 449,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -3734,8 +3734,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 981,
-        "_addedAt": "2026-11-03"
+        "prijs": 999,
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "januari",
@@ -3797,7 +3797,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 764,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -3849,8 +3849,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 804,
-        "_addedAt": "2026-11-03"
+        "prijs": 822,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -3904,7 +3904,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 871,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -3958,7 +3958,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 785,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4061,8 +4061,8 @@ const trips = [
         "maand": "november",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 877,
-        "_addedAt": "2026-11-03"
+        "prijs": 837,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4120,7 +4120,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 479,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4173,7 +4173,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 842,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4226,7 +4226,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 419,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4279,7 +4279,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 849,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4330,7 +4330,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 756,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4394,7 +4394,7 @@ const trips = [
         "duur": 4,
         "airport": "AMS",
         "prijs": 468,
-        "_addedAt": "2026-11-01"
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "februari",
@@ -4454,7 +4454,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 582,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4504,7 +4504,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 705,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4556,7 +4556,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 759,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4618,7 +4618,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 765,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4670,7 +4670,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 947,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4722,7 +4722,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 477,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4780,7 +4780,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1162,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4828,8 +4828,8 @@ const trips = [
         "maand": "november",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 999,
-        "_addedAt": "2026-11-03"
+        "prijs": 959,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4882,7 +4882,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 765,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4933,7 +4933,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 779,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -4984,7 +4984,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 538,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "januari",
@@ -5043,7 +5043,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 745,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "januari",
@@ -5104,7 +5104,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 759,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -5154,7 +5154,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 820,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -5206,7 +5206,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 458,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -5263,8 +5263,8 @@ const trips = [
         "maand": "januari",
         "duur": 6,
         "airport": "AMS",
-        "prijs": 543,
-        "_addedAt": "2026-10-29"
+        "prijs": 546,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -5316,7 +5316,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 709,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -5367,7 +5367,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 912,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -5418,7 +5418,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 680,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -5469,7 +5469,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1749,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -5521,7 +5521,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 739,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "januari",
@@ -5587,8 +5587,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "EIN",
-        "prijs": 862,
-        "_addedAt": "2026-11-03"
+        "prijs": 867,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -5642,8 +5642,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "EIN",
-        "prijs": 895,
-        "_addedAt": "2026-11-03"
+        "prijs": 914,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -5699,7 +5699,7 @@ const trips = [
         "duur": 4,
         "airport": "AMS",
         "prijs": 437,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -5755,18 +5755,11 @@ const trips = [
         "_addedAt": "2026-10-21"
       },
       {
-        "maand": "april",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 1088,
-        "_addedAt": "2026-10-20"
-      },
-      {
         "maand": "november",
         "duur": 5,
         "airport": "AMS",
-        "prijs": 894,
-        "_addedAt": "2026-11-03"
+        "prijs": 916,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -5820,7 +5813,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 892,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -5870,7 +5863,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 776,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -5917,8 +5910,8 @@ const trips = [
         "maand": "januari",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 488,
-        "_addedAt": "2026-11-03"
+        "prijs": 493,
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "december",
@@ -5979,7 +5972,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1482,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "december",
@@ -6026,18 +6019,11 @@ const trips = [
     "affiliatePartner": "Corendon",
     "variants": [
       {
-        "maand": "november",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 899,
-        "_addedAt": "2026-10-20"
-      },
-      {
         "maand": "januari",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 898,
-        "_addedAt": "2026-11-03"
+        "prijs": 903,
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "december",
@@ -6096,7 +6082,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 791,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -6148,7 +6134,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1479,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -6206,8 +6192,8 @@ const trips = [
         "maand": "oktober",
         "duur": 7,
         "airport": "EIN",
-        "prijs": 1050,
-        "_addedAt": "2026-11-03"
+        "prijs": 1055,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -6263,7 +6249,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 1443,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -6316,7 +6302,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1594,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "december",
@@ -6443,8 +6429,8 @@ const trips = [
         "maand": "april",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 789,
-        "_addedAt": "2026-11-03"
+        "prijs": 797,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -6494,7 +6480,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 699,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -6542,7 +6528,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 845,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -6653,7 +6639,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 2109,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -6704,7 +6690,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 989,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -6761,7 +6747,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1094,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -6812,7 +6798,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 838,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -6863,7 +6849,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 720,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "december",
@@ -6921,7 +6907,7 @@ const trips = [
         "duur": 8,
         "airport": "AMS",
         "prijs": 2146,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -6970,11 +6956,11 @@ const trips = [
         "maand": "december",
         "duur": 8,
         "airport": "AMS",
-        "prijs": 1974,
-        "_addedAt": "2026-10-27"
+        "prijs": 1989,
+        "_addedAt": "2026-11-04"
       }
     ],
-    "prijsPeilDatum": "oktober 2026",
+    "prijsPeilDatum": "november 2026",
     "_score": 158
   },
   {
@@ -7091,7 +7077,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 964,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -7195,7 +7181,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1007,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -7253,7 +7239,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 616,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -7306,7 +7292,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 928,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -7356,7 +7342,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 324,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -7406,7 +7392,7 @@ const trips = [
         "duur": 7,
         "airport": "EIN",
         "prijs": 433,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -7455,7 +7441,7 @@ const trips = [
         "duur": 8,
         "airport": "AMS",
         "prijs": 1054,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -7507,7 +7493,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1157,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -7553,8 +7539,8 @@ const trips = [
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
-        "prijs": 615,
-        "_addedAt": "2026-11-03"
+        "prijs": 604,
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "november",
@@ -7609,7 +7595,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 562,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "april",
@@ -7670,7 +7656,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 937,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -7723,7 +7709,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1144,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -7775,7 +7761,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 675,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "april",
@@ -7838,7 +7824,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 660,
-        "_addedAt": "2026-11-01"
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "mei",
@@ -7888,8 +7874,8 @@ const trips = [
         "maand": "november",
         "duur": 7,
         "airport": "EIN",
-        "prijs": 765,
-        "_addedAt": "2026-11-03"
+        "prijs": 770,
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "januari",
@@ -7954,11 +7940,62 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 718,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
     "_score": 143
+  },
+  {
+    "id": "corendon-grand-windsock-dive-beach-resort-bngrw",
+    "title": "Zonvakantie hotel Kralendijk",
+    "destination": "Kralendijk, Bonaire",
+    "hotelName": "Grand Windsock Dive & Beach Resort",
+    "sfeer": [
+      "comfort",
+      "strand",
+      "resort",
+      "actief",
+      "avontuur"
+    ],
+    "aanbieder": "Corendon",
+    "boardType": "Logies",
+    "vluchtduur": "9u30",
+    "adultsOnly": false,
+    "audience": "couples",
+    "matchReason": "Zonvakantie in Kralendijk, Bonaire — vlakbij het centrum",
+    "whyThisTrip": "Bonaire's huisriffen, flamingo's bij Gotomeer en windsurfen op Lac Bay. Het rustigste ABC-eiland.",
+    "tripDesc": "4-sterren, gastwaardering 8,9.",
+    "tags": [
+      "4-sterren",
+      "strand",
+      "pool",
+      "wellness",
+      "centraal",
+      "snorkelen",
+      "wifi"
+    ],
+    "highlights": [
+      "4-sterren accommodatie",
+      "Gastwaardering: 8,9",
+      "Logies",
+      "Vlucht inbegrepen",
+      "Strand op 250m"
+    ],
+    "description": "Beleef luxe en ontspanning bij Grand Windsock Dive & Beach Resort, een stijlvol resort vlakbij het centrum van Kralendijk. Kies uit moderne appartementen of ruime privévilla's, waarvan sommige zelfs een eigen zwembad op het terras hebben. Neem een du",
+    "imageUrl": "https://images.corendonresources.com/L1E13139A1W1024H684.jpg?v=250327124627",
+    "affiliatePartner": "Corendon",
+    "variants": [
+      {
+        "maand": "november",
+        "duur": 8,
+        "airport": "AMS",
+        "prijs": 1186,
+        "_addedAt": "2026-11-04"
+      }
+    ],
+    "prijsPeilDatum": "november 2026",
+    "_score": 142
   },
   {
     "id": "corendon-fly-go-belnem-house-bonaire-bnbhbf",
@@ -8002,7 +8039,7 @@ const trips = [
         "duur": 8,
         "airport": "AMS",
         "prijs": 1211,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -8051,8 +8088,8 @@ const trips = [
         "maand": "december",
         "duur": 6,
         "airport": "AMS",
-        "prijs": 999,
-        "_addedAt": "2026-11-01"
+        "prijs": 989,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -8102,7 +8139,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1109,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -8153,7 +8190,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1107,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -8202,8 +8239,8 @@ const trips = [
         "maand": "december",
         "duur": 6,
         "airport": "AMS",
-        "prijs": 899,
-        "_addedAt": "2026-11-01"
+        "prijs": 889,
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -8250,7 +8287,7 @@ const trips = [
         "duur": 11,
         "airport": "EIN",
         "prijs": 1160,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "januari",
@@ -8300,18 +8337,11 @@ const trips = [
     "affiliatePartner": "Corendon",
     "variants": [
       {
-        "maand": "november",
-        "duur": 7,
-        "airport": "AMS",
-        "prijs": 854,
-        "_addedAt": "2026-10-20"
-      },
-      {
         "maand": "december",
         "duur": 7,
         "airport": "AMS",
         "prijs": 854,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "januari",
@@ -8368,7 +8398,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1007,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -8414,7 +8444,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1247,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -8465,7 +8495,7 @@ const trips = [
         "duur": 8,
         "airport": "AMS",
         "prijs": 1343,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -8511,7 +8541,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 1359,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -8560,7 +8590,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 681,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -8611,7 +8641,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 861,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -8678,7 +8708,7 @@ const trips = [
         "duur": 11,
         "airport": "AMS",
         "prijs": 1308,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -8728,7 +8758,7 @@ const trips = [
         "duur": 7,
         "airport": "AMS",
         "prijs": 1269,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       },
       {
         "maand": "november",
@@ -8786,7 +8816,7 @@ const trips = [
         "duur": 6,
         "airport": "AMS",
         "prijs": 889,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -8832,18 +8862,11 @@ const trips = [
     "affiliatePartner": "Corendon",
     "variants": [
       {
-        "maand": "mei",
-        "duur": 6,
-        "airport": "AMS",
-        "prijs": 1196,
-        "_addedAt": "2026-10-20"
-      },
-      {
         "maand": "november",
         "duur": 6,
         "airport": "AMS",
         "prijs": 968,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -8893,7 +8916,7 @@ const trips = [
         "duur": 8,
         "airport": "AMS",
         "prijs": 1426,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
@@ -8943,7 +8966,7 @@ const trips = [
         "duur": 8,
         "airport": "AMS",
         "prijs": 1310,
-        "_addedAt": "2026-11-03"
+        "_addedAt": "2026-11-04"
       }
     ],
     "prijsPeilDatum": "november 2026",
